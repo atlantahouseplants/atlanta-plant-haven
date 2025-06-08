@@ -22,7 +22,7 @@ const Navigation = () => {
           <div className="flex items-center space-x-2">
             <img 
               src="/lovable-uploads/5f4fe99d-f892-4ded-9db1-53ffdfd0a592.png" 
-              alt="Atlanta House Plants"
+              alt="Atlanta House Plants - Professional Office Plant Services"
               className="h-10 w-auto"
             />
           </div>
@@ -38,9 +38,14 @@ const Navigation = () => {
                 {item.name}
               </a>
             ))}
-            <Button className="bg-primary hover:bg-primary/90">
-              Get Quote
-            </Button>
+            <div className="flex space-x-2">
+              <Button className="bg-orange-600 hover:bg-orange-700 text-white">
+                Plant Doctor - $129
+              </Button>
+              <Button className="bg-green-600 hover:bg-green-700 text-white">
+                FREE Design
+              </Button>
+            </div>
           </div>
 
           {/* Mobile menu button */}
@@ -69,9 +74,12 @@ const Navigation = () => {
                   {item.name}
                 </a>
               ))}
-              <div className="px-3 py-2">
-                <Button className="w-full bg-primary hover:bg-primary/90">
-                  Get Quote
+              <div className="px-3 py-2 space-y-2">
+                <Button className="w-full bg-orange-600 hover:bg-orange-700 text-white">
+                  Plant Doctor - $129
+                </Button>
+                <Button className="w-full bg-green-600 hover:bg-green-700 text-white">
+                  FREE Design
                 </Button>
               </div>
             </div>
