@@ -26,28 +26,52 @@ const PlantGallery = () => {
       plantsCount: "6 plants"
     },
     {
-      image: "/lovable-uploads/6ce5cacc-3f1d-46f2-93e8-2c25414367dd.png",
-      title: "Colorful Workspace Enhancement",
-      description: "Vibrant Croton bringing energy to work areas",
-      setting: "Open Office Space",
-      projectValue: "$4,100",
-      plantsCount: "12 plants"
+      image: "/lovable-uploads/f816d29c-4694-4186-8770-9e16ab935892.png",
+      title: "Custom Color Planters",
+      description: "Handmade seasonal outdoor planters for business patios",
+      setting: "Business Patio",
+      projectValue: "$1,800",
+      plantsCount: "4 planters"
     },
     {
-      image: "/lovable-uploads/dc14cd41-8f92-4445-9d6e-c544d6c7d548.png",
-      title: "Custom Plant Arrangement",
-      description: "Mixed plant display for unique corporate spaces",
-      setting: "Executive Waiting Area",
-      projectValue: "$6,500",
-      plantsCount: "20 plants"
+      image: "/lovable-uploads/009139fd-5ef7-4193-aaf0-52d32a3bc636.png",
+      title: "Vibrant Office Entrance",
+      description: "Bright color planter creating stunning first impressions",
+      setting: "Office Building Entrance",
+      projectValue: "$2,100",
+      plantsCount: "Custom design"
     },
     {
-      image: "/lovable-uploads/b669889e-a33c-4de1-a5c3-4dd4eb0cf786.png",
-      title: "Living Wall Installation",
-      description: "Multiple plants creating stunning natural feature",
-      setting: "Corporate Headquarters",
-      projectValue: "$8,900",
-      plantsCount: "35 plants"
+      image: "/lovable-uploads/91809c55-8571-46c3-b671-b411d93dbe4e.png",
+      title: "Restaurant Outdoor Design",
+      description: "Mixed planters enhancing dining atmosphere",
+      setting: "Restaurant Patio",
+      projectValue: "$3,200",
+      plantsCount: "6 planters"
+    },
+    {
+      image: "/lovable-uploads/6ff8c577-b398-4b80-990c-e948788ec260.png",
+      title: "Elegant Seasonal Bowls",
+      description: "Custom ceramic bowl arrangements with festive touches",
+      setting: "Corporate Entrance",
+      projectValue: "$1,400",
+      plantsCount: "3 bowls"
+    },
+    {
+      image: "/lovable-uploads/6eb64e7a-2313-4a09-82f2-73a7f9476f8f.png",
+      title: "Colorful Balcony Display",
+      description: "Vibrant seasonal blooms for outdoor spaces",
+      setting: "High-rise Balcony",
+      projectValue: "$950",
+      plantsCount: "Planter box"
+    },
+    {
+      image: "/lovable-uploads/5dc2ebdc-1068-42bb-811b-6c05f8b694d7.png",
+      title: "Rooftop Garden Design",
+      description: "Mixed seasonal arrangements for rooftop spaces",
+      setting: "Apartment Balcony",
+      projectValue: "$750",
+      plantsCount: "Container garden"
     }
   ];
 
@@ -57,11 +81,11 @@ const PlantGallery = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Real Office Plant Transformations
+            Real Plant Transformations & Custom Designs
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            See how our certified plant doctor has transformed Atlanta office spaces with professional 
-            plant design, installation, and guaranteed maintenance.
+            See how our certified plant doctor has transformed Atlanta spaces with professional 
+            plant design, custom color planters, and guaranteed maintenance.
           </p>
         </div>
 
@@ -106,9 +130,9 @@ const PlantGallery = () => {
 
         {/* Call to Action */}
         <div className="text-center bg-green-50 p-8 rounded-lg">
-          <h3 className="text-2xl font-bold text-foreground mb-4">Ready for Your Office Plant Transformation?</h3>
+          <h3 className="text-2xl font-bold text-foreground mb-4">Ready for Your Plant Transformation?</h3>
           <p className="text-lg text-muted-foreground mb-6 max-w-2xl mx-auto">
-            Get your FREE office plant design consultation. Our certified plant doctor will create a custom plan 
+            Get your FREE office plant design consultation or custom color planter quote. Our certified plant doctor will create a custom plan 
             for your space with guaranteed results.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -116,11 +140,11 @@ const PlantGallery = () => {
               Get FREE Design Consultation
             </button>
             <button className="border-2 border-green-600 text-green-600 hover:bg-green-50 px-8 py-3 rounded-lg font-semibold transition-colors">
-              View All Services
+              Request Color Planter Quote
             </button>
           </div>
           <p className="text-sm text-muted-foreground mt-4">
-            ✓ Free consultation • ✓ Professional installation • ✓ 100% plant guarantee
+            ✓ Free consultation • ✓ Professional installation • ✓ 100% plant guarantee on maintained plants
           </p>
         </div>
       </div>

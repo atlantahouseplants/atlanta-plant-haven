@@ -1,7 +1,7 @@
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Wrench, Truck, Stethoscope, Palette, Droplets, Shield, Gift, Users, Home } from "lucide-react";
+import { Wrench, Truck, Stethoscope, Palette, Droplets, Shield, Gift, Users, Home, Flower, Sparkles } from "lucide-react";
 
 const Services = () => {
   const primaryServices = [
@@ -9,28 +9,37 @@ const Services = () => {
       icon: Palette,
       title: "FREE Office Plant Design",
       description: "Custom plant arrangements designed for your space, lighting, and aesthetic preferences.",
-      features: ["Site assessment", "Professional installation", "Custom design consultation", "100% plant guarantee with care"],
+      features: ["Site assessment", "Professional installation", "Custom design consultation", "100% plant guarantee with ongoing care"],
       cta: "Get Free Design",
       ctaStyle: "bg-green-600 hover:bg-green-700 text-white",
       price: "FREE consultation • Projects $3k-$10k"
     },
     {
       icon: Wrench,
-      title: "Office Plant Care",
+      title: "Ongoing Plant Care",
       description: "Professional maintenance by our certified plant doctor with guaranteed plant health.",
-      features: ["Weekly/bi-weekly visits", "Certified plant professional", "Plant health guarantee", "Emergency plant doctor calls"],
+      features: ["Weekly/bi-weekly visits", "Certified plant professional", "Plant health guarantee", "Professional diagnosis & treatment"],
       cta: "Get Care Quote",
       ctaStyle: "bg-green-600 hover:bg-green-700 text-white",
       price: "Starting $199/month"
     },
     {
-      icon: Stethoscope,
-      title: "Plant Doctor Emergency",
-      description: "90-minute comprehensive plant diagnosis and treatment by our UGA-certified plant doctor.",
-      features: ["90-minute appointment", "Professional diagnosis", "Treatment plan", "Ongoing care instructions"],
-      cta: "Book Appointment - $129",
-      ctaStyle: "bg-orange-600 hover:bg-orange-700 text-white",
-      price: "$129 flat rate"
+      icon: Flower,
+      title: "Handmade Color Planters",
+      description: "Custom seasonal outdoor planters designed by Nick using the freshest seasonal blooms.",
+      features: ["Spring & fall installations", "Custom planter designs", "Business patios & pool areas", "Seasonal bloom rotations"],
+      cta: "Request Design Quote",
+      ctaStyle: "bg-green-600 hover:bg-green-700 text-white",
+      price: "Custom pricing • Seasonal refresh available"
+    },
+    {
+      icon: Sparkles,
+      title: "Color Bowl Service",
+      description: "Indoor handmade ceramic bowl arrangements with seasonal rotations every 6 weeks.",
+      features: ["3-80 bowl installations", "6-week seasonal rotations", "Orchids, succulents & seasonal blooms", "Hotel lobbies & office centerpieces"],
+      cta: "Get Bowl Quote",
+      ctaStyle: "bg-green-600 hover:bg-green-700 text-white",
+      price: "Min 3 bowls • 6-week refresh cycles"
     }
   ];
 
@@ -64,7 +73,16 @@ const Services = () => {
     }
   ];
 
-  const premiumServices = [
+  const additionalServices = [
+    {
+      icon: Stethoscope,
+      title: "Plant Doctor Service",
+      description: "90-minute comprehensive plant diagnosis and treatment by our UGA-certified plant doctor.",
+      features: ["90-minute appointment", "Professional diagnosis", "Treatment plan", "Ongoing care instructions"],
+      cta: "Book Appointment - $129",
+      ctaStyle: "bg-orange-600 hover:bg-orange-700 text-white",
+      price: "$129 flat rate"
+    },
     {
       icon: Home,
       title: "Premium Home Design",
@@ -86,14 +104,14 @@ const Services = () => {
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Led by Nick, our UGA-certified plant professional with 15+ years experience. 
-            We guarantee every plant we maintain - protecting your investment.
+            We guarantee every plant we install and maintain - protecting your investment.
           </p>
         </div>
 
         {/* Primary Revenue Services */}
         <div className="mb-16">
           <h3 className="text-2xl font-bold text-center mb-8 text-green-700">Most Popular Services</h3>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {primaryServices.map((service, index) => (
               <Card key={index} className="hover:shadow-lg transition-shadow duration-300 border-2 border-green-200">
                 <CardHeader>
@@ -101,23 +119,23 @@ const Services = () => {
                     <div className="p-2 bg-green-100 rounded-lg">
                       <service.icon className="h-6 w-6 text-green-600" />
                     </div>
-                    <CardTitle className="text-xl">{service.title}</CardTitle>
+                    <CardTitle className="text-lg">{service.title}</CardTitle>
                   </div>
-                  <CardDescription className="text-muted-foreground">
+                  <CardDescription className="text-muted-foreground text-sm">
                     {service.description}
                   </CardDescription>
-                  <div className="text-lg font-semibold text-green-700">{service.price}</div>
+                  <div className="text-sm font-semibold text-green-700">{service.price}</div>
                 </CardHeader>
                 <CardContent>
-                  <ul className="space-y-2 mb-6">
+                  <ul className="space-y-1 mb-4">
                     {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm">
-                        <div className="w-2 h-2 bg-green-600 rounded-full mr-3"></div>
+                      <li key={featureIndex} className="flex items-center text-xs">
+                        <div className="w-1.5 h-1.5 bg-green-600 rounded-full mr-2"></div>
                         {feature}
                       </li>
                     ))}
                   </ul>
-                  <Button className={`w-full ${service.ctaStyle}`}>
+                  <Button className={`w-full text-sm py-2 ${service.ctaStyle}`}>
                     {service.cta}
                   </Button>
                 </CardContent>
@@ -162,11 +180,11 @@ const Services = () => {
           </div>
         </div>
 
-        {/* Premium Services */}
+        {/* Additional Services */}
         <div className="mb-12">
-          <h3 className="text-2xl font-bold text-center mb-8 text-gray-700">Premium Services</h3>
-          <div className="max-w-md mx-auto">
-            {premiumServices.map((service, index) => (
+          <h3 className="text-2xl font-bold text-center mb-8 text-gray-700">Additional Services</h3>
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {additionalServices.map((service, index) => (
               <Card key={index} className="hover:shadow-lg transition-shadow duration-300 border-border">
                 <CardHeader>
                   <div className="flex items-center space-x-3 mb-2">
@@ -205,7 +223,7 @@ const Services = () => {
             <div className="flex flex-col items-center">
               <Shield className="h-12 w-12 text-green-600 mb-2" />
               <h4 className="font-semibold">100% Plant Guarantee</h4>
-              <p className="text-sm text-muted-foreground">Every maintained plant is guaranteed</p>
+              <p className="text-sm text-muted-foreground">On plants we install & maintain</p>
             </div>
             <div className="flex flex-col items-center">
               <Stethoscope className="h-12 w-12 text-green-600 mb-2" />

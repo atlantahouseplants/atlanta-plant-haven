@@ -36,10 +36,10 @@ const Contact = () => {
   const quickServices = [
     {
       icon: Calendar,
-      title: "Plant Doctor Emergency",
+      title: "Plant Doctor Service",
       description: "90-minute comprehensive plant diagnosis and treatment",
       price: "$129",
-      cta: "Book Now",
+      cta: "Book Appointment",
       urgent: true
     },
     {
@@ -61,7 +61,7 @@ const Contact = () => {
             Ready to Transform Your Office with Plants?
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Get your free office plant design consultation or book an emergency plant doctor visit. 
+            Get your free office plant design consultation or request a custom color planter quote. 
             Our certified plant professional is ready to help.
           </p>
         </div>
@@ -139,11 +139,13 @@ const Contact = () => {
                 </label>
                 <select className="w-full p-2 border border-input rounded-md bg-background">
                   <option>FREE Office Plant Design</option>
-                  <option>Plant Care for Existing Plants</option>
+                  <option>Ongoing Plant Care for Existing Plants</option>
                   <option>Corporate Plant Gifting (100+ plants)</option>
                   <option>Smiles for Succulents CSR Program</option>
+                  <option>Handmade Color Planters</option>
+                  <option>Color Bowl Service</option>
                   <option>Corporate Workshop</option>
-                  <option>Plant Doctor Emergency Visit</option>
+                  <option>Plant Doctor Service</option>
                   <option>Premium Home Design</option>
                 </select>
               </div>
@@ -212,8 +214,8 @@ const Contact = () => {
             <div className="bg-green-100 p-6 rounded-lg border-l-4 border-green-600">
               <h4 className="font-bold text-green-800 mb-2">🛡️ Our Guarantee</h4>
               <p className="text-green-700 text-sm">
-                Every plant we maintain comes with a 100% health guarantee. If any plant fails under our care, 
-                we replace it at no cost. Your investment is protected when you choose professional plant care.
+                Every plant we install and maintain comes with a 100% health guarantee. If any plant fails under our care, 
+                we replace it at no cost. Your investment is protected with professional plant care.
               </p>
             </div>
           </div>

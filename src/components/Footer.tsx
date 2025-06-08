@@ -39,11 +39,11 @@ const Footer = () => {
             <h3 className="font-semibold text-lg mb-4">Services</h3>
             <ul className="space-y-2 text-gray-300">
               <li>Plant Design & Installation</li>
-              <li>Ongoing Maintenance</li>
+              <li>Ongoing Plant Care</li>
               <li>Plant Doctor Services</li>
-              <li>Plant Rental & Leasing</li>
-              <li>Irrigation Systems</li>
-              <li>Plant Guarantee</li>
+              <li>Corporate Gifting</li>
+              <li>Smiles for Succulents CSR</li>
+              <li>Handmade Color Planters</li>
             </ul>
           </div>
 
