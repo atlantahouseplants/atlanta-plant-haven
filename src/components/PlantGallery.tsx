@@ -26,6 +26,22 @@ const PlantGallery = () => {
       plantsCount: "6 plants"
     },
     {
+      image: "/lovable-uploads/9a6a89cb-90a7-48df-a670-52cf61f223ea.png",
+      title: "Plant Doctor in Action",
+      description: "Nick providing professional plant care in high-rise office",
+      setting: "Corporate High-Rise",
+      projectValue: "Care Service",
+      plantsCount: "Professional care"
+    },
+    {
+      image: "/lovable-uploads/8643a575-76e7-4931-8466-23c8bc19325a.png",
+      title: "Expert Plant Maintenance",
+      description: "Comprehensive plant health assessment and care",
+      setting: "Office Environment",
+      projectValue: "Plant Doctor Visit",
+      plantsCount: "Health assessment"
+    },
+    {
       image: "/lovable-uploads/f816d29c-4694-4186-8770-9e16ab935892.png",
       title: "Custom Color Planters",
       description: "Handmade seasonal outdoor planters for business patios",
@@ -48,6 +64,14 @@ const PlantGallery = () => {
       setting: "Restaurant Patio",
       projectValue: "$3,200",
       plantsCount: "6 planters"
+    },
+    {
+      image: "/lovable-uploads/a9b4bf22-dd33-4cb1-a543-c9b890bc6146.png",
+      title: "Professional Planter Installation",
+      description: "Nick installing custom seasonal color planters",
+      setting: "Commercial Property",
+      projectValue: "Installation Service",
+      plantsCount: "Planter design"
     },
     {
       image: "/lovable-uploads/6ff8c577-b398-4b80-990c-e948788ec260.png",
@@ -81,10 +105,10 @@ const PlantGallery = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Real Plant Transformations & Custom Designs
+            Real Plant Transformations & Professional Service
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            See how our certified plant doctor has transformed Atlanta spaces with professional 
+            See how our certified plant doctor Nick has transformed Atlanta spaces with professional 
             plant design, custom color planters, and guaranteed maintenance.
           </p>
         </div>
@@ -132,15 +156,15 @@ const PlantGallery = () => {
         <div className="text-center bg-green-50 p-8 rounded-lg">
           <h3 className="text-2xl font-bold text-foreground mb-4">Ready for Your Plant Transformation?</h3>
           <p className="text-lg text-muted-foreground mb-6 max-w-2xl mx-auto">
-            Get your FREE office plant design consultation or custom color planter quote. Our certified plant doctor will create a custom plan 
+            Get your FREE office plant design consultation or book a Plant Doctor visit. Our certified plant doctor will create a custom plan 
             for your space with guaranteed results.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
               Get FREE Design Consultation
             </button>
-            <button className="border-2 border-green-600 text-green-600 hover:bg-green-50 px-8 py-3 rounded-lg font-semibold transition-colors">
-              Request Color Planter Quote
+            <button className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+              Book Plant Doctor Visit - $129
             </button>
           </div>
           <p className="text-sm text-muted-foreground mt-4">

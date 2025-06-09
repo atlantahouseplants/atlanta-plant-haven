@@ -1,7 +1,7 @@
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Wrench, Truck, Stethoscope, Palette, Droplets, Shield, Gift, Users, Home, Flower, Sparkles } from "lucide-react";
+import { Wrench, Truck, Stethoscope, Palette, Droplets, Shield, Gift, Users, Home, Flower, Sparkles, Star, Calendar, Video, Heart } from "lucide-react";
 
 const Services = () => {
   const primaryServices = [
@@ -73,16 +73,55 @@ const Services = () => {
     }
   ];
 
-  const additionalServices = [
+  const plantDoctorTestimonials = [
+    {
+      text: "This plant had sentimental value to me, so I reached to see if anything could be done to help it. He was very realistic with the possible outcome, and he completely brought my plant back to life!",
+      author: "Erika",
+      date: "09/23",
+      source: "Google Review"
+    },
+    {
+      text: "We used the plant doctor service and highly recommend it! Nick was very helpful and knowledgeable on all things plants!",
+      author: "Josh",
+      date: "02/23",
+      source: "Google Review"
+    },
+    {
+      text: "My experience with Nick was fantastic. I had one online appointment with him to get some information about my plants. Then I booked an in person visit. Nick came and spent a long time explaining how to care for the plants and what he was doing...",
+      author: "Shawn",
+      date: "08/23",
+      source: "Google Review"
+    }
+  ];
+
+  const plantDoctorServices = [
     {
       icon: Stethoscope,
-      title: "Plant Doctor Service",
-      description: "90-minute comprehensive plant diagnosis and treatment by our UGA-certified plant doctor.",
-      features: ["90-minute appointment", "Professional diagnosis", "Treatment plan", "Ongoing care instructions"],
-      cta: "Book Appointment - $129",
-      ctaStyle: "bg-orange-600 hover:bg-orange-700 text-white",
-      price: "$129 flat rate"
+      title: "In-Home Plant Doctor Visit",
+      description: "Comprehensive 90-minute plant diagnosis and treatment at your location.",
+      features: ["Professional plant diagnosis", "Pest & disease treatment", "Repotting assessment", "Light & fertilization guidance"],
+      price: "$129 flat rate",
+      popular: true
     },
+    {
+      icon: Video,
+      title: "Virtual Plant Doctor Consultation",
+      description: "Quick video call diagnosis for fast answers to plant problems.",
+      features: ["Video call assessment", "Step-by-step guidance", "Personalized care advice", "Same-day availability"],
+      price: "Contact for pricing",
+      popular: false
+    },
+    {
+      icon: Heart,
+      title: "Plant Sitter Service",
+      description: "Professional plant watering while you're away traveling.",
+      features: ["Travel peace of mind", "Professional watering", "Plant health monitoring", "Flexible scheduling"],
+      price: "Per visit pricing",
+      popular: false
+    }
+  ];
+
+  const additionalServices = [
     {
       icon: Home,
       title: "Premium Home Design",
@@ -141,6 +180,120 @@ const Services = () => {
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </div>
+
+        {/* Plant Doctor Services - Featured Section */}
+        <div className="mb-16">
+          <div className="bg-orange-50 rounded-lg p-8 border-2 border-orange-200">
+            <div className="text-center mb-8">
+              <h3 className="text-3xl font-bold text-orange-800 mb-4">
+                🩺 Plant Doctor Services - Expert Plant Care
+              </h3>
+              <p className="text-lg text-orange-700 max-w-3xl mx-auto">
+                Are you having trouble keeping your houseplants healthy and thriving? Our Plant Doctor is here to help! 
+                Don't let your plants suffer any longer - schedule an appointment today.
+              </p>
+            </div>
+
+            {/* Plant Doctor Service Options */}
+            <div className="grid md:grid-cols-3 gap-6 mb-8">
+              {plantDoctorServices.map((service, index) => (
+                <Card key={index} className={`relative ${service.popular ? 'border-2 border-orange-400 bg-orange-25' : 'border-border bg-white'}`}>
+                  {service.popular && (
+                    <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                      <span className="bg-orange-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                        Most Popular
+                      </span>
+                    </div>
+                  )}
+                  <CardHeader>
+                    <div className="flex items-center space-x-3 mb-2">
+                      <div className="p-2 bg-orange-100 rounded-lg">
+                        <service.icon className="h-6 w-6 text-orange-600" />
+                      </div>
+                      <CardTitle className="text-lg">{service.title}</CardTitle>
+                    </div>
+                    <CardDescription className="text-muted-foreground">
+                      {service.description}
+                    </CardDescription>
+                    <div className="text-lg font-semibold text-orange-700">{service.price}</div>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="space-y-2 mb-4">
+                      {service.features.map((feature, featureIndex) => (
+                        <li key={featureIndex} className="flex items-center text-sm">
+                          <div className="w-2 h-2 bg-orange-600 rounded-full mr-3"></div>
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+
+            {/* What Our Plant Doctor Helps With */}
+            <div className="bg-white rounded-lg p-6 mb-8">
+              <h4 className="text-xl font-bold text-orange-800 mb-4 text-center">
+                OUR PLANT DOCTOR WILL HELP YOU WITH:
+              </h4>
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 text-sm">
+                <div className="flex items-center"><Calendar className="h-4 w-4 text-orange-600 mr-2" />Repotting needs</div>
+                <div className="flex items-center"><Shield className="h-4 w-4 text-orange-600 mr-2" />Disease & Fungal Issues</div>
+                <div className="flex items-center"><Stethoscope className="h-4 w-4 text-orange-600 mr-2" />Pest & Insect Management</div>
+                <div className="flex items-center"><Droplets className="h-4 w-4 text-orange-600 mr-2" />Fertilization & Soil Management</div>
+                <div className="flex items-center"><Droplets className="h-4 w-4 text-orange-600 mr-2" />Proper Watering Techniques</div>
+                <div className="flex items-center"><Sparkles className="h-4 w-4 text-orange-600 mr-2" />Light Measuring & Grow Lights</div>
+                <div className="flex items-center"><Flower className="h-4 w-4 text-orange-600 mr-2" />Cuttings & Propagation</div>
+                <div className="flex items-center"><Heart className="h-4 w-4 text-orange-600 mr-2" />& Much More!</div>
+              </div>
+            </div>
+
+            {/* Customer Testimonials */}
+            <div className="mb-8">
+              <h4 className="text-xl font-bold text-orange-800 mb-4 text-center">What Our Customers Say</h4>
+              <div className="grid md:grid-cols-3 gap-4">
+                {plantDoctorTestimonials.map((testimonial, index) => (
+                  <div key={index} className="bg-white p-4 rounded-lg border border-orange-200">
+                    <div className="flex mb-2">
+                      {[1,2,3,4,5].map((star) => (
+                        <Star key={star} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+                      ))}
+                    </div>
+                    <p className="text-sm italic text-gray-700 mb-2">"{testimonial.text}"</p>
+                    <div className="text-xs text-gray-500">
+                      - {testimonial.author}, {testimonial.date}, {testimonial.source}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Booking Section */}
+            <div className="bg-white rounded-lg p-6 text-center">
+              <h4 className="text-2xl font-bold text-orange-800 mb-4">Ready to Book Your Plant Doctor Visit?</h4>
+              <p className="text-gray-700 mb-6">Schedule your appointment now and get your plants back to perfect health!</p>
+              
+              {/* Embedded Booking Widget */}
+              <div className="max-w-md mx-auto">
+                <iframe 
+                  src="https://api.leadconnectorhq.com/widget/booking/J3NNAtlNcdw0V75i8LX2" 
+                  style={{width: '100%', border: 'none', overflow: 'hidden', minHeight: '600px'}} 
+                  scrolling="no" 
+                  id="plantDoctorBooking"
+                  title="Plant Doctor Booking"
+                ></iframe>
+              </div>
+              
+              <div className="mt-4">
+                <Button className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 text-lg">
+                  <a href="https://api.leadconnectorhq.com/widget/bookings/plantdoctorservice" target="_blank" rel="noopener noreferrer">
+                    Book Plant Doctor Visit - $129
+                  </a>
+                </Button>
+              </div>
+            </div>
           </div>
         </div>
 
