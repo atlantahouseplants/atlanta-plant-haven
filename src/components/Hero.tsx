@@ -1,124 +1,186 @@
 
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Building2, Home, Award, Phone, Mail } from "lucide-react";
+import { ArrowRight, Building2, Home, Award, Phone, Mail, Shield, Star } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section id="home" className="pt-16 min-h-screen flex items-center bg-gradient-to-br from-green-50 to-blue-50">
+    <section id="home" className="pt-16 min-h-screen flex items-center bg-gradient-to-br from-green-50 via-white to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="text-center mb-16">
           {/* Credentials Badge */}
-          <div className="inline-flex items-center px-4 py-2 bg-green-100 rounded-full text-green-800 text-sm font-medium mb-6">
-            <Award className="h-4 w-4 mr-2" />
+          <div className="inline-flex items-center px-6 py-3 bg-green-100 rounded-full text-green-800 text-sm font-medium mb-8 shadow-sm">
+            <Award className="h-5 w-5 mr-2" />
             Georgia Certified Plant Professional • UGA Horticulture Degree • 15+ Years Experience
           </div>
           
           {/* Main Headline */}
-          <h1 className="text-4xl md:text-6xl font-bold text-foreground leading-tight mb-6">
-            Atlanta's Professional
-            <span className="block text-green-600">Plant Care Company</span>
+          <h1 className="text-5xl md:text-7xl font-bold text-foreground leading-tight mb-8">
+            Atlanta's #1
+            <span className="block text-green-600 bg-gradient-to-r from-green-600 to-green-500 bg-clip-text text-transparent">
+              Plant Care Company
+            </span>
           </h1>
           
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-12">
-            Serving 500+ Atlanta businesses and plant parents with expert plant design, 
-            care, and guaranteed results. Choose your path below:
+          <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto mb-4 leading-relaxed">
+            Professional plant solutions that transform your workspace and guarantee results
           </p>
+          
+          <div className="flex items-center justify-center gap-6 mb-12">
+            <div className="flex items-center text-green-600 font-medium">
+              <Shield className="h-5 w-5 mr-2" />
+              100% Plant Guarantee
+            </div>
+            <div className="flex items-center text-green-600 font-medium">
+              <Star className="h-5 w-5 mr-2" />
+              500+ Atlanta Businesses
+            </div>
+          </div>
         </div>
 
-        {/* Two-Path Selection */}
-        <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
-          {/* B2B Path */}
-          <div className="bg-white p-8 rounded-lg shadow-lg border-2 border-green-600 relative">
-            <div className="absolute top-0 right-0 bg-green-600 text-white px-3 py-1 text-sm font-medium">
+        {/* Two-Path Selection - Enhanced */}
+        <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto mb-16">
+          {/* B2B Path - Enhanced */}
+          <div className="bg-white p-10 rounded-2xl shadow-xl border border-green-100 relative overflow-hidden">
+            <div className="absolute top-0 right-0 bg-gradient-to-r from-green-600 to-green-500 text-white px-4 py-2 text-sm font-medium rounded-bl-lg">
               Primary Focus
             </div>
+            
+            {/* Office Plants Image */}
+            <div className="mb-6 rounded-xl overflow-hidden">
+              <img 
+                src="/lovable-uploads/5fd9b530-50f9-413b-b16c-230ffffbda8d.png" 
+                alt="Professional office plants in modern Atlanta office with city view"
+                className="w-full h-48 object-cover"
+              />
+            </div>
+            
             <div className="flex items-center mb-6">
-              <Building2 className="h-12 w-12 text-green-600 mr-4" />
+              <Building2 className="h-14 w-14 text-green-600 mr-4" />
               <div>
-                <h2 className="text-2xl font-bold text-foreground">For Businesses & Offices</h2>
-                <p className="text-muted-foreground">Professional plant solutions for Atlanta companies</p>
+                <h2 className="text-3xl font-bold text-foreground">For Businesses & Offices</h2>
+                <p className="text-lg text-muted-foreground">Transform your Atlanta workspace with guaranteed plant solutions</p>
               </div>
             </div>
             
             <div className="space-y-4 mb-8">
-              <div className="flex items-center text-sm">
-                <span className="bg-green-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs mr-3">✓</span>
-                <span><strong>Office Plant Design & Care</strong> - FREE design + guaranteed plant care</span>
+              <div className="flex items-start text-base">
+                <span className="bg-green-600 text-white rounded-full w-7 h-7 flex items-center justify-center text-sm mr-4 mt-0.5 flex-shrink-0">✓</span>
+                <div>
+                  <span className="font-semibold">FREE Office Plant Design & Care</span>
+                  <p className="text-sm text-muted-foreground">Complete consultation, professional installation, and guaranteed ongoing maintenance</p>
+                </div>
               </div>
-              <div className="flex items-center text-sm">
-                <span className="bg-green-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs mr-3">✓</span>
-                <span><strong>Corporate Gifting</strong> - Bulk succulents for teams (like Georgia Tech's 2,000!)</span>
+              <div className="flex items-start text-base">
+                <span className="bg-green-600 text-white rounded-full w-7 h-7 flex items-center justify-center text-sm mr-4 mt-0.5 flex-shrink-0">✓</span>
+                <div>
+                  <span className="font-semibold">Employee Appreciation Plants</span>
+                  <p className="text-sm text-muted-foreground">Bulk succulents and plants for teams (we've served Georgia Tech with 2,000+ plants!)</p>
+                </div>
               </div>
-              <div className="flex items-center text-sm">
-                <span className="bg-green-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs mr-3">✓</span>
-                <span><strong>Smiles for Succulents</strong> - CSR donation program</span>
+              <div className="flex items-start text-base">
+                <span className="bg-green-600 text-white rounded-full w-7 h-7 flex items-center justify-center text-sm mr-4 mt-0.5 flex-shrink-0">✓</span>
+                <div>
+                  <span className="font-semibold">Smiles for Succulents CSR</span>
+                  <p className="text-sm text-muted-foreground">Corporate donation program for local charities and community impact</p>
+                </div>
               </div>
-              <div className="flex items-center text-sm">
-                <span className="bg-green-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs mr-3">✓</span>
-                <span><strong>Color Bowls & Planters</strong> - Indoor/outdoor business solutions</span>
+              <div className="flex items-start text-base">
+                <span className="bg-green-600 text-white rounded-full w-7 h-7 flex items-center justify-center text-sm mr-4 mt-0.5 flex-shrink-0">✓</span>
+                <div>
+                  <span className="font-semibold">Seasonal Color Solutions</span>
+                  <p className="text-sm text-muted-foreground">Indoor color bowls and outdoor planters for year-round beauty</p>
+                </div>
               </div>
             </div>
 
-            <Button className="w-full bg-green-600 hover:bg-green-700 text-white text-lg py-4 mb-4">
+            <Button className="w-full bg-gradient-to-r from-green-600 to-green-500 hover:from-green-700 hover:to-green-600 text-white text-lg py-4 mb-4 shadow-lg">
               Get Your FREE Business Plant Quote
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
             
-            <p className="text-xs text-center text-muted-foreground">
-              ✓ 24-hour response • ✓ Free consultation • ✓ 100% plant guarantee
+            <p className="text-sm text-center text-muted-foreground">
+              ✓ 24-hour response • ✓ Free on-site consultation • ✓ 100% plant guarantee
             </p>
           </div>
 
-          {/* Individual Path */}
-          <div className="bg-white p-8 rounded-lg shadow-lg border-2 border-blue-600">
+          {/* Individual Path - Enhanced */}
+          <div className="bg-white p-10 rounded-2xl shadow-xl border border-blue-100 relative overflow-hidden">
+            {/* Nick's Photo */}
+            <div className="mb-6 rounded-xl overflow-hidden">
+              <img 
+                src="/lovable-uploads/35c56d89-5991-47a6-a64b-19c134b4b9ec.png" 
+                alt="Nick, certified plant doctor, holding healthy plant in professional setting"
+                className="w-full h-48 object-cover"
+              />
+            </div>
+            
             <div className="flex items-center mb-6">
-              <Home className="h-12 w-12 text-blue-600 mr-4" />
+              <Home className="h-14 w-14 text-blue-600 mr-4" />
               <div>
-                <h2 className="text-2xl font-bold text-foreground">For Plant Parents & Homeowners</h2>
-                <p className="text-muted-foreground">Expert help for your personal plant needs</p>
+                <h2 className="text-3xl font-bold text-foreground">For Plant Parents & Homeowners</h2>
+                <p className="text-lg text-muted-foreground">Expert plant doctor services for your personal plants</p>
               </div>
             </div>
             
+            <div className="bg-orange-50 p-4 rounded-lg mb-6">
+              <h3 className="font-bold text-orange-800 mb-2">Meet Dr. Nick - Your Certified Plant Doctor</h3>
+              <p className="text-sm text-orange-700">
+                UGA Horticulture graduate with 15+ years healing Atlanta's plants. Specializing in comprehensive 
+                plant diagnostics, pest management, and personalized care solutions.
+              </p>
+            </div>
+            
             <div className="space-y-4 mb-8">
-              <div className="flex items-center text-sm">
-                <span className="bg-blue-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs mr-3">✓</span>
-                <span><strong>Plant Doctor Service</strong> - $129 comprehensive 90-minute visit</span>
+              <div className="flex items-start text-base">
+                <span className="bg-orange-600 text-white rounded-full w-7 h-7 flex items-center justify-center text-sm mr-4 mt-0.5 flex-shrink-0">🩺</span>
+                <div>
+                  <span className="font-semibold">Plant Doctor House Call - $129</span>
+                  <p className="text-sm text-muted-foreground">Comprehensive 90-minute diagnosis, treatment, and personalized care plan</p>
+                </div>
               </div>
-              <div className="flex items-center text-sm">
-                <span className="bg-blue-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs mr-3">✓</span>
-                <span><strong>Home Design</strong> - $199 consultation (credited back with install)</span>
+              <div className="flex items-start text-base">
+                <span className="bg-blue-600 text-white rounded-full w-7 h-7 flex items-center justify-center text-sm mr-4 mt-0.5 flex-shrink-0">✓</span>
+                <div>
+                  <span className="font-semibold">Home Plant Design - $199</span>
+                  <p className="text-sm text-muted-foreground">Professional consultation (credited back with installation)</p>
+                </div>
               </div>
-              <div className="flex items-center text-sm">
-                <span className="bg-blue-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs mr-3">✓</span>
-                <span><strong>Home Color Planters</strong> - Seasonal outdoor solutions</span>
+              <div className="flex items-start text-base">
+                <span className="bg-blue-600 text-white rounded-full w-7 h-7 flex items-center justify-center text-sm mr-4 mt-0.5 flex-shrink-0">✓</span>
+                <div>
+                  <span className="font-semibold">Seasonal Color Planters</span>
+                  <p className="text-sm text-muted-foreground">Beautiful outdoor seasonal solutions for your home</p>
+                </div>
               </div>
             </div>
 
             <div className="space-y-3">
-              <Button className="w-full bg-orange-600 hover:bg-orange-700 text-white text-lg py-4">
+              <Button className="w-full bg-gradient-to-r from-orange-600 to-orange-500 hover:from-orange-700 hover:to-orange-600 text-white text-lg py-4 shadow-lg">
                 Book Plant Doctor Visit - $129
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-              <Button variant="outline" className="w-full border-blue-600 text-blue-600 hover:bg-blue-50">
+              <Button variant="outline" className="w-full border-blue-600 text-blue-600 hover:bg-blue-50 hover:border-blue-700">
                 Request Home Consultation
               </Button>
             </div>
             
-            <p className="text-xs text-center text-muted-foreground mt-4">
-              ✓ Same-week appointments • ✓ Expert diagnosis • ✓ Care instructions included
+            <p className="text-sm text-center text-muted-foreground mt-4">
+              ✓ Same-week appointments • ✓ Expert diagnosis • ✓ Guaranteed results
             </p>
           </div>
         </div>
 
-        {/* Contact Info */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center mt-12">
-          <div className="flex items-center text-sm text-muted-foreground">
-            <Phone className="h-4 w-4 mr-2" />
-            Emergency Plant Help: (770) 123-4567
-          </div>
-          <div className="flex items-center text-sm text-muted-foreground">
-            <Mail className="h-4 w-4 mr-2" />
-            nick@atlantahouseplants.com
+        {/* Trust Indicators */}
+        <div className="text-center">
+          <div className="inline-flex items-center gap-8 text-sm text-muted-foreground bg-white px-8 py-4 rounded-full shadow-sm">
+            <div className="flex items-center">
+              <Phone className="h-4 w-4 mr-2" />
+              Emergency Plant Help: (770) 123-4567
+            </div>
+            <div className="flex items-center">
+              <Mail className="h-4 w-4 mr-2" />
+              nick@atlantahouseplants.com
+            </div>
           </div>
         </div>
       </div>
