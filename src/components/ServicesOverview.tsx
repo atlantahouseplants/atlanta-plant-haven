@@ -1,17 +1,19 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { Building2, Stethoscope, Gift, Users, Home, ArrowRight, Shield, Star, Award } from "lucide-react";
+import { useForm } from "@/components/forms/FormContext";
 
 const ServicesOverview = () => {
+  const { openForm } = useForm();
+
   const businessServices = [
     {
       icon: Building2,
       title: "Office Plant Design & Care",
       description: "Complete plant solutions from FREE design consultation to guaranteed ongoing maintenance.",
       details: "Professional installation • Weekly/bi-weekly care • 100% plant guarantee",
-      href: "/office-plants",
+      action: () => openForm('business-quote'),
       cta: "Get FREE Quote",
       image: "/lovable-uploads/8e4a5b72-0959-4758-8dd3-39d3eaa2754b.png"
     },
@@ -20,7 +22,7 @@ const ServicesOverview = () => {
       title: "Employee Appreciation Plants",
       description: "Bulk succulents and plants perfect for employee gifts, client appreciation, and special events.",
       details: "100+ plant minimum • Custom branded tags • Atlanta delivery included",
-      href: "/corporate",
+      action: () => openForm('bulk-order'),
       cta: "Get Bulk Quote",
       image: "/lovable-uploads/0b7e580d-7c48-4a2c-85fa-db09007330cc.png"
     },
@@ -29,7 +31,7 @@ const ServicesOverview = () => {
       title: "Smiles for Succulents CSR",
       description: "Corporate donation program - sponsor plants for local hospitals, charities, and community organizations.",
       details: "100-500+ plant packs • Photo documentation • Tax-deductible donation",
-      href: "/corporate",
+      action: () => openForm('bulk-order'),
       cta: "Start CSR Program",
       image: "/lovable-uploads/0feaa11c-af07-4bbc-bdfc-4941bfac8593.png"
     },
@@ -38,7 +40,7 @@ const ServicesOverview = () => {
       title: "Seasonal Color Solutions",
       description: "Indoor color bowls and outdoor planters with seasonal rotations to keep your space vibrant year-round.",
       details: "6-week refresh cycles • Custom ceramic bowls • Outdoor planter installations",
-      href: "/color-planters",
+      action: () => openForm('business-quote'),
       cta: "View Options",
       image: "/lovable-uploads/5fd9b530-50f9-413b-b16c-230ffffbda8d.png"
     }
@@ -50,7 +52,7 @@ const ServicesOverview = () => {
       title: "Plant Doctor House Calls",
       description: "Comprehensive 90-minute plant health consultation and treatment by our certified plant doctor.",
       details: "Professional diagnosis • Pest & disease treatment • Personalized care plan",
-      href: "/plant-doctor",
+      action: () => openForm('plant-doctor'),
       cta: "Book Appointment - $129",
       popular: true,
       image: "/lovable-uploads/35c56d89-5991-47a6-a64b-19c134b4b9ec.png"
@@ -60,7 +62,7 @@ const ServicesOverview = () => {
       title: "Home Plant Design",
       description: "Custom residential plant design and installation services for luxury homes and condos.",
       details: "$199 consultation fee (credited back with installation) • Custom plant selection",
-      href: "/home-design",
+      action: () => openForm('home-consultation'),
       cta: "Request Consultation",
       image: "/lovable-uploads/8e4a5b72-0959-4758-8dd3-39d3eaa2754b.png"
     }
@@ -107,19 +109,24 @@ const ServicesOverview = () => {
                   <p className="text-sm text-green-700 font-medium mb-6">
                     {service.details}
                   </p>
-                  <Link to={service.href}>
-                    <Button className="w-full bg-green-600 hover:bg-green-700 text-white">
-                      {service.cta}
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </Button>
-                  </Link>
+                  <Button 
+                    onClick={service.action}
+                    className="w-full bg-green-600 hover:bg-green-700 text-white"
+                  >
+                    {service.cta}
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
                 </CardContent>
               </Card>
             ))}
           </div>
 
           <div className="text-center">
-            <Button size="lg" className="bg-gradient-to-r from-green-600 to-green-500 hover:from-green-700 hover:to-green-600 text-white px-12 py-4 text-xl shadow-lg">
+            <Button 
+              onClick={() => openForm('business-quote')}
+              size="lg" 
+              className="bg-gradient-to-r from-green-600 to-green-500 hover:from-green-700 hover:to-green-600 text-white px-12 py-4 text-xl shadow-lg"
+            >
               Get Your FREE Business Plant Quote
               <ArrowRight className="ml-3 h-6 w-6" />
             </Button>
@@ -172,12 +179,13 @@ const ServicesOverview = () => {
                   <p className="text-sm text-blue-700 font-medium mb-6">
                     {service.details}
                   </p>
-                  <Link to={service.href}>
-                    <Button className={`w-full ${service.popular ? 'bg-orange-600 hover:bg-orange-700' : 'bg-blue-600 hover:bg-blue-700'} text-white`}>
-                      {service.cta}
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </Button>
-                  </Link>
+                  <Button 
+                    onClick={service.action}
+                    className={`w-full ${service.popular ? 'bg-orange-600 hover:bg-orange-700' : 'bg-blue-600 hover:bg-blue-700'} text-white`}
+                  >
+                    {service.cta}
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
                 </CardContent>
               </Card>
             ))}

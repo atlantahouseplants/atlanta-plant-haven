@@ -1,8 +1,10 @@
-
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Building2, Home, Award, Phone, Mail, Shield, Star } from "lucide-react";
+import { useForm } from "@/components/forms/FormContext";
 
 const Hero = () => {
+  const { openForm } = useForm();
+
   return (
     <section id="home" className="pt-16 min-h-screen flex items-center bg-gradient-to-br from-green-50 via-white to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
@@ -93,7 +95,10 @@ const Hero = () => {
               </div>
             </div>
 
-            <Button className="w-full bg-gradient-to-r from-green-600 to-green-500 hover:from-green-700 hover:to-green-600 text-white text-lg py-4 mb-4 shadow-lg">
+            <Button 
+              onClick={() => openForm('business-quote')}
+              className="w-full bg-gradient-to-r from-green-600 to-green-500 hover:from-green-700 hover:to-green-600 text-white text-lg py-4 mb-4 shadow-lg"
+            >
               Get Your FREE Business Plant Quote
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
@@ -155,11 +160,18 @@ const Hero = () => {
             </div>
 
             <div className="space-y-3">
-              <Button className="w-full bg-gradient-to-r from-orange-600 to-orange-500 hover:from-orange-700 hover:to-orange-600 text-white text-lg py-4 shadow-lg">
+              <Button 
+                onClick={() => openForm('plant-doctor')}
+                className="w-full bg-gradient-to-r from-orange-600 to-orange-500 hover:from-orange-700 hover:to-orange-600 text-white text-lg py-4 shadow-lg"
+              >
                 Book Plant Doctor Visit - $129
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-              <Button variant="outline" className="w-full border-blue-600 text-blue-600 hover:bg-blue-50 hover:border-blue-700">
+              <Button 
+                onClick={() => openForm('home-consultation')}
+                variant="outline" 
+                className="w-full border-blue-600 text-blue-600 hover:bg-blue-50 hover:border-blue-700"
+              >
                 Request Home Consultation
               </Button>
             </div>
