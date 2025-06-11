@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Building2, Home, Award, Phone, Mail, Shield, Star } from "lucide-react";
 import { useForm } from "@/components/forms/FormContext";
@@ -30,7 +31,7 @@ const Hero = () => {
           <div className="flex items-center justify-center gap-6 mb-12">
             <div className="flex items-center text-green-600 font-medium">
               <Shield className="h-5 w-5 mr-2" />
-              100% Plant Guarantee
+              Professional Installation
             </div>
             <div className="flex items-center text-green-600 font-medium">
               <Star className="h-5 w-5 mr-2" />
@@ -43,16 +44,12 @@ const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto mb-16">
           {/* B2B Path - Enhanced */}
           <div className="bg-white p-10 rounded-2xl shadow-xl border border-green-100 relative overflow-hidden">
-            <div className="absolute top-0 right-0 bg-gradient-to-r from-green-600 to-green-500 text-white px-4 py-2 text-sm font-medium rounded-bl-lg">
-              Primary Focus
-            </div>
-            
-            {/* Office Plants Image */}
+            {/* Office Plants Image - Better cropping */}
             <div className="mb-6 rounded-xl overflow-hidden">
               <img 
                 src="/lovable-uploads/5fd9b530-50f9-413b-b16c-230ffffbda8d.png" 
                 alt="Professional office plants in modern Atlanta office with city view"
-                className="w-full h-48 object-cover"
+                className="w-full h-56 object-cover object-center"
               />
             </div>
             
@@ -69,7 +66,7 @@ const Hero = () => {
                 <span className="bg-green-600 text-white rounded-full w-7 h-7 flex items-center justify-center text-sm mr-4 mt-0.5 flex-shrink-0">✓</span>
                 <div>
                   <span className="font-semibold">FREE Office Plant Design & Care</span>
-                  <p className="text-sm text-muted-foreground">Complete consultation, professional installation, and guaranteed ongoing maintenance</p>
+                  <p className="text-sm text-muted-foreground">Complete consultation, professional installation, and ongoing maintenance with 100% plant guarantee</p>
                 </div>
               </div>
               <div className="flex items-start text-base">
@@ -82,8 +79,8 @@ const Hero = () => {
               <div className="flex items-start text-base">
                 <span className="bg-green-600 text-white rounded-full w-7 h-7 flex items-center justify-center text-sm mr-4 mt-0.5 flex-shrink-0">✓</span>
                 <div>
-                  <span className="font-semibold">Smiles for Succulents CSR</span>
-                  <p className="text-sm text-muted-foreground">Corporate donation program for local charities and community impact</p>
+                  <span className="font-semibold">Corporate Social Responsibility</span>
+                  <p className="text-sm text-muted-foreground">Community impact programs and charitable giving initiatives</p>
                 </div>
               </div>
               <div className="flex items-start text-base">
@@ -104,18 +101,18 @@ const Hero = () => {
             </Button>
             
             <p className="text-sm text-center text-muted-foreground">
-              ✓ 24-hour response • ✓ Free on-site consultation • ✓ 100% plant guarantee
+              ✓ 24-hour response • ✓ Free on-site consultation • ✓ Professional guarantee
             </p>
           </div>
 
           {/* Individual Path - Enhanced */}
           <div className="bg-white p-10 rounded-2xl shadow-xl border border-blue-100 relative overflow-hidden">
-            {/* Nick's Photo */}
+            {/* Nick's Photo - Better cropping */}
             <div className="mb-6 rounded-xl overflow-hidden">
               <img 
                 src="/lovable-uploads/35c56d89-5991-47a6-a64b-19c134b4b9ec.png" 
-                alt="Nick, certified plant doctor, holding healthy plant in professional setting"
-                className="w-full h-48 object-cover"
+                alt="Nick, your plant doctor, providing expert plant care"
+                className="w-full h-56 object-cover object-center"
               />
             </div>
             
@@ -128,7 +125,7 @@ const Hero = () => {
             </div>
             
             <div className="bg-orange-50 p-4 rounded-lg mb-6">
-              <h3 className="font-bold text-orange-800 mb-2">Meet Dr. Nick - Your Certified Plant Doctor</h3>
+              <h3 className="font-bold text-orange-800 mb-2">Meet Nick, Your Plant Doctor</h3>
               <p className="text-sm text-orange-700">
                 UGA Horticulture graduate with 15+ years healing Atlanta's plants. Specializing in comprehensive 
                 plant diagnostics, pest management, and personalized care solutions.
@@ -177,21 +174,21 @@ const Hero = () => {
             </div>
             
             <p className="text-sm text-center text-muted-foreground mt-4">
-              ✓ Same-week appointments • ✓ Expert diagnosis • ✓ Guaranteed results
+              ✓ Same-week appointments • ✓ Expert diagnosis • ✓ Professional results
             </p>
           </div>
         </div>
 
-        {/* Trust Indicators */}
+        {/* Contact Information */}
         <div className="text-center">
           <div className="inline-flex items-center gap-8 text-sm text-muted-foreground bg-white px-8 py-4 rounded-full shadow-sm">
             <div className="flex items-center">
               <Phone className="h-4 w-4 mr-2" />
-              Emergency Plant Help: (770) 123-4567
+              Emergency Plant Help: (470) 664-4039
             </div>
             <div className="flex items-center">
               <Mail className="h-4 w-4 mr-2" />
-              nick@atlantahouseplants.com
+              ana@atlantahouseplants.com
             </div>
           </div>
         </div>
