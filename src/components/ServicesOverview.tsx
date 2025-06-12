@@ -17,7 +17,7 @@ const ServicesOverview = () => {
       action: () => openForm('business-quote'),
       cta: "Get FREE Quote",
       learnMore: "/office-plants",
-      image: "/lovable-uploads/8e4a5b72-0959-4758-8dd3-39d3eaa2754b.png"
+      image: "/lovable-uploads/0744c293-0606-4a7d-b73a-140d0a4405ea.png"
     },
     {
       icon: Gift,
@@ -27,7 +27,7 @@ const ServicesOverview = () => {
       action: () => openForm('bulk-order'),
       cta: "Get Bulk Quote",
       learnMore: "/corporate",
-      image: "/lovable-uploads/0b7e580d-7c48-4a2c-85fa-db09007330cc.png"
+      image: "/lovable-uploads/f6771e8f-e3c7-432a-ae46-88584325a2f5.png"
     },
     {
       icon: Users,
@@ -37,7 +37,7 @@ const ServicesOverview = () => {
       action: () => openForm('bulk-order'),
       cta: "Start CSR Program",
       learnMore: "/corporate",
-      image: "/lovable-uploads/0feaa11c-af07-4bbc-bdfc-4941bfac8593.png"
+      image: "/lovable-uploads/6538df31-b81f-40ef-9b80-c3d85951126b.png"
     },
     {
       icon: Building2,
@@ -47,7 +47,7 @@ const ServicesOverview = () => {
       action: () => openForm('business-quote'),
       cta: "View Options",
       learnMore: "/color-planters",
-      image: "/lovable-uploads/5fd9b530-50f9-413b-b16c-230ffffbda8d.png"
+      image: "/lovable-uploads/24794cd6-d871-433d-8ce5-1b5d61120d74.png"
     }
   ];
 
@@ -61,7 +61,7 @@ const ServicesOverview = () => {
       cta: "Book Appointment - $129",
       learnMore: "/plant-doctor",
       popular: true,
-      image: "/lovable-uploads/35c56d89-5991-47a6-a64b-19c134b4b9ec.png"
+      image: "/lovable-uploads/cc2424e3-3025-4f30-be79-6a4763fca0a5.png"
     },
     {
       icon: Home,
@@ -71,7 +71,7 @@ const ServicesOverview = () => {
       action: () => openForm('home-consultation'),
       cta: "Request Consultation",
       learnMore: "/home-design",
-      image: "/lovable-uploads/8e4a5b72-0959-4758-8dd3-39d3eaa2754b.png"
+      image: "/lovable-uploads/24794cd6-d871-433d-8ce5-1b5d61120d74.png"
     }
   ];
 
@@ -150,6 +150,29 @@ const ServicesOverview = () => {
           </div>
         </div>
 
+        {/* Customer Reviews Section */}
+        <div className="mb-24">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+              What Our Customers Say
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              Don't just take our word for it - see what Atlanta businesses and plant parents are saying about our services.
+            </p>
+          </div>
+          
+          <div className="bg-white rounded-2xl shadow-lg p-8">
+            <script type='text/javascript' src='https://reputationhub.site/reputation/assets/review-widget.js'></script>
+            <iframe 
+              className='lc_reviews_widget' 
+              src='https://reputationhub.site/reputation/widgets/review_widget/wTvEeXunnbLa5kBRFbc4' 
+              frameBorder='0' 
+              scrolling='no' 
+              style={{ minWidth: '100%', width: '100%', minHeight: '400px' }}
+            ></iframe>
+          </div>
+        </div>
+
         {/* Individual Services */}
         <div className="mb-20">
           <div className="text-center mb-16">
@@ -217,7 +240,7 @@ const ServicesOverview = () => {
         <div className="bg-gradient-to-r from-green-600 to-green-500 text-white p-12 rounded-2xl text-center shadow-2xl">
           <div className="flex items-center justify-center mb-6">
             <img 
-              src="/lovable-uploads/35c56d89-5991-47a6-a64b-19c134b4b9ec.png" 
+              src="/lovable-uploads/cc2424e3-3025-4f30-be79-6a4763fca0a5.png" 
               alt="Nick - Your Plant Doctor"
               className="w-20 h-20 rounded-full object-cover mr-4 border-2 border-white"
             />

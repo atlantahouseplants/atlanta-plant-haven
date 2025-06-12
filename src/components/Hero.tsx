@@ -45,11 +45,11 @@ const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto mb-16">
           {/* B2B Path - Enhanced */}
           <div className="bg-white p-10 rounded-2xl shadow-xl border border-green-100 relative overflow-hidden">
-            {/* Office Plants Image - Better display */}
+            {/* Office Plants Image - Updated */}
             <div className="mb-6 rounded-xl overflow-hidden aspect-video">
               <img 
-                src="/lovable-uploads/5fd9b530-50f9-413b-b16c-230ffffbda8d.png" 
-                alt="Professional office plants in modern Atlanta office with city view"
+                src="/lovable-uploads/24794cd6-d871-433d-8ce5-1b5d61120d74.png" 
+                alt="Professional office plants in modern Atlanta office"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -108,10 +108,10 @@ const Hero = () => {
 
           {/* Individual Path - Enhanced */}
           <div className="bg-white p-10 rounded-2xl shadow-xl border border-blue-100 relative overflow-hidden">
-            {/* Nick's Photo - Better display */}
+            {/* Nick's Photo - Updated */}
             <div className="mb-6 rounded-xl overflow-hidden aspect-video">
               <img 
-                src="/lovable-uploads/35c56d89-5991-47a6-a64b-19c134b4b9ec.png" 
+                src="/lovable-uploads/cc2424e3-3025-4f30-be79-6a4763fca0a5.png" 
                 alt="Nick, your plant doctor, providing expert plant care"
                 className="w-full h-full object-cover"
               />

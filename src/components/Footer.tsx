@@ -109,18 +109,10 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-gray-700 mt-12 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-300 text-center md:text-left mb-4 md:mb-0">
+          <div className="text-center">
+            <p className="text-gray-300">
               &copy; 2024 Atlanta House Plants. All rights reserved.
             </p>
-            <div className="text-center md:text-right">
-              <p className="text-gray-400 text-sm">
-                <span className="font-semibold">Meet Nick, Your Plant Doctor</span>
-              </p>
-              <p className="text-gray-400 text-xs">
-                Professional Plant Care • UGA Certified • 15+ Years Experience
-              </p>
-            </div>
           </div>
         </div>
       </div>
