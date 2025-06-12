@@ -1,4 +1,3 @@
-
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -21,9 +20,34 @@ const OfficePlants = () => {
       title: "Corporate Lobby Installation"
     },
     {
+      src: "/lovable-uploads/daf81320-b43b-4b04-be7f-de89d266eb62.png",
+      alt: "Large palm plant in modern office setting with ocean view",
+      title: "Modern Office Palm Installation"
+    },
+    {
+      src: "/lovable-uploads/e848d465-1e0e-47b7-94d6-226ed5ab1c49.png",
+      alt: "Colorful tropical plant in elegant concrete planter",
+      title: "Executive Tropical Display"
+    },
+    {
       src: "/lovable-uploads/bda5d0ab-23d1-4179-a0e3-ca491a450073.png",
       alt: "Multiple office plants creating green workspace",
       title: "Open Office Design"
+    },
+    {
+      src: "/lovable-uploads/1683fbf6-99c1-4c4c-818b-2e3644960f47.png",
+      alt: "Spider plant in white ceramic planter",
+      title: "Clean Office Aesthetic"
+    },
+    {
+      src: "/lovable-uploads/1f78b53b-2623-4bc4-b83c-246c1a7fd6a7.png",
+      alt: "Rubber tree plant in textured black planter",
+      title: "Executive Suite Installation"
+    },
+    {
+      src: "/lovable-uploads/911bc300-a742-4904-b3c2-346923206800.png",
+      alt: "Variegated office plant in professional setting",
+      title: "Conference Room Accent"
     },
     {
       src: "/lovable-uploads/e50117c2-e3d5-4eae-ad91-6e0037ad1b84.png",
@@ -44,11 +68,6 @@ const OfficePlants = () => {
       src: "/lovable-uploads/e53e274d-32e6-460b-a5b9-01e5f79c885f.png",
       alt: "Large tropical office plant installation",
       title: "Workplace Wellness Design"
-    },
-    {
-      src: "/lovable-uploads/d1213176-0152-46b9-bfcb-d16a27ff4491.png",
-      alt: "Professional office plant care and maintenance",
-      title: "Executive Suite Installation"
     }
   ];
 
@@ -396,12 +415,12 @@ const OfficePlants = () => {
             
             <div className="grid grid-cols-2 gap-4">
               <img
-                src="/lovable-uploads/30a84ea6-f741-4055-a3a0-8b27f2d24782.png"
+                src="/lovable-uploads/daf81320-b43b-4b04-be7f-de89d266eb62.png"
                 alt="Professional office plant care"
                 className="w-full h-48 object-cover rounded-xl shadow-lg"
               />
               <img
-                src="/lovable-uploads/b90e0cac-c262-4e29-b9bd-bbd0990b70d6.png"
+                src="/lovable-uploads/1f78b53b-2623-4bc4-b83c-246c1a7fd6a7.png"
                 alt="Healthy office plants"
                 className="w-full h-48 object-cover rounded-xl shadow-lg"
               />
