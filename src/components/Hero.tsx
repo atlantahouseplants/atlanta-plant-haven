@@ -2,6 +2,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Building2, Home, Award, Phone, Mail, Shield, Star } from "lucide-react";
 import { useForm } from "@/components/forms/FormContext";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   const { openForm } = useForm();
@@ -44,12 +45,12 @@ const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto mb-16">
           {/* B2B Path - Enhanced */}
           <div className="bg-white p-10 rounded-2xl shadow-xl border border-green-100 relative overflow-hidden">
-            {/* Office Plants Image - Better cropping */}
-            <div className="mb-6 rounded-xl overflow-hidden">
+            {/* Office Plants Image - Better display */}
+            <div className="mb-6 rounded-xl overflow-hidden aspect-video">
               <img 
                 src="/lovable-uploads/5fd9b530-50f9-413b-b16c-230ffffbda8d.png" 
                 alt="Professional office plants in modern Atlanta office with city view"
-                className="w-full h-56 object-cover object-center"
+                className="w-full h-full object-cover"
               />
             </div>
             
@@ -57,7 +58,7 @@ const Hero = () => {
               <Building2 className="h-14 w-14 text-green-600 mr-4" />
               <div>
                 <h2 className="text-3xl font-bold text-foreground">For Businesses & Offices</h2>
-                <p className="text-lg text-muted-foreground">Transform your Atlanta workspace with guaranteed plant solutions</p>
+                <p className="text-lg text-muted-foreground">Transform your Atlanta workspace with professional plant solutions</p>
               </div>
             </div>
             
@@ -66,7 +67,7 @@ const Hero = () => {
                 <span className="bg-green-600 text-white rounded-full w-7 h-7 flex items-center justify-center text-sm mr-4 mt-0.5 flex-shrink-0">✓</span>
                 <div>
                   <span className="font-semibold">FREE Office Plant Design & Care</span>
-                  <p className="text-sm text-muted-foreground">Complete consultation, professional installation, and ongoing maintenance with 100% plant guarantee</p>
+                  <p className="text-sm text-muted-foreground">Complete consultation with ongoing maintenance and plant guarantee for business installations</p>
                 </div>
               </div>
               <div className="flex items-start text-base">
@@ -107,12 +108,12 @@ const Hero = () => {
 
           {/* Individual Path - Enhanced */}
           <div className="bg-white p-10 rounded-2xl shadow-xl border border-blue-100 relative overflow-hidden">
-            {/* Nick's Photo - Better cropping */}
-            <div className="mb-6 rounded-xl overflow-hidden">
+            {/* Nick's Photo - Better display */}
+            <div className="mb-6 rounded-xl overflow-hidden aspect-video">
               <img 
                 src="/lovable-uploads/35c56d89-5991-47a6-a64b-19c134b4b9ec.png" 
                 alt="Nick, your plant doctor, providing expert plant care"
-                className="w-full h-56 object-cover object-center"
+                className="w-full h-full object-cover"
               />
             </div>
             

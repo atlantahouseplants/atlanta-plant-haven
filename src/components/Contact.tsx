@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Phone, Mail, MapPin, Clock, Calendar, Gift, Facebook, Instagram, Linkedin, Twitter, Youtube } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Facebook, Instagram, Linkedin, Twitter, Youtube } from "lucide-react";
 
 const Contact = () => {
   const contactInfo = [
@@ -33,25 +33,6 @@ const Contact = () => {
     }
   ];
 
-  const quickServices = [
-    {
-      icon: Calendar,
-      title: "Plant Doctor Service",
-      description: "90-minute comprehensive plant diagnosis and treatment",
-      price: "$129",
-      cta: "Book Appointment",
-      urgent: true
-    },
-    {
-      icon: Gift,
-      title: "Bulk Plant Gifting Quote",
-      description: "Mini succulents for employee/client appreciation",
-      price: "Starting $7.25 each",
-      cta: "Get Quote",
-      urgent: false
-    }
-  ];
-
   const socialLinks = [
     { name: "Facebook", icon: Facebook, url: "https://www.facebook.com/atlantahouseplants/" },
     { name: "Instagram", icon: Instagram, url: "https://www.instagram.com/atlanta_houseplants/" },
@@ -72,29 +53,6 @@ const Contact = () => {
             Get your free office plant design consultation or request expert plant care services. 
             Our certified plant professional is ready to help.
           </p>
-        </div>
-
-        {/* Quick Action Cards */}
-        <div className="grid md:grid-cols-2 gap-6 mb-12">
-          {quickServices.map((service, index) => (
-            <Card key={index} className={`border-2 ${service.urgent ? 'border-orange-300 bg-orange-50' : 'border-blue-300 bg-blue-50'}`}>
-              <CardHeader>
-                <div className="flex items-center space-x-3">
-                  <service.icon className={`h-8 w-8 ${service.urgent ? 'text-orange-600' : 'text-blue-600'}`} />
-                  <div>
-                    <CardTitle className="text-xl">{service.title}</CardTitle>
-                    <p className={`text-lg font-bold ${service.urgent ? 'text-orange-700' : 'text-blue-700'}`}>{service.price}</p>
-                  </div>
-                </div>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground mb-4">{service.description}</p>
-                <Button className={`w-full ${service.urgent ? 'bg-orange-600 hover:bg-orange-700' : 'bg-blue-600 hover:bg-blue-700'} text-white`}>
-                  {service.cta}
-                </Button>
-              </CardContent>
-            </Card>
-          ))}
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12">
@@ -195,6 +153,21 @@ const Contact = () => {
                     </div>
                   </div>
                 ))}
+              </div>
+            </div>
+
+            {/* Additional Contact Methods */}
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h4 className="font-semibold text-foreground mb-4">Additional Contact</h4>
+              <div className="space-y-2 text-sm">
+                <div className="flex items-center">
+                  <Mail className="h-4 w-4 text-green-600 mr-2" />
+                  <span>Service: service@atlantahouseplants.com</span>
+                </div>
+                <div className="flex items-center">
+                  <Mail className="h-4 w-4 text-orange-600 mr-2" />
+                  <span>Plant Doctor: plantdoctor@atlantahouseplants.com</span>
+                </div>
               </div>
             </div>
 

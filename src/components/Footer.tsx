@@ -36,6 +36,14 @@ const Footer = () => {
                 <span>ana@atlantahouseplants.com</span>
               </div>
               <div className="flex items-center space-x-2 text-sm">
+                <Mail className="h-4 w-4" />
+                <span>service@atlantahouseplants.com</span>
+              </div>
+              <div className="flex items-center space-x-2 text-sm">
+                <Mail className="h-4 w-4" />
+                <span>plantdoctor@atlantahouseplants.com</span>
+              </div>
+              <div className="flex items-center space-x-2 text-sm">
                 <MapPin className="h-4 w-4" />
                 <span>Metro Atlanta, GA</span>
               </div>
@@ -80,9 +88,9 @@ const Footer = () => {
             <ul className="space-y-2 text-gray-300">
               <li><a href="#home" className="hover:text-green-400 transition-colors">Home</a></li>
               <li><a href="#services" className="hover:text-green-400 transition-colors">Services</a></li>
-              <li><a href="#gallery" className="hover:text-green-400 transition-colors">Gallery</a></li>
-              <li><a href="#about" className="hover:text-green-400 transition-colors">About</a></li>
               <li><a href="#contact" className="hover:text-green-400 transition-colors">Contact</a></li>
+              <li><a href="/office-plants" className="hover:text-green-400 transition-colors">Office Plants</a></li>
+              <li><a href="/plant-doctor" className="hover:text-green-400 transition-colors">Plant Doctor</a></li>
             </ul>
           </div>
 
