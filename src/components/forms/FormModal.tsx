@@ -17,7 +17,7 @@ const FormModal = () => {
       case 'bulk-order':
         return 'Corporate Plant Order Request';
       case 'plant-doctor':
-        return 'Book Plant Doctor Visit - $129';
+        return 'Book Plant Doctor Visit - $149';
       case 'home-consultation':
         return 'Request Home Consultation';
       default:

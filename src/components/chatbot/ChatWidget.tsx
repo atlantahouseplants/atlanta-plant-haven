@@ -1,9 +1,6 @@
 
 import React, { useState, useRef, useEffect } from 'react';
 import { MessageCircle, X, Send } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Card } from '@/components/ui/card';
 import ChatMessage from './ChatMessage';
 import { Message } from './types';
 
@@ -12,15 +9,14 @@ const ChatWidget = () => {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: '1',
-      text: "Hello! I'm here to help you with your plant care questions and services. How can I assist you today?",
+      text: "Hi! I'm here to help you with any questions about our plant services. How can I assist you today?",
       isBot: true,
-      timestamp: new Date()
-    }
+      timestamp: new Date(),
+    },
   ]);
-  const [inputValue, setInputValue] = useState('');
+  const [inputText, setInputText] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
-  const inputRef = useRef<HTMLInputElement>(null);
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -30,24 +26,18 @@ const ChatWidget = () => {
     scrollToBottom();
   }, [messages]);
 
-  useEffect(() => {
-    if (isOpen && inputRef.current) {
-      inputRef.current.focus();
-    }
-  }, [isOpen]);
-
-  const sendMessage = async () => {
-    if (!inputValue.trim() || isLoading) return;
+  const handleSendMessage = async () => {
+    if (!inputText.trim() || isLoading) return;
 
     const userMessage: Message = {
       id: Date.now().toString(),
-      text: inputValue,
+      text: inputText,
       isBot: false,
-      timestamp: new Date()
+      timestamp: new Date(),
     };
 
     setMessages(prev => [...prev, userMessage]);
-    setInputValue('');
+    setInputText('');
     setIsLoading(true);
 
     try {
@@ -57,26 +47,19 @@ const ChatWidget = () => {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          message: inputValue,
+          message: inputText,
           timestamp: new Date().toISOString(),
-          sessionId: 'web-chat-' + Date.now()
-        })
+          sessionId: `session_${Date.now()}`,
+        }),
       });
 
-      let botResponseText = "Thank you for your message! I'm processing your request and will get back to you shortly.";
+      const data = await response.json();
       
-      if (response.ok) {
-        const data = await response.text();
-        if (data && data.trim()) {
-          botResponseText = data;
-        }
-      }
-
       const botMessage: Message = {
         id: (Date.now() + 1).toString(),
-        text: botResponseText,
+        text: data.response || "I apologize, but I'm having trouble responding right now. Please try again or contact us directly at (770) 123-4567.",
         isBot: true,
-        timestamp: new Date()
+        timestamp: new Date(),
       };
 
       setMessages(prev => [...prev, botMessage]);
@@ -84,9 +67,9 @@ const ChatWidget = () => {
       console.error('Error sending message:', error);
       const errorMessage: Message = {
         id: (Date.now() + 1).toString(),
-        text: "I'm sorry, I'm having trouble connecting right now. Please try again in a moment or contact us directly.",
+        text: "I'm sorry, I'm having trouble connecting right now. Please try again or call us at (770) 123-4567.",
         isBot: true,
-        timestamp: new Date()
+        timestamp: new Date(),
       };
       setMessages(prev => [...prev, errorMessage]);
     } finally {
@@ -97,96 +80,100 @@ const ChatWidget = () => {
   const handleKeyPress = (e: React.KeyboardEvent) => {
     if (e.key === 'Enter' && !e.shiftKey) {
       e.preventDefault();
-      sendMessage();
+      handleSendMessage();
     }
   };
 
   return (
     <>
-      {/* Chat Toggle Button */}
-      <Button
-        onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-6 right-6 z-50 h-14 w-14 rounded-full bg-green-600 hover:bg-green-700 shadow-lg transition-all duration-200 hover:scale-105"
-        size="icon"
-      >
-        {isOpen ? <X size={24} /> : <MessageCircle size={24} />}
-        <span className="sr-only">Toggle chat</span>
-      </Button>
+      <style>
+        {`
+          .chat-widget-shadow {
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+          }
+          .chat-bubble {
+            animation: bounce 0.3s ease-out;
+          }
+          @keyframes bounce {
+            0% { transform: scale(0.8); opacity: 0; }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); opacity: 1; }
+          }
+        `}
+      </style>
+      
+      <div className="fixed bottom-4 right-4 z-50">
+        {!isOpen && (
+          <button
+            onClick={() => setIsOpen(true)}
+            className="chat-bubble bg-green-600 hover:bg-green-700 text-white rounded-full p-4 chat-widget-shadow transition-all duration-300 hover:scale-110"
+            aria-label="Open chat"
+          >
+            <MessageCircle className="h-6 w-6" />
+          </button>
+        )}
 
-      {/* Chat Window */}
-      {isOpen && (
-        <Card className="fixed bottom-24 right-6 z-40 w-80 h-96 flex flex-col shadow-xl border-0 bg-background">
-          {/* Header */}
-          <div className="flex items-center justify-between p-4 border-b bg-green-600 text-white rounded-t-lg">
-            <div className="flex items-center space-x-2">
-              <MessageCircle size={20} />
-              <h3 className="font-semibold">Plant Care Assistant</h3>
+        {isOpen && (
+          <div className="bg-white rounded-lg chat-widget-shadow w-80 h-96 flex flex-col">
+            {/* Header */}
+            <div className="bg-green-600 text-white p-4 rounded-t-lg flex justify-between items-center">
+              <div>
+                <h3 className="font-semibold">Plant Help Assistant</h3>
+                <p className="text-sm opacity-90">Ask me anything!</p>
+              </div>
+              <button
+                onClick={() => setIsOpen(false)}
+                className="hover:bg-green-700 p-1 rounded"
+                aria-label="Close chat"
+              >
+                <X className="h-4 w-4" />
+              </button>
             </div>
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={() => setIsOpen(false)}
-              className="text-white hover:bg-green-700 h-8 w-8 p-0"
-            >
-              <X size={16} />
-            </Button>
-          </div>
 
-          {/* Messages */}
-          <div className="flex-1 overflow-y-auto p-4 space-y-4">
-            {messages.map((message) => (
-              <ChatMessage key={message.id} message={message} />
-            ))}
-            {isLoading && (
-              <div className="flex justify-start">
-                <div className="bg-gray-100 rounded-lg p-3 max-w-xs">
-                  <div className="flex space-x-1">
-                    <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>
-                    <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
-                    <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+            {/* Messages */}
+            <div className="flex-1 p-4 overflow-y-auto space-y-4">
+              {messages.map((message) => (
+                <ChatMessage key={message.id} message={message} />
+              ))}
+              {isLoading && (
+                <div className="flex justify-start">
+                  <div className="bg-gray-100 rounded-lg p-3 max-w-xs">
+                    <div className="flex space-x-1">
+                      <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>
+                      <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
+                      <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+                    </div>
                   </div>
                 </div>
-              </div>
-            )}
-            <div ref={messagesEndRef} />
-          </div>
+              )}
+              <div ref={messagesEndRef} />
+            </div>
 
-          {/* Input */}
-          <div className="p-4 border-t">
-            <div className="flex space-x-2">
-              <Input
-                ref={inputRef}
-                value={inputValue}
-                onChange={(e) => setInputValue(e.target.value)}
-                onKeyPress={handleKeyPress}
-                placeholder="Type your message..."
-                disabled={isLoading}
-                className="flex-1"
-              />
-              <Button
-                onClick={sendMessage}
-                disabled={!inputValue.trim() || isLoading}
-                size="icon"
-                className="bg-green-600 hover:bg-green-700"
-              >
-                <Send size={16} />
-              </Button>
+            {/* Input */}
+            <div className="p-4 border-t">
+              <div className="flex space-x-2">
+                <input
+                  type="text"
+                  value={inputText}
+                  onChange={(e) => setInputText(e.target.value)}
+                  onKeyPress={handleKeyPress}
+                  placeholder="Type your message..."
+                  className="flex-1 border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-green-500"
+                  disabled={isLoading}
+                />
+                <button
+                  onClick={handleSendMessage}
+                  disabled={!inputText.trim() || isLoading}
+                  className="bg-green-600 hover:bg-green-700 disabled:bg-gray-300 text-white rounded-lg p-2 transition-colors"
+                  aria-label="Send message"
+                >
+                  <Send className="h-4 w-4" />
+                </button>
+              </div>
             </div>
           </div>
-        </Card>
-      )}
-
-      {/* Mobile Responsive Styles */}
-      <style jsx>{`
-        @media (max-width: 640px) {
-          .chat-widget {
-            width: calc(100vw - 2rem);
-            height: calc(100vh - 8rem);
-            bottom: 1rem;
-            right: 1rem;
-          }
-        }
-      `}</style>
+        )}
+      </div>
     </>
   );
 };
