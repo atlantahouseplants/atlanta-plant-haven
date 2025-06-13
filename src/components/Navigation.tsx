@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -13,6 +12,7 @@ const Navigation = () => {
     { name: "Plant Doctor", href: "/plant-doctor" },
     { name: "Color Planters", href: "/color-planters" },
     { name: "Corporate", href: "/corporate" },
+    { name: "Succulents for Smiles", href: "/succulents-for-smiles" },
     { name: "About", href: "/about" },
     { name: "Contact", href: "/contact" },
   ];
@@ -46,7 +46,7 @@ const Navigation = () => {
             <div className="flex space-x-2">
               <Link to="/plant-doctor">
                 <Button className="bg-orange-600 hover:bg-orange-700 text-white">
-                  Plant Doctor - $129
+                  Plant Doctor - $149
                 </Button>
               </Link>
               <Link to="/office-plants">
@@ -86,7 +86,7 @@ const Navigation = () => {
               <div className="px-3 py-2 space-y-2">
                 <Link to="/plant-doctor">
                   <Button className="w-full bg-orange-600 hover:bg-orange-700 text-white">
-                    Plant Doctor - $129
+                    Plant Doctor - $149
                   </Button>
                 </Link>
                 <Link to="/office-plants">
