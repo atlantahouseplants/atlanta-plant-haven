@@ -6,6 +6,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { FormProvider } from "@/components/forms/FormContext";
 import FormModal from "@/components/forms/FormModal";
+import ChatWidget from "@/components/chatbot/ChatWidget";
 import Index from "./pages/Index";
 import OfficePlants from "./pages/OfficePlants";
 import PlantDoctor from "./pages/PlantDoctor";
@@ -38,6 +39,7 @@ const App = () => (
             <Route path="*" element={<NotFound />} />
           </Routes>
           <FormModal />
+          <ChatWidget />
         </BrowserRouter>
       </FormProvider>
     </TooltipProvider>
