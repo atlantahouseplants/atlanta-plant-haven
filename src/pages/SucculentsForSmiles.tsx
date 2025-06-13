@@ -1,10 +1,9 @@
-
 import React from 'react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Heart, Users, Camera, Award, Truck, FileText, Tag, Plant } from 'lucide-react';
+import { Heart, Users, Camera, Award, Truck, FileText, Tag, Flower } from 'lucide-react';
 
 const SucculentsForSmiles = () => {
   const scrollToForm = () => {
@@ -102,7 +101,7 @@ const SucculentsForSmiles = () => {
             
             <Card>
               <CardHeader className="text-center">
-                <Plant className="h-12 w-12 text-green-600 mx-auto mb-4" />
+                <Flower className="h-12 w-12 text-green-600 mx-auto mb-4" />
                 <CardTitle>Transforming Spaces</CardTitle>
               </CardHeader>
               <CardContent>
@@ -241,7 +240,7 @@ const SucculentsForSmiles = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <Card>
               <CardHeader className="text-center">
-                <Plant className="h-10 w-10 text-green-600 mx-auto mb-3" />
+                <Flower className="h-10 w-10 text-green-600 mx-auto mb-3" />
                 <CardTitle className="text-lg">Quality Mini Succulents</CardTitle>
               </CardHeader>
               <CardContent>
