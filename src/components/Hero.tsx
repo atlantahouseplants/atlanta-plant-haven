@@ -137,8 +137,8 @@ const Hero = () => {
               <div className="flex items-start text-base">
                 <span className="bg-orange-600 text-white rounded-full w-7 h-7 flex items-center justify-center text-sm mr-4 mt-0.5 flex-shrink-0">🩺</span>
                 <div>
-                  <span className="font-semibold">Plant Doctor House Call - $129</span>
-                  <p className="text-sm text-muted-foreground">Comprehensive 90-minute diagnosis, treatment, and personalized care plan</p>
+                  <span className="font-semibold">Plant Doctor House Call - $149</span>
+                  <p className="text-sm text-muted-foreground">Comprehensive 90-minute diagnosis, treatment, and personalized care plan with professional guarantee</p>
                 </div>
               </div>
               <div className="flex items-start text-base">
@@ -158,13 +158,17 @@ const Hero = () => {
             </div>
 
             <div className="space-y-3">
-              <Button 
-                onClick={() => openForm('plant-doctor')}
-                className="w-full bg-gradient-to-r from-orange-600 to-orange-500 hover:from-orange-700 hover:to-orange-600 text-white text-lg py-4 shadow-lg"
+              <a 
+                href="https://api.leadconnectorhq.com/widget/bookings/plantdoctorservice"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block"
               >
-                Book Plant Doctor Visit - $129
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
+                <Button className="w-full bg-gradient-to-r from-orange-600 to-orange-500 hover:from-orange-700 hover:to-orange-600 text-white text-lg py-4 shadow-lg">
+                  Book Plant Doctor Visit - $149
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </a>
               <Button 
                 onClick={() => openForm('home-consultation')}
                 variant="outline" 
@@ -175,7 +179,7 @@ const Hero = () => {
             </div>
             
             <p className="text-sm text-center text-muted-foreground mt-4">
-              ✓ Same-week appointments • ✓ Expert diagnosis • ✓ Professional results
+              ✓ Same-week appointments • ✓ Expert diagnosis • ✓ Professional guarantee
             </p>
           </div>
         </div>
