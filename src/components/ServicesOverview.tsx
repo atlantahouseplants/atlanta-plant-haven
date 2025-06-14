@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
@@ -57,8 +56,8 @@ const ServicesOverview = () => {
       title: "Plant Doctor House Calls",
       description: "Comprehensive 90-minute plant health consultation and treatment by our certified plant doctor.",
       details: "Perfect for plant parents with struggling plants or pest issues",
-      action: () => openForm('plant-doctor'),
-      cta: "Book Appointment - $129",
+      action: "https://api.leadconnectorhq.com/widget/bookings/plantdoctorservice",
+      cta: "Book Appointment - $149",
       learnMore: "/plant-doctor",
       popular: true,
       image: "/lovable-uploads/cc2424e3-3025-4f30-be79-6a4763fca0a5.png"
@@ -212,13 +211,29 @@ const ServicesOverview = () => {
                     {service.details}
                   </p>
                   <div className="space-y-3">
-                    <Button 
-                      onClick={service.action}
-                      className={`w-full ${service.popular ? 'bg-orange-600 hover:bg-orange-700' : 'bg-blue-600 hover:bg-blue-700'} text-white`}
-                    >
-                      {service.cta}
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </Button>
+                    {typeof service.action === 'string' ? (
+                      <a 
+                        href={service.action}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block"
+                      >
+                        <Button 
+                          className={`w-full ${service.popular ? 'bg-orange-600 hover:bg-orange-700' : 'bg-blue-600 hover:bg-blue-700'} text-white`}
+                        >
+                          {service.cta}
+                          <ArrowRight className="ml-2 h-4 w-4" />
+                        </Button>
+                      </a>
+                    ) : (
+                      <Button 
+                        onClick={service.action}
+                        className={`w-full ${service.popular ? 'bg-orange-600 hover:bg-orange-700' : 'bg-blue-600 hover:bg-blue-700'} text-white`}
+                      >
+                        {service.cta}
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                      </Button>
+                    )}
                     <Button 
                       asChild
                       variant="outline" 
@@ -257,14 +272,19 @@ const ServicesOverview = () => {
           <p className="text-lg text-green-200 font-medium">- Nick, Founder & Your Plant Doctor</p>
           
           <div className="mt-8">
-            <Button 
-              onClick={() => openForm('plant-doctor')}
-              variant="outline"
-              className="bg-white text-green-600 border-white hover:bg-green-50 px-8 py-3"
+            <a 
+              href="https://api.leadconnectorhq.com/widget/bookings/plantdoctorservice"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              Book Plant Doctor Visit
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
+              <Button 
+                variant="outline"
+                className="bg-white text-green-600 border-white hover:bg-green-50 px-8 py-3"
+              >
+                Book Plant Doctor Visit
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </a>
           </div>
         </div>
       </div>
