@@ -497,11 +497,12 @@ const PlantDoctor = () => {
           </div>
           <div className="text-center">
             <iframe 
-              src="https://widgets.sociablekit.com/google-reviews/iframe/25436"
-              width="100%" 
-              height="400"
-              className="border-none rounded-lg"
-              title="Google Reviews"
+              className='lc_reviews_widget rounded-lg border-none' 
+              src='https://reputationhub.site/reputation/widgets/review_widget/wTvEeXunnbLa5kBRFbc4' 
+              frameBorder='0' 
+              scrolling='no' 
+              style={{minWidth: '100%', width: '100%', height: '400px'}}
+              title="Customer Reviews"
             />
           </div>
         </div>
@@ -533,8 +534,9 @@ const PlantDoctor = () => {
 
       <Footer />
       
-      {/* Script for booking widget */}
+      {/* Scripts for widgets */}
       <script src="https://link.msgsndr.com/js/form_embed.js" type="text/javascript"></script>
+      <script type='text/javascript' src='https://reputationhub.site/reputation/assets/review-widget.js'></script>
     </div>
   );
 };
