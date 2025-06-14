@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -44,11 +45,15 @@ const Navigation = () => {
               </Link>
             ))}
             <div className="flex space-x-2">
-              <Link to="/plant-doctor">
+              <a 
+                href="https://api.leadconnectorhq.com/widget/bookings/plantdoctorservice"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Button className="bg-orange-600 hover:bg-orange-700 text-white">
                   Plant Doctor - $149
                 </Button>
-              </Link>
+              </a>
               <Link to="/office-plants">
                 <Button className="bg-green-600 hover:bg-green-700 text-white">
                   FREE Design
@@ -84,11 +89,15 @@ const Navigation = () => {
                 </Link>
               ))}
               <div className="px-3 py-2 space-y-2">
-                <Link to="/plant-doctor">
+                <a 
+                  href="https://api.leadconnectorhq.com/widget/bookings/plantdoctorservice"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Button className="w-full bg-orange-600 hover:bg-orange-700 text-white">
                     Plant Doctor - $149
                   </Button>
-                </Link>
+                </a>
                 <Link to="/office-plants">
                   <Button className="w-full bg-green-600 hover:bg-green-700 text-white">
                     FREE Design
