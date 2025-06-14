@@ -1,3 +1,4 @@
+
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -9,6 +10,11 @@ const OfficePlants = () => {
   const { openForm } = useForm();
 
   const portfolioImages = [
+    {
+      src: "/lovable-uploads/e1930419-ea64-46bc-b42a-ed13b1f43ab1.png",
+      alt: "Professional monstera office plant installation",
+      title: "Executive Monstera Installation"
+    },
     {
       src: "/lovable-uploads/30a84ea6-f741-4055-a3a0-8b27f2d24782.png",
       alt: "Modern office plant in elegant white planter",
@@ -191,8 +197,8 @@ const OfficePlants = () => {
             
             <div className="relative">
               <img
-                src="/lovable-uploads/e1930419-ea64-46bc-b42a-ed13b1f43ab1.png"
-                alt="Professional office plant installation showcase"
+                src="/lovable-uploads/509a280d-6396-4ab6-8e28-f171ebe74070.png"
+                alt="Beautiful office plants by windows with city view"
                 className="w-full rounded-2xl shadow-2xl"
               />
             </div>
