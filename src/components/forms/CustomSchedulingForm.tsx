@@ -5,7 +5,6 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent } from "@/components/ui/card";
-import { Upload, X } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const CustomSchedulingForm = () => {
@@ -15,7 +14,6 @@ const CustomSchedulingForm = () => {
     phone: '',
     situation: '',
   });
-  const [files, setFiles] = useState<File[]>([]);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
@@ -24,41 +22,13 @@ const CustomSchedulingForm = () => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (e.target.files) {
-      const newFiles = Array.from(e.target.files);
-      setFiles(prev => [...prev, ...newFiles]);
-    }
-  };
-
-  const removeFile = (index: number) => {
-    setFiles(prev => prev.filter((_, i) => i !== index));
-  };
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
     try {
-      // Convert files to base64 for webhook
-      const filePromises = files.map(file => {
-        return new Promise((resolve) => {
-          const reader = new FileReader();
-          reader.onload = () => resolve({
-            name: file.name,
-            type: file.type,
-            size: file.size,
-            data: reader.result
-          });
-          reader.readAsDataURL(file);
-        });
-      });
-
-      const fileData = await Promise.all(filePromises);
-
       const payload = {
         ...formData,
-        files: fileData,
         timestamp: new Date().toISOString(),
         formType: 'custom-scheduling'
       };
@@ -84,7 +54,6 @@ const CustomSchedulingForm = () => {
           phone: '',
           situation: '',
         });
-        setFiles([]);
       } else {
         throw new Error('Failed to submit');
       }
@@ -150,47 +119,6 @@ const CustomSchedulingForm = () => {
               placeholder="Tell us about your plant problems, what you've tried, or any specific concerns..."
               rows={4}
             />
-          </div>
-
-          <div>
-            <Label htmlFor="files">Upload Photos or Videos (Optional)</Label>
-            <div className="mt-2">
-              <Input
-                id="files"
-                type="file"
-                onChange={handleFileChange}
-                multiple
-                accept="image/*,video/*"
-                className="hidden"
-              />
-              <Button
-                type="button"
-                variant="outline"
-                onClick={() => document.getElementById('files')?.click()}
-                className="w-full"
-              >
-                <Upload className="h-4 w-4 mr-2" />
-                Choose Files
-              </Button>
-              
-              {files.length > 0 && (
-                <div className="mt-2 space-y-2">
-                  {files.map((file, index) => (
-                    <div key={index} className="flex items-center justify-between bg-gray-50 p-2 rounded">
-                      <span className="text-sm">{file.name}</span>
-                      <Button
-                        type="button"
-                        variant="ghost"
-                        size="sm"
-                        onClick={() => removeFile(index)}
-                      >
-                        <X className="h-4 w-4" />
-                      </Button>
-                    </div>
-                  ))}
-                </div>
-              )}
-            </div>
           </div>
 
           <Button

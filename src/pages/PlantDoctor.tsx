@@ -249,12 +249,19 @@ const PlantDoctor = () => {
                 <p className="text-muted-foreground mb-6">
                   Schedule your $149 plant doctor visit. Most appointments available within the week.
                 </p>
-                <Button 
-                  onClick={() => openForm('plant-doctor')}
-                  className="w-full bg-orange-600 hover:bg-orange-700 text-white py-3 text-lg mb-4"
-                >
-                  Book Plant Doctor Visit - $149
-                </Button>
+                
+                {/* Booking Widget */}
+                <div className="mb-4">
+                  <iframe 
+                    src="https://app.acuityscheduling.com/schedule.php?owner=32849351" 
+                    title="Schedule Appointment" 
+                    width="100%" 
+                    height="800"
+                    frameBorder="0"
+                    className="rounded-lg"
+                  />
+                </div>
+                
                 <p className="text-sm text-muted-foreground">
                   ✓ 90-minute comprehensive visit<br/>
                   ✓ Same-week appointments available
