@@ -3,8 +3,9 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Stethoscope, Home, CheckCircle, Phone, Mail, Leaf, Heart, Award, GraduationCap } from "lucide-react";
+import { Stethoscope, Home, CheckCircle, Mail, Leaf, Heart, Award, GraduationCap } from "lucide-react";
 import { useForm } from "@/components/forms/FormContext";
+import CustomSchedulingForm from "@/components/forms/CustomSchedulingForm";
 
 const PlantDoctor = () => {
   const { openForm } = useForm();
@@ -40,12 +41,6 @@ const PlantDoctor = () => {
                   className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 text-lg"
                 >
                   Book Plant Doctor Visit - $149
-                </Button>
-                <Button 
-                  variant="outline" 
-                  className="border-green-600 text-green-600 hover:bg-green-50 px-8 py-3"
-                >
-                  Call Now: (770) 123-4567
                 </Button>
               </div>
             </div>
@@ -268,24 +263,15 @@ const PlantDoctor = () => {
             </Card>
 
             <Card className="border-2 border-green-200">
-              <CardContent className="p-8 text-center">
-                <div className="bg-green-100 p-4 rounded-lg mb-6">
-                  <Phone className="h-12 w-12 text-green-600 mx-auto" />
+              <CardContent className="p-8">
+                <div className="bg-green-100 p-4 rounded-lg mb-6 text-center">
+                  <Mail className="h-12 w-12 text-green-600 mx-auto" />
                 </div>
-                <h3 className="text-2xl font-bold mb-4">Need Custom Scheduling?</h3>
-                <p className="text-muted-foreground mb-6">
+                <h3 className="text-2xl font-bold mb-4 text-center">Need Custom Scheduling?</h3>
+                <p className="text-muted-foreground mb-6 text-center">
                   Contact Nick directly to discuss your situation or if you need availability not shown on our calendar.
                 </p>
-                <Button 
-                  variant="outline"
-                  className="w-full border-green-600 text-green-600 hover:bg-green-50 py-3 text-lg mb-4"
-                >
-                  <Phone className="h-5 w-5 mr-2" />
-                  Call (770) 123-4567
-                </Button>
-                <p className="text-sm text-muted-foreground">
-                  Nick will assess if the service is right for your situation and work you into his regular routes if possible.
-                </p>
+                <CustomSchedulingForm />
               </CardContent>
             </Card>
           </div>
@@ -522,21 +508,13 @@ const PlantDoctor = () => {
           <p className="text-xl mb-8 opacity-90">
             Professional plant care is just one appointment away. Give your plants the expert attention they deserve.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex justify-center">
             <Button 
               onClick={() => openForm('plant-doctor')}
               size="lg"
               className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 text-lg"
             >
               Book Plant Doctor Visit - $149
-            </Button>
-            <Button 
-              size="lg"
-              variant="outline" 
-              className="bg-transparent border-white text-white hover:bg-white hover:text-green-600 px-8 py-4 text-lg"
-            >
-              <Phone className="h-5 w-5 mr-2" />
-              Call Now: (770) 123-4567
             </Button>
           </div>
           <p className="text-sm mt-6 opacity-75">
