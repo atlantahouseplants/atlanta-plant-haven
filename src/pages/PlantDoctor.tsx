@@ -4,11 +4,12 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Stethoscope, Home, CheckCircle, Mail, Leaf, Heart, Award, GraduationCap } from "lucide-react";
-import { useForm } from "@/components/forms/FormContext";
 import CustomSchedulingForm from "@/components/forms/CustomSchedulingForm";
 
 const PlantDoctor = () => {
-  const { openForm } = useForm();
+  const handleBookingClick = () => {
+    window.open('https://api.leadconnectorhq.com/widget/bookings/plantdoctorservice', '_blank');
+  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -37,7 +38,7 @@ const PlantDoctor = () => {
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button 
-                  onClick={() => openForm('plant-doctor')}
+                  onClick={handleBookingClick}
                   className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 text-lg"
                 >
                   Book Plant Doctor Visit - $149
@@ -253,12 +254,12 @@ const PlantDoctor = () => {
                 {/* Booking Widget */}
                 <div className="mb-4">
                   <iframe 
-                    src="https://app.acuityscheduling.com/schedule.php?owner=32849351" 
-                    title="Schedule Appointment" 
-                    width="100%" 
-                    height="800"
-                    frameBorder="0"
+                    src="https://api.leadconnectorhq.com/widget/booking/J3NNAtlNcdw0V75i8LX2" 
+                    style={{width: '100%', border: 'none', overflow: 'hidden'}} 
+                    scrolling="no" 
+                    id="DEF98LO6WWc6OgMYWE0E_1749942475268"
                     className="rounded-lg"
+                    height="800"
                   />
                 </div>
                 
@@ -517,7 +518,7 @@ const PlantDoctor = () => {
           </p>
           <div className="flex justify-center">
             <Button 
-              onClick={() => openForm('plant-doctor')}
+              onClick={handleBookingClick}
               size="lg"
               className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 text-lg"
             >
@@ -531,6 +532,9 @@ const PlantDoctor = () => {
       </section>
 
       <Footer />
+      
+      {/* Script for booking widget */}
+      <script src="https://link.msgsndr.com/js/form_embed.js" type="text/javascript"></script>
     </div>
   );
 };
