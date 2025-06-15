@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { Award, Users, Heart, Building2 } from "lucide-react";
+import { Award, Users, Heart, Building2, Star, CheckCircle } from "lucide-react";
 
 const CorporateSuccess = () => {
   const successStats = [
@@ -26,16 +26,46 @@ const CorporateSuccess = () => {
     }
   ];
 
+  const clientLogos = [
+    "Georgia Tech", "Emory University", "Atlanta Public Schools", "Children's Healthcare of Atlanta",
+    "SunTrust Plaza", "Buckhead Office Complex", "Atlantic Station", "Downtown Atlanta Hotels"
+  ];
+
+  const successStories = [
+    {
+      company: "Georgia Tech",
+      event: "Employee Appreciation Week",
+      quantity: "2,000 mini succulents",
+      result: "100% positive feedback, boosted campus morale",
+      image: "/lovable-uploads/f816d29c-4694-4186-8770-9e16ab935892.png"
+    },
+    {
+      company: "Children's Healthcare of Atlanta",
+      event: "Wellness Initiative",
+      quantity: "500 air plant terrariums",
+      result: "Reduced stress levels, improved workplace atmosphere",
+      image: "/lovable-uploads/15d3c644-63db-450b-84cb-57bade84ab3f.png"
+    },
+    {
+      company: "Emory University",
+      event: "Faculty Appreciation",
+      quantity: "300 custom arrangements",
+      result: "Strengthened university culture, lasting impact",
+      image: "/lovable-uploads/7ee3e1df-8037-4a61-8b9a-0fbc4fea25e5.png"
+    }
+  ];
+
   return (
     <section className="py-20 bg-green-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Proven Success with Atlanta's Leading Companies
+            Trusted by Atlanta's Leading Organizations
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            From individual offices to campus-wide installations, we deliver results that grow your business.
+            From corporate gifting to team workshops, we create meaningful plant experiences 
+            that strengthen relationships and boost morale across Atlanta.
           </p>
         </div>
 
@@ -52,77 +82,69 @@ const CorporateSuccess = () => {
           ))}
         </div>
 
-        {/* Georgia Tech Case Study */}
-        <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-          <div className="grid lg:grid-cols-2 gap-0">
-            <div className="p-8 lg:p-12">
-              <div className="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-medium inline-block mb-4">
-                🏆 Featured Case Study
-              </div>
-              <h3 className="text-2xl font-bold text-foreground mb-4">
-                Georgia Tech: 2,000 Mini Succulents for Employee Appreciation
-              </h3>
-              <p className="text-lg text-muted-foreground mb-6">
-                When Georgia Tech needed a meaningful way to show appreciation to their entire campus staff, 
-                they trusted us to deliver 2,000 beautiful mini succulents with custom care instructions.
-              </p>
-              <div className="space-y-3 mb-6">
-                <div className="flex items-center text-sm">
-                  <span className="bg-green-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs mr-3">✓</span>
-                  <span>Delivered across multiple campus locations</span>
-                </div>
-                <div className="flex items-center text-sm">
-                  <span className="bg-green-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs mr-3">✓</span>
-                  <span>Custom branded care cards included</span>
-                </div>
-                <div className="flex items-center text-sm">
-                  <span className="bg-green-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs mr-3">✓</span>
-                  <span>Coordinated with HR for seamless distribution</span>
-                </div>
-                <div className="flex items-center text-sm">
-                  <span className="bg-green-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs mr-3">✓</span>
-                  <span>100% positive feedback from recipients</span>
-                </div>
-              </div>
-              <Button className="bg-green-600 hover:bg-green-700 text-white">
-                Request Your Corporate Quote
-              </Button>
-            </div>
-            <div className="lg:h-full">
-              <img
-                src="/lovable-uploads/f816d29c-4694-4186-8770-9e16ab935892.png"
-                alt="Georgia Tech corporate succulent delivery"
-                className="w-full h-64 lg:h-full object-cover"
-              />
-            </div>
-          </div>
-        </div>
-
-        {/* Corporate Calculator Widget */}
-        <div className="bg-white p-8 rounded-lg shadow-lg mt-12 max-w-2xl mx-auto text-center">
-          <h3 className="text-2xl font-bold text-foreground mb-4">
-            Quick Corporate Order Calculator
-          </h3>
-          <p className="text-muted-foreground mb-6">
-            How many team members do you want to appreciate?
-          </p>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
-            {[
-              { count: "50", price: "$350" },
-              { count: "100", price: "$650" },
-              { count: "500", price: "$2,750" },
-              { count: "1000+", price: "Call for pricing" }
-            ].map((option, index) => (
-              <div key={index} className="border-2 border-green-200 rounded-lg p-4 hover:border-green-600 cursor-pointer transition-colors">
-                <div className="text-2xl font-bold text-green-600">{option.count}</div>
-                <div className="text-sm text-muted-foreground">plants</div>
-                <div className="text-lg font-semibold">{option.price}</div>
+        {/* Client Logos */}
+        <div className="text-center mb-16">
+          <h3 className="text-2xl font-bold text-foreground mb-8">Proudly Serving</h3>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            {clientLogos.map((client, index) => (
+              <div key={index} className="bg-white p-4 rounded-lg shadow-sm">
+                <p className="text-sm font-medium text-muted-foreground">{client}</p>
               </div>
             ))}
           </div>
-          <Button className="bg-green-600 hover:bg-green-700 text-white">
-            Get Exact Quote for My Team Size
-          </Button>
+        </div>
+
+        {/* Success Stories */}
+        <div className="mb-16">
+          <h3 className="text-2xl font-bold text-center text-foreground mb-8">Client Success Stories</h3>
+          <div className="grid md:grid-cols-3 gap-8">
+            {successStories.map((story, index) => (
+              <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden">
+                <img
+                  src={story.image}
+                  alt={`${story.company} success story`}
+                  className="w-full h-48 object-cover"
+                />
+                <div className="p-6">
+                  <div className="flex items-center mb-3">
+                    <Star className="h-5 w-5 text-yellow-500 mr-1" />
+                    <Star className="h-5 w-5 text-yellow-500 mr-1" />
+                    <Star className="h-5 w-5 text-yellow-500 mr-1" />
+                    <Star className="h-5 w-5 text-yellow-500 mr-1" />
+                    <Star className="h-5 w-5 text-yellow-500 mr-1" />
+                  </div>
+                  <h4 className="text-lg font-bold text-foreground mb-2">{story.company}</h4>
+                  <p className="text-sm text-muted-foreground mb-2">{story.event}</p>
+                  <p className="text-sm font-medium text-green-600 mb-3">{story.quantity}</p>
+                  <p className="text-sm text-muted-foreground">{story.result}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Why Plants Beat Traditional Gifts */}
+        <div className="bg-white rounded-lg p-8 mb-8">
+          <h3 className="text-2xl font-bold text-center text-foreground mb-8">
+            Why Plant Gifts Beat Corporate Mugs Every Time
+          </h3>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <Heart className="h-12 w-12 text-green-600 mx-auto mb-4" />
+              <h4 className="text-xl font-semibold mb-3">Meaningful Connection</h4>
+              <p className="text-muted-foreground">Plants create lasting emotional connections. Your team will remember the company that gave them life, not another mug for the cabinet.</p>
+            </div>
+            <div className="text-center">
+              <CheckCircle className="h-12 w-12 text-green-600 mx-auto mb-4" />
+              <h4 className="text-xl font-semibold mb-3">Proven Health Benefits</h4>
+              <p className="text-muted-foreground">NASA studies show plants improve air quality by 87%, reduce stress by 37%, and boost productivity by 15% - gifts that keep giving.</p>
+            </div>
+            <div className="text-center">
+              <Award className="h-12 w-12 text-green-600 mx-auto mb-4" />
+              <h4 className="text-xl font-semibold mb-3">Unique & Memorable</h4>
+              <p className="text-muted-foreground">Stand out from the sea of branded merchandise. Plants show you care about your team's wellbeing and create conversation starters.</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
