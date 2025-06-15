@@ -50,7 +50,8 @@ const PlantDoctorForm = () => {
         }
       };
 
-      await fetch('https://hook.us1.make.com/0i3sxbwb2i37n6817qgnjlje844q8l7o', {
+      // UPDATED WEBHOOK URL BELOW — each form now uses its own webhook for simplicity
+      await fetch('https://hook.us1.make.com/i3qrwxko2b42mpgrtj4giqnq8wi2op3e', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
