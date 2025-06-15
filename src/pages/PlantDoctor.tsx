@@ -4,11 +4,11 @@ import Footer from "@/components/Footer";
 import PlantDoctorHero from "@/components/plant-doctor/PlantDoctorHero";
 import CommonUseCases from "@/components/plant-doctor/CommonUseCases";
 import WhatsIncluded from "@/components/plant-doctor/WhatsIncluded";
-import WhatToExpect from "@/components/plant-doctor/WhatToExpect";
+import WhatToExpected from "@/components/plant-doctor/WhatToExpect";
 import BookingOptions from "@/components/plant-doctor/BookingOptions";
 import WhyChooseNick from "@/components/plant-doctor/WhyChooseNick";
-import BeforeAfterTransformations from "@/components/plant-doctor/BeforeAfterTransformations";
 import PlantDoctorGallery from "@/components/plant-doctor/PlantDoctorGallery";
+import BeforeAfterTransformations from "@/components/plant-doctor/BeforeAfterTransformations";
 import PlantDoctorFAQ from "@/components/plant-doctor/PlantDoctorFAQ";
 import PlantDoctorReviews from "@/components/plant-doctor/PlantDoctorReviews";
 import PlantDoctorFinalCTA from "@/components/plant-doctor/PlantDoctorFinalCTA";
@@ -25,11 +25,11 @@ const PlantDoctor = () => {
       <PlantDoctorHero onBookingClick={handleBookingClick} />
       <CommonUseCases />
       <WhatsIncluded />
-      <WhatToExpect />
+      <WhatToExpected />
       <BookingOptions />
       <WhyChooseNick />
-      <BeforeAfterTransformations onBookingClick={handleBookingClick} />
       <PlantDoctorGallery />
+      <BeforeAfterTransformations onBookingClick={handleBookingClick} />
       <PlantDoctorFAQ />
       <PlantDoctorReviews />
       <PlantDoctorFinalCTA onBookingClick={handleBookingClick} />
