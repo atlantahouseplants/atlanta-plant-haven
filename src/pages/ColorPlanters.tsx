@@ -257,9 +257,14 @@ const ColorPlanters = () => {
             {/* Indoor Gallery */}
             <div>
               <h4 className="text-2xl font-semibold mb-6 text-pink-600">Indoor Color Bowls</h4>
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid md:grid-cols-3 gap-6 mb-6">
                 <img src="/lovable-uploads/d3c07ae9-0fa4-4634-9be8-88912ceb64f6.png" alt="Handmade indoor color bowl centerpiece" className="w-full h-64 object-cover rounded-lg shadow-md" />
                 <img src="/lovable-uploads/c7cbb1f4-171d-4217-ae52-4e84adc6503f.png" alt="Custom indoor planter arrangement with orchids" className="w-full h-64 object-cover rounded-lg shadow-md" />
+                <img src="/lovable-uploads/6f8be497-c091-4462-a2f1-4bafb12effea.png" alt="Conference table centerpiece with anthurium and tropical plants" className="w-full h-64 object-cover rounded-lg shadow-md" />
+              </div>
+              <div className="grid md:grid-cols-2 gap-6">
+                <img src="/lovable-uploads/c2622f62-937e-49d4-a647-df30191973e4.png" alt="Executive office color bowl with mixed tropical plants" className="w-full h-64 object-cover rounded-lg shadow-md" />
+                <img src="/lovable-uploads/63df0b99-19df-41a5-b30f-002f4ddc8191.png" alt="Vibrant color bowl arrangement for reception area" className="w-full h-64 object-cover rounded-lg shadow-md" />
               </div>
             </div>
           </div>
