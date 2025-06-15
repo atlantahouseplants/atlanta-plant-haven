@@ -344,37 +344,37 @@ const OfficePlants = () => {
             <Card>
               <CardContent className="p-8">
                 <div className="flex items-center mb-6">
-                  <Leaf className="h-12 w-12 text-blue-600 mr-4" />
+                  <Shield className="h-12 w-12 text-blue-600 mr-4" />
                   <div>
-                    <h3 className="text-2xl font-bold mb-2">Design Only</h3>
-                    <p className="text-blue-600 font-semibold">$199 consultation (credited back)</p>
+                    <h3 className="text-2xl font-bold mb-2">Plant Care Services</h3>
+                    <p className="text-blue-600 font-semibold">Starting at $99 per visit</p>
                   </div>
                 </div>
                 
                 <p className="text-muted-foreground mb-6">
-                  Perfect if you want professional design with your own maintenance
+                  Perfect if you already have plants or want to switch plant care providers
                 </p>
                 
                 <ul className="space-y-3 mb-8">
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" />
-                    <span>Professional office consultation</span>
+                    <span>Professional assessment of existing plants</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" />
-                    <span>Custom plant selection and layout design</span>
+                    <span>Comprehensive plant health evaluation</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" />
-                    <span>Professional plant installation</span>
+                    <span>Regular watering, fertilizing, and pruning</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" />
-                    <span>Detailed care instructions and training</span>
+                    <span>Pest and disease treatment</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" />
-                    <span>$199 consultation fee credited toward installation</span>
+                    <span>Plant replacement for unhealthy specimens</span>
                   </li>
                 </ul>
                 
@@ -382,7 +382,7 @@ const OfficePlants = () => {
                   onClick={() => openForm('business-quote')}
                   className="w-full bg-blue-600 hover:bg-blue-700 text-white text-lg py-3"
                 >
-                  Schedule Design Consultation
+                  Get Plant Care Quote
                 </Button>
               </CardContent>
             </Card>
