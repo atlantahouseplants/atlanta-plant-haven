@@ -26,6 +26,41 @@ const OfficePlants = () => {
       title: "Corporate Lobby Installation"
     },
     {
+      src: "/lovable-uploads/e8ad58e3-1431-4485-9ea4-883ca5e66a7c.png",
+      alt: "Professional office plant divider with mixed tropical plants",
+      title: "Modern Office Divider Design"
+    },
+    {
+      src: "/lovable-uploads/359adb5c-b0c1-43a3-a015-1a817a3eff70.png",
+      alt: "Vibrant office planter with lush green foliage",
+      title: "Workplace Wellness Display"
+    },
+    {
+      src: "/lovable-uploads/4b18516d-7bc4-4140-aa45-ac98dc21e101.png",
+      alt: "Bird of paradise plant by office window with city view",
+      title: "Executive Window Installation"
+    },
+    {
+      src: "/lovable-uploads/9d68eddf-931a-4e64-8521-5a6d639f9e9b.png",
+      alt: "Rubber tree plant in modern black planter by office window",
+      title: "Contemporary Office Corner"
+    },
+    {
+      src: "/lovable-uploads/fbd190b7-b2a3-46e4-91e3-a74daa907932.png",
+      alt: "Money tree plant in white planter in modern office lobby",
+      title: "Bright Lobby Centerpiece"
+    },
+    {
+      src: "/lovable-uploads/0d2b0535-9e7a-417b-a65e-66fa2e7aa4a6.png",
+      alt: "Office plants creating natural atmosphere in modern workspace",
+      title: "Employee Break Area Design"
+    },
+    {
+      src: "/lovable-uploads/bf09ba8f-0d92-4f1c-a65d-f3158a53adcd.png",
+      alt: "Large bird of paradise plant in sleek black planter",
+      title: "Statement Reception Plant"
+    },
+    {
       src: "/lovable-uploads/daf81320-b43b-4b04-be7f-de89d266eb62.png",
       alt: "Large palm plant in modern office setting with ocean view",
       title: "Modern Office Palm Installation"
