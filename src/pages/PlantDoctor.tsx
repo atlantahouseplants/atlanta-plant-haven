@@ -533,10 +533,10 @@ const PlantDoctor = () => {
               </div>
             </div>
 
-            {/* Third Before/After Comparison - Rubber Plants */}
+            {/* Third Before/After Comparison - Rubber Plants (FIXED) */}
             <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
               <div className="grid lg:grid-cols-2 gap-0">
-                {/* Before Image */}
+                {/* Before Image - Now showing the struggling plant */}
                 <div className="relative">
                   <div className="absolute top-4 left-4 z-10">
                     <span className="bg-red-600 text-white px-4 py-2 rounded-full font-semibold text-sm">
@@ -544,7 +544,7 @@ const PlantDoctor = () => {
                     </span>
                   </div>
                   <img 
-                    src="/lovable-uploads/e87cc43c-6531-4cd6-99c5-7f957c7cb232.png"
+                    src="/lovable-uploads/bc3f5f45-3dba-4329-a207-3bea64600ef6.png"
                     alt="Rubber plant before treatment - showing sparse growth and poor condition"
                     className="w-full h-80 lg:h-96 object-cover"
                   />
@@ -557,7 +557,7 @@ const PlantDoctor = () => {
                   </div>
                 </div>
 
-                {/* After Image */}
+                {/* After Image - Now showing the healthy plants */}
                 <div className="relative">
                   <div className="absolute top-4 left-4 z-10">
                     <span className="bg-green-600 text-white px-4 py-2 rounded-full font-semibold text-sm">
@@ -565,7 +565,7 @@ const PlantDoctor = () => {
                     </span>
                   </div>
                   <img 
-                    src="/lovable-uploads/bc3f5f45-3dba-4329-a207-3bea64600ef6.png"
+                    src="/lovable-uploads/e87cc43c-6531-4cd6-99c5-7f957c7cb232.png"
                     alt="Rubber plants after treatment - showing lush, healthy growth"
                     className="w-full h-80 lg:h-96 object-cover"
                   />
@@ -693,10 +693,10 @@ const PlantDoctor = () => {
               </div>
             </div>
 
-            {/* Fifth Before/After Comparison - Palm Plant */}
+            {/* Fifth Before/After Comparison - Palm Plant (FIXED) */}
             <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
               <div className="grid lg:grid-cols-2 gap-0">
-                {/* Before Image */}
+                {/* Before Image - Now showing the struggling palm */}
                 <div className="relative">
                   <div className="absolute top-4 left-4 z-10">
                     <span className="bg-red-600 text-white px-4 py-2 rounded-full font-semibold text-sm">
@@ -704,7 +704,7 @@ const PlantDoctor = () => {
                     </span>
                   </div>
                   <img 
-                    src="/lovable-uploads/fb7e6b4c-0fab-4f87-b2e0-2db548134229.png"
+                    src="/lovable-uploads/27ae64dd-28fd-4ad5-896b-047a9f7be996.png"
                     alt="Palm plant before treatment - showing browning tips and poor growth"
                     className="w-full h-80 lg:h-96 object-cover"
                   />
@@ -717,7 +717,7 @@ const PlantDoctor = () => {
                   </div>
                 </div>
 
-                {/* After Image */}
+                {/* After Image - Now showing the healthy palm */}
                 <div className="relative">
                   <div className="absolute top-4 left-4 z-10">
                     <span className="bg-green-600 text-white px-4 py-2 rounded-full font-semibold text-sm">
@@ -725,7 +725,7 @@ const PlantDoctor = () => {
                     </span>
                   </div>
                   <img 
-                    src="/lovable-uploads/27ae64dd-28fd-4ad5-896b-047a9f7be996.png"
+                    src="/lovable-uploads/fb7e6b4c-0fab-4f87-b2e0-2db548134229.png"
                     alt="Palm plant after treatment - showing healthy, vibrant growth"
                     className="w-full h-80 lg:h-96 object-cover"
                   />
