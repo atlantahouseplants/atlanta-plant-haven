@@ -1,4 +1,3 @@
-
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -75,17 +74,24 @@ const Corporate = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
       
-      {/* Hero Section */}
-      <section className="pt-24 pb-16 bg-gradient-to-br from-green-50 to-blue-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Hero Section with Background */}
+      <section className="pt-24 pb-16 relative overflow-hidden">
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: "url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070')",
+          }}
+        />
+        <div className="absolute inset-0 bg-green-900/75" />
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <div className="inline-block bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-medium mb-6">
               🏢 Trusted by 500+ Atlanta Organizations
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Business Plant Solutions
             </h1>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
+            <p className="text-xl text-green-50 max-w-3xl mx-auto mb-8">
               Transform your corporate gifting and team experiences with meaningful plant solutions. 
               We create custom plant gifts and workshops for businesses, universities, schools, 
               and organizations throughout Atlanta.
@@ -132,18 +138,6 @@ const Corporate = () => {
               </div>
               <div className="text-3xl font-bold text-green-600 mb-2">15+</div>
               <p className="text-muted-foreground font-medium">Years of Plant Expertise</p>
-            </div>
-          </div>
-
-          {/* Client Logos */}
-          <div className="text-center mb-16">
-            <h3 className="text-2xl font-bold text-foreground mb-8">Proudly Serving Atlanta's Leading Organizations</h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-              {["Georgia Tech", "Emory University", "Atlanta Public Schools", "Children's Healthcare of Atlanta", "SunTrust Plaza", "Buckhead Office Complex", "Atlantic Station", "Downtown Atlanta Hotels"].map((client, index) => (
-                <div key={index} className="bg-gray-50 p-4 rounded-lg">
-                  <p className="text-sm font-medium text-muted-foreground">{client}</p>
-                </div>
-              ))}
             </div>
           </div>
 
@@ -203,6 +197,12 @@ const Corporate = () => {
             {/* Corporate Gifting */}
             <div>
               <div className="text-center mb-8">
+                <div 
+                  className="w-full h-48 bg-cover bg-center rounded-lg mb-6"
+                  style={{
+                    backgroundImage: "url('https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?q=80&w=2070')",
+                  }}
+                />
                 <Gift className="h-16 w-16 text-green-600 mx-auto mb-4" />
                 <h3 className="text-3xl font-bold text-foreground mb-4">Corporate Plant Gifting</h3>
                 <p className="text-lg text-muted-foreground">
@@ -267,6 +267,12 @@ const Corporate = () => {
             {/* Team Building Workshops */}
             <div>
               <div className="text-center mb-8">
+                <div 
+                  className="w-full h-48 bg-cover bg-center rounded-lg mb-6"
+                  style={{
+                    backgroundImage: "url('https://images.unsplash.com/photo-1721322800607-8c38375eef04?q=80&w=2070')",
+                  }}
+                />
                 <Users className="h-16 w-16 text-blue-600 mx-auto mb-4" />
                 <h3 className="text-3xl font-bold text-foreground mb-4">Team Building Plant Workshops</h3>
                 <p className="text-lg text-muted-foreground">
@@ -365,6 +371,7 @@ const Corporate = () => {
           <Card>
             <CardContent className="p-8">
               <form onSubmit={handleSubmit} className="space-y-6">
+                
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
                     <Label htmlFor="name">Name *</Label>
