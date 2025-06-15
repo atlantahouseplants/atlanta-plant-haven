@@ -360,6 +360,114 @@ const PlantDoctor = () => {
         </div>
       </section>
 
+      {/* Before & After Plant Transformations */}
+      <section className="py-20 bg-gradient-to-br from-green-50 to-blue-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+              Real Results: Before & After Plant Transformations
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              See the dramatic improvements Nick achieves with his expert plant doctor services
+            </p>
+          </div>
+
+          <div className="space-y-16">
+            {/* First Before/After Comparison */}
+            <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
+              <div className="grid lg:grid-cols-2 gap-0">
+                {/* Before Image */}
+                <div className="relative">
+                  <div className="absolute top-4 left-4 z-10">
+                    <span className="bg-red-600 text-white px-4 py-2 rounded-full font-semibold text-sm">
+                      BEFORE
+                    </span>
+                  </div>
+                  <img 
+                    src="/lovable-uploads/1f1c52f4-2411-4c57-b506-a385b08f097a.png"
+                    alt="Monstera plant before treatment - showing pest infestation"
+                    className="w-full h-80 lg:h-96 object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                  <div className="absolute bottom-4 left-4 right-4 text-white">
+                    <h3 className="text-xl font-bold mb-2">Severe Pest Infestation</h3>
+                    <p className="text-sm opacity-90">
+                      This beautiful Monstera was covered in mealybugs and powdery mildew, threatening its survival
+                    </p>
+                  </div>
+                </div>
+
+                {/* After Image */}
+                <div className="relative">
+                  <div className="absolute top-4 left-4 z-10">
+                    <span className="bg-green-600 text-white px-4 py-2 rounded-full font-semibold text-sm">
+                      AFTER
+                    </span>
+                  </div>
+                  <img 
+                    src="/lovable-uploads/dc178d9f-839d-47fa-873a-e63dc3930cc2.png"
+                    alt="Monstera plant after treatment - healthy and thriving"
+                    className="w-full h-80 lg:h-96 object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                  <div className="absolute bottom-4 left-4 right-4 text-white">
+                    <h3 className="text-xl font-bold mb-2">Completely Restored</h3>
+                    <p className="text-sm opacity-90">
+                      After Nick's expert treatment, the plant is pest-free with vibrant, healthy foliage
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Treatment Details */}
+              <div className="p-8 bg-gray-50">
+                <div className="grid md:grid-cols-3 gap-6">
+                  <div className="text-center">
+                    <div className="bg-red-100 p-3 rounded-lg mb-3 inline-block">
+                      <Stethoscope className="h-6 w-6 text-red-600" />
+                    </div>
+                    <h4 className="font-semibold mb-2">Problem Diagnosed</h4>
+                    <p className="text-sm text-muted-foreground">
+                      Severe mealybug and powdery mildew infestation threatening plant health
+                    </p>
+                  </div>
+                  <div className="text-center">
+                    <div className="bg-blue-100 p-3 rounded-lg mb-3 inline-block">
+                      <Heart className="h-6 w-6 text-blue-600" />
+                    </div>
+                    <h4 className="font-semibold mb-2">Treatment Applied</h4>
+                    <p className="text-sm text-muted-foreground">
+                      Professional pest removal, antifungal treatment, and soil rehabilitation
+                    </p>
+                  </div>
+                  <div className="text-center">
+                    <div className="bg-green-100 p-3 rounded-lg mb-3 inline-block">
+                      <CheckCircle className="h-6 w-6 text-green-600" />
+                    </div>
+                    <h4 className="font-semibold mb-2">Result Achieved</h4>
+                    <p className="text-sm text-muted-foreground">
+                      Complete recovery with ongoing care plan to prevent future issues
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="text-center mt-12">
+            <p className="text-lg text-muted-foreground mb-6">
+              Ready to see similar results with your plants?
+            </p>
+            <Button 
+              onClick={handleBookingClick}
+              className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 text-lg"
+            >
+              Book Your Plant Doctor Visit - $149
+            </Button>
+          </div>
+        </div>
+      </section>
+
       {/* Gallery */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
