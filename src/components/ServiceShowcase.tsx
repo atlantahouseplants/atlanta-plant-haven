@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Building2, Stethoscope, Gift, Heart, Palette, ArrowRight, ExternalLink } from "lucide-react";
 import { useForm } from "@/components/forms/FormContext";
@@ -14,7 +13,7 @@ const ServiceShowcase = () => {
       title: "Office Plant Design & Maintenance",
       subtitle: "Transform Your Workspace",
       description: "Complete plant solutions from FREE design to ongoing maintenance with 100% plant guarantee. Professional installation for Atlanta businesses.",
-      image: "/lovable-uploads/24794cd6-d871-433d-8ce5-1b5d61120d74.png",
+      image: "/lovable-uploads/e63a667a-2e0b-4f5e-bb35-9ca3f3059e0d.png",
       primaryCTA: {
         text: "Get FREE Quote",
         action: () => openForm('business-quote'),
