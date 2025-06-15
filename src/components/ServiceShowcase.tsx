@@ -1,5 +1,6 @@
+
 import { Button } from "@/components/ui/button";
-import { Building2, Stethoscope, Gift, Heart, Palette, ArrowRight, ExternalLink } from "lucide-react";
+import { Building2, Stethoscope, Gift, Heart, Palette, ArrowRight, ExternalLink, Paintbrush } from "lucide-react";
 import { useForm } from "@/components/forms/FormContext";
 import { Link } from "react-router-dom";
 
@@ -93,7 +94,7 @@ const ServiceShowcase = () => {
       title: "Outdoor Color Planters",
       subtitle: "Handmade Seasonal Designs",
       description: "Stunning seasonal planter designs for outdoor spaces. Handcrafted with premium materials - no two planters alike in Atlanta.",
-      image: "/lovable-uploads/c7cbb1f4-171d-4217-ae52-4e84adc6503f.png",
+      image: "/lovable-uploads/51d0a899-621b-4011-8842-d9d929d45e2a.png",
       primaryCTA: {
         text: "Get FREE Quote",
         action: () => openForm('business-quote'),
@@ -106,6 +107,26 @@ const ServiceShowcase = () => {
       },
       bgColor: "bg-white",
       features: ["Handmade designs", "Seasonal arrangements", "Premium materials", "Unique Atlanta creations"]
+    },
+    {
+      id: "handmade-color-bowls",
+      icon: Paintbrush,
+      title: "Handmade Color Bowls",
+      subtitle: "Artisan Crafted Arrangements",
+      description: "Beautiful handcrafted color bowls featuring vibrant seasonal plants. Each piece is uniquely designed by our artisans for Atlanta homes and businesses.",
+      image: "/lovable-uploads/c7cbb1f4-171d-4217-ae52-4e84adc6503f.png",
+      primaryCTA: {
+        text: "Get FREE Quote",
+        action: () => openForm('business-quote'),
+        className: "bg-emerald-600 hover:bg-emerald-700"
+      },
+      secondaryCTA: {
+        text: "Learn More",
+        link: "/color-planters",
+        className: "border-emerald-600 text-emerald-600 hover:bg-emerald-50"
+      },
+      bgColor: "bg-emerald-50",
+      features: ["Artisan handcrafted", "Unique bowl designs", "Vibrant seasonal plants", "Custom color schemes"]
     }
   ];
 
