@@ -80,7 +80,7 @@ const ColorPlanters = () => {
               className="w-full rounded-lg shadow-lg"
             />
             <img
-              src="/lovable-uploads/d3c07ae9-0fa4-4634-9be8-88912ceb64f6.png"
+              src="/lovable-uploads/b68c4092-c52d-4d4a-9bde-73aca712548f.png"
               alt="Indoor color bowl arrangements for offices"
               className="w-full rounded-lg shadow-lg"
             />
