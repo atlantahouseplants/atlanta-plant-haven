@@ -1,4 +1,3 @@
-
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -29,7 +28,7 @@ const ColorPlanters = () => {
     };
 
     try {
-      const response = await fetch('https://api.leadconnectorhq.com/widget/form/yc2iyBbIL6lGOokDJgjQ', {
+      const response = await fetch('https://hook.us1.make.com/wety65khuwm6edw0uc5kwegptlyjhhor', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
