@@ -533,6 +533,86 @@ const PlantDoctor = () => {
                 </div>
               </div>
             </div>
+
+            {/* Third Before/After Comparison - Rubber Plants */}
+            <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
+              <div className="grid lg:grid-cols-2 gap-0">
+                {/* Before Image */}
+                <div className="relative">
+                  <div className="absolute top-4 left-4 z-10">
+                    <span className="bg-red-600 text-white px-4 py-2 rounded-full font-semibold text-sm">
+                      BEFORE
+                    </span>
+                  </div>
+                  <img 
+                    src="/lovable-uploads/e87cc43c-6531-4cd6-99c5-7f957c7cb232.png"
+                    alt="Rubber plant before treatment - showing sparse growth and poor condition"
+                    className="w-full h-80 lg:h-96 object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                  <div className="absolute bottom-4 left-4 right-4 text-white">
+                    <h3 className="text-xl font-bold mb-2">Struggling Rubber Plant</h3>
+                    <p className="text-sm opacity-90">
+                      This rubber plant was showing poor growth with sparse foliage and weak structure
+                    </p>
+                  </div>
+                </div>
+
+                {/* After Image */}
+                <div className="relative">
+                  <div className="absolute top-4 left-4 z-10">
+                    <span className="bg-green-600 text-white px-4 py-2 rounded-full font-semibold text-sm">
+                      AFTER
+                    </span>
+                  </div>
+                  <img 
+                    src="/lovable-uploads/bc3f5f45-3dba-4329-a207-3bea64600ef6.png"
+                    alt="Rubber plants after treatment - showing lush, healthy growth"
+                    className="w-full h-80 lg:h-96 object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                  <div className="absolute bottom-4 left-4 right-4 text-white">
+                    <h3 className="text-xl font-bold mb-2">Lush & Thriving Growth</h3>
+                    <p className="text-sm opacity-90">
+                      After Nick's treatment, the rubber plants show dense, healthy foliage and strong growth patterns
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Treatment Details */}
+              <div className="p-8 bg-gray-50">
+                <div className="grid md:grid-cols-3 gap-6">
+                  <div className="text-center">
+                    <div className="bg-red-100 p-3 rounded-lg mb-3 inline-block">
+                      <Stethoscope className="h-6 w-6 text-red-600" />
+                    </div>
+                    <h4 className="font-semibold mb-2">Problem Diagnosed</h4>
+                    <p className="text-sm text-muted-foreground">
+                      Poor soil nutrition, inadequate lighting conditions, and improper watering schedule
+                    </p>
+                  </div>
+                  <div className="text-center">
+                    <div className="bg-blue-100 p-3 rounded-lg mb-3 inline-block">
+                      <Heart className="h-6 w-6 text-blue-600" />
+                    </div>
+                    <h4 className="font-semibold mb-2">Treatment Applied</h4>
+                    <p className="text-sm text-muted-foreground">
+                      Soil enrichment, optimal placement guidance, proper watering schedule, and growth enhancement
+                    </p>
+                  </div>
+                  <div className="text-center">
+                    <div className="bg-green-100 p-3 rounded-lg mb-3 inline-block">
+                      <CheckCircle className="h-6 w-6 text-green-600" />
+                    </div>
+                    <h4 className="font-semibold mb-2">Result Achieved</h4>
+                    <p className="text-sm text-muted-foreground">
+                      Dramatic improvement in growth density and overall plant health with sustained vitality
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
           <div className="text-center mt-12">
