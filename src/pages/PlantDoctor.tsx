@@ -1,3 +1,4 @@
+
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -384,15 +385,15 @@ const PlantDoctor = () => {
                     </span>
                   </div>
                   <img 
-                    src="/lovable-uploads/1f1c52f4-2411-4c57-b506-a385b08f097a.png"
-                    alt="Monstera plant before treatment - showing pest infestation"
+                    src="/lovable-uploads/5090e472-45e2-4dc2-b388-6cbf2f73ab20.png"
+                    alt="Monstera plant before treatment - showing damaged and yellowing leaves"
                     className="w-full h-80 lg:h-96 object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
                   <div className="absolute bottom-4 left-4 right-4 text-white">
-                    <h3 className="text-xl font-bold mb-2">Severe Pest Infestation</h3>
+                    <h3 className="text-xl font-bold mb-2">Severely Damaged Plant</h3>
                     <p className="text-sm opacity-90">
-                      This beautiful Monstera was covered in mealybugs and powdery mildew, threatening its survival
+                      This Monstera was struggling with multiple issues including yellowing leaves and poor structural support
                     </p>
                   </div>
                 </div>
@@ -405,15 +406,15 @@ const PlantDoctor = () => {
                     </span>
                   </div>
                   <img 
-                    src="/lovable-uploads/dc178d9f-839d-47fa-873a-e63dc3930cc2.png"
-                    alt="Monstera plant after treatment - healthy and thriving"
+                    src="/lovable-uploads/0cd7e1d1-f0c2-4b95-8bb0-b76188510016.png"
+                    alt="Monstera plant after treatment - healthy and well-structured"
                     className="w-full h-80 lg:h-96 object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
                   <div className="absolute bottom-4 left-4 right-4 text-white">
-                    <h3 className="text-xl font-bold mb-2">Completely Restored</h3>
+                    <h3 className="text-xl font-bold mb-2">Fully Restored & Thriving</h3>
                     <p className="text-sm opacity-90">
-                      After Nick's expert treatment, the plant is pest-free with vibrant, healthy foliage
+                      After Nick's expert care, the plant shows vibrant green foliage and proper structural support
                     </p>
                   </div>
                 </div>
@@ -428,7 +429,7 @@ const PlantDoctor = () => {
                     </div>
                     <h4 className="font-semibold mb-2">Problem Diagnosed</h4>
                     <p className="text-sm text-muted-foreground">
-                      Severe mealybug and powdery mildew infestation threatening plant health
+                      Multiple leaf damage, poor soil conditions, and inadequate structural support
                     </p>
                   </div>
                   <div className="text-center">
@@ -437,7 +438,7 @@ const PlantDoctor = () => {
                     </div>
                     <h4 className="font-semibold mb-2">Treatment Applied</h4>
                     <p className="text-sm text-muted-foreground">
-                      Professional pest removal, antifungal treatment, and soil rehabilitation
+                      Professional repotting, soil amendment, pruning, and proper support system installation
                     </p>
                   </div>
                   <div className="text-center">
@@ -446,7 +447,87 @@ const PlantDoctor = () => {
                     </div>
                     <h4 className="font-semibold mb-2">Result Achieved</h4>
                     <p className="text-sm text-muted-foreground">
-                      Complete recovery with ongoing care plan to prevent future issues
+                      Complete structural recovery with healthy new growth and proper care plan
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Second Before/After Comparison */}
+            <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
+              <div className="grid lg:grid-cols-2 gap-0">
+                {/* Before Image */}
+                <div className="relative">
+                  <div className="absolute top-4 left-4 z-10">
+                    <span className="bg-red-600 text-white px-4 py-2 rounded-full font-semibold text-sm">
+                      BEFORE
+                    </span>
+                  </div>
+                  <img 
+                    src="/lovable-uploads/1f1c52f4-2411-4c57-b506-a385b08f097a.png"
+                    alt="Plant before treatment - showing pest infestation and disease"
+                    className="w-full h-80 lg:h-96 object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                  <div className="absolute bottom-4 left-4 right-4 text-white">
+                    <h3 className="text-xl font-bold mb-2">Severe Pest Infestation</h3>
+                    <p className="text-sm opacity-90">
+                      This plant was suffering from mealybugs and powdery mildew, threatening its survival
+                    </p>
+                  </div>
+                </div>
+
+                {/* After Image */}
+                <div className="relative">
+                  <div className="absolute top-4 left-4 z-10">
+                    <span className="bg-green-600 text-white px-4 py-2 rounded-full font-semibold text-sm">
+                      AFTER
+                    </span>
+                  </div>
+                  <img 
+                    src="/lovable-uploads/dc178d9f-839d-47fa-873a-e63dc3930cc2.png"
+                    alt="Plant after treatment - healthy and pest-free"
+                    className="w-full h-80 lg:h-96 object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                  <div className="absolute bottom-4 left-4 right-4 text-white">
+                    <h3 className="text-xl font-bold mb-2">Completely Pest-Free</h3>
+                    <p className="text-sm opacity-90">
+                      After Nick's professional treatment, the plant is healthy with vibrant, clean foliage
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Treatment Details */}
+              <div className="p-8 bg-gray-50">
+                <div className="grid md:grid-cols-3 gap-6">
+                  <div className="text-center">
+                    <div className="bg-red-100 p-3 rounded-lg mb-3 inline-block">
+                      <Stethoscope className="h-6 w-6 text-red-600" />
+                    </div>
+                    <h4 className="font-semibold mb-2">Problem Diagnosed</h4>
+                    <p className="text-sm text-muted-foreground">
+                      Mealybug infestation and powdery mildew compromising plant health
+                    </p>
+                  </div>
+                  <div className="text-center">
+                    <div className="bg-blue-100 p-3 rounded-lg mb-3 inline-block">
+                      <Heart className="h-6 w-6 text-blue-600" />
+                    </div>
+                    <h4 className="font-semibold mb-2">Treatment Applied</h4>
+                    <p className="text-sm text-muted-foreground">
+                      Professional pest removal, antifungal treatment, and comprehensive leaf cleaning
+                    </p>
+                  </div>
+                  <div className="text-center">
+                    <div className="bg-green-100 p-3 rounded-lg mb-3 inline-block">
+                      <CheckCircle className="h-6 w-6 text-green-600" />
+                    </div>
+                    <h4 className="font-semibold mb-2">Result Achieved</h4>
+                    <p className="text-sm text-muted-foreground">
+                      Complete pest elimination with preventive care plan to maintain health
                     </p>
                   </div>
                 </div>
