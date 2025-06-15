@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Building2, Stethoscope, Gift, Heart, Palette, ArrowRight, ExternalLink, Paintbrush } from "lucide-react";
 import { useForm } from "@/components/forms/FormContext";
@@ -74,7 +73,7 @@ const ServiceShowcase = () => {
       title: "Succulents for Smiles",
       subtitle: "Community Donation Program",
       description: "Spread joy in Atlanta's community! $4.75 per succulent plant donated to nursing homes, hospitals, and community centers (minimum 100 plants).",
-      image: "/lovable-uploads/e848d465-1e0e-47b7-94d6-226ed5ab1c49.png",
+      image: "/lovable-uploads/1d594861-1b48-453b-b860-d23e913d9397.png",
       primaryCTA: {
         text: "Donate Succulents",
         action: () => openForm('bulk-order'),
