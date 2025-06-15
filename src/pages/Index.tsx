@@ -16,6 +16,7 @@ const Index = () => {
         <Navigation />
         <Hero />
         <WhyChooseUs />
+        <ServiceShowcase />
         
         {/* Customer Reviews Section */}
         <section className="py-20 bg-gray-50">
@@ -42,7 +43,6 @@ const Index = () => {
           </div>
         </section>
 
-        <ServiceShowcase />
         <HowItWorks />
         <Contact />
         <Footer />
