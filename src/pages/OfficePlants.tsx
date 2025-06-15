@@ -1,4 +1,3 @@
-
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -109,6 +108,51 @@ const OfficePlants = () => {
       src: "/lovable-uploads/e53e274d-32e6-460b-a5b9-01e5f79c885f.png",
       alt: "Large tropical office plant installation",
       title: "Workplace Wellness Design"
+    },
+    {
+      src: "/lovable-uploads/932f9457-d595-4181-819c-ba72ba8c01c3.png",
+      alt: "Fiddle leaf fig tree in white ceramic planter by office window",
+      title: "Executive Window Statement"
+    },
+    {
+      src: "/lovable-uploads/9d888897-3b4f-45bf-bd9d-bacb0f29b2e1.png",
+      alt: "Golden pothos arrangement in modern office library setting",
+      title: "Library Reading Area Design"
+    },
+    {
+      src: "/lovable-uploads/d09ba7b4-31c8-487a-a267-735b7312b6d5.png",
+      alt: "Weeping fig tree in black planter in modern office building",
+      title: "Corporate Lobby Tree Installation"
+    },
+    {
+      src: "/lovable-uploads/14be2c1e-669b-4578-b1a4-96497d23a645.png",
+      alt: "Custom office planter box with mixed ficus plants",
+      title: "Executive Office Planter Box"
+    },
+    {
+      src: "/lovable-uploads/92f0beb5-84df-4d4c-a91a-1bf7b8b2c0b0.png",
+      alt: "Burgundy rubber tree plants in modern office planter box",
+      title: "Contemporary Office Divider"
+    },
+    {
+      src: "/lovable-uploads/90b0c29e-5176-408d-a66b-6c895969c110.png",
+      alt: "Twin fiddle leaf fig trees flanking office entrance",
+      title: "Professional Entrance Design"
+    },
+    {
+      src: "/lovable-uploads/e3f72a78-c761-4c63-9d5d-b1dbcbc814ab.png",
+      alt: "Large bird of paradise plant by floor-to-ceiling office windows",
+      title: "Floor-to-Ceiling Window Display"
+    },
+    {
+      src: "/lovable-uploads/ff49a252-bd82-48c2-8780-7c2ac3b4992e.png",
+      alt: "Fiddle leaf fig tree in modern office lobby with city view",
+      title: "Premium Lobby Installation"
+    },
+    {
+      src: "/lovable-uploads/0807f37e-1602-486a-ab78-3899b7d83fb1.png",
+      alt: "Dracaena plant in white planter against artistic office wall",
+      title: "Creative Office Accent"
     }
   ];
 
