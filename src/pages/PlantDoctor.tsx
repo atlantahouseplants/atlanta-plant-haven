@@ -1,4 +1,3 @@
-
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -608,6 +607,86 @@ const PlantDoctor = () => {
                     <h4 className="font-semibold mb-2">Result Achieved</h4>
                     <p className="text-sm text-muted-foreground">
                       Dramatic improvement in growth density and overall plant health with sustained vitality
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Fourth Before/After Comparison - Prayer Plant */}
+            <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
+              <div className="grid lg:grid-cols-2 gap-0">
+                {/* Before Image */}
+                <div className="relative">
+                  <div className="absolute top-4 left-4 z-10">
+                    <span className="bg-red-600 text-white px-4 py-2 rounded-full font-semibold text-sm">
+                      BEFORE
+                    </span>
+                  </div>
+                  <img 
+                    src="/lovable-uploads/0ee768e7-a10f-4219-a860-91c34c9c9260.png"
+                    alt="Prayer plant before treatment - showing damaged and browning leaves"
+                    className="w-full h-80 lg:h-96 object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                  <div className="absolute bottom-4 left-4 right-4 text-white">
+                    <h3 className="text-xl font-bold mb-2">Severely Damaged Prayer Plant</h3>
+                    <p className="text-sm opacity-90">
+                      This prayer plant showed extensive leaf damage with browning, curling, and deteriorating foliage
+                    </p>
+                  </div>
+                </div>
+
+                {/* After Image */}
+                <div className="relative">
+                  <div className="absolute top-4 left-4 z-10">
+                    <span className="bg-green-600 text-white px-4 py-2 rounded-full font-semibold text-sm">
+                      AFTER
+                    </span>
+                  </div>
+                  <img 
+                    src="/lovable-uploads/e4f0d6d8-1d3c-48b2-bcf5-9faff676a5f7.png"
+                    alt="Prayer plant after treatment - showing vibrant, healthy foliage"
+                    className="w-full h-80 lg:h-96 object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                  <div className="absolute bottom-4 left-4 right-4 text-white">
+                    <h3 className="text-xl font-bold mb-2">Stunning Recovery & New Growth</h3>
+                    <p className="text-sm opacity-90">
+                      After Nick's expert care, the prayer plant displays beautiful, vibrant patterns and healthy new foliage
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Treatment Details */}
+              <div className="p-8 bg-gray-50">
+                <div className="grid md:grid-cols-3 gap-6">
+                  <div className="text-center">
+                    <div className="bg-red-100 p-3 rounded-lg mb-3 inline-block">
+                      <Stethoscope className="h-6 w-6 text-red-600" />
+                    </div>
+                    <h4 className="font-semibold mb-2">Problem Diagnosed</h4>
+                    <p className="text-sm text-muted-foreground">
+                      Environmental stress, humidity issues, and potential root problems causing widespread leaf damage
+                    </p>
+                  </div>
+                  <div className="text-center">
+                    <div className="bg-blue-100 p-3 rounded-lg mb-3 inline-block">
+                      <Heart className="h-6 w-6 text-blue-600" />
+                    </div>
+                    <h4 className="font-semibold mb-2">Treatment Applied</h4>
+                    <p className="text-sm text-muted-foreground">
+                      Humidity optimization, proper placement guidance, soil treatment, and specialized prayer plant care
+                    </p>
+                  </div>
+                  <div className="text-center">
+                    <div className="bg-green-100 p-3 rounded-lg mb-3 inline-block">
+                      <CheckCircle className="h-6 w-6 text-green-600" />
+                    </div>
+                    <h4 className="font-semibold mb-2">Result Achieved</h4>
+                    <p className="text-sm text-muted-foreground">
+                      Complete recovery with vibrant leaf patterns and healthy new growth demonstrating proper care
                     </p>
                   </div>
                 </div>
