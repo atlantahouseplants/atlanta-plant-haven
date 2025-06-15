@@ -258,9 +258,20 @@ const ColorPlanters = () => {
             <div>
               <h4 className="text-2xl font-semibold mb-6 text-pink-600">Indoor Color Bowls</h4>
               <div className="grid md:grid-cols-3 gap-6 mb-6">
-                <img src="/lovable-uploads/d3c07ae9-0fa4-4634-9be8-88912ceb64f6.png" alt="Handmade indoor color bowl centerpiece" className="w-full h-64 object-cover rounded-lg shadow-md" />
-                <img src="/lovable-uploads/c7cbb1f4-171d-4217-ae52-4e84adc6503f.png" alt="Custom indoor planter arrangement with orchids" className="w-full h-64 object-cover rounded-lg shadow-md" />
-                <img src="/lovable-uploads/6f8be497-c091-4462-a2f1-4bafb12effea.png" alt="Conference table centerpiece with anthurium and tropical plants" className="w-full h-64 object-cover rounded-lg shadow-md" />
+                <img src="/lovable-uploads/0a46f717-6a07-43f8-b46f-98f8203dc460.png" alt="Lush tropical indoor color bowl with bird's nest fern and prayer plants" className="w-full h-64 object-cover rounded-lg shadow-md" />
+                <img src="/lovable-uploads/5a7b84a7-c04d-4727-b584-8b433bc5255a.png" alt="Mixed foliage color bowl with alocasia and tropical plants" className="w-full h-64 object-cover rounded-lg shadow-md" />
+                <img src="/lovable-uploads/78887fa2-05dc-45a4-9045-b406854ccfa1.png" alt="Vibrant color bowl with ti plants and tropical mix" className="w-full h-64 object-cover rounded-lg shadow-md" />
+              </div>
+              <div className="grid md:grid-cols-3 gap-6 mb-6">
+                <img src="/lovable-uploads/27610228-d006-4087-ac11-aefff1e4f4ac.png" alt="Sophisticated green foliage arrangement with peace lily and ferns" className="w-full h-64 object-cover rounded-lg shadow-md" />
+                <img src="/lovable-uploads/94ec742e-bb3c-453c-b5f6-f550fd68f23b.png" alt="Colorful ceramic bowl with croton and snake plant arrangement" className="w-full h-64 object-cover rounded-lg shadow-md" />
+                <img src="/lovable-uploads/6f13f0c8-6f80-423e-bc59-eca698c3dfa2.png" alt="Modern succulent and air plant arrangement in geometric planter" className="w-full h-64 object-cover rounded-lg shadow-md" />
+              </div>
+              <div className="grid md:grid-cols-4 gap-6 mb-6">
+                <img src="/lovable-uploads/aa4da4dc-1bef-4425-bb6b-c8cfcee357fd.png" alt="Detailed succulent arrangement with jade pearls and colorful varieties" className="w-full h-64 object-cover rounded-lg shadow-md" />
+                <img src="/lovable-uploads/b7db9856-d25e-494f-972e-e5208818fe58.png" alt="Bright anthurium centerpiece with tropical foliage mix" className="w-full h-64 object-cover rounded-lg shadow-md" />
+                <img src="/lovable-uploads/4f80ca81-72b0-4505-96f2-e595c5e60781.png" alt="Elegant snake plant and tropical arrangement in decorative pot" className="w-full h-64 object-cover rounded-lg shadow-md" />
+                <img src="/lovable-uploads/97354911-b016-495e-8c04-e86e474912c9.png" alt="Artistic ceramic bowl with croton and tropical plant mix" className="w-full h-64 object-cover rounded-lg shadow-md" />
               </div>
               <div className="grid md:grid-cols-2 gap-6">
                 <img src="/lovable-uploads/c2622f62-937e-49d4-a647-df30191973e4.png" alt="Executive office color bowl with mixed tropical plants" className="w-full h-64 object-cover rounded-lg shadow-md" />
