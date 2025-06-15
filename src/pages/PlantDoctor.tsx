@@ -1,4 +1,3 @@
-
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -390,7 +389,7 @@ const PlantDoctor = () => {
                 description: "Detailed examination of root systems"
               },
               {
-                src: "/lovable-uploads/b0543742-bb86-45d7-a641-7ccd52b9be1f.png",
+                src: "/lovable-uploads/4355b0a9-2fd8-44cd-b9f9-2901fc3ba442.png",
                 title: "Plant Care Education",
                 description: "Teaching proper plant care techniques"
               },
