@@ -692,6 +692,86 @@ const PlantDoctor = () => {
                 </div>
               </div>
             </div>
+
+            {/* Fifth Before/After Comparison - Palm Plant */}
+            <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
+              <div className="grid lg:grid-cols-2 gap-0">
+                {/* Before Image */}
+                <div className="relative">
+                  <div className="absolute top-4 left-4 z-10">
+                    <span className="bg-red-600 text-white px-4 py-2 rounded-full font-semibold text-sm">
+                      BEFORE
+                    </span>
+                  </div>
+                  <img 
+                    src="/lovable-uploads/fb7e6b4c-0fab-4f87-b2e0-2db548134229.png"
+                    alt="Palm plant before treatment - showing browning tips and poor growth"
+                    className="w-full h-80 lg:h-96 object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                  <div className="absolute bottom-4 left-4 right-4 text-white">
+                    <h3 className="text-xl font-bold mb-2">Struggling Palm with Browning Tips</h3>
+                    <p className="text-sm opacity-90">
+                      This palm plant was showing stress with browning leaf tips and overall poor growth patterns
+                    </p>
+                  </div>
+                </div>
+
+                {/* After Image */}
+                <div className="relative">
+                  <div className="absolute top-4 left-4 z-10">
+                    <span className="bg-green-600 text-white px-4 py-2 rounded-full font-semibold text-sm">
+                      AFTER
+                    </span>
+                  </div>
+                  <img 
+                    src="/lovable-uploads/27ae64dd-28fd-4ad5-896b-047a9f7be996.png"
+                    alt="Palm plant after treatment - showing healthy, vibrant growth"
+                    className="w-full h-80 lg:h-96 object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                  <div className="absolute bottom-4 left-4 right-4 text-white">
+                    <h3 className="text-xl font-bold mb-2">Vibrant & Healthy Palm</h3>
+                    <p className="text-sm opacity-90">
+                      After Nick's treatment, the palm displays lush, healthy foliage with proper growth and no browning
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Treatment Details */}
+              <div className="p-8 bg-gray-50">
+                <div className="grid md:grid-cols-3 gap-6">
+                  <div className="text-center">
+                    <div className="bg-red-100 p-3 rounded-lg mb-3 inline-block">
+                      <Stethoscope className="h-6 w-6 text-red-600" />
+                    </div>
+                    <h4 className="font-semibold mb-2">Problem Diagnosed</h4>
+                    <p className="text-sm text-muted-foreground">
+                      Leaf tip burn from water quality issues, improper humidity levels, and nutrient deficiencies
+                    </p>
+                  </div>
+                  <div className="text-center">
+                    <div className="bg-blue-100 p-3 rounded-lg mb-3 inline-block">
+                      <Heart className="h-6 w-6 text-blue-600" />
+                    </div>
+                    <h4 className="font-semibold mb-2">Treatment Applied</h4>
+                    <p className="text-sm text-muted-foreground">
+                      Water quality improvement, humidity optimization, proper fertilization, and pruning of damaged fronds
+                    </p>
+                  </div>
+                  <div className="text-center">
+                    <div className="bg-green-100 p-3 rounded-lg mb-3 inline-block">
+                      <CheckCircle className="h-6 w-6 text-green-600" />
+                    </div>
+                    <h4 className="font-semibold mb-2">Result Achieved</h4>
+                    <p className="text-sm text-muted-foreground">
+                      Eliminated browning with healthy new growth and improved overall plant vitality and appearance
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
           <div className="text-center mt-12">
