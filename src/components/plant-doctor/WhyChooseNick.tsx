@@ -8,10 +8,10 @@ const WhyChooseNick = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-            Why Choose Nick as Your Plant Doctor?
+            Meet Nick: Your Certified Plant Doctor
           </h2>
           <p className="text-lg text-muted-foreground">
-            Unlike competitors who send untrained staff, you get a certified professional who treats your plants like family
+            Unlike competitors who send untrained staff at $20/hour, you get a certified professional with over 15 years of dedicated experience
           </p>
         </div>
 
@@ -68,8 +68,9 @@ const WhyChooseNick = () => {
 
             <div className="bg-green-50 p-6 rounded-lg border-l-4 border-green-600">
               <p className="text-lg italic text-foreground mb-4">
-                "I don't just diagnose plant problems - I solve them. Every plant gets my full attention and expertise. 
-                I won't give up on your plant, and I'll teach you everything you need to know to keep it thriving."
+                "I don't just work with plants - I live with them, breathe with them, and understand their needs at a molecular level. 
+                That's the difference between professional plant care and someone just watering your plants. I won't give up on your plant, 
+                and I'll teach you everything you need to know to keep it thriving."
               </p>
               <p className="text-right text-green-700 font-semibold">- Nick, Certified Plant Doctor</p>
             </div>
