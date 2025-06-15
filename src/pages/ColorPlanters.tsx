@@ -1,3 +1,4 @@
+
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -247,9 +248,23 @@ const ColorPlanters = () => {
                 <img src="/lovable-uploads/894e3588-fd78-45ec-a66a-d38adba26f7f.png" alt="Custom outdoor planters for commercial spaces" className="w-full h-64 object-cover rounded-lg shadow-md" />
                 <img src="/lovable-uploads/5c12d8b0-6716-4d13-93da-7cf2237ef880.png" alt="Colorful seasonal outdoor arrangement" className="w-full h-64 object-cover rounded-lg shadow-md" />
               </div>
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid md:grid-cols-2 gap-6 mb-8">
                 <img src="/lovable-uploads/df58d580-3b02-4989-a642-40ce17cce555.png" alt="Poolside planters for luxury hotels" className="w-full h-64 object-cover rounded-lg shadow-md" />
                 <img src="/lovable-uploads/2ab58439-a84c-4527-9b77-51cc964b24a1.png" alt="Restaurant patio seasonal planters" className="w-full h-64 object-cover rounded-lg shadow-md" />
+              </div>
+              <div className="grid md:grid-cols-3 gap-6 mb-8">
+                <img src="/lovable-uploads/1e9f2a96-ad5e-43d3-88a4-bae956c8196e.png" alt="Window box planter with colorful blooms" className="w-full h-64 object-cover rounded-lg shadow-md" />
+                <img src="/lovable-uploads/d833a0e8-8747-4f0e-9b98-bc768a20bf24.png" alt="Window box with orange flowers and colorful spikes" className="w-full h-64 object-cover rounded-lg shadow-md" />
+                <img src="/lovable-uploads/8bf1fcc2-deee-4413-bb51-93dd4f122fe5.png" alt="Ceramic bowl with colorful foliage and white blooms" className="w-full h-64 object-cover rounded-lg shadow-md" />
+              </div>
+              <div className="grid md:grid-cols-4 gap-6 mb-8">
+                <img src="/lovable-uploads/3b22ae44-b55b-40e0-b578-43cf9e992bf9.png" alt="Modern white planter with mixed colorful plants" className="w-full h-64 object-cover rounded-lg shadow-md" />
+                <img src="/lovable-uploads/6a8a648b-686a-4774-b874-bfc9cced612f.png" alt="Holiday themed large planters with seasonal displays" className="w-full h-64 object-cover rounded-lg shadow-md" />
+                <img src="/lovable-uploads/3db88ecc-7dc5-4ead-9725-1dc765097751.png" alt="Modern commercial planter with colorful flowers" className="w-full h-64 object-cover rounded-lg shadow-md" />
+                <img src="/lovable-uploads/de561043-6cdc-4946-be66-aea8a936bd9c.png" alt="Evergreen and colorful flower combination planter" className="w-full h-64 object-cover rounded-lg shadow-md" />
+              </div>
+              <div className="grid md:grid-cols-1 gap-6">
+                <img src="/lovable-uploads/c3f3979d-8c40-4b0b-8837-76d0e33de106.png" alt="Bright yellow commercial planter with cascading plants" className="w-full h-64 object-cover rounded-lg shadow-md" />
               </div>
             </div>
 
