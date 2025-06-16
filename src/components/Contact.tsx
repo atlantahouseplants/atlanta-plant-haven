@@ -1,9 +1,27 @@
 
+import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Phone, Mail, MapPin, Clock, Calendar, Gift } from "lucide-react";
+import { useForm as useReactHookForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import * as z from "zod";
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import { useToast } from "@/hooks/use-toast";
+
+const formSchema = z.object({
+  firstName: z.string().min(2, "First name is required"),
+  lastName: z.string().min(2, "Last name is required"),
+  companyName: z.string().min(2, "Company name is required"),
+  email: z.string().email("Please enter a valid email address"),
+  phone: z.string().min(10, "Please enter a valid phone number"),
+  serviceInterest: z.string(),
+  projectDetails: z.string().optional(),
+});
+
+type FormData = z.infer<typeof formSchema>;
 
 const Contact = () => {
   const contactInfo = [
@@ -52,6 +70,60 @@ const Contact = () => {
     }
   ];
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { toast } = useToast();
+
+  const form = useReactHookForm<FormData>({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      serviceInterest: "FREE Office Plant Design",
+    },
+  });
+
+  const onSubmit = async (data: FormData) => {
+    setIsSubmitting(true);
+    
+    try {
+      const payload = {
+        formType: "office-plant-design",
+        timestamp: new Date().toISOString(),
+        leadData: {
+          ...data,
+          source: "homepage",
+          service: "Office Plant Design & Care"
+        }
+      };
+
+      const response = await fetch("https://hook.us1.make.com/crj4finfx3ubm8o2u7q4n4npa265tmrs", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+
+      toast({
+        title: "Request Submitted!",
+        description: "We'll contact you within 24 hours with your free consultation details.",
+      });
+      
+      form.reset();
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      toast({
+        title: "Submission Error",
+        description: "Please try again or call us directly at (404) 555-PLANT",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <section id="contact" className="py-20 bg-green-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -61,7 +133,7 @@ const Contact = () => {
             Ready to Transform Your Office with Plants?
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Get your free office plant design consultation or request a custom color planter quote. 
+            Get your free office plant design consultation or request a custom color planter quote.
             Our certified plant professional is ready to help.
           </p>
         </div>
@@ -97,77 +169,152 @@ const Contact = () => {
               <p className="text-muted-foreground">Complete the form below and we'll contact you within 24 hours to schedule your consultation.</p>
             </CardHeader>
             <CardContent className="space-y-6">
-              <div className="grid grid-cols-2 gap-4">
-                <div>
-                  <label className="text-sm font-medium text-foreground mb-2 block">
-                    First Name *
-                  </label>
-                  <Input placeholder="John" required />
-                </div>
-                <div>
-                  <label className="text-sm font-medium text-foreground mb-2 block">
-                    Last Name *
-                  </label>
-                  <Input placeholder="Doe" required />
-                </div>
-              </div>
-              
-              <div>
-                <label className="text-sm font-medium text-foreground mb-2 block">
-                  Company Name *
-                </label>
-                <Input placeholder="Your Company" required />
-              </div>
+              <Form {...form}>
+                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                  <div className="grid grid-cols-2 gap-4">
+                    <FormField
+                      control={form.control}
+                      name="firstName"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel className="text-sm font-medium text-foreground mb-2 block">
+                            First Name *
+                          </FormLabel>
+                          <FormControl>
+                            <Input placeholder="John" {...field} />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                    <FormField
+                      control={form.control}
+                      name="lastName"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel className="text-sm font-medium text-foreground mb-2 block">
+                            Last Name *
+                          </FormLabel>
+                          <FormControl>
+                            <Input placeholder="Doe" {...field} />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                  </div>
+                  
+                  <FormField
+                    control={form.control}
+                    name="companyName"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="text-sm font-medium text-foreground mb-2 block">
+                          Company Name *
+                        </FormLabel>
+                        <FormControl>
+                          <Input placeholder="Your Company" {...field} />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
 
-              <div>
-                <label className="text-sm font-medium text-foreground mb-2 block">
-                  Email Address *
-                </label>
-                <Input type="email" placeholder="john@company.com" required />
-              </div>
+                  <FormField
+                    control={form.control}
+                    name="email"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="text-sm font-medium text-foreground mb-2 block">
+                          Email Address *
+                        </FormLabel>
+                        <FormControl>
+                          <Input type="email" placeholder="john@company.com" {...field} />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
 
-              <div>
-                <label className="text-sm font-medium text-foreground mb-2 block">
-                  Phone Number *
-                </label>
-                <Input type="tel" placeholder="(404) 555-0123" required />
-              </div>
+                  <FormField
+                    control={form.control}
+                    name="phone"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="text-sm font-medium text-foreground mb-2 block">
+                          Phone Number *
+                        </FormLabel>
+                        <FormControl>
+                          <Input type="tel" placeholder="(404) 555-0123" {...field} />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
 
-              <div>
-                <label className="text-sm font-medium text-foreground mb-2 block">
-                  Service Interest
-                </label>
-                <select className="w-full p-2 border border-input rounded-md bg-background">
-                  <option>FREE Office Plant Design</option>
-                  <option>Ongoing Plant Care for Existing Plants</option>
-                  <option>Corporate Plant Gifting (100+ plants)</option>
-                  <option>Smiles for Succulents CSR Program</option>
-                  <option>Handmade Color Planters</option>
-                  <option>Color Bowl Service</option>
-                  <option>Corporate Workshop</option>
-                  <option>Plant Doctor Service</option>
-                  <option>Premium Home Design</option>
-                </select>
-              </div>
+                  <FormField
+                    control={form.control}
+                    name="serviceInterest"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="text-sm font-medium text-foreground mb-2 block">
+                          Service Interest
+                        </FormLabel>
+                        <FormControl>
+                          <select
+                            className="w-full p-2 border border-input rounded-md bg-background"
+                            {...field}
+                          >
+                            <option value="FREE Office Plant Design">FREE Office Plant Design</option>
+                            <option value="Ongoing Plant Care for Existing Plants">Ongoing Plant Care for Existing Plants</option>
+                            <option value="Corporate Plant Gifting (100+ plants)">Corporate Plant Gifting (100+ plants)</option>
+                            <option value="Smiles for Succulents CSR Program">Smiles for Succulents CSR Program</option>
+                            <option value="Handmade Color Planters">Handmade Color Planters</option>
+                            <option value="Color Bowl Service">Color Bowl Service</option>
+                            <option value="Corporate Workshop">Corporate Workshop</option>
+                            <option value="Plant Doctor Service">Plant Doctor Service</option>
+                            <option value="Premium Home Design">Premium Home Design</option>
+                          </select>
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
 
-              <div>
-                <label className="text-sm font-medium text-foreground mb-2 block">
-                  Tell us about your project
-                </label>
-                <Textarea 
-                  placeholder="Describe your office space, number of employees, plant preferences, and any specific needs..."
-                  rows={4}
-                />
-              </div>
+                  <FormField
+                    control={form.control}
+                    name="projectDetails"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="text-sm font-medium text-foreground mb-2 block">
+                          Tell us about your project
+                        </FormLabel>
+                        <FormControl>
+                          <Textarea
+                            placeholder="Describe your office space, number of employees, plant preferences, and any specific needs..."
+                            rows={4}
+                            {...field}
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
 
-              <Button className="w-full bg-green-600 hover:bg-green-700 text-white text-lg py-3">
-                Request FREE Consultation
-              </Button>
-              
-              <p className="text-xs text-muted-foreground text-center">
-                * By submitting this form, you agree to receive communication from Atlanta House Plants. 
-                We typically respond within 4 hours during business hours.
-              </p>
+                  <Button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="w-full bg-green-600 hover:bg-green-700 text-white text-lg py-3"
+                  >
+                    {isSubmitting ? "Submitting..." : "Request FREE Consultation"}
+                  </Button>
+                  
+                  <p className="text-xs text-muted-foreground text-center">
+                    * By submitting this form, you agree to receive communication from Atlanta House Plants.
+                    We typically respond within 4 hours during business hours.
+                  </p>
+                </form>
+              </Form>
             </CardContent>
           </Card>
 
