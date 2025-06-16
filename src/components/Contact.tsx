@@ -27,8 +27,8 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Phone",
-      details: "(470) 664-4039",
-      subtext: "Call for immediate assistance"
+      details: "Contact via Email",
+      subtext: "We'll respond promptly to your inquiry"
     },
     {
       icon: Mail,
@@ -82,7 +82,7 @@ const Contact = () => {
         }
       };
 
-      const response = await fetch("https://hook.us1.make.com/crj4finfx3ubm8o2u7q4n4npa265tmrs", {
+      const response = await fetch("https://hook.us1.make.com/cpweuqa2uji7hpytowfctwgszbsflf8t", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -104,7 +104,7 @@ const Contact = () => {
       console.error("Error submitting form:", error);
       toast({
         title: "Submission Error",
-        description: "Please try again or call us directly at (470) 664-4039",
+        description: "Please try again or contact us via email",
         variant: "destructive",
       });
     } finally {
@@ -210,7 +210,7 @@ const Contact = () => {
                           Phone Number *
                         </FormLabel>
                         <FormControl>
-                          <Input type="tel" placeholder="(470) 664-4039" {...field} />
+                          <Input type="tel" placeholder="Your phone number" {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>

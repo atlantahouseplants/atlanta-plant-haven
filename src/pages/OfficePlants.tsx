@@ -560,8 +560,8 @@ const OfficePlants = () => {
             
             <div className="flex items-center text-white/90">
               <div className="flex items-center mr-6">
-                <Phone className="h-5 w-5 mr-2" />
-                <span>(470) 664-4039</span>
+                <Mail className="h-5 w-5 mr-2" />
+                <span>ana@atlantahouseplants.com</span>
               </div>
               <div className="flex items-center">
                 <Mail className="h-5 w-5 mr-2" />

@@ -1,7 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Calendar, Truck, CheckCircle, ArrowRight, Phone, MessageSquare, Settings } from "lucide-react";
+import { Calendar, Truck, CheckCircle, ArrowRight, Phone, MessageSquare, Settings, Mail } from "lucide-react";
 import { useForm } from "@/components/forms/FormContext";
 
 const HowItWorks = () => {
@@ -127,12 +127,12 @@ const HowItWorks = () => {
           </div>
         </div>
 
-        {/* Emergency Contact */}
+        {/* Contact Info */}
         <div className="mt-16 text-center">
           <div className="inline-flex items-center gap-8 text-sm text-muted-foreground bg-white px-8 py-4 rounded-full shadow-sm">
             <div className="flex items-center">
-              <Phone className="h-4 w-4 mr-2" />
-              Emergency Plant Help: (470) 664-4039
+              <Mail className="h-4 w-4 mr-2" />
+              ana@atlantahouseplants.com
             </div>
           </div>
         </div>

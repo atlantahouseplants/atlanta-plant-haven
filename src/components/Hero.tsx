@@ -157,7 +157,7 @@ const Hero = () => {
           <div className="inline-flex items-center gap-8 text-sm text-muted-foreground bg-white px-8 py-4 rounded-full shadow-sm">
             <div className="flex items-center">
               <Phone className="h-4 w-4 mr-2" />
-              Emergency Plant Help: (470) 664-4039
+              Contact Us Online
             </div>
             <div className="flex items-center">
               <Mail className="h-4 w-4 mr-2" />
