@@ -1,4 +1,3 @@
-
 const PlantGallery = () => {
   const installations = [
     {
@@ -163,9 +162,15 @@ const PlantGallery = () => {
             <button className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
               Get FREE Design Consultation
             </button>
-            <button className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
-              Book Plant Doctor Visit - $129
-            </button>
+            <a 
+              href="https://api.leadconnectorhq.com/widget/bookings/plantdoctorservice"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+                Book Plant Doctor Visit - $149
+              </button>
+            </a>
           </div>
           <p className="text-sm text-muted-foreground mt-4">
             ✓ Free consultation • ✓ Professional installation • ✓ 100% plant guarantee on maintained plants

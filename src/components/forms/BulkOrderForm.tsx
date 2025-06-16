@@ -51,7 +51,8 @@ const BulkOrderForm = () => {
         }
       };
 
-      await fetch('https://hook.us1.make.com/0i3sxbwb2i37n6817qgnjlje844q8l7o', {
+      // UPDATED WEBHOOK URL BELOW
+      await fetch('https://hook.us1.make.com/w5uy8j6sl9dcevqpgvticzofzdsnqyl9', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -53,7 +53,7 @@ const BusinessQuoteForm = () => {
         }
       };
 
-      const response = await fetch('https://hook.us1.make.com/0i3sxbwb2i37n6817qgnjlje844q8l7o', {
+      const response = await fetch('https://hook.us1.make.com/bix139lh7j2138g6i8wfabruq4jkhf3u', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

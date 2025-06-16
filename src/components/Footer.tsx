@@ -1,7 +1,15 @@
 
-import { Leaf, Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin, Twitter, Youtube } from "lucide-react";
 
 const Footer = () => {
+  const socialLinks = [
+    { name: "Facebook", icon: Facebook, url: "https://www.facebook.com/atlantahouseplants/" },
+    { name: "Instagram", icon: Instagram, url: "https://www.instagram.com/atlanta_houseplants/" },
+    { name: "LinkedIn", icon: Linkedin, url: "https://www.linkedin.com/company/atlanta-houseplants/" },
+    { name: "Twitter", icon: Twitter, url: "https://twitter.com/ATL_Houseplants" },
+    { name: "YouTube", icon: Youtube, url: "https://www.youtube.com/channel/UCIV-DyGixA6mChcP1FNpLdQ" }
+  ];
+
   return (
     <footer className="bg-gray-900 text-white py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -21,15 +29,42 @@ const Footer = () => {
             <div className="space-y-2">
               <div className="flex items-center space-x-2 text-sm">
                 <Phone className="h-4 w-4" />
-                <span>(404) 555-PLANT</span>
+                <span>(470) 664-4039</span>
               </div>
               <div className="flex items-center space-x-2 text-sm">
                 <Mail className="h-4 w-4" />
-                <span>info@atlantahouseplants.com</span>
+                <span>ana@atlantahouseplants.com</span>
+              </div>
+              <div className="flex items-center space-x-2 text-sm">
+                <Mail className="h-4 w-4" />
+                <span>service@atlantahouseplants.com</span>
+              </div>
+              <div className="flex items-center space-x-2 text-sm">
+                <Mail className="h-4 w-4" />
+                <span>plantdoctor@atlantahouseplants.com</span>
               </div>
               <div className="flex items-center space-x-2 text-sm">
                 <MapPin className="h-4 w-4" />
                 <span>Metro Atlanta, GA</span>
+              </div>
+            </div>
+            
+            {/* Social Media Links */}
+            <div className="mt-6">
+              <h4 className="font-semibold text-lg mb-3">Follow Us</h4>
+              <div className="flex space-x-3">
+                {socialLinks.map((social) => (
+                  <a
+                    key={social.name}
+                    href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-2 bg-gray-800 rounded-lg hover:bg-gray-700 transition-colors"
+                    aria-label={`Follow us on ${social.name}`}
+                  >
+                    <social.icon className="h-4 w-4 text-gray-300 hover:text-white" />
+                  </a>
+                ))}
               </div>
             </div>
           </div>
@@ -42,7 +77,7 @@ const Footer = () => {
               <li>Ongoing Plant Care</li>
               <li>Plant Doctor Services</li>
               <li>Corporate Gifting</li>
-              <li>Smiles for Succulents CSR</li>
+              <li>Corporate Social Responsibility</li>
               <li>Handmade Color Planters</li>
             </ul>
           </div>
@@ -53,9 +88,9 @@ const Footer = () => {
             <ul className="space-y-2 text-gray-300">
               <li><a href="#home" className="hover:text-green-400 transition-colors">Home</a></li>
               <li><a href="#services" className="hover:text-green-400 transition-colors">Services</a></li>
-              <li><a href="#gallery" className="hover:text-green-400 transition-colors">Gallery</a></li>
-              <li><a href="#about" className="hover:text-green-400 transition-colors">About</a></li>
               <li><a href="#contact" className="hover:text-green-400 transition-colors">Contact</a></li>
+              <li><a href="/office-plants" className="hover:text-green-400 transition-colors">Office Plants</a></li>
+              <li><a href="/plant-doctor" className="hover:text-green-400 transition-colors">Plant Doctor</a></li>
             </ul>
           </div>
 
@@ -73,8 +108,12 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-gray-700 mt-12 pt-8 text-center text-gray-300">
-          <p>&copy; 2024 Atlanta House Plants. All rights reserved.</p>
+        <div className="border-t border-gray-700 mt-12 pt-8">
+          <div className="text-center">
+            <p className="text-gray-300">
+              &copy; 2024 Atlanta House Plants. All rights reserved.
+            </p>
+          </div>
         </div>
       </div>
     </footer>

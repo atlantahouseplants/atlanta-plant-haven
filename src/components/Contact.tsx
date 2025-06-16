@@ -1,10 +1,9 @@
-
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Phone, Mail, MapPin, Clock, Calendar, Gift } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Facebook, Instagram, Linkedin, Twitter, Youtube, Calendar, Gift } from "lucide-react";
 import { useForm as useReactHookForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
@@ -28,13 +27,13 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Phone",
-      details: "(404) 555-PLANT",
+      details: "(470) 664-4039",
       subtext: "Call for immediate assistance"
     },
     {
       icon: Mail,
       title: "Email",
-      details: "info@atlantahouseplants.com",
+      details: "ana@atlantahouseplants.com",
       subtext: "Get a response within 24 hours"
     },
     {
@@ -51,23 +50,12 @@ const Contact = () => {
     }
   ];
 
-  const quickServices = [
-    {
-      icon: Calendar,
-      title: "Plant Doctor Service",
-      description: "90-minute comprehensive plant diagnosis and treatment",
-      price: "$129",
-      cta: "Book Appointment",
-      urgent: true
-    },
-    {
-      icon: Gift,
-      title: "Bulk Plant Gifting Quote",
-      description: "Mini succulents for employee/client appreciation",
-      price: "Starting $7.25 each",
-      cta: "Get Quote",
-      urgent: false
-    }
+  const socialLinks = [
+    { name: "Facebook", icon: Facebook, url: "https://www.facebook.com/atlantahouseplants/" },
+    { name: "Instagram", icon: Instagram, url: "https://www.instagram.com/atlanta_houseplants/" },
+    { name: "LinkedIn", icon: Linkedin, url: "https://www.linkedin.com/company/atlanta-houseplants/" },
+    { name: "Twitter", icon: Twitter, url: "https://twitter.com/ATL_Houseplants" },
+    { name: "YouTube", icon: Youtube, url: "https://www.youtube.com/channel/UCIV-DyGixA6mChcP1FNpLdQ" }
   ];
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -116,7 +104,7 @@ const Contact = () => {
       console.error("Error submitting form:", error);
       toast({
         title: "Submission Error",
-        description: "Please try again or call us directly at (404) 555-PLANT",
+        description: "Please try again or call us directly at (470) 664-4039",
         variant: "destructive",
       });
     } finally {
@@ -130,42 +118,19 @@ const Contact = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Ready to Transform Your Office with Plants?
+            Ready to Transform Your Space with Plants?
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Get your free office plant design consultation or request a custom color planter quote.
+            Get your free office plant design consultation or request expert plant care services. 
             Our certified plant professional is ready to help.
           </p>
-        </div>
-
-        {/* Quick Action Cards */}
-        <div className="grid md:grid-cols-2 gap-6 mb-12">
-          {quickServices.map((service, index) => (
-            <Card key={index} className={`border-2 ${service.urgent ? 'border-orange-300 bg-orange-50' : 'border-blue-300 bg-blue-50'}`}>
-              <CardHeader>
-                <div className="flex items-center space-x-3">
-                  <service.icon className={`h-8 w-8 ${service.urgent ? 'text-orange-600' : 'text-blue-600'}`} />
-                  <div>
-                    <CardTitle className="text-xl">{service.title}</CardTitle>
-                    <p className={`text-lg font-bold ${service.urgent ? 'text-orange-700' : 'text-blue-700'}`}>{service.price}</p>
-                  </div>
-                </div>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground mb-4">{service.description}</p>
-                <Button className={`w-full ${service.urgent ? 'bg-orange-600 hover:bg-orange-700' : 'bg-blue-600 hover:bg-blue-700'} text-white`}>
-                  {service.cta}
-                </Button>
-              </CardContent>
-            </Card>
-          ))}
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Primary Contact Form */}
           <Card className="border-border">
             <CardHeader>
-              <CardTitle className="text-2xl">Get Your FREE Office Plant Design</CardTitle>
+              <CardTitle className="text-2xl">Get Your FREE Plant Consultation</CardTitle>
               <p className="text-muted-foreground">Complete the form below and we'll contact you within 24 hours to schedule your consultation.</p>
             </CardHeader>
             <CardContent className="space-y-6">
@@ -213,7 +178,7 @@ const Contact = () => {
                           Company Name *
                         </FormLabel>
                         <FormControl>
-                          <Input placeholder="Your Company" {...field} />
+                          <Input placeholder="Your Company (if applicable)" {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -245,7 +210,7 @@ const Contact = () => {
                           Phone Number *
                         </FormLabel>
                         <FormControl>
-                          <Input type="tel" placeholder="(404) 555-0123" {...field} />
+                          <Input type="tel" placeholder="(470) 664-4039" {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -268,12 +233,11 @@ const Contact = () => {
                             <option value="FREE Office Plant Design">FREE Office Plant Design</option>
                             <option value="Ongoing Plant Care for Existing Plants">Ongoing Plant Care for Existing Plants</option>
                             <option value="Corporate Plant Gifting (100+ plants)">Corporate Plant Gifting (100+ plants)</option>
-                            <option value="Smiles for Succulents CSR Program">Smiles for Succulents CSR Program</option>
+                            <option value="Corporate Social Responsibility Program">Corporate Social Responsibility Program</option>
                             <option value="Handmade Color Planters">Handmade Color Planters</option>
                             <option value="Color Bowl Service">Color Bowl Service</option>
-                            <option value="Corporate Workshop">Corporate Workshop</option>
                             <option value="Plant Doctor Service">Plant Doctor Service</option>
-                            <option value="Premium Home Design">Premium Home Design</option>
+                            <option value="Home Plant Design">Home Plant Design</option>
                           </select>
                         </FormControl>
                         <FormMessage />
@@ -291,7 +255,7 @@ const Contact = () => {
                         </FormLabel>
                         <FormControl>
                           <Textarea
-                            placeholder="Describe your office space, number of employees, plant preferences, and any specific needs..."
+                            placeholder="Describe your space, plant needs, and any specific requirements..."
                             rows={4}
                             {...field}
                           />
@@ -338,6 +302,40 @@ const Contact = () => {
               </div>
             </div>
 
+            {/* Additional Contact Methods */}
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h4 className="font-semibold text-foreground mb-4">Additional Contact</h4>
+              <div className="space-y-2 text-sm">
+                <div className="flex items-center">
+                  <Mail className="h-4 w-4 text-green-600 mr-2" />
+                  <span>Service: service@atlantahouseplants.com</span>
+                </div>
+                <div className="flex items-center">
+                  <Mail className="h-4 w-4 text-orange-600 mr-2" />
+                  <span>Plant Doctor: plantdoctor@atlantahouseplants.com</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Social Media Links */}
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h4 className="font-semibold text-foreground mb-4">Follow Us</h4>
+              <div className="flex space-x-4">
+                {socialLinks.map((social) => (
+                  <a
+                    key={social.name}
+                    href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-2 bg-green-100 rounded-lg hover:bg-green-200 transition-colors"
+                    aria-label={`Follow us on ${social.name}`}
+                  >
+                    <social.icon className="h-5 w-5 text-green-600" />
+                  </a>
+                ))}
+              </div>
+            </div>
+
             {/* Service Areas */}
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h4 className="font-semibold text-foreground mb-4">Metro Atlanta Service Areas</h4>
@@ -357,12 +355,31 @@ const Contact = () => {
               </div>
             </div>
 
-            {/* Guarantee Section */}
+            {/* Professional Guarantee */}
             <div className="bg-green-100 p-6 rounded-lg border-l-4 border-green-600">
-              <h4 className="font-bold text-green-800 mb-2">🛡️ Our Guarantee</h4>
+              <h4 className="font-bold text-green-800 mb-2">🛡️ Professional Guarantee</h4>
               <p className="text-green-700 text-sm">
-                Every plant we install and maintain comes with a 100% health guarantee. If any plant fails under our care, 
-                we replace it at no cost. Your investment is protected with professional plant care.
+                Every business plant installation and maintenance service comes with our professional guarantee. 
+                Your investment is protected with expert plant care and dedicated support.
+              </p>
+            </div>
+
+            {/* Meet Nick Section */}
+            <div className="bg-blue-50 p-6 rounded-lg text-center">
+              <div className="flex items-center justify-center mb-4">
+                <img 
+                  src="/lovable-uploads/9a6a89cb-90a7-48df-a670-52cf61f223ea.png" 
+                  alt="Nick, Your Plant Doctor"
+                  className="w-20 h-20 rounded-full object-cover mr-4"
+                />
+                <div className="text-left">
+                  <h3 className="text-2xl font-bold text-foreground">Meet Nick, Your Plant Doctor</h3>
+                  <p className="text-blue-600 font-medium">UGA Horticulture Graduate • 15+ Years Experience</p>
+                </div>
+              </div>
+              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+                "I've dedicated my career to helping Atlanta businesses and homeowners create beautiful, healthy plant environments. 
+                Every service comes with my personal expertise and ongoing support."
               </p>
             </div>
           </div>

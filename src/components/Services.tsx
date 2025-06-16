@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Wrench, Truck, Stethoscope, Palette, Droplets, Shield, Gift, Users, Home, Flower, Sparkles, Star, Calendar, Video, Heart } from "lucide-react";
@@ -100,7 +99,7 @@ const Services = () => {
       title: "In-Home Plant Doctor Visit",
       description: "Comprehensive 90-minute plant diagnosis and treatment at your location.",
       features: ["Professional plant diagnosis", "Pest & disease treatment", "Repotting assessment", "Light & fertilization guidance"],
-      price: "$129 flat rate",
+      price: "$149 flat rate",
       popular: true
     },
     {
@@ -275,23 +274,16 @@ const Services = () => {
               <h4 className="text-2xl font-bold text-orange-800 mb-4">Ready to Book Your Plant Doctor Visit?</h4>
               <p className="text-gray-700 mb-6">Schedule your appointment now and get your plants back to perfect health!</p>
               
-              {/* Embedded Booking Widget */}
-              <div className="max-w-md mx-auto">
-                <iframe 
-                  src="https://api.leadconnectorhq.com/widget/booking/J3NNAtlNcdw0V75i8LX2" 
-                  style={{width: '100%', border: 'none', overflow: 'hidden', minHeight: '600px'}} 
-                  scrolling="no" 
-                  id="plantDoctorBooking"
-                  title="Plant Doctor Booking"
-                ></iframe>
-              </div>
-              
               <div className="mt-4">
-                <Button className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 text-lg">
-                  <a href="https://api.leadconnectorhq.com/widget/bookings/plantdoctorservice" target="_blank" rel="noopener noreferrer">
-                    Book Plant Doctor Visit - $129
-                  </a>
-                </Button>
+                <a 
+                  href="https://api.leadconnectorhq.com/widget/bookings/plantdoctorservice" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  <Button className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 text-lg">
+                    Book Plant Doctor Visit - $149
+                  </Button>
+                </a>
               </div>
             </div>
           </div>

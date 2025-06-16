@@ -45,12 +45,13 @@ const PlantDoctorForm = () => {
         timestamp: new Date().toISOString(),
         leadData: {
           ...data,
-          source: 'homepage',
-          service: 'Plant Doctor House Call - $129'
+          source: 'plant-doctor-page',
+          service: 'Plant Doctor House Call - $149'
         }
       };
 
-      await fetch('https://hook.us1.make.com/0i3sxbwb2i37n6817qgnjlje844q8l7o', {
+      // UPDATED WEBHOOK URL BELOW — each form now uses its own webhook for simplicity
+      await fetch('https://hook.us1.make.com/i3qrwxko2b42mpgrtj4giqnq8wi2op3e', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -60,7 +61,7 @@ const PlantDoctorForm = () => {
 
       toast({
         title: "Appointment Request Submitted!",
-        description: "Dr. Nick will contact you within 24 hours to schedule your $129 plant doctor visit.",
+        description: "Dr. Nick will contact you within 24 hours to schedule your $149 plant doctor visit.",
       });
       
       closeForm();
@@ -230,7 +231,7 @@ const PlantDoctorForm = () => {
           disabled={isSubmitting}
           className="w-full bg-orange-600 hover:bg-orange-700 text-white py-3 text-lg"
         >
-          {isSubmitting ? 'Submitting...' : 'Book Plant Doctor Visit - $129'}
+          {isSubmitting ? 'Submitting...' : 'Book Plant Doctor Visit - $149'}
         </Button>
         
         <p className="text-sm text-center text-muted-foreground">
