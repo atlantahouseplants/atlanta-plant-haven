@@ -1,18 +1,14 @@
-# Welcome to your Lovable project
+# Atlanta Plant Haven Website
 
 ## Project info
 
-**URL**: https://lovable.dev/projects/117071e9-b273-4d2a-9c2e-53fdb2b06ddc
+This is a website for Atlanta Plant Haven, a plant service company in Atlanta.
 
 ## How can I edit this code?
 
 There are several ways of editing your application.
 
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/117071e9-b273-4d2a-9c2e-53fdb2b06ddc) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
+**Use your preferred IDE**
 
 **Use your preferred IDE**
 
@@ -62,12 +58,10 @@ This project is built with:
 
 ## How can I deploy this project?
 
-Simply open [Lovable](https://lovable.dev/projects/117071e9-b273-4d2a-9c2e-53fdb2b06ddc) and click on Share -> Publish.
+You can deploy this project to any static site hosting service like Vercel, Netlify, or GitHub Pages.
 
-## Can I connect a custom domain to my Lovable project?
+## Can I connect a custom domain to my project?
 
 Yes, you can!
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+Most hosting services allow you to connect a custom domain to your project. Follow the instructions provided by your hosting service.
