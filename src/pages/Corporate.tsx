@@ -80,7 +80,7 @@ const Corporate = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: "url('/lovable-uploads/6f8be497-c091-4462-a2f1-4bafb12effea.png')",
+            backgroundImage: "url('/lovable-uploads/7ee3e1df-8037-4a61-8b9a-0fbc4fea25e5.png')",
           }}
         />
         <div className="absolute inset-0 bg-black/60" />
@@ -152,7 +152,7 @@ const Corporate = () => {
               <div 
                 className="w-full h-64 bg-cover bg-center rounded-lg mb-8 shadow-lg"
                 style={{
-                  backgroundImage: "url('/lovable-uploads/6decc00f-ce9c-49b1-840d-d7897f252047.png')",
+                  backgroundImage: "url('/lovable-uploads/d7f70ef6-351e-4955-a23d-a8d83a031ebd.png')",
                 }}
               />
               <div className="bg-green-50 p-8 rounded-lg">
@@ -193,7 +193,7 @@ const Corporate = () => {
               <div 
                 className="w-full h-64 bg-cover bg-center rounded-lg mb-8 shadow-lg"
                 style={{
-                  backgroundImage: "url('/lovable-uploads/5090e472-45e2-4dc2-b388-6cbf2f73ab20.png')",
+                  backgroundImage: "url('/lovable-uploads/56c7f17e-8692-4d55-a5ea-ce8ba58543fe.png')",
                 }}
               />
               <div className="bg-blue-50 p-8 rounded-lg">
