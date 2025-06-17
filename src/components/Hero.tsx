@@ -21,7 +21,7 @@ const Hero = () => {
           <h1 className="text-5xl md:text-7xl font-bold text-foreground leading-tight mb-8">
             Atlanta's #1
             <span className="block text-green-600 bg-gradient-to-r from-green-600 to-green-500 bg-clip-text text-transparent">
-              Plant Care Company
+              Plant Care & Design Company
             </span>
           </h1>
           

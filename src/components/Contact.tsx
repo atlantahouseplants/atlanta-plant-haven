@@ -27,7 +27,7 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Phone",
-      details: "Contact via Email",
+      details: "470-664-4039",
       subtext: "We'll respond promptly to your inquiry"
     },
     {
