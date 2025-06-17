@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { FormProvider } from "@/components/forms/FormContext";
 import FormModal from "@/components/forms/FormModal";
 import ChatWidget from "@/components/chatbot/ChatWidget";
+import ScrollToTop from "@/components/ScrollToTop";
 import Index from "./pages/Index";
 import OfficePlants from "./pages/OfficePlants";
 import PlantDoctor from "./pages/PlantDoctor";
@@ -26,6 +27,7 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
+          <ScrollToTop />
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/office-plants" element={<OfficePlants />} />
