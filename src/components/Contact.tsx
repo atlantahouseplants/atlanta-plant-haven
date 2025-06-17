@@ -82,7 +82,7 @@ const Contact = () => {
         }
       };
 
-      const response = await fetch("https://hook.us1.make.com/cpweuqa2uji7hpytowfctwgszbsflf8t", {
+      const response = await fetch("https://hook.us1.make.com/crj4finfx3ubm8o2u7q4n4npa265tmrs", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
