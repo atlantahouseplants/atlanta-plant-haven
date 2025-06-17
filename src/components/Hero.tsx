@@ -97,8 +97,8 @@ const Hero = () => {
           {/* Individual Path */}
           <div className="bg-white p-8 rounded-2xl shadow-xl border border-orange-100 relative overflow-hidden">
             <div className="mb-6 rounded-xl overflow-hidden aspect-video">
-              <img 
-                src="/lovable-uploads/cc2424e3-3025-4f30-be79-6a4763fca0a5.png" 
+              <img
+                src="/lovable-uploads/b0543742-bb86-45d7-a641-7ccd52b9be1f.png"
                 alt="Nick, your plant doctor, providing expert plant care"
                 className="w-full h-full object-cover"
               />
