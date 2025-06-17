@@ -69,29 +69,26 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Services */}
-          <div>
-            <h3 className="font-semibold text-lg mb-4">Services</h3>
-            <ul className="space-y-2 text-gray-300">
-              <li>Plant Design & Installation</li>
-              <li>Ongoing Plant Care</li>
-              <li>Plant Doctor Services</li>
-              <li>Corporate Gifting</li>
-              <li>Corporate Social Responsibility</li>
-              <li>Handmade Color Planters</li>
-            </ul>
-          </div>
-
-          {/* Quick Links */}
-          <div>
-            <h3 className="font-semibold text-lg mb-4">Quick Links</h3>
-            <ul className="space-y-2 text-gray-300">
-              <li><a href="#home" className="hover:text-green-400 transition-colors">Home</a></li>
-              <li><a href="#services" className="hover:text-green-400 transition-colors">Services</a></li>
-              <li><a href="#contact" className="hover:text-green-400 transition-colors">Contact</a></li>
-              <li><a href="/office-plants" className="hover:text-green-400 transition-colors">Office Plants</a></li>
-              <li><a href="/plant-doctor" className="hover:text-green-400 transition-colors">Plant Doctor</a></li>
-            </ul>
+          {/* Services & Quick Links */}
+          <div className="col-span-1 md:col-span-2">
+            <h3 className="font-semibold text-lg mb-4">Services & Quick Links</h3>
+            <div className="grid grid-cols-2 gap-4">
+              <ul className="space-y-2 text-gray-300">
+                <li><a href="/office-plants" className="hover:text-green-400 transition-colors">Plant Design & Installation</a></li>
+                <li><a href="/office-plants" className="hover:text-green-400 transition-colors">Ongoing Plant Care</a></li>
+                <li><a href="/plant-doctor" className="hover:text-green-400 transition-colors">Plant Doctor Services</a></li>
+                <li><a href="/corporate" className="hover:text-green-400 transition-colors">Corporate Gifting</a></li>
+                <li><a href="/succulents-for-smiles" className="hover:text-green-400 transition-colors">Corporate Social Responsibility</a></li>
+                <li><a href="/color-planters" className="hover:text-green-400 transition-colors">Handmade Color Planters</a></li>
+              </ul>
+              <ul className="space-y-2 text-gray-300">
+                <li><a href="/" className="hover:text-green-400 transition-colors">Home</a></li>
+                <li><a href="/#services" className="hover:text-green-400 transition-colors">Services</a></li>
+                <li><a href="/#contact" className="hover:text-green-400 transition-colors">Contact</a></li>
+                <li><a href="/home-design" className="hover:text-green-400 transition-colors">Home Plant Design</a></li>
+                <li><a href="/contact" className="hover:text-green-400 transition-colors">Get a Quote</a></li>
+              </ul>
+            </div>
           </div>
 
           {/* Service Areas */}
