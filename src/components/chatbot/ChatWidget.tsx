@@ -6,16 +6,26 @@ import { Message } from './types';
 
 const ChatWidget = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [messages, setMessages] = useState<Message[]>([
-    {
-      id: '1',
-      text: "Hi! I'm here to help you with any questions about our plant services. How can I assist you today?",
-      isBot: true,
-      timestamp: new Date(),
-    },
-  ]);
+  const [sessionId] = useState(() => `chat_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`);
+  const [messages, setMessages] = useState<Message[]>(() => {
+    // Try to load existing conversation from localStorage
+    const savedMessages = localStorage.getItem(`chat_session_${sessionId}`);
+    if (savedMessages) {
+      return JSON.parse(savedMessages);
+    }
+    return [
+      {
+        id: '1',
+        text: "Hi! I'm here to help you with any questions about our plant services. How can I assist you today?",
+        isBot: true,
+        timestamp: new Date(),
+      },
+    ];
+  });
   const [inputText, setInputText] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  const [showContactForm, setShowContactForm] = useState(false);
+  const [contactInfo, setContactInfo] = useState({ name: '', email: '', phone: '' });
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   const scrollToBottom = () => {
@@ -25,6 +35,68 @@ const ChatWidget = () => {
   useEffect(() => {
     scrollToBottom();
   }, [messages]);
+
+  // Save conversation to localStorage whenever messages change
+  useEffect(() => {
+    localStorage.setItem(`chat_session_${sessionId}`, JSON.stringify(messages));
+    
+    // Also save session metadata
+    const sessionData = {
+      sessionId,
+      startTime: messages[0]?.timestamp || new Date(),
+      lastActivity: new Date(),
+      messageCount: messages.length
+    };
+    localStorage.setItem(`chat_meta_${sessionId}`, JSON.stringify(sessionData));
+  }, [messages, sessionId]);
+
+  const getChatTranscript = () => {
+    return messages.map(msg => 
+      `${msg.isBot ? 'Bot' : 'User'} (${msg.timestamp.toLocaleTimeString()}): ${msg.text}`
+    ).join('\n');
+  };
+
+  const sendContactRequest = async () => {
+    if (!contactInfo.name || !contactInfo.email) {
+      alert('Please fill in your name and email.');
+      return;
+    }
+
+    try {
+      const transcript = getChatTranscript();
+      const response = await fetch('https://hook.us1.make.com/cpweuqa2uji7hpytowfctwgszbsflf8t', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          type: 'contact_request',
+          sessionId,
+          name: contactInfo.name,
+          email: contactInfo.email,
+          phone: contactInfo.phone,
+          chatTranscript: transcript,
+          timestamp: new Date().toISOString(),
+        }),
+      });
+
+      if (response.ok) {
+        setShowContactForm(false);
+        setContactInfo({ name: '', email: '', phone: '' });
+        
+        const confirmMessage: Message = {
+          id: (Date.now() + 2).toString(),
+          text: "Thank you! I've recorded your contact information and our conversation. Someone from our team will reach out to you soon!",
+          isBot: true,
+          timestamp: new Date(),
+        };
+        setMessages(prev => [...prev, confirmMessage]);
+      }
+    } catch (error) {
+      console.error('Error sending contact request:', error);
+      alert('Sorry, there was an error submitting your request. Please try again.');
+    }
+  };
 
   const handleSendMessage = async () => {
     if (!inputText.trim() || isLoading) return;
@@ -148,6 +220,19 @@ const ChatWidget = () => {
               {messages.map((message) => (
                 <ChatMessage key={message.id} message={message} />
               ))}
+              
+              {/* Request Contact Button */}
+              {!showContactForm && messages.length > 1 && (
+                <div className="flex justify-center">
+                  <button
+                    onClick={() => setShowContactForm(true)}
+                    className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg text-sm transition-colors"
+                  >
+                    📞 Request Contact
+                  </button>
+                </div>
+              )}
+              
               {isLoading && (
                 <div className="flex justify-start">
                   <div className="bg-gray-100 rounded-lg p-3 max-w-xs">
@@ -164,25 +249,66 @@ const ChatWidget = () => {
 
             {/* Input */}
             <div className="p-4 border-t">
-              <div className="flex space-x-2">
-                <input
-                  type="text"
-                  value={inputText}
-                  onChange={(e) => setInputText(e.target.value)}
-                  onKeyPress={handleKeyPress}
-                  placeholder="Type your message..."
-                  className="flex-1 border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-green-500"
-                  disabled={isLoading}
-                />
-                <button
-                  onClick={handleSendMessage}
-                  disabled={!inputText.trim() || isLoading}
-                  className="bg-green-600 hover:bg-green-700 disabled:bg-gray-300 text-white rounded-lg p-2 transition-colors"
-                  aria-label="Send message"
-                >
-                  <Send className="h-4 w-4" />
-                </button>
-              </div>
+              {showContactForm ? (
+                <div className="space-y-3">
+                  <h4 className="font-semibold text-sm text-gray-700">Request Contact</h4>
+                  <input
+                    type="text"
+                    placeholder="Your Name *"
+                    value={contactInfo.name}
+                    onChange={(e) => setContactInfo(prev => ({ ...prev, name: e.target.value }))}
+                    className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-green-500"
+                  />
+                  <input
+                    type="email"
+                    placeholder="Your Email *"
+                    value={contactInfo.email}
+                    onChange={(e) => setContactInfo(prev => ({ ...prev, email: e.target.value }))}
+                    className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-green-500"
+                  />
+                  <input
+                    type="tel"
+                    placeholder="Your Phone (optional)"
+                    value={contactInfo.phone}
+                    onChange={(e) => setContactInfo(prev => ({ ...prev, phone: e.target.value }))}
+                    className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-green-500"
+                  />
+                  <div className="flex space-x-2">
+                    <button
+                      onClick={sendContactRequest}
+                      className="flex-1 bg-green-600 hover:bg-green-700 text-white rounded-lg py-2 text-sm transition-colors"
+                    >
+                      Send Request
+                    </button>
+                    <button
+                      onClick={() => setShowContactForm(false)}
+                      className="flex-1 bg-gray-300 hover:bg-gray-400 text-gray-700 rounded-lg py-2 text-sm transition-colors"
+                    >
+                      Cancel
+                    </button>
+                  </div>
+                </div>
+              ) : (
+                <div className="flex space-x-2">
+                  <input
+                    type="text"
+                    value={inputText}
+                    onChange={(e) => setInputText(e.target.value)}
+                    onKeyPress={handleKeyPress}
+                    placeholder="Type your message..."
+                    className="flex-1 border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-green-500"
+                    disabled={isLoading}
+                  />
+                  <button
+                    onClick={handleSendMessage}
+                    disabled={!inputText.trim() || isLoading}
+                    className="bg-green-600 hover:bg-green-700 disabled:bg-gray-300 text-white rounded-lg p-2 transition-colors"
+                    aria-label="Send message"
+                  >
+                    <Send className="h-4 w-4" />
+                  </button>
+                </div>
+              )}
             </div>
           </div>
         )}
