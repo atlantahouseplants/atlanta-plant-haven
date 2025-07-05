@@ -55,9 +55,22 @@ const ChatWidget = () => {
 
       const data = await response.json();
       
+      // Extract message from webhook response - handles nested JSON structure
+      let responseText = "I apologize, but I'm having trouble responding right now. Please try again or contact us directly at (770) 123-4567.";
+      
+      if (data.message) {
+        responseText = data.message;
+      } else if (data.response) {
+        responseText = data.response;
+      } else if (data.text) {
+        responseText = data.text;
+      } else if (typeof data === 'string') {
+        responseText = data;
+      }
+      
       const botMessage: Message = {
         id: (Date.now() + 1).toString(),
-        text: data.response || "I apologize, but I'm having trouble responding right now. Please try again or contact us directly at (770) 123-4567.",
+        text: responseText,
         isBot: true,
         timestamp: new Date(),
       };
