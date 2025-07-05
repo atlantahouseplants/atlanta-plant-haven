@@ -64,7 +64,7 @@ const ChatWidget = () => {
 
     try {
       const transcript = getChatTranscript();
-      const response = await fetch('https://hook.us1.make.com/cpweuqa2uji7hpytowfctwgszbsflf8t', {
+      const response = await fetch('https://hook.us1.make.com/ne1lkcja68ltmand16j66614cup1gjej', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -113,7 +113,7 @@ const ChatWidget = () => {
     setIsLoading(true);
 
     try {
-      const response = await fetch('https://hook.us1.make.com/cpweuqa2uji7hpytowfctwgszbsflf8t', {
+      const response = await fetch('https://hook.us1.make.com/ne1lkcja68ltmand16j66614cup1gjej', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
