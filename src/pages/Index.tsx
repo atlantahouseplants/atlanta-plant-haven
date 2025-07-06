@@ -35,7 +35,7 @@ const Index = () => {
               <div className="bg-white rounded-2xl shadow-lg p-8">
                 <div className="flex items-center mb-6">
                   <img 
-                    src="/lovable-uploads/24794cd6-d871-433d-8ce5-1b5d61120d74.png" 
+                    src="/lovable-uploads/f3967d27-f426-48b4-af6c-5b4f0e316b29.png" 
                     alt="Corporate office plants transformation"
                     className="w-16 h-16 rounded-full object-cover mr-4"
                   />
@@ -60,7 +60,7 @@ const Index = () => {
               <div className="bg-white rounded-2xl shadow-lg p-8">
                 <div className="flex items-center mb-6">
                   <img 
-                    src="/lovable-uploads/b0543742-bb86-45d7-a641-7ccd52b9be1f.png" 
+                    src="/lovable-uploads/418cda1f-5e4a-4a96-9b30-5650e06e8b97.png" 
                     alt="Plant doctor house call success story"
                     className="w-16 h-16 rounded-full object-cover mr-4"
                   />
@@ -85,7 +85,7 @@ const Index = () => {
               <div className="bg-white rounded-2xl shadow-lg p-8">
                 <div className="flex items-center mb-6">
                   <img 
-                    src="/lovable-uploads/30a84ea6-f741-4055-a3a0-8b27f2d24782.png" 
+                    src="/lovable-uploads/c864df96-c7e3-4667-bfe2-e2ebaad928d8.png" 
                     alt="Seasonal color transformation"
                     className="w-16 h-16 rounded-full object-cover mr-4"
                   />
@@ -100,10 +100,10 @@ const Index = () => {
                   </div>
                 </div>
                 <p className="text-muted-foreground italic mb-4">
-                  "Our Midtown restaurant's seasonal color displays bring customers back monthly. Nick's designs increased our Instagram engagement by 40%!"
+                  "Our customers constantly compliment Nick's beautiful plant arrangements. The seasonal displays create such a welcoming atmosphere - it's even mentioned in our Google reviews!"
                 </p>
                 <div className="bg-purple-50 p-4 rounded-lg">
-                  <p className="text-sm font-medium text-purple-800">Result: 40% more social media engagement, repeat customers</p>
+                  <p className="text-sm font-medium text-purple-800">Result: Regular customer compliments, positive Google reviews</p>
                 </div>
               </div>
             </div>
@@ -136,14 +136,24 @@ const Index = () => {
             
             {/* Reviews Widget */}
             <div className="bg-white rounded-2xl shadow-lg p-8">
+              <h3 className="text-2xl font-bold text-center mb-8">What Our Customers Say</h3>
               <script type='text/javascript' src='https://reputationhub.site/reputation/assets/review-widget.js'></script>
-              <iframe 
-                className='lc_reviews_widget' 
-                src='https://reputationhub.site/reputation/widgets/review_widget/wTvEeXunnbLa5kBRFbc4' 
-                frameBorder='0' 
-                scrolling='no' 
-                style={{ minWidth: '100%', width: '100%', minHeight: '400px' }}
-              ></iframe>
+              <div className="w-full overflow-hidden rounded-lg">
+                <iframe 
+                  className='lc_reviews_widget w-full border-0 rounded-lg' 
+                  src='https://reputationhub.site/reputation/widgets/review_widget/wTvEeXunnbLa5kBRFbc4' 
+                  frameBorder='0' 
+                  scrolling='no' 
+                  style={{ 
+                    width: '100%', 
+                    height: '500px',
+                    minHeight: '500px',
+                    maxWidth: '100%',
+                    display: 'block'
+                  }}
+                  title="Customer Reviews Widget"
+                ></iframe>
+              </div>
             </div>
           </div>
         </section>
