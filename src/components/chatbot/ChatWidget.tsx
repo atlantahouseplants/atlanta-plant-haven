@@ -203,8 +203,8 @@ const ChatWidget = () => {
             {/* Header */}
             <div className="bg-green-600 text-white p-4 rounded-t-lg flex justify-between items-center">
               <div>
-                <h3 className="font-semibold">Plant Help Assistant</h3>
-                <p className="text-sm opacity-90">Ask me anything!</p>
+                <h3 className="font-semibold">Nick's Plant Assistant</h3>
+                <p className="text-sm opacity-90">Get expert plant advice instantly!</p>
               </div>
               <button
                 onClick={() => setIsOpen(false)}

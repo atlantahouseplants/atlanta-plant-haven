@@ -62,16 +62,17 @@ const WhyChooseUs = () => {
         </div>
 
         {/* Credentials Section */}
-        <div className="mt-16 bg-green-50 p-8 rounded-lg text-center">
+        <div className="mt-16 bg-green-50 p-8 rounded-lg text-center border-2 border-green-200">
           <div className="flex items-center justify-center mb-4">
             <img 
               src="/lovable-uploads/9a6a89cb-90a7-48df-a670-52cf61f223ea.png" 
               alt="Nick - Plant Doctor providing professional plant care"
-              className="w-20 h-20 rounded-full object-cover mr-4"
+              className="w-24 h-24 rounded-full object-cover mr-6 border-4 border-green-600"
             />
             <div className="text-left">
-              <h3 className="text-2xl font-bold text-foreground">Meet Nick, Your Plant Doctor</h3>
-              <p className="text-green-600 font-medium">UGA Horticulture Graduate • 15+ Years Experience</p>
+              <h3 className="text-3xl font-bold text-foreground">Meet Nick, Your Plant Doctor</h3>
+              <p className="text-green-600 font-bold text-lg">🎓 UGA Horticulture Graduate • 15+ Years Experience</p>
+              <p className="text-orange-600 font-medium">✓ Georgia Certified Professional • Same-Week Appointments</p>
             </div>
           </div>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">

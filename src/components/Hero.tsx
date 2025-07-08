@@ -85,12 +85,12 @@ const Hero = () => {
               onClick={() => openForm('business-quote')}
               className="w-full bg-gradient-to-r from-green-600 to-green-500 hover:from-green-700 hover:to-green-600 text-white text-lg py-4 mb-4 shadow-lg"
             >
-              Get Your FREE Quote
+              Get Your FREE Quote (Same Week!)
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
             
             <p className="text-sm text-center text-muted-foreground">
-              ✓ 24-hour response • ✓ Free consultation • ✓ Professional guarantee
+              ✓ 24-hour response • ✓ UGA Certified Professional • ✓ 100% Plant guarantee
             </p>
           </div>
 
@@ -141,7 +141,7 @@ const Hero = () => {
               className="block"
             >
               <Button className="w-full bg-gradient-to-r from-orange-600 to-orange-500 hover:from-orange-700 hover:to-orange-600 text-white text-lg py-4 shadow-lg">
-                Book Plant Doctor Visit - $149
+                Book Plant Doctor Visit - $149 (Same Week!)
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </a>
