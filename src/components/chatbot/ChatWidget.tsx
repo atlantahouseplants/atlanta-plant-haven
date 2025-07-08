@@ -199,7 +199,7 @@ const ChatWidget = () => {
         )}
 
         {isOpen && (
-          <div className="bg-white rounded-lg chat-widget-shadow w-80 h-96 flex flex-col">
+          <div className="bg-white rounded-lg chat-widget-shadow w-80 sm:w-80 w-72 h-96 flex flex-col">
             {/* Header */}
             <div className="bg-green-600 text-white p-4 rounded-t-lg flex justify-between items-center">
               <div>

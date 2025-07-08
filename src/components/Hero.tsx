@@ -154,8 +154,15 @@ const Hero = () => {
 
         {/* Contact Information */}
         <div className="text-center">
-          <div className="inline-flex items-center gap-8 text-sm text-muted-foreground bg-white px-8 py-4 rounded-full shadow-sm">
-            <div className="flex items-center">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 text-sm text-muted-foreground bg-white px-8 py-4 rounded-full shadow-sm">
+            <a 
+              href="tel:470-664-4039" 
+              className="flex items-center hover:text-green-600 transition-colors md:hidden bg-green-600 text-white px-4 py-2 rounded-full"
+            >
+              <Phone className="h-4 w-4 mr-2" />
+              Call Now
+            </a>
+            <div className="hidden md:flex items-center">
               <Phone className="h-4 w-4 mr-2" />
               470-664-4039
             </div>
