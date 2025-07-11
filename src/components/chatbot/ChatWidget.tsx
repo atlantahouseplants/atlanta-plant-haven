@@ -26,7 +26,9 @@ const ChatWidget = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [showContactForm, setShowContactForm] = useState(false);
   const [contactInfo, setContactInfo] = useState({ name: '', email: '', phone: '' });
+  const [transcriptSent, setTranscriptSent] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
+  const inactivityTimerRef = useRef<NodeJS.Timeout | null>(null);
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -55,6 +57,77 @@ const ChatWidget = () => {
       `${msg.isBot ? 'Bot' : 'User'} (${msg.timestamp.toLocaleTimeString()}): ${msg.text}`
     ).join('\n');
   };
+
+  const sendTranscriptToWebhook = async (reason: string = 'session_ended') => {
+    // Only send transcript if there are actual user messages and we haven't sent it already
+    if (transcriptSent || messages.length <= 1) return;
+    
+    try {
+      const transcript = getChatTranscript();
+      const response = await fetch('https://hook.us1.make.com/ne1lkcja68ltmand16j66614cup1gjej', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          type: 'chat_transcript',
+          sessionId,
+          chatTranscript: transcript,
+          endReason: reason,
+          messageCount: messages.length,
+          sessionDuration: new Date().getTime() - new Date(messages[0]?.timestamp || new Date()).getTime(),
+          timestamp: new Date().toISOString(),
+        }),
+      });
+
+      if (response.ok) {
+        setTranscriptSent(true);
+        console.log('Chat transcript sent successfully');
+      }
+    } catch (error) {
+      console.error('Error sending chat transcript:', error);
+    }
+  };
+
+  // Handle chat close and send transcript
+  const handleCloseChat = () => {
+    sendTranscriptToWebhook('user_closed_chat');
+    setIsOpen(false);
+  };
+
+  // Set up inactivity timer
+  const resetInactivityTimer = () => {
+    if (inactivityTimerRef.current) {
+      clearTimeout(inactivityTimerRef.current);
+    }
+    
+    // Send transcript after 5 minutes of inactivity
+    inactivityTimerRef.current = setTimeout(() => {
+      sendTranscriptToWebhook('inactivity_timeout');
+    }, 5 * 60 * 1000);
+  };
+
+  // Reset timer on new messages
+  useEffect(() => {
+    if (messages.length > 1) {
+      resetInactivityTimer();
+    }
+    
+    return () => {
+      if (inactivityTimerRef.current) {
+        clearTimeout(inactivityTimerRef.current);
+      }
+    };
+  }, [messages]);
+
+  // Send transcript when component unmounts
+  useEffect(() => {
+    return () => {
+      if (messages.length > 1 && !transcriptSent) {
+        sendTranscriptToWebhook('page_unload');
+      }
+    };
+  }, []);
 
   const sendContactRequest = async () => {
     if (!contactInfo.name || !contactInfo.email) {
@@ -207,7 +280,7 @@ const ChatWidget = () => {
                 <p className="text-sm opacity-90">Get expert plant advice instantly!</p>
               </div>
               <button
-                onClick={() => setIsOpen(false)}
+                onClick={handleCloseChat}
                 className="hover:bg-green-700 p-1 rounded"
                 aria-label="Close chat"
               >
