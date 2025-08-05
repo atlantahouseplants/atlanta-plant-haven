@@ -136,7 +136,7 @@ const Corporate = () => {
               <div 
                 className="w-full h-64 bg-cover bg-center rounded-lg mb-6 shadow-lg"
                 style={{
-                  backgroundImage: "url('/lovable-uploads/8d50d76d-b349-4ac3-9177-5f7844ac7d45.png')",
+                  backgroundImage: "url('/lovable-uploads/4bd098cf-c347-44d4-8770-5cbd973972cf.png')",
                 }}
               />
               <Card>
@@ -174,7 +174,7 @@ const Corporate = () => {
               <div 
                 className="w-full h-64 bg-cover bg-center rounded-lg mb-6 shadow-lg"
                 style={{
-                  backgroundImage: "url('/lovable-uploads/3bc97c6a-ffd5-49b0-be55-1f0e5d5c04b1.png')",
+                  backgroundImage: "url('/lovable-uploads/8d50d76d-b349-4ac3-9177-5f7844ac7d45.png')",
                 }}
               />
               <Card>
@@ -367,7 +367,7 @@ const Corporate = () => {
                 <div 
                   className="w-full h-64 bg-cover bg-center rounded-lg shadow-lg"
                   style={{
-                    backgroundImage: "url('/lovable-uploads/be1a1a51-b3bb-4843-92bb-bb23d282def8.png')",
+                    backgroundImage: "url('/lovable-uploads/e2804558-0f3f-4dab-b434-d9f4c65e4fc5.png')",
                   }}
                 />
                 <div className="text-center lg:text-left">
@@ -494,6 +494,55 @@ const Corporate = () => {
           <div className="text-center mt-12 space-y-2">
             <p className="text-lg font-medium text-foreground"><strong>Minimum order:</strong> 25 units</p>
             <p className="text-lg font-medium text-foreground"><strong>Lead time:</strong> 5-7 business days</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Photo Gallery & Testimonial */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-foreground mb-4">📸 Other Corporate Gifts We Offer</h2>
+            <p className="text-xl text-muted-foreground">Examples from our recent corporate orders</p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div 
+              className="w-full h-80 bg-cover bg-center rounded-lg shadow-lg"
+              style={{
+                backgroundImage: "url('/lovable-uploads/be1a1a51-b3bb-4843-92bb-bb23d282def8.png')",
+              }}
+            />
+            <div className="space-y-6">
+              <Card className="bg-green-50 border-green-200">
+                <CardContent className="p-6">
+                  <div className="flex items-start space-x-4">
+                    <div className="flex-shrink-0">
+                      <div className="flex space-x-1">
+                        {[...Array(5)].map((_, i) => (
+                          <Star key={i} className="h-5 w-5 fill-yellow-400 text-yellow-400" />
+                        ))}
+                      </div>
+                    </div>
+                    <div>
+                      <blockquote className="text-lg text-green-800 italic mb-4">
+                        "Our clients constantly compliment the plant arrangements. They love them, and it's even mentioned in our Google reviews!"
+                      </blockquote>
+                      <p className="text-green-700 font-medium">— Corporate Client</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+              
+              <div className="text-center">
+                <Button 
+                  onClick={scrollToOrder}
+                  className="bg-green-600 hover:bg-green-700 text-white px-8 py-3"
+                >
+                  Order Custom Arrangements Like These
+                </Button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
