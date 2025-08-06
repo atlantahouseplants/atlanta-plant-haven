@@ -11,7 +11,7 @@ const Navigation = () => {
     { name: "Home", href: "/" },
     { name: "Office Plants", href: "/office-plants" },
     { name: "Plant Doctor", href: "/plant-doctor" },
-    { name: "Corporate", href: "/corporate" },
+    { name: "Corporate Gifting", href: "/corporate" },
     { name: "Succulents for Smiles", href: "/succulents-for-smiles" },
     { name: "Color Planters", href: "/color-planters" },
     { name: "Contact", href: "/contact" },

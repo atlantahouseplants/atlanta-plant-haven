@@ -133,12 +133,20 @@ const Corporate = () => {
           <div className="grid lg:grid-cols-2 gap-12 mb-16">
             {/* Succulent Options */}
             <div>
-              <div 
-                className="w-full h-64 bg-cover bg-center rounded-lg mb-6 shadow-lg"
-                style={{
-                  backgroundImage: "url('/lovable-uploads/4bd098cf-c347-44d4-8770-5cbd973972cf.png')",
-                }}
-              />
+              <div className="grid grid-cols-2 gap-4 mb-6">
+                <div 
+                  className="w-full h-48 bg-cover bg-center rounded-lg shadow-lg"
+                  style={{
+                    backgroundImage: "url('/lovable-uploads/4bd098cf-c347-44d4-8770-5cbd973972cf.png')",
+                  }}
+                />
+                <div 
+                  className="w-full h-48 bg-cover bg-center rounded-lg shadow-lg"
+                  style={{
+                    backgroundImage: "url('/lovable-uploads/90f5433f-c1d9-46f3-9585-07fd8cf8b4f3.png')",
+                  }}
+                />
+              </div>
               <Card>
                 <CardHeader>
                   <CardTitle className="text-2xl text-green-600">Succulent Options</CardTitle>
@@ -171,12 +179,20 @@ const Corporate = () => {
 
             {/* Air Plant Options */}
             <div>
-              <div 
-                className="w-full h-64 bg-cover bg-center rounded-lg mb-6 shadow-lg"
-                style={{
-                  backgroundImage: "url('/lovable-uploads/8d50d76d-b349-4ac3-9177-5f7844ac7d45.png')",
-                }}
-              />
+              <div className="grid grid-cols-2 gap-4 mb-6">
+                <div 
+                  className="w-full h-48 bg-cover bg-center rounded-lg shadow-lg"
+                  style={{
+                    backgroundImage: "url('/lovable-uploads/8d50d76d-b349-4ac3-9177-5f7844ac7d45.png')",
+                  }}
+                />
+                <div 
+                  className="w-full h-48 bg-cover bg-center rounded-lg shadow-lg"
+                  style={{
+                    backgroundImage: "url('/lovable-uploads/8169a351-529d-491f-b975-8f13688d75b8.png')",
+                  }}
+                />
+              </div>
               <Card>
                 <CardHeader>
                   <CardTitle className="text-2xl text-blue-600">Air Plant Options</CardTitle>
@@ -315,12 +331,20 @@ const Corporate = () => {
 
             {/* Ceramic Gardens */}
             <div>
+            <div className="grid grid-cols-2 gap-4 mb-6">
               <div 
-                className="w-full h-64 bg-cover bg-center rounded-lg mb-6 shadow-lg"
+                className="w-full h-48 bg-cover bg-center rounded-lg shadow-lg"
                 style={{
                   backgroundImage: "url('/lovable-uploads/0ce46e4f-6354-42d3-98b8-2239be3bbd31.png')",
                 }}
               />
+              <div 
+                className="w-full h-48 bg-cover bg-center rounded-lg shadow-lg"
+                style={{
+                  backgroundImage: "url('/lovable-uploads/86c2026a-d63a-4bb9-b7b9-473883d52fc7.png')",
+                }}
+              />
+            </div>
               <Card>
                 <CardHeader>
                   <CardTitle className="text-2xl text-purple-600">Ceramic Gardens</CardTitle>
@@ -364,12 +388,20 @@ const Corporate = () => {
           <Card className="max-w-4xl mx-auto">
             <CardContent className="p-8">
               <div className="grid lg:grid-cols-2 gap-8 items-center">
-                <div 
-                  className="w-full h-64 bg-cover bg-center rounded-lg shadow-lg"
-                  style={{
-                    backgroundImage: "url('/lovable-uploads/e2804558-0f3f-4dab-b434-d9f4c65e4fc5.png')",
-                  }}
-                />
+                <div className="grid grid-cols-2 gap-4">
+                  <div 
+                    className="w-full h-48 bg-cover bg-center rounded-lg shadow-lg"
+                    style={{
+                      backgroundImage: "url('/lovable-uploads/e2804558-0f3f-4dab-b434-d9f4c65e4fc5.png')",
+                    }}
+                  />
+                  <div 
+                    className="w-full h-48 bg-cover bg-center rounded-lg shadow-lg"
+                    style={{
+                      backgroundImage: "url('/lovable-uploads/950e7437-9258-4a48-8836-bc8f5a10edd6.png')",
+                    }}
+                  />
+                </div>
                 <div className="text-center lg:text-left">
                   <h3 className="text-3xl font-bold text-foreground mb-4">10" Peace Lily Supreme</h3>
                   <div className="text-5xl font-bold text-green-600 mb-4">$145</div>
@@ -504,6 +536,27 @@ const Corporate = () => {
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-foreground mb-4">📸 Other Corporate Gifts We Offer</h2>
             <p className="text-xl text-muted-foreground">Examples from our recent corporate orders</p>
+          </div>
+
+          <div className="grid lg:grid-cols-3 gap-8 mb-12">
+            <div 
+              className="w-full h-64 bg-cover bg-center rounded-lg shadow-lg"
+              style={{
+                backgroundImage: "url('/lovable-uploads/1bd45f7a-3658-4382-ae7e-22ae907bef12.png')",
+              }}
+            />
+            <div 
+              className="w-full h-64 bg-cover bg-center rounded-lg shadow-lg"
+              style={{
+                backgroundImage: "url('/lovable-uploads/b1d3fcc2-bffc-45a3-b075-22432c158831.png')",
+              }}
+            />
+            <div 
+              className="w-full h-64 bg-cover bg-center rounded-lg shadow-lg"
+              style={{
+                backgroundImage: "url('/lovable-uploads/05ea5854-590a-4b34-aff0-6642ce355ca4.png')",
+              }}
+            />
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 items-center">
