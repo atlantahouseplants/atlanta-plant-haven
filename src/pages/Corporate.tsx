@@ -137,13 +137,13 @@ const Corporate = () => {
                 <div 
                   className="w-full h-48 bg-cover bg-center rounded-lg shadow-lg"
                   style={{
-                    backgroundImage: "url('/lovable-uploads/4bd098cf-c347-44d4-8770-5cbd973972cf.png')",
+                    backgroundImage: "url('/lovable-uploads/d9e78ef6-8606-4f22-a41e-302ec5960fb9.png')",
                   }}
                 />
                 <div 
                   className="w-full h-48 bg-cover bg-center rounded-lg shadow-lg"
                   style={{
-                    backgroundImage: "url('/lovable-uploads/90f5433f-c1d9-46f3-9585-07fd8cf8b4f3.png')",
+                    backgroundImage: "url('/lovable-uploads/3268169a-40c2-4366-9d04-649b592c107e.png')",
                   }}
                 />
               </div>
@@ -183,13 +183,13 @@ const Corporate = () => {
                 <div 
                   className="w-full h-48 bg-cover bg-center rounded-lg shadow-lg"
                   style={{
-                    backgroundImage: "url('/lovable-uploads/8d50d76d-b349-4ac3-9177-5f7844ac7d45.png')",
+                    backgroundImage: "url('/lovable-uploads/d8c81e56-3b3f-4275-a348-5537219bde8b.png')",
                   }}
                 />
                 <div 
                   className="w-full h-48 bg-cover bg-center rounded-lg shadow-lg"
                   style={{
-                    backgroundImage: "url('/lovable-uploads/8169a351-529d-491f-b975-8f13688d75b8.png')",
+                    backgroundImage: "url('/lovable-uploads/2156f2f3-8215-4569-802c-791ca5b929c8.png')",
                   }}
                 />
               </div>
@@ -242,12 +242,32 @@ const Corporate = () => {
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12">
-            <div 
-              className="w-full h-80 bg-cover bg-center rounded-lg shadow-lg"
-              style={{
-                backgroundImage: "url('/lovable-uploads/5e7af490-5108-4915-9b05-14f1426d3b5b.png')",
-              }}
-            />
+            <div className="grid grid-cols-2 gap-4">
+              <div 
+                className="w-full h-48 bg-cover bg-center rounded-lg shadow-lg"
+                style={{
+                  backgroundImage: "url('/lovable-uploads/9ff30ce9-dde6-4b5e-9bfd-967996b2525f.png')",
+                }}
+              />
+              <div 
+                className="w-full h-48 bg-cover bg-center rounded-lg shadow-lg"
+                style={{
+                  backgroundImage: "url('/lovable-uploads/3c095b68-4548-4766-b2ce-32f6b871e4d5.png')",
+                }}
+              />
+              <div 
+                className="w-full h-48 bg-cover bg-center rounded-lg shadow-lg"
+                style={{
+                  backgroundImage: "url('/lovable-uploads/2df912ea-3fe8-43b7-99cf-39e56951e44a.png')",
+                }}
+              />
+              <div 
+                className="w-full h-48 bg-cover bg-center rounded-lg shadow-lg"
+                style={{
+                  backgroundImage: "url('/lovable-uploads/e71d2b36-5a13-45c0-8d8e-0f6e2419022f.png')",
+                }}
+              />
+            </div>
             <div className="space-y-6">
               <Card>
                 <CardContent className="p-6">
@@ -303,7 +323,7 @@ const Corporate = () => {
               <div 
                 className="w-full h-64 bg-cover bg-center rounded-lg mb-6 shadow-lg"
                 style={{
-                  backgroundImage: "url('/lovable-uploads/9cc3e42f-7ac1-44ff-b4a6-389a65181a83.png')",
+                  backgroundImage: "url('/lovable-uploads/c22ae899-bb8a-4a5b-a561-787e6f8f23cc.png')",
                 }}
               />
               <Card>
@@ -388,17 +408,11 @@ const Corporate = () => {
           <Card className="max-w-4xl mx-auto">
             <CardContent className="p-8">
               <div className="grid lg:grid-cols-2 gap-8 items-center">
-                <div className="grid grid-cols-2 gap-4">
+                <div className="flex justify-center">
                   <div 
-                    className="w-full h-48 bg-cover bg-center rounded-lg shadow-lg"
+                    className="w-full max-w-sm h-64 bg-cover bg-center rounded-lg shadow-lg"
                     style={{
-                      backgroundImage: "url('/lovable-uploads/e2804558-0f3f-4dab-b434-d9f4c65e4fc5.png')",
-                    }}
-                  />
-                  <div 
-                    className="w-full h-48 bg-cover bg-center rounded-lg shadow-lg"
-                    style={{
-                      backgroundImage: "url('/lovable-uploads/950e7437-9258-4a48-8836-bc8f5a10edd6.png')",
+                      backgroundImage: "url('/lovable-uploads/a1aac1e0-b893-404b-9feb-e7300dff762a.png')",
                     }}
                   />
                 </div>
