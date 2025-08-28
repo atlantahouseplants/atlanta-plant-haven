@@ -30,7 +30,7 @@ const SimplifiedHero = () => {
                 size="lg"
                 className="w-full h-20 text-xl bg-gradient-to-r from-green-600 to-green-500 hover:from-green-700 hover:to-green-600 text-white shadow-xl"
               >
-                Transform Your Workspace
+                Get Free Office Plant Consultation
                 <ArrowRight className="ml-2 h-6 w-6" />
               </Button>
             </Link>
@@ -61,12 +61,50 @@ const SimplifiedHero = () => {
           </div>
         </div>
 
-        {/* Minimalist Mission Statement */}
-        <div className="max-w-3xl mx-auto text-center mt-16">
-          <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
-            We bring life to Atlanta's best workspaces through expert biophilic design and professional plant care. 
-            Transforming environments, enhancing well-being, building lasting partnerships.
-          </p>
+        {/* Why Plants Matter for Business */}
+        <div className="max-w-6xl mx-auto mt-20">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Why Atlanta's Leading Companies Choose Office Plants
+            </h2>
+            <p className="text-xl text-muted-foreground">
+              Research-proven benefits that impact your bottom line
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8 mb-16">
+            <div className="bg-white p-6 rounded-xl shadow-lg text-center">
+              <div className="text-4xl font-bold text-green-600 mb-2">15%</div>
+              <h3 className="font-semibold text-lg mb-2">Increased Productivity</h3>
+              <p className="text-muted-foreground text-sm">
+                University studies show office plants boost focus and task performance
+              </p>
+            </div>
+            
+            <div className="bg-white p-6 rounded-xl shadow-lg text-center">
+              <div className="text-4xl font-bold text-blue-600 mb-2">38%</div>
+              <h3 className="font-semibold text-lg mb-2">Reduced Fatigue</h3>
+              <p className="text-muted-foreground text-sm">
+                Biophilic design elements significantly reduce mental fatigue and stress
+              </p>
+            </div>
+            
+            <div className="bg-white p-6 rounded-xl shadow-lg text-center">
+              <div className="text-4xl font-bold text-purple-600 mb-2">25%</div>
+              <h3 className="font-semibold text-lg mb-2">Better Air Quality</h3>
+              <p className="text-muted-foreground text-sm">
+                Professional plant installations improve indoor air quality and wellness
+              </p>
+            </div>
+          </div>
+
+          {/* Mission Statement */}
+          <div className="text-center">
+            <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-4xl mx-auto">
+              We bring life to Atlanta's best workspaces through expert biophilic design and professional plant care. 
+              <strong className="text-foreground"> Every installation is designed to enhance employee well-being and create lasting first impressions.</strong>
+            </p>
+          </div>
         </div>
       </div>
     </section>
