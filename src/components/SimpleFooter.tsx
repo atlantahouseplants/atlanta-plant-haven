@@ -47,8 +47,8 @@ const SimpleFooter = () => {
             <div className="space-y-4 text-gray-300">
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-green-400 flex-shrink-0" />
-                <a href="tel:+14045551234" className="hover:text-green-400 transition-colors">
-                  (404) 555-1234
+                <a href="tel:+14706644039" className="hover:text-green-400 transition-colors">
+                  (470) 664-4039
                 </a>
               </div>
               <div className="flex items-center space-x-3">
