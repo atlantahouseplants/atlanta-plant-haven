@@ -229,7 +229,7 @@ const OfficePlants = () => {
             </div>
           </div>
           <cite className="text-xl text-muted-foreground font-medium">
-            – Keenan Ebow, CohnReznick
+            – Michelle, Office Manager Heritage Distribution
           </cite>
         </div>
       </section>
