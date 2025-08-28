@@ -26,7 +26,7 @@ const OfficePlants = () => {
               
               <Button 
                 size="lg" 
-                onClick={() => openForm('business-quote')}
+                onClick={() => window.open('https://api.leadconnectorhq.com/widget/booking/9fRFPShg1NmMIukGqwc4', '_blank')}
                 className="bg-gradient-to-r from-green-600 to-green-500 hover:from-green-700 hover:to-green-600 text-white text-xl px-12 py-6 shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 font-bold tracking-wide"
               >
                 <span className="flex items-center">
@@ -196,7 +196,7 @@ const OfficePlants = () => {
           
           <Button 
             size="lg"
-            onClick={() => openForm('business-quote')}
+            onClick={() => window.open('https://api.leadconnectorhq.com/widget/booking/9fRFPShg1NmMIukGqwc4', '_blank')}
             className="bg-gradient-to-r from-green-600 to-green-500 hover:from-green-700 hover:to-green-600 text-white text-2xl px-16 py-8 shadow-2xl hover:shadow-green-500/25 transform hover:scale-105 transition-all duration-300 font-bold tracking-wide rounded-xl"
           >
             <span className="flex items-center">
@@ -284,7 +284,7 @@ const OfficePlants = () => {
           </h2>
           <Button 
             size="lg"
-            onClick={() => openForm('business-quote')}
+            onClick={() => window.open('https://api.leadconnectorhq.com/widget/booking/9fRFPShg1NmMIukGqwc4', '_blank')}
             className="bg-white text-green-700 hover:bg-green-50 border-2 border-white hover:border-green-100 text-2xl px-16 py-8 shadow-2xl hover:shadow-white/25 transform hover:scale-105 transition-all duration-300 font-bold tracking-wide rounded-xl"
           >
             <span className="flex items-center">
