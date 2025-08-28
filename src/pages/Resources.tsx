@@ -111,7 +111,7 @@ const Resources = () => {
         </div>
       </section>
 
-      {/* Why These Resources Matter */}
+      {/* Why These Resources Matter - deployment fix */}
       <section className="py-20 bg-muted/30">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
