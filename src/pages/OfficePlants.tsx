@@ -52,10 +52,10 @@ const OfficePlants = () => {
           </h3>
           <div className="flex flex-wrap justify-center items-center gap-12 opacity-60">
             <div className="text-3xl font-bold text-foreground">Marriott</div>
-            <div className="text-3xl font-bold text-foreground">CohnReznick</div>
-            <div className="text-3xl font-bold text-foreground">Roark Capital</div>
-            <div className="text-3xl font-bold text-foreground">Jencap Insurance Services</div>
-            <div className="text-3xl font-bold text-foreground">PBS Aerospace</div>
+            <div className="text-3xl font-bold text-foreground">Archer Western</div>
+            <div className="text-3xl font-bold text-foreground">OneStreet Residential</div>
+            <div className="text-3xl font-bold text-foreground">Perkins and Will</div>
+            <div className="text-3xl font-bold text-foreground">Loria Ansley</div>
           </div>
         </div>
       </section>
