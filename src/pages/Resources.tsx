@@ -104,7 +104,6 @@ const Resources = () => {
                       </svg>
                     </span>
                   </Button>
-                  </div>
                 </CardContent>
               </Card>
             ))}
