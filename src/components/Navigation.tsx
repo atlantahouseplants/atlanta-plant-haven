@@ -9,12 +9,10 @@ const Navigation = () => {
 
   const navItems = [
     { name: "Home", href: "/" },
-    { name: "Office Plants", href: "/office-plants" },
-    { name: "Plant Doctor", href: "/plant-doctor" },
-    { name: "Corporate", href: "/corporate" },
-    { name: "Succulents for Smiles", href: "/succulents-for-smiles" },
-    { name: "Color Planters", href: "/color-planters" },
-    { name: "Contact", href: "/contact" },
+    { name: "Office Plant Service", href: "/office-plants" },
+    { name: "Corporate Gifting", href: "/corporate" },
+    { name: "Our Work", href: "/our-work" },
+    { name: "The Plant Doctor", href: "/plant-doctor" },
   ];
 
   return (
@@ -44,18 +42,14 @@ const Navigation = () => {
               </Link>
             ))}
             <div className="flex space-x-2">
-              <a 
-                href="https://api.leadconnectorhq.com/widget/bookings/plantdoctorservice"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Button className="bg-orange-600 hover:bg-orange-700 text-white">
-                  Plant Doctor - $149
-                </Button>
-              </a>
               <Link to="/office-plants">
-                <Button className="bg-green-600 hover:bg-green-700 text-white">
-                  FREE Design
+                <Button className="bg-primary text-primary-foreground hover:bg-primary/90">
+                  Free Office Audit
+                </Button>
+              </Link>
+              <Link to="/corporate">
+                <Button variant="outline">
+                  Corporate Gifting
                 </Button>
               </Link>
             </div>
@@ -88,18 +82,14 @@ const Navigation = () => {
                 </Link>
               ))}
               <div className="px-3 py-2 space-y-2">
-                <a 
-                  href="https://api.leadconnectorhq.com/widget/bookings/plantdoctorservice"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Button className="w-full bg-orange-600 hover:bg-orange-700 text-white">
-                    Plant Doctor - $149
-                  </Button>
-                </a>
                 <Link to="/office-plants">
-                  <Button className="w-full bg-green-600 hover:bg-green-700 text-white">
-                    FREE Design
+                  <Button className="w-full bg-primary text-primary-foreground">
+                    Free Office Audit
+                  </Button>
+                </Link>
+                <Link to="/corporate">
+                  <Button className="w-full" variant="outline">
+                    Corporate Gifting
                   </Button>
                 </Link>
               </div>

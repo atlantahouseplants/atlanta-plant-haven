@@ -12,7 +12,7 @@ const ServiceShowcase = () => {
       icon: Building2,
       title: "Office Plant Design & Maintenance",
       subtitle: "Transform Your Workspace",
-      description: "Complete plant solutions from FREE design to ongoing maintenance with 100% plant guarantee. Professional installation for Atlanta businesses.",
+      description: "Complete plant solutions from FREE design to ongoing maintenance with 100% plant guarantee. Serving Buckhead, Midtown, Virginia-Highland, and all Atlanta metro businesses.",
       image: "/lovable-uploads/e63a667a-2e0b-4f5e-bb35-9ca3f3059e0d.png",
       primaryCTA: {
         text: "Get FREE Quote",
@@ -32,7 +32,7 @@ const ServiceShowcase = () => {
       icon: Stethoscope,
       title: "Plant Doctor House Calls",
       subtitle: "Professional Plant Healthcare",
-      description: "90-minute comprehensive plant health consultation by our UGA-certified expert. Same-week appointments available across Atlanta.",
+      description: "90-minute comprehensive plant health consultation by our UGA-certified expert. Same-week appointments available across Decatur, Sandy Springs, Marietta, and all Atlanta metro areas.",
       image: "/lovable-uploads/cc2424e3-3025-4f30-be79-6a4763fca0a5.png",
       primaryCTA: {
         text: "Book Visit - $149",
@@ -72,7 +72,7 @@ const ServiceShowcase = () => {
       icon: Heart,
       title: "Succulents for Smiles",
       subtitle: "Community Donation Program",
-      description: "Spread joy in Atlanta's community! $4.75 per succulent plant donated to nursing homes, hospitals, and community centers (minimum 100 plants).",
+      description: "Spread joy throughout Atlanta communities! $4.75 per succulent plant donated to nursing homes, hospitals, and community centers in Brookhaven, East Atlanta, Inman Park, and beyond (minimum 100 plants).",
       image: "/lovable-uploads/1d594861-1b48-453b-b860-d23e913d9397.png",
       primaryCTA: {
         text: "Donate Succulents",
@@ -92,7 +92,7 @@ const ServiceShowcase = () => {
       icon: Palette,
       title: "Outdoor Color Planters",
       subtitle: "Handmade Seasonal Designs",
-      description: "Stunning seasonal planter designs for outdoor spaces. Handcrafted with premium materials - no two planters alike in Atlanta.",
+      description: "Stunning seasonal planter designs for outdoor spaces throughout Atlanta. Handcrafted with premium materials for Smyrna, Vinings, Grant Park, and surrounding areas - no two planters alike.",
       image: "/lovable-uploads/51d0a899-621b-4011-8842-d9d929d45e2a.png",
       primaryCTA: {
         text: "Get FREE Quote",
@@ -112,7 +112,7 @@ const ServiceShowcase = () => {
       icon: Paintbrush,
       title: "Handmade Color Bowls",
       subtitle: "Artisan Crafted Arrangements",
-      description: "Beautiful handcrafted color bowls featuring vibrant seasonal plants. Each piece is uniquely designed by our artisans for Atlanta homes and businesses.",
+      description: "Beautiful handcrafted color bowls featuring vibrant seasonal plants. Each piece is uniquely designed by our artisans for Candler Park, Little Five Points, Westside, and Atlanta metro homes and businesses.",
       image: "/lovable-uploads/c7cbb1f4-171d-4217-ae52-4e84adc6503f.png",
       primaryCTA: {
         text: "Get FREE Quote",

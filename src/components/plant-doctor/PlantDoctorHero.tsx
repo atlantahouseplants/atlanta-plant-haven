@@ -32,7 +32,7 @@ const PlantDoctorHero = ({ onBookingClick }: PlantDoctorHeroProps) => {
                 onClick={onBookingClick}
                 className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 text-lg"
               >
-                Book Plant Doctor Visit - $149
+                Book Plant Doctor Visit - $149 (Same Week!)
               </Button>
             </div>
           </div>

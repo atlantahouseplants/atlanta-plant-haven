@@ -8,6 +8,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
 import { useToast } from '@/hooks/use-toast';
 import { useForm } from './FormContext';
+import { getMostRecentChatTranscript, hasRecentChatActivity } from '@/lib/chatUtils';
 
 const formSchema = z.object({
   name: z.string().min(2, 'Full name is required'),
@@ -39,6 +40,9 @@ const HomeConsultationForm = () => {
     setIsSubmitting(true);
     
     try {
+      // Check for recent chat activity and include transcript if available
+      const chatTranscript = hasRecentChatActivity() ? getMostRecentChatTranscript() : '';
+      
       const payload = {
         formType: 'home-consultation',
         timestamp: new Date().toISOString(),
@@ -46,7 +50,11 @@ const HomeConsultationForm = () => {
           ...data,
           source: 'homepage',
           service: 'Home Plant Design Consultation - $199'
-        }
+        },
+        ...(chatTranscript && {
+          chatTranscript,
+          hasRecentChatActivity: true
+        })
       };
 
       // UPDATED WEBHOOK URL BELOW — each form now uses its own webhook for simplicity
@@ -60,7 +68,7 @@ const HomeConsultationForm = () => {
 
       toast({
         title: "Consultation Request Submitted!",
-        description: "We'll contact you within 24 hours to schedule your $199 home consultation.",
+        description: `We'll contact you within 24 hours to schedule your $199 home consultation.${chatTranscript ? ' Your chat conversation has been included.' : ''}`,
       });
       
       closeForm();

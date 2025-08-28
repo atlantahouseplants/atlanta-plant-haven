@@ -11,11 +11,11 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "
 import { useToast } from "@/hooks/use-toast";
 
 const formSchema = z.object({
-  firstName: z.string().min(2, "First name is required"),
-  lastName: z.string().min(2, "Last name is required"),
-  companyName: z.string().min(2, "Company name is required"),
-  email: z.string().email("Please enter a valid email address"),
-  phone: z.string().min(10, "Please enter a valid phone number"),
+  firstName: z.string().min(2, "Please enter your first name (at least 2 characters)"),
+  lastName: z.string().min(2, "Please enter your last name (at least 2 characters)"),
+  companyName: z.string().min(2, "Please enter your company name (at least 2 characters)"),
+  email: z.string().email("Please enter a valid email address (example: john@company.com)"),
+  phone: z.string().min(10, "Please enter a valid 10-digit phone number"),
   serviceInterest: z.string(),
   projectDetails: z.string().optional(),
 });
@@ -28,13 +28,17 @@ const Contact = () => {
       icon: Phone,
       title: "Phone",
       details: "470-664-4039",
-      subtext: "We'll respond promptly to your inquiry"
+      subtext: "We'll respond promptly to your inquiry",
+      clickable: true,
+      href: "tel:470-664-4039"
     },
     {
       icon: Mail,
       title: "Email",
       details: "ana@atlantahouseplants.com",
-      subtext: "Get a response within 24 hours"
+      subtext: "Get a response within 24 hours",
+      clickable: true,
+      href: "mailto:ana@atlantahouseplants.com"
     },
     {
       icon: MapPin,
@@ -146,7 +150,11 @@ const Contact = () => {
                             First Name *
                           </FormLabel>
                           <FormControl>
-                            <Input placeholder="John" {...field} />
+                            <Input 
+                              placeholder="John" 
+                              autoFocus
+                              {...field} 
+                            />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -287,18 +295,27 @@ const Contact = () => {
             <div>
               <h3 className="text-2xl font-bold text-foreground mb-6">Contact Information</h3>
               <div className="grid gap-6">
-                {contactInfo.map((info, index) => (
-                  <div key={index} className="flex items-start space-x-4 p-4 bg-white rounded-lg shadow-sm">
-                    <div className="p-2 bg-green-100 rounded-lg">
-                      <info.icon className="h-5 w-5 text-green-600" />
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-foreground">{info.title}</h4>
-                      <p className="text-foreground">{info.details}</p>
-                      <p className="text-sm text-muted-foreground">{info.subtext}</p>
-                    </div>
-                  </div>
-                ))}
+                {contactInfo.map((info, index) => {
+                  const ContactComponent = info.clickable ? 'a' : 'div';
+                  const contactProps = info.clickable ? { href: info.href } : {};
+                  
+                  return (
+                    <ContactComponent 
+                      key={index} 
+                      {...contactProps}
+                      className={`flex items-start space-x-4 p-4 bg-white rounded-lg shadow-sm ${info.clickable ? 'hover:bg-green-50 transition-colors cursor-pointer' : ''}`}
+                    >
+                      <div className="p-2 bg-green-100 rounded-lg">
+                        <info.icon className="h-5 w-5 text-green-600" />
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-foreground">{info.title}</h4>
+                        <p className={`text-foreground ${info.clickable ? 'hover:text-green-600' : ''}`}>{info.details}</p>
+                        <p className="text-sm text-muted-foreground">{info.subtext}</p>
+                      </div>
+                    </ContactComponent>
+                  );
+                })}
               </div>
             </div>
 

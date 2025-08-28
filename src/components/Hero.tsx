@@ -85,12 +85,12 @@ const Hero = () => {
               onClick={() => openForm('business-quote')}
               className="w-full bg-gradient-to-r from-green-600 to-green-500 hover:from-green-700 hover:to-green-600 text-white text-lg py-4 mb-4 shadow-lg"
             >
-              Get Your FREE Quote
+              Get Your FREE Quote (Same Week!)
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
             
             <p className="text-sm text-center text-muted-foreground">
-              ✓ 24-hour response • ✓ Free consultation • ✓ Professional guarantee
+              ✓ 24-hour response • ✓ UGA Certified Professional • ✓ 100% Plant guarantee
             </p>
           </div>
 
@@ -141,7 +141,7 @@ const Hero = () => {
               className="block"
             >
               <Button className="w-full bg-gradient-to-r from-orange-600 to-orange-500 hover:from-orange-700 hover:to-orange-600 text-white text-lg py-4 shadow-lg">
-                Book Plant Doctor Visit - $149
+                Book Plant Doctor Visit - $149 (Same Week!)
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </a>
@@ -154,8 +154,15 @@ const Hero = () => {
 
         {/* Contact Information */}
         <div className="text-center">
-          <div className="inline-flex items-center gap-8 text-sm text-muted-foreground bg-white px-8 py-4 rounded-full shadow-sm">
-            <div className="flex items-center">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 text-sm text-muted-foreground bg-white px-8 py-4 rounded-full shadow-sm">
+            <a 
+              href="tel:470-664-4039" 
+              className="flex items-center hover:text-green-600 transition-colors md:hidden bg-green-600 text-white px-4 py-2 rounded-full"
+            >
+              <Phone className="h-4 w-4 mr-2" />
+              Call Now
+            </a>
+            <div className="hidden md:flex items-center">
               <Phone className="h-4 w-4 mr-2" />
               470-664-4039
             </div>
