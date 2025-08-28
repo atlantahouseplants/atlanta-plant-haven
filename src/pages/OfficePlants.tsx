@@ -236,7 +236,7 @@ const OfficePlants = () => {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12 mb-20">
+          <div className="grid lg:grid-cols-2 gap-12">
             {/* Case Study 1 */}
             <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
               <img
@@ -245,22 +245,11 @@ const OfficePlants = () => {
                 className="w-full h-64 object-cover"
               />
               <div className="p-8">
-                <h3 className="text-2xl font-bold mb-4">Heritage Distribution - Buckhead</h3>
-                <div className="grid grid-cols-2 gap-4 mb-6">
-                  <div className="text-center p-4 bg-green-50 rounded-lg">
-                    <div className="text-2xl font-bold text-green-600">23%</div>
-                    <p className="text-sm text-muted-foreground">Fewer sick days</p>
-                  </div>
-                  <div className="text-center p-4 bg-blue-50 rounded-lg">
-                    <div className="text-2xl font-bold text-blue-600">40%</div>
-                    <p className="text-sm text-muted-foreground">Improved client feedback</p>
-                  </div>
-                </div>
-                <blockquote className="italic text-muted-foreground mb-4">
-                  "The professionalism and expertise are unmatched. Our lobby is now a true showpiece, 
-                  and the ongoing service is completely hands-off. It's a turnkey solution that delivers real value."
+                <h3 className="text-2xl font-bold mb-6 text-green-600">Heritage Distribution - Buckhead</h3>
+                <blockquote className="text-xl text-foreground font-semibold leading-relaxed mb-6">
+                  "The professionalism and expertise are unmatched. Our lobby is now a true showpiece, and the morning mood in the office is completely different. It's a turnkey service that delivered real results."
                 </blockquote>
-                <cite className="font-medium text-foreground">
+                <cite className="text-lg font-medium text-muted-foreground">
                   – Michelle, Office Manager
                 </cite>
               </div>
@@ -274,47 +263,13 @@ const OfficePlants = () => {
                 className="w-full h-64 object-cover"
               />
               <div className="p-8">
-                <h3 className="text-2xl font-bold mb-4">Tech Startup - Alpharetta</h3>
-                <div className="grid grid-cols-2 gap-4 mb-6">
-                  <div className="text-center p-4 bg-purple-50 rounded-lg">
-                    <div className="text-2xl font-bold text-purple-600">18%</div>
-                    <p className="text-sm text-muted-foreground">Productivity increase</p>
-                  </div>
-                  <div className="text-center p-4 bg-orange-50 rounded-lg">
-                    <div className="text-2xl font-bold text-orange-600">90%</div>
-                    <p className="text-sm text-muted-foreground">Employee satisfaction</p>
-                  </div>
-                </div>
-                <blockquote className="italic text-muted-foreground mb-4">
-                  "Our team noticed the difference immediately. The office feels more alive and energizing. 
-                  We've seen measurable improvements in focus and creativity since the installation."
+                <h3 className="text-2xl font-bold mb-6 text-green-600">Tech Startup - Alpharetta</h3>
+                <blockquote className="text-xl text-foreground font-semibold leading-relaxed mb-6">
+                  "Our team noticed the difference immediately. The office feels more alive and energizing. We've seen measurable improvements in focus and creativity since the installation."
                 </blockquote>
-                <cite className="font-medium text-foreground">
+                <cite className="text-lg font-medium text-muted-foreground">
                   – Sarah Chen, HR Director
                 </cite>
-              </div>
-            </div>
-          </div>
-
-          {/* ROI Statistics */}
-          <div className="bg-gradient-to-r from-green-600 to-green-500 text-white p-12 rounded-2xl text-center">
-            <h3 className="text-3xl font-bold mb-8">Average Client Results After 6 Months</h3>
-            <div className="grid md:grid-cols-4 gap-8">
-              <div>
-                <div className="text-4xl font-bold mb-2">19%</div>
-                <p className="text-green-100">Reduction in sick days</p>
-              </div>
-              <div>
-                <div className="text-4xl font-bold mb-2">24%</div>
-                <p className="text-green-100">Improved productivity</p>
-              </div>
-              <div>
-                <div className="text-4xl font-bold mb-2">89%</div>
-                <p className="text-green-100">Client satisfaction rate</p>
-              </div>
-              <div>
-                <div className="text-4xl font-bold mb-2">$3,200</div>
-                <p className="text-green-100">Average annual savings</p>
               </div>
             </div>
           </div>
