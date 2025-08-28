@@ -12,22 +12,19 @@ const SimplifiedHero = () => {
         {/* Hero Section */}
         <div className="text-center mb-16">
           <div className="mb-8">
-            <h1 className="text-5xl sm:text-6xl md:text-8xl font-black text-foreground leading-[0.9] mb-4 tracking-tight">
-              We Create
+            <h1 className="text-5xl sm:text-6xl md:text-8xl font-black text-foreground leading-[0.9] mb-6 tracking-tight">
               <span className="block bg-gradient-to-r from-green-600 via-green-500 to-emerald-500 bg-clip-text text-transparent drop-shadow-sm">
-                Environments
+                Transform
               </span>
-              <span className="block text-3xl sm:text-4xl md:text-5xl font-bold text-muted-foreground/80 mt-2">
-                That Thrive
+              <span className="block text-foreground">
+                Your Atlanta Workspace
               </span>
             </h1>
           </div>
           
-          <div className="max-w-3xl mx-auto mb-12">
-            <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed font-medium">
-              Transform your Atlanta workspace with 
-              <span className="text-green-700 font-semibold"> research-proven plant solutions</span> that 
-              boost productivity and employee well-being
+          <div className="max-w-4xl mx-auto mb-12">
+            <p className="text-2xl md:text-3xl text-muted-foreground leading-relaxed font-medium text-center">
+              Elevate Your Brand, Boost Employee Well-being, and Create an Unforgettable First Impression
             </p>
           </div>
           
@@ -49,8 +46,8 @@ const SimplifiedHero = () => {
                 className="w-full h-28 sm:h-24 text-lg sm:text-xl bg-gradient-to-r from-green-600 via-green-500 to-green-600 hover:from-green-700 hover:via-green-600 hover:to-green-700 text-white shadow-2xl hover:shadow-green-500/25 transform hover:scale-[1.02] transition-all duration-300 border-0 font-bold tracking-wide rounded-2xl"
               >
                 <div className="flex flex-col items-center px-2">
-                  <span className="text-base sm:text-lg mb-1">Get Free Office Plant Consultation</span>
-                  <span className="text-xs sm:text-sm opacity-90 font-medium">✓ UGA Certified Expert • Same Week Response</span>
+                  <span className="text-base sm:text-lg mb-1">Transform Your Workspace</span>
+                  <span className="text-xs sm:text-sm opacity-90 font-medium">✓ Free Consultation • Same Week Response</span>
                 </div>
                 <ArrowRight className="ml-2 sm:ml-3 h-6 w-6 sm:h-7 sm:w-7 group-hover:translate-x-1 transition-transform flex-shrink-0" />
               </Button>
@@ -90,118 +87,60 @@ const SimplifiedHero = () => {
           </div>
         </div>
 
-        {/* Social Proof Bar */}
+        {/* Strategic Social Proof - Immediately After Hero */}
         <div className="text-center mb-20">
-          <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-gray-200/50">
-            <h3 className="text-2xl font-bold text-foreground mb-2">
+          <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-2xl border border-gray-200/50">
+            <h3 className="text-3xl font-bold text-foreground mb-3">
               Trusted by Atlanta's Leading Firms
             </h3>
-            <p className="text-muted-foreground mb-8">Join these prestigious companies who rely on our expertise</p>
-            <div className="flex flex-wrap justify-center items-center gap-8 lg:gap-12">
-              <div className="text-2xl lg:text-3xl font-bold text-foreground hover:text-green-600 transition-colors cursor-default">Marriott</div>
-              <div className="text-2xl lg:text-3xl font-bold text-foreground hover:text-green-600 transition-colors cursor-default">Archer Western</div>
-              <div className="text-2xl lg:text-3xl font-bold text-foreground hover:text-green-600 transition-colors cursor-default">OneStreet Residential</div>
-              <div className="text-2xl lg:text-3xl font-bold text-foreground hover:text-green-600 transition-colors cursor-default">Perkins and Will</div>
-              <div className="text-2xl lg:text-3xl font-bold text-foreground hover:text-green-600 transition-colors cursor-default">Loria Ansley</div>
+            <div className="flex flex-wrap justify-center items-center gap-8 lg:gap-12 mt-8">
+              <div className="text-3xl font-bold text-foreground hover:text-green-600 transition-colors cursor-default">Marriott</div>
+              <div className="text-3xl font-bold text-foreground hover:text-green-600 transition-colors cursor-default">Archer Western</div>
+              <div className="text-3xl font-bold text-foreground hover:text-green-600 transition-colors cursor-default">OneStreet Residential</div>
+              <div className="text-3xl font-bold text-foreground hover:text-green-600 transition-colors cursor-default">Perkins and Will</div>
+              <div className="text-3xl font-bold text-foreground hover:text-green-600 transition-colors cursor-default">Loria Ansley</div>
             </div>
           </div>
         </div>
 
-        {/* Why Plants Matter for Business */}
-        <div className="max-w-6xl mx-auto mt-20">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Why Atlanta's Leading Companies Choose Office Plants
+        {/* Strategic Mission Statement Section */}
+        <div className="text-center mb-20">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+            A New Standard of Professional Plant Care
+          </h2>
+          <p className="text-xl text-muted-foreground leading-relaxed max-w-4xl mx-auto">
+            We transform Atlanta workspaces through expert biophilic design and guaranteed plant care. 
+            Every installation is designed to elevate your brand and create lasting first impressions that matter to your business.
+          </p>
+        </div>
+
+        {/* Final Strategic CTA Section */}
+        <div className="text-center">
+          <div className="bg-gradient-to-br from-green-50 to-emerald-50/50 p-12 rounded-3xl shadow-xl border border-green-100">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8">
+              Ready to Begin Your Transformation?
             </h2>
-            <p className="text-xl text-muted-foreground">
-              Research-proven benefits that impact your bottom line
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
-            <div className="group bg-gradient-to-br from-white to-green-50/50 p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 text-center border border-green-100/50 hover:border-green-200 transform hover:scale-[1.02]">
-              <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-green-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                <div className="text-3xl font-bold text-white">15%</div>
-              </div>
-              <h3 className="font-bold text-xl mb-3 text-foreground">Increased Productivity</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                University studies show office plants boost focus and task performance
-              </p>
-            </div>
             
-            <div className="group bg-gradient-to-br from-white to-blue-50/50 p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 text-center border border-blue-100/50 hover:border-blue-200 transform hover:scale-[1.02]">
-              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                <div className="text-3xl font-bold text-white">38%</div>
-              </div>
-              <h3 className="font-bold text-xl mb-3 text-foreground">Reduced Fatigue</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Biophilic design elements significantly reduce mental fatigue and stress
-              </p>
-            </div>
-            
-            <div className="group bg-gradient-to-br from-white to-purple-50/50 p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 text-center border border-purple-100/50 hover:border-purple-200 transform hover:scale-[1.02]">
-              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                <div className="text-3xl font-bold text-white">25%</div>
-              </div>
-              <h3 className="font-bold text-xl mb-3 text-foreground">Better Air Quality</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Professional plant installations improve indoor air quality and wellness
-              </p>
-            </div>
-          </div>
-
-          {/* Mission Statement */}
-          <div className="text-center mb-16">
-            <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-4xl mx-auto">
-              We bring life to Atlanta's best workspaces through expert biophilic design and professional plant care. 
-              <strong className="text-foreground"> Every installation is designed to enhance employee well-being and create lasting first impressions.</strong>
-            </p>
-          </div>
-
-          {/* Service Areas */}
-          <div className="bg-gradient-to-br from-green-50 to-emerald-50/50 p-10 rounded-3xl shadow-xl border border-green-100">
-            <div className="text-center mb-12">
-              <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-                Serving Atlanta's Premier Business Districts
-              </h3>
-              <p className="text-xl text-muted-foreground">
-                Professional office plant services throughout Metro Atlanta
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 sm:gap-6 max-w-5xl mx-auto">
-              <div className="group bg-white p-4 sm:p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 text-center transform hover:scale-105 border border-gray-100 min-h-[80px] sm:min-h-[90px] flex flex-col justify-center">
-                <h4 className="font-bold text-green-700 mb-1 sm:mb-2 group-hover:text-green-800 transition-colors text-sm sm:text-base">Buckhead</h4>
-                <p className="text-xs sm:text-sm text-muted-foreground">Financial District</p>
-              </div>
-              <div className="group bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 text-center transform hover:scale-105 border border-gray-100">
-                <h4 className="font-bold text-green-700 mb-2 group-hover:text-green-800 transition-colors">Midtown</h4>
-                <p className="text-sm text-muted-foreground">Corporate Corridor</p>
-              </div>
-              <div className="group bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 text-center transform hover:scale-105 border border-gray-100">
-                <h4 className="font-bold text-green-700 mb-2 group-hover:text-green-800 transition-colors">Sandy Springs</h4>
-                <p className="text-sm text-muted-foreground">Business Hub</p>
-              </div>
-              <div className="group bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 text-center transform hover:scale-105 border border-gray-100">
-                <h4 className="font-bold text-green-700 mb-2 group-hover:text-green-800 transition-colors">Alpharetta</h4>
-                <p className="text-sm text-muted-foreground">Tech Corridor</p>
-              </div>
-              <div className="group bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 text-center transform hover:scale-105 border border-gray-100">
-                <h4 className="font-bold text-green-700 mb-2 group-hover:text-green-800 transition-colors">Decatur</h4>
-                <p className="text-sm text-muted-foreground">Creative District</p>
-              </div>
-              <div className="group bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 text-center transform hover:scale-105 border border-gray-100">
-                <h4 className="font-bold text-green-700 mb-2 group-hover:text-green-800 transition-colors">Dunwoody</h4>
-                <p className="text-sm text-muted-foreground">Office Parks</p>
-              </div>
-              <div className="group bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 text-center transform hover:scale-105 border border-gray-100">
-                <h4 className="font-bold text-green-700 mb-2 group-hover:text-green-800 transition-colors">Vinings</h4>
-                <p className="text-sm text-muted-foreground">Business Center</p>
-              </div>
-              <div className="group bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 text-center transform hover:scale-105 border border-gray-100">
-                <h4 className="font-bold text-green-700 mb-2 group-hover:text-green-800 transition-colors">Marietta</h4>
-                <p className="text-sm text-muted-foreground">Corporate Campus</p>
-              </div>
+            <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+              <Link to="/office-plants" className="group">
+                <Button 
+                  size="lg"
+                  className="w-full h-20 text-xl bg-gradient-to-r from-green-600 via-green-500 to-green-600 hover:from-green-700 hover:via-green-600 hover:to-green-700 text-white shadow-2xl hover:shadow-green-500/25 transform hover:scale-[1.02] transition-all duration-300 border-0 font-bold tracking-wide rounded-2xl"
+                >
+                  Transform Your Workspace
+                  <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </Link>
+              
+              <Link to="/corporate" className="group">
+                <Button 
+                  size="lg"
+                  className="w-full h-20 text-xl bg-gradient-to-r from-blue-600 via-blue-500 to-blue-600 hover:from-blue-700 hover:via-blue-600 hover:to-blue-700 text-white shadow-2xl hover:shadow-blue-500/25 transform hover:scale-[1.02] transition-all duration-300 border-0 font-bold tracking-wide rounded-2xl"
+                >
+                  Elevate Your Corporate Gifting
+                  <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

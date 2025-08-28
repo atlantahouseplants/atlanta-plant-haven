@@ -8,11 +8,9 @@ const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
-    { name: "Home", href: "/" },
     { name: "Office Plant Service", href: "/office-plants" },
     { name: "Corporate Gifting", href: "/corporate" },
     { name: "Our Work", href: "/our-work" },
-    { name: "Resources", href: "/resources" },
     { name: "The Plant Doctor", href: "/plant-doctor" },
   ];
 

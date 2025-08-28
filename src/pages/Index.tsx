@@ -1,7 +1,7 @@
 
 import Navigation from "@/components/Navigation";
 import SimplifiedHero from "@/components/SimplifiedHero";
-import Footer from "@/components/Footer";
+import SimpleFooter from "@/components/SimpleFooter";
 import { FormProvider } from "@/components/forms/FormContext";
 import FormModal from "@/components/forms/FormModal";
 
@@ -11,7 +11,7 @@ const Index = () => {
       <div className="min-h-screen bg-background">
         <Navigation />
         <SimplifiedHero />
-        <Footer />
+        <SimpleFooter />
         <FormModal />
       </div>
     </FormProvider>
