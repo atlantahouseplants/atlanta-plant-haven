@@ -171,17 +171,158 @@ const Corporate = () => {
         </div>
       </section>
 
-      {/* Mini Gifts Section */}
-      <section className="py-20 bg-white">
+      {/* The Milestone Collection - 3 Solution Tiers */}
+      <section className="py-20 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-foreground mb-4">🌵 Mini Gifts</h2>
-            <p className="text-xl text-muted-foreground mb-2">Perfect for 50+ recipients</p>
-            <Badge variant="outline" className="text-green-600 border-green-600">Starting at $8</Badge>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+              The Milestone Collection: Curated for Every Occasion
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Three carefully designed tiers to match every recognition moment in your company's journey.
+            </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12 mb-16">
-            {/* Succulent Options */}
+          <div className="grid lg:grid-cols-3 gap-8">
+            {/* Welcome Tier */}
+            <div className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300">
+              <img
+                src="/lovable-uploads/d9e78ef6-8606-4f22-a41e-302ec5960fb9.png"
+                alt="Welcome Tier - Mini succulent gift for new hires"
+                className="w-full h-64 object-cover"
+              />
+              <div className="p-8">
+                <div className="text-center">
+                  <h3 className="text-2xl font-bold text-foreground mb-4">Welcome Tier</h3>
+                  <p className="text-muted-foreground mb-6 leading-relaxed">
+                    Perfect for new hire welcome gifts, small thank-yous, and team appreciation. 
+                    Mini succulent arrangements that make a memorable first impression.
+                  </p>
+                  <div className="mb-6">
+                    <Badge className="bg-green-600 text-white text-lg px-4 py-2">
+                      One-Time: $12 each
+                    </Badge>
+                  </div>
+                  <p className="text-sm text-muted-foreground">
+                    Ideal for: New hires, team thank-yous, small milestones
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Recognition Tier */}
+            <div className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300 ring-2 ring-green-600">
+              <div className="bg-green-600 text-white text-center py-2 font-semibold">
+                MOST POPULAR
+              </div>
+              <img
+                src="/lovable-uploads/4b18516d-7bc4-4140-aa45-ac98dc21e101.png"
+                alt="Recognition Tier - Desktop plant for anniversaries"
+                className="w-full h-64 object-cover"
+              />
+              <div className="p-8">
+                <div className="text-center">
+                  <h3 className="text-2xl font-bold text-foreground mb-4">Recognition Tier</h3>
+                  <p className="text-muted-foreground mb-6 leading-relaxed">
+                    Professional desktop plants for work anniversaries, promotions, and client gifts. 
+                    Substantial plants that make a lasting impression.
+                  </p>
+                  <div className="mb-6">
+                    <Badge className="bg-blue-600 text-white text-lg px-4 py-2">
+                      One-Time: $45 each
+                    </Badge>
+                  </div>
+                  <p className="text-sm text-muted-foreground">
+                    Ideal for: Work anniversaries, promotions, client thank-yous
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Executive Tier */}
+            <div className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300">
+              <img
+                src="/lovable-uploads/24794cd6-d871-433d-8ce5-1b5d61120d74.png"
+                alt="Executive Tier - Designer arrangement for VIP recognition"
+                className="w-full h-64 object-cover"
+              />
+              <div className="p-8">
+                <div className="text-center">
+                  <h3 className="text-2xl font-bold text-foreground mb-4">Executive Tier</h3>
+                  <p className="text-muted-foreground mb-6 leading-relaxed">
+                    Designer arrangements for executive recognition, major milestones, and VIP clients. 
+                    Statement pieces that reflect your company's premium standards.
+                  </p>
+                  <div className="mb-6">
+                    <Badge className="bg-purple-600 text-white text-lg px-4 py-2">
+                      One-Time: $125 each
+                    </Badge>
+                  </div>
+                  <p className="text-sm text-muted-foreground">
+                    Ideal for: Executive recognition, major milestones, VIP clients
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Continuity Offer - Partner With Us & Save */}
+      <section className="py-20 bg-gradient-to-br from-green-600 to-green-500 text-white">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-4xl md:text-5xl font-bold mb-8 leading-tight">
+            Partner With Us & Save
+          </h2>
+          <div className="text-xl leading-relaxed mb-12 max-w-4xl mx-auto">
+            <p className="mb-6">
+              You can place one-time orders at our list price. However, our partners who enroll in the <strong>12-month Automated Gifting Program</strong> receive an immediate <strong>20% discount on all gifts</strong> and our complimentary branding package.
+            </p>
+            <p>
+              It's the most seamless and cost-effective way to manage your company's culture of recognition.
+            </p>
+          </div>
+          
+          {/* Partnership Benefits */}
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold">20%</span>
+              </div>
+              <h3 className="text-xl font-semibold mb-2">Immediate Savings</h3>
+              <p className="text-green-100">20% off all gifts for 12-month partners</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Gift className="h-8 w-8" />
+              </div>
+              <h3 className="text-xl font-semibold mb-2">Complimentary Branding</h3>
+              <p className="text-green-100">Custom logo cards and branded packaging included</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Clock className="h-8 w-8" />
+              </div>
+              <h3 className="text-xl font-semibold mb-2">Set & Forget</h3>
+              <p className="text-green-100">Quarterly list updates - we handle everything else</p>
+            </div>
+          </div>
+
+          {/* Single Powerful CTA */}
+          <Button 
+            size="lg"
+            onClick={() => window.open('tel:+14706644039')}
+            className="bg-white text-green-700 hover:bg-green-50 border-2 border-white hover:border-green-100 text-2xl px-16 py-8 shadow-2xl hover:shadow-white/25 transform hover:scale-105 transition-all duration-300 font-bold tracking-wide rounded-xl"
+          >
+            <span className="flex items-center">
+              Schedule a Gifting Strategy Call
+              <Phone className="ml-4 h-7 w-7" />
+            </span>
+          </Button>
+        </div>
+      </section>
+
+      {/* Volume Discounts */}
             <div>
               <div className="grid grid-cols-2 gap-4 mb-6">
                 <div 
