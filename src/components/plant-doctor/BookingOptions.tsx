@@ -27,16 +27,28 @@ const BookingOptions = () => {
                 Schedule your $149 plant doctor visit. Most appointments available within the week.
               </p>
               
-              {/* Booking Widget */}
-              <div className="mb-4">
+              {/* Optimized Booking Widget */}
+              <div className="mb-6 bg-white rounded-lg shadow-inner p-2">
                 <iframe 
                   src="https://api.leadconnectorhq.com/widget/booking/J3NNAtlNcdw0V75i8LX2" 
                   style={{width: '100%', border: 'none', overflow: 'hidden'}} 
                   scrolling="no" 
-                  id="DEF98LO6WWc6OgMYWE0E_1749942475268"
+                  id="plantdoctor_booking_widget"
                   className="rounded-lg"
                   height="800"
+                  title="Book Plant Doctor Appointment"
                 />
+              </div>
+              
+              {/* Mobile/Backup Button */}
+              <div className="mb-4 md:hidden">
+                <button 
+                  onClick={() => window.open('https://api.leadconnectorhq.com/widget/booking/J3NNAtlNcdw0V75i8LX2', '_blank')}
+                  className="w-full bg-orange-600 hover:bg-orange-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
+                >
+                  Open Booking Calendar
+                </button>
+                <p className="text-xs text-gray-500 mt-2 text-center">Having trouble with the calendar above? Click here.</p>
               </div>
               
               <p className="text-sm text-muted-foreground">

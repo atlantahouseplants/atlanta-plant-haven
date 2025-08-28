@@ -21,7 +21,7 @@ const PlantDoctor = () => {
   const { openForm } = useForm();
   
   const handleBookingClick = () => {
-    window.open('https://api.leadconnectorhq.com/widget/bookings/plantdoctorservice', '_blank');
+    window.open('https://api.leadconnectorhq.com/widget/booking/J3NNAtlNcdw0V75i8LX2', '_blank');
   };
 
   const expertTips = [
