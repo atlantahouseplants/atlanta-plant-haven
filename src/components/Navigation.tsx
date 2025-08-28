@@ -44,7 +44,7 @@ const Navigation = () => {
             <div className="flex space-x-3">
               <Link to="/office-plants" className="group">
                 <Button className="bg-gradient-to-r from-green-600 to-green-500 hover:from-green-700 hover:to-green-600 text-white shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200 font-semibold">
-                  Free Office Audit
+                  Book Your Audit
                   <svg className="ml-2 h-4 w-4 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                   </svg>
@@ -92,7 +92,7 @@ const Navigation = () => {
               <div className="px-4 py-4 space-y-4">
                 <Link to="/office-plants">
                   <Button className="w-full bg-gradient-to-r from-green-600 to-green-500 hover:from-green-700 hover:to-green-600 text-white shadow-lg font-semibold py-4 text-lg rounded-xl">
-                    Free Office Audit
+                    Book Your Audit
                   </Button>
                 </Link>
                 <Link to="/corporate">

@@ -30,8 +30,8 @@ const SimplifiedHero = () => {
           
           <div className="mb-16 rounded-3xl overflow-hidden shadow-2xl max-w-5xl mx-auto ring-1 ring-black/5 hover:shadow-3xl transition-shadow duration-500">
             <img 
-              src="/lovable-uploads/6af17da1-48bd-4128-9ec9-22df7aebc7eb.png" 
-              alt="Professional plant maintenance service in Atlanta high-rise office with multiple plants and downtown skyline view"
+              src="/lovable-uploads/14be2c1e-669b-4578-b1a4-96497d23a645.png" 
+              alt="Stunning modern Atlanta corporate office transformation with elegant plant installations and professional workspace design"
               className="w-full h-96 md:h-[500px] object-cover hover:scale-[1.02] transition-transform duration-700"
             />
             {/* Image overlay gradient */}
@@ -43,26 +43,20 @@ const SimplifiedHero = () => {
             <Link to="/office-plants" className="group">
               <Button 
                 size="lg"
-                className="w-full h-28 sm:h-24 text-lg sm:text-xl bg-gradient-to-r from-green-600 via-green-500 to-green-600 hover:from-green-700 hover:via-green-600 hover:to-green-700 text-white shadow-2xl hover:shadow-green-500/25 transform hover:scale-[1.02] transition-all duration-300 border-0 font-bold tracking-wide rounded-2xl"
+                className="w-full h-20 text-xl bg-gradient-to-r from-green-600 via-green-500 to-green-600 hover:from-green-700 hover:via-green-600 hover:to-green-700 text-white shadow-2xl hover:shadow-green-500/25 transform hover:scale-[1.02] transition-all duration-300 border-0 font-bold tracking-wide rounded-2xl"
               >
-                <div className="flex flex-col items-center px-2">
-                  <span className="text-base sm:text-lg mb-1">Transform Your Workspace</span>
-                  <span className="text-xs sm:text-sm opacity-90 font-medium">✓ Free Consultation • Same Week Response</span>
-                </div>
-                <ArrowRight className="ml-2 sm:ml-3 h-6 w-6 sm:h-7 sm:w-7 group-hover:translate-x-1 transition-transform flex-shrink-0" />
+                Transform Your Workspace
+                <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>
             
             <Link to="/corporate" className="group">
               <Button 
                 size="lg"
-                className="w-full h-28 sm:h-24 text-lg sm:text-xl bg-gradient-to-r from-blue-600 via-blue-500 to-blue-600 hover:from-blue-700 hover:via-blue-600 hover:to-blue-700 text-white shadow-2xl hover:shadow-blue-500/25 transform hover:scale-[1.02] transition-all duration-300 border-0 font-bold tracking-wide rounded-2xl"
+                className="w-full h-20 text-xl bg-gradient-to-r from-blue-600 via-blue-500 to-blue-600 hover:from-blue-700 hover:via-blue-600 hover:to-blue-700 text-white shadow-2xl hover:shadow-blue-500/25 transform hover:scale-[1.02] transition-all duration-300 border-0 font-bold tracking-wide rounded-2xl"
               >
-                <div className="flex flex-col items-center px-2">
-                  <span className="text-base sm:text-lg mb-1">Elevate Your Corporate Gifting</span>
-                  <span className="text-xs sm:text-sm opacity-90 font-medium">✓ Bulk Orders • Custom Packaging</span>
-                </div>
-                <ArrowRight className="ml-2 sm:ml-3 h-6 w-6 sm:h-7 sm:w-7 group-hover:translate-x-1 transition-transform flex-shrink-0" />
+                Elevate Your Corporate Gifting
+                <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>
           </div>
