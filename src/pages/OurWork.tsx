@@ -9,13 +9,13 @@ const OurWork = () => {
   const portfolioProjects = [
     {
       image: "/lovable-uploads/24794cd6-d871-433d-8ce5-1b5d61120d74.png",
-      client: "Roark Capital Headquarters",
+      client: "OneStreet Residential Headquarters",
       description: "Executive reception area transformation with premium biophilic design elements.",
       testimonial: "The professionalism and expertise are unmatched. Our lobby is now a true showpiece."
     },
     {
       image: "/lovable-uploads/f3967d27-f426-48b4-af6c-5b4f0e316b29.png",
-      client: "CohnReznick Atlanta Office",
+      client: "Archer Western Atlanta Office",
       description: "Complete office plant ecosystem design for enhanced productivity and air quality.",
       testimonial: "Employee satisfaction scores increased 23% since the installation."
     },
@@ -27,13 +27,13 @@ const OurWork = () => {
     },
     {
       image: "/lovable-uploads/c864df96-c7e3-4667-bfe2-e2ebaad928d8.png",
-      client: "Jencap Insurance Services",
+      client: "Perkins and Will Design Studio",
       description: "Seasonal plant rotation program to maintain year-round visual impact.",
       testimonial: "The seasonal displays create such a welcoming atmosphere for our clients."
     },
     {
       image: "/lovable-uploads/b0543742-bb86-45d7-a641-7ccd52b9be1f.png",
-      client: "PBS Aerospace Facility",
+      client: "Loria Ansley Corporate Office",
       description: "Industrial office space softened with strategic plant placement and maintenance.",
       testimonial: "Transformed our sterile environment into a space employees actually enjoy."
     },

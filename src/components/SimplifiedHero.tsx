@@ -45,6 +45,22 @@ const SimplifiedHero = () => {
               </Button>
             </Link>
           </div>
+          
+          <div className="text-center mt-8">
+            <p className="text-muted-foreground mb-4">
+              Need to build a business case? Get research-backed ROI data
+            </p>
+            <Link to="/resources">
+              <Button 
+                variant="outline"
+                size="lg"
+                className="border-green-600 text-green-600 hover:bg-green-50"
+              >
+                Free Business Plant Resources
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </Link>
+          </div>
         </div>
 
         {/* Social Proof Bar */}
