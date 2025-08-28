@@ -78,24 +78,30 @@ const OurWork = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16">
             {portfolioProjects.map((project, index) => (
-              <div key={index} className="bg-card rounded-2xl shadow-xl overflow-hidden border border-border">
-                <div className="aspect-video overflow-hidden">
+              <div key={index} className="group bg-gradient-to-br from-white to-gray-50/50 rounded-3xl shadow-2xl hover:shadow-green-500/10 overflow-hidden border-0 transform hover:scale-[1.01] hover:-translate-y-2 transition-all duration-500">
+                <div className="aspect-video overflow-hidden relative">
                   <img 
                     src={project.image}
                     alt={`${project.client} plant installation by Atlanta Houseplants`}
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
+                  {/* Gradient overlay on hover */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 </div>
-                <div className="p-8">
+                <div className="p-10 relative">
+                  {/* Subtle background pattern */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-green-50/20 via-transparent to-blue-50/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none rounded-b-3xl"></div>
+                  <div className="relative z-10">
                   <h3 className="text-2xl font-bold text-foreground mb-4">
                     {project.client}
                   </h3>
                   <p className="text-muted-foreground mb-6 leading-relaxed">
                     {project.description}
                   </p>
-                  <blockquote className="bg-muted p-6 rounded-xl border-l-4 border-green-500">
-                    <p className="text-foreground italic mb-2">"{project.testimonial}"</p>
+                  <blockquote className="bg-gradient-to-r from-green-50 to-emerald-50 p-6 rounded-2xl border-l-4 border-green-500 shadow-inner group-hover:shadow-lg transition-shadow duration-300">
+                    <p className="text-foreground italic mb-2 text-lg leading-relaxed">"{project.testimonial}"</p>
                   </blockquote>
+                  </div>
                 </div>
               </div>
             ))}
@@ -104,13 +110,18 @@ const OurWork = () => {
       </section>
 
       {/* Floating CTA - Sticky Button */}
-      <div className="fixed bottom-8 right-8 z-50">
+      <div className="fixed bottom-8 right-8 z-50 group">
         <Button 
           onClick={() => openForm('business-quote')}
           size="lg"
-          className="bg-green-600 hover:bg-green-700 text-white shadow-2xl px-6 py-4"
+          className="bg-gradient-to-r from-green-600 to-green-500 hover:from-green-700 hover:to-green-600 text-white shadow-2xl hover:shadow-green-500/30 px-8 py-4 transform hover:scale-110 transition-all duration-300 font-bold rounded-xl border border-green-500/20"
         >
-          Book My Free Audit
+          <span className="flex items-center">
+            Book My Free Audit
+            <svg className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+            </svg>
+          </span>
         </Button>
       </div>
 

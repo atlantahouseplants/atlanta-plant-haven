@@ -12,12 +12,12 @@ const SimplifiedHero = () => {
         {/* Hero Section */}
         <div className="text-center mb-16">
           <div className="mb-8">
-            <h1 className="text-6xl md:text-8xl font-black text-foreground leading-[0.9] mb-4 tracking-tight">
+            <h1 className="text-5xl sm:text-6xl md:text-8xl font-black text-foreground leading-[0.9] mb-4 tracking-tight">
               We Create
               <span className="block bg-gradient-to-r from-green-600 via-green-500 to-emerald-500 bg-clip-text text-transparent drop-shadow-sm">
                 Environments
               </span>
-              <span className="block text-4xl md:text-5xl font-bold text-muted-foreground/80 mt-2">
+              <span className="block text-3xl sm:text-4xl md:text-5xl font-bold text-muted-foreground/80 mt-2">
                 That Thrive
               </span>
             </h1>
@@ -42,30 +42,30 @@ const SimplifiedHero = () => {
           </div>
 
           {/* The Two Paths */}
-          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-16">
+          <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto mb-16">
             <Link to="/office-plants" className="group">
               <Button 
                 size="lg"
-                className="w-full h-24 text-xl bg-gradient-to-r from-green-600 via-green-500 to-green-600 hover:from-green-700 hover:via-green-600 hover:to-green-700 text-white shadow-2xl hover:shadow-green-500/25 transform hover:scale-[1.02] transition-all duration-300 border-0 font-bold tracking-wide"
+                className="w-full h-28 sm:h-24 text-lg sm:text-xl bg-gradient-to-r from-green-600 via-green-500 to-green-600 hover:from-green-700 hover:via-green-600 hover:to-green-700 text-white shadow-2xl hover:shadow-green-500/25 transform hover:scale-[1.02] transition-all duration-300 border-0 font-bold tracking-wide rounded-2xl"
               >
-                <div className="flex flex-col items-center">
-                  <span className="text-lg mb-1">Get Free Office Plant Consultation</span>
-                  <span className="text-sm opacity-90 font-medium">✓ UGA Certified Expert • Same Week Response</span>
+                <div className="flex flex-col items-center px-2">
+                  <span className="text-base sm:text-lg mb-1">Get Free Office Plant Consultation</span>
+                  <span className="text-xs sm:text-sm opacity-90 font-medium">✓ UGA Certified Expert • Same Week Response</span>
                 </div>
-                <ArrowRight className="ml-3 h-7 w-7 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="ml-2 sm:ml-3 h-6 w-6 sm:h-7 sm:w-7 group-hover:translate-x-1 transition-transform flex-shrink-0" />
               </Button>
             </Link>
             
             <Link to="/corporate" className="group">
               <Button 
                 size="lg"
-                className="w-full h-24 text-xl bg-gradient-to-r from-blue-600 via-blue-500 to-blue-600 hover:from-blue-700 hover:via-blue-600 hover:to-blue-700 text-white shadow-2xl hover:shadow-blue-500/25 transform hover:scale-[1.02] transition-all duration-300 border-0 font-bold tracking-wide"
+                className="w-full h-28 sm:h-24 text-lg sm:text-xl bg-gradient-to-r from-blue-600 via-blue-500 to-blue-600 hover:from-blue-700 hover:via-blue-600 hover:to-blue-700 text-white shadow-2xl hover:shadow-blue-500/25 transform hover:scale-[1.02] transition-all duration-300 border-0 font-bold tracking-wide rounded-2xl"
               >
-                <div className="flex flex-col items-center">
-                  <span className="text-lg mb-1">Elevate Your Corporate Gifting</span>
-                  <span className="text-sm opacity-90 font-medium">✓ Bulk Orders • Custom Packaging</span>
+                <div className="flex flex-col items-center px-2">
+                  <span className="text-base sm:text-lg mb-1">Elevate Your Corporate Gifting</span>
+                  <span className="text-xs sm:text-sm opacity-90 font-medium">✓ Bulk Orders • Custom Packaging</span>
                 </div>
-                <ArrowRight className="ml-3 h-7 w-7 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="ml-2 sm:ml-3 h-6 w-6 sm:h-7 sm:w-7 group-hover:translate-x-1 transition-transform flex-shrink-0" />
               </Button>
             </Link>
           </div>
@@ -169,10 +169,10 @@ const SimplifiedHero = () => {
               </p>
             </div>
             
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
-              <div className="group bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 text-center transform hover:scale-105 border border-gray-100">
-                <h4 className="font-bold text-green-700 mb-2 group-hover:text-green-800 transition-colors">Buckhead</h4>
-                <p className="text-sm text-muted-foreground">Financial District</p>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 sm:gap-6 max-w-5xl mx-auto">
+              <div className="group bg-white p-4 sm:p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 text-center transform hover:scale-105 border border-gray-100 min-h-[80px] sm:min-h-[90px] flex flex-col justify-center">
+                <h4 className="font-bold text-green-700 mb-1 sm:mb-2 group-hover:text-green-800 transition-colors text-sm sm:text-base">Buckhead</h4>
+                <p className="text-xs sm:text-sm text-muted-foreground">Financial District</p>
               </div>
               <div className="group bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 text-center transform hover:scale-105 border border-gray-100">
                 <h4 className="font-bold text-green-700 mb-2 group-hover:text-green-800 transition-colors">Midtown</h4>

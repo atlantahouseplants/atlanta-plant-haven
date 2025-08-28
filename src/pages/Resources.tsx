@@ -74,15 +74,17 @@ const Resources = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {resources.map((resource, index) => (
-              <Card key={index} className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg overflow-hidden">
-                <CardContent className="p-8">
+              <Card key={index} className="group hover:shadow-2xl hover:shadow-green-500/10 transition-all duration-500 border-0 shadow-xl overflow-hidden bg-gradient-to-br from-white to-gray-50/50 transform hover:scale-[1.02] hover:-translate-y-1">
+                <CardContent className="p-8 relative">
+                  {/* Subtle gradient overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-green-50/20 via-transparent to-blue-50/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none rounded-lg"></div>
                   <div className="flex items-center mb-6">
-                    <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4">
-                      <resource.icon className="h-6 w-6 text-green-600" />
+                    <div className="w-16 h-16 bg-gradient-to-br from-green-100 to-green-200 rounded-xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                      <resource.icon className="h-8 w-8 text-green-700" />
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold text-foreground">{resource.title}</h3>
-                      <span className="text-sm text-green-600 font-medium">{resource.type}</span>
+                      <h3 className="text-xl font-bold text-foreground group-hover:text-green-700 transition-colors">{resource.title}</h3>
+                      <span className="text-sm text-green-600 font-semibold px-3 py-1 bg-green-50 rounded-full">{resource.type}</span>
                     </div>
                   </div>
                   
@@ -92,11 +94,17 @@ const Resources = () => {
                   
                   <Button 
                     onClick={resource.action}
-                    className="w-full bg-green-600 hover:bg-green-700 text-white group-hover:shadow-lg transition-all"
+                    className="w-full bg-gradient-to-r from-green-600 to-green-500 hover:from-green-700 hover:to-green-600 text-white shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 font-semibold py-3"
                   >
-                    <Download className="mr-2 h-4 w-4" />
-                    {resource.cta}
+                    <Download className="mr-2 h-5 w-5" />
+                    <span className="flex items-center">
+                      {resource.cta}
+                      <svg className="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                      </svg>
+                    </span>
                   </Button>
+                  </div>
                 </CardContent>
               </Card>
             ))}
@@ -163,9 +171,14 @@ const Resources = () => {
           <Button 
             size="lg"
             onClick={() => openForm('business-quote')}
-            className="bg-white text-green-600 hover:bg-gray-100 text-xl px-12 py-6"
+            className="bg-white text-green-700 hover:bg-green-50 border-2 border-white hover:border-green-100 text-xl px-16 py-8 shadow-2xl hover:shadow-white/25 transform hover:scale-105 transition-all duration-300 font-bold tracking-wide rounded-xl"
           >
-            Schedule Free Consultation
+            <span className="flex items-center">
+              Schedule Free Consultation
+              <svg className="ml-3 h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              </svg>
+            </span>
           </Button>
           
           <div className="mt-8 text-green-100">

@@ -51,11 +51,11 @@ const WhyChooseUs = () => {
         {/* Features Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
-            <div key={index} className="text-center group">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-6 group-hover:bg-green-200 transition-colors duration-300">
-                <feature.icon className="h-8 w-8 text-green-600" />
+            <div key={index} className="text-center group bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transform hover:scale-105 hover:-translate-y-1 transition-all duration-300 border border-gray-100/50">
+              <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-green-100 to-green-200 rounded-2xl mb-6 group-hover:scale-110 group-hover:from-green-200 group-hover:to-green-300 transition-all duration-300 shadow-lg">
+                <feature.icon className="h-10 w-10 text-green-700" />
               </div>
-              <h3 className="text-xl font-bold text-foreground mb-3">{feature.title}</h3>
+              <h3 className="text-xl font-bold text-foreground mb-4 group-hover:text-green-700 transition-colors">{feature.title}</h3>
               <p className="text-muted-foreground leading-relaxed">{feature.description}</p>
             </div>
           ))}

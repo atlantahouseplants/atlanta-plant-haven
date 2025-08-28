@@ -27,9 +27,14 @@ const OfficePlants = () => {
               <Button 
                 size="lg" 
                 onClick={() => openForm('business-quote')}
-                className="bg-green-600 hover:bg-green-700 text-white text-xl px-8 py-6"
+                className="bg-gradient-to-r from-green-600 to-green-500 hover:from-green-700 hover:to-green-600 text-white text-xl px-12 py-6 shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 font-bold tracking-wide"
               >
-                Book My Complimentary Audit
+                <span className="flex items-center">
+                  Book My Complimentary Audit
+                  <svg className="ml-3 h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  </svg>
+                </span>
               </Button>
             </div>
             
@@ -192,9 +197,14 @@ const OfficePlants = () => {
           <Button 
             size="lg"
             onClick={() => openForm('business-quote')}
-            className="bg-green-600 hover:bg-green-700 text-white text-2xl px-12 py-6"
+            className="bg-gradient-to-r from-green-600 to-green-500 hover:from-green-700 hover:to-green-600 text-white text-2xl px-16 py-8 shadow-2xl hover:shadow-green-500/25 transform hover:scale-105 transition-all duration-300 font-bold tracking-wide rounded-xl"
           >
-            Book My Complimentary Audit
+            <span className="flex items-center">
+              Book My Complimentary Audit
+              <svg className="ml-4 h-7 w-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              </svg>
+            </span>
           </Button>
           
           <div className="mt-8 flex flex-wrap justify-center items-center gap-8 text-green-600 font-medium">
@@ -320,9 +330,14 @@ const OfficePlants = () => {
           <Button 
             size="lg"
             onClick={() => openForm('business-quote')}
-            className="bg-white text-green-600 hover:bg-gray-100 text-2xl px-12 py-6"
+            className="bg-white text-green-700 hover:bg-green-50 border-2 border-white hover:border-green-100 text-2xl px-16 py-8 shadow-2xl hover:shadow-white/25 transform hover:scale-105 transition-all duration-300 font-bold tracking-wide rounded-xl"
           >
-            Book My Free Audit & See The Plan
+            <span className="flex items-center">
+              Book My Free Audit & See The Plan
+              <svg className="ml-4 h-7 w-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              </svg>
+            </span>
           </Button>
         </div>
       </section>
