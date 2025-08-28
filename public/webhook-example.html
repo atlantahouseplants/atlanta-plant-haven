@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webhook Response Example</title>
+</head>
+<body>
+    <h1>Make.com Webhook Response Handler</h1>
+    <p>This page demonstrates how Make.com should send the ChatGPT response back to your website.</p>
+    
+    <h2>Instructions for Make.com Setup:</h2>
+    <ol>
+        <li>In your Make.com scenario, after getting the ChatGPT response, add an HTTP module</li>
+        <li>Set the HTTP module to make a POST request to: <code>https://yourdomain.com/webhook-response</code></li>
+        <li>Or use the JavaScript injection method below</li>
+    </ol>
+
+    <h2>Method 1: JavaScript Injection (Recommended for frontend-only apps)</h2>
+    <p>Make.com should execute this JavaScript code to send the response back:</p>
+    <pre><code>
+// This is what Make.com should execute
+if (window.receiveChatResponse) {
+    // Parse the message from the ChatGPT response
+    let messageText = "";
+    try {
+        // If the response is a JSON string with a message field
+        const parsed = JSON.parse("{{chatgpt_response}}");
+        messageText = parsed.message || "{{chatgpt_response}}";
+    } catch (e) {
+        // If it's not JSON, use the response directly
+        messageText = "{{chatgpt_response}}";
+    }
+    
+    window.receiveChatResponse({
+        sessionId: "{{1.sessionId}}", // The sessionId from the original request
+        response: messageText,
+        timestamp: "{{now}}" // Current timestamp
+    });
+} else {
+    console.error('receiveChatResponse function not found');
+}
+    </code></pre>
+
+    <h2>Method 2: HTTP POST (If you have a backend)</h2>
+    <p>Make.com should send a POST request with this JSON payload:</p>
+    <pre><code>
+{
+    "sessionId": "session_123456789_abc123",
+    "response": "Hello! I'd be happy to help you with your plant care questions...",
+    "timestamp": "2024-01-01T12:00:00Z"
+}
+    </code></pre>
+
+    <h2>Test the Webhook Response</h2>
+    <button onclick="testWebhookResponse()">Test Webhook Response</button>
+    
+    <script>
+        function testWebhookResponse() {
+            // Simulate what Make.com should do
+            if (window.receiveChatResponse) {
+                window.receiveChatResponse({
+                    sessionId: "test_session_" + Date.now(),
+                    response: "This is a test response from the webhook system. Your chatbot should receive this message!",
+                    timestamp: new Date().toISOString()
+                });
+                alert('Test webhook response sent! Check your chatbot.');
+            } else {
+                alert('receiveChatResponse function not found. Make sure the main website is loaded.');
+            }
+        }
+    </script>
+</body>
+</html>

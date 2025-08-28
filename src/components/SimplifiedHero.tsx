@@ -99,11 +99,58 @@ const SimplifiedHero = () => {
           </div>
 
           {/* Mission Statement */}
-          <div className="text-center">
+          <div className="text-center mb-16">
             <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-4xl mx-auto">
               We bring life to Atlanta's best workspaces through expert biophilic design and professional plant care. 
               <strong className="text-foreground"> Every installation is designed to enhance employee well-being and create lasting first impressions.</strong>
             </p>
+          </div>
+
+          {/* Service Areas */}
+          <div className="bg-green-50 p-8 rounded-2xl">
+            <div className="text-center mb-8">
+              <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
+                Serving Atlanta's Premier Business Districts
+              </h3>
+              <p className="text-lg text-muted-foreground">
+                Professional office plant services throughout Metro Atlanta
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto text-center">
+              <div className="bg-white p-4 rounded-lg shadow-sm">
+                <h4 className="font-semibold text-green-700 mb-1">Buckhead</h4>
+                <p className="text-sm text-muted-foreground">Financial District</p>
+              </div>
+              <div className="bg-white p-4 rounded-lg shadow-sm">
+                <h4 className="font-semibold text-green-700 mb-1">Midtown</h4>
+                <p className="text-sm text-muted-foreground">Corporate Corridor</p>
+              </div>
+              <div className="bg-white p-4 rounded-lg shadow-sm">
+                <h4 className="font-semibold text-green-700 mb-1">Sandy Springs</h4>
+                <p className="text-sm text-muted-foreground">Business Hub</p>
+              </div>
+              <div className="bg-white p-4 rounded-lg shadow-sm">
+                <h4 className="font-semibold text-green-700 mb-1">Alpharetta</h4>
+                <p className="text-sm text-muted-foreground">Tech Corridor</p>
+              </div>
+              <div className="bg-white p-4 rounded-lg shadow-sm">
+                <h4 className="font-semibold text-green-700 mb-1">Decatur</h4>
+                <p className="text-sm text-muted-foreground">Creative District</p>
+              </div>
+              <div className="bg-white p-4 rounded-lg shadow-sm">
+                <h4 className="font-semibold text-green-700 mb-1">Dunwoody</h4>
+                <p className="text-sm text-muted-foreground">Office Parks</p>
+              </div>
+              <div className="bg-white p-4 rounded-lg shadow-sm">
+                <h4 className="font-semibold text-green-700 mb-1">Vinings</h4>
+                <p className="text-sm text-muted-foreground">Business Center</p>
+              </div>
+              <div className="bg-white p-4 rounded-lg shadow-sm">
+                <h4 className="font-semibold text-green-700 mb-1">Marietta</h4>
+                <p className="text-sm text-muted-foreground">Corporate Campus</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

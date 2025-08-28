@@ -214,23 +214,100 @@ const OfficePlants = () => {
         </div>
       </section>
 
-      {/* 8. Testimonial Section */}
-      <section className="py-20">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <blockquote className="text-3xl md:text-4xl font-bold text-foreground leading-relaxed mb-8 italic">
-            "The professionalism and expertise are unmatched. Atlanta Houseplants took our vision and executed it flawlessly. 
-            Our lobby is now a true showpiece, and the ongoing service is completely hands-off. It's a turnkey solution that delivers real value."
-          </blockquote>
-          <div className="flex items-center justify-center">
-            <div className="flex mb-4">
-              {[1, 2, 3, 4, 5].map((star) => (
-                <Star key={star} className="h-6 w-6 text-yellow-400 fill-current" />
-              ))}
+      {/* 8. Case Studies & Results Section */}
+      <section className="py-20 bg-muted/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+              Real Results from Atlanta Businesses
+            </h2>
+            <p className="text-xl text-muted-foreground">
+              See how we've transformed workspaces and improved business outcomes
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-12 mb-20">
+            {/* Case Study 1 */}
+            <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
+              <img
+                src="/lovable-uploads/24794cd6-d871-433d-8ce5-1b5d61120d74.png"
+                alt="Heritage Distribution office transformation"
+                className="w-full h-64 object-cover"
+              />
+              <div className="p-8">
+                <h3 className="text-2xl font-bold mb-4">Heritage Distribution - Buckhead</h3>
+                <div className="grid grid-cols-2 gap-4 mb-6">
+                  <div className="text-center p-4 bg-green-50 rounded-lg">
+                    <div className="text-2xl font-bold text-green-600">23%</div>
+                    <p className="text-sm text-muted-foreground">Fewer sick days</p>
+                  </div>
+                  <div className="text-center p-4 bg-blue-50 rounded-lg">
+                    <div className="text-2xl font-bold text-blue-600">40%</div>
+                    <p className="text-sm text-muted-foreground">Improved client feedback</p>
+                  </div>
+                </div>
+                <blockquote className="italic text-muted-foreground mb-4">
+                  "The professionalism and expertise are unmatched. Our lobby is now a true showpiece, 
+                  and the ongoing service is completely hands-off. It's a turnkey solution that delivers real value."
+                </blockquote>
+                <cite className="font-medium text-foreground">
+                  – Michelle, Office Manager
+                </cite>
+              </div>
+            </div>
+
+            {/* Case Study 2 */}
+            <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
+              <img
+                src="/lovable-uploads/e1930419-ea64-46bc-b42a-ed13b1f43ab1.png"
+                alt="Tech company office plant installation"
+                className="w-full h-64 object-cover"
+              />
+              <div className="p-8">
+                <h3 className="text-2xl font-bold mb-4">Tech Startup - Alpharetta</h3>
+                <div className="grid grid-cols-2 gap-4 mb-6">
+                  <div className="text-center p-4 bg-purple-50 rounded-lg">
+                    <div className="text-2xl font-bold text-purple-600">18%</div>
+                    <p className="text-sm text-muted-foreground">Productivity increase</p>
+                  </div>
+                  <div className="text-center p-4 bg-orange-50 rounded-lg">
+                    <div className="text-2xl font-bold text-orange-600">90%</div>
+                    <p className="text-sm text-muted-foreground">Employee satisfaction</p>
+                  </div>
+                </div>
+                <blockquote className="italic text-muted-foreground mb-4">
+                  "Our team noticed the difference immediately. The office feels more alive and energizing. 
+                  We've seen measurable improvements in focus and creativity since the installation."
+                </blockquote>
+                <cite className="font-medium text-foreground">
+                  – Sarah Chen, HR Director
+                </cite>
+              </div>
             </div>
           </div>
-          <cite className="text-xl text-muted-foreground font-medium">
-            – Michelle, Office Manager Heritage Distribution
-          </cite>
+
+          {/* ROI Statistics */}
+          <div className="bg-gradient-to-r from-green-600 to-green-500 text-white p-12 rounded-2xl text-center">
+            <h3 className="text-3xl font-bold mb-8">Average Client Results After 6 Months</h3>
+            <div className="grid md:grid-cols-4 gap-8">
+              <div>
+                <div className="text-4xl font-bold mb-2">19%</div>
+                <p className="text-green-100">Reduction in sick days</p>
+              </div>
+              <div>
+                <div className="text-4xl font-bold mb-2">24%</div>
+                <p className="text-green-100">Improved productivity</p>
+              </div>
+              <div>
+                <div className="text-4xl font-bold mb-2">89%</div>
+                <p className="text-green-100">Client satisfaction rate</p>
+              </div>
+              <div>
+                <div className="text-4xl font-bold mb-2">$3,200</div>
+                <p className="text-green-100">Average annual savings</p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

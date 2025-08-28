@@ -61,24 +61,62 @@ const WhyChooseUs = () => {
           ))}
         </div>
 
-        {/* Credentials Section */}
-        <div className="mt-16 bg-green-50 p-8 rounded-lg text-center border-2 border-green-200">
-          <div className="flex items-center justify-center mb-4">
-            <img 
-              src="/lovable-uploads/9a6a89cb-90a7-48df-a670-52cf61f223ea.png" 
-              alt="Nick - Plant Doctor providing professional plant care"
-              className="w-24 h-24 rounded-full object-cover mr-6 border-4 border-green-600"
-            />
-            <div className="text-left">
-              <h3 className="text-3xl font-bold text-foreground">Meet Nick, Your Plant Doctor</h3>
-              <p className="text-green-600 font-bold text-lg">🎓 UGA Horticulture Graduate • 15+ Years Experience</p>
-              <p className="text-orange-600 font-medium">✓ Georgia Certified Professional • Same-Week Appointments</p>
+        {/* Enhanced Credentials Section */}
+        <div className="mt-16 bg-gradient-to-br from-green-50 to-blue-50 p-10 rounded-xl border border-green-200 shadow-lg">
+          <div className="grid lg:grid-cols-2 gap-8 items-center">
+            <div className="flex items-center">
+              <img 
+                src="/lovable-uploads/9a6a89cb-90a7-48df-a670-52cf61f223ea.png" 
+                alt="Nick - Plant Doctor providing professional plant care"
+                className="w-28 h-28 rounded-full object-cover border-4 border-green-600 shadow-lg"
+              />
+              <div className="ml-6">
+                <h3 className="text-3xl font-bold text-foreground mb-2">Meet Nick, Your Plant Doctor</h3>
+                <div className="space-y-2">
+                  <p className="text-green-700 font-bold text-lg flex items-center">
+                    🎓 UGA Horticulture Graduate
+                  </p>
+                  <p className="text-blue-700 font-medium flex items-center">
+                    ✓ Georgia Certified Plant Professional
+                  </p>
+                  <p className="text-purple-700 font-medium flex items-center">
+                    🏆 15+ Years Commercial Experience
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="space-y-4">
+              <h4 className="text-xl font-bold text-foreground">Professional Certifications & Expertise</h4>
+              <div className="grid grid-cols-2 gap-4 text-sm">
+                <div className="bg-white p-3 rounded-lg shadow-sm">
+                  <strong className="text-green-600">UGA Horticulture Degree</strong>
+                  <p className="text-muted-foreground">University of Georgia</p>
+                </div>
+                <div className="bg-white p-3 rounded-lg shadow-sm">
+                  <strong className="text-blue-600">Georgia Licensed</strong>
+                  <p className="text-muted-foreground">State Certified Professional</p>
+                </div>
+                <div className="bg-white p-3 rounded-lg shadow-sm">
+                  <strong className="text-purple-600">Commercial Focus</strong>
+                  <p className="text-muted-foreground">500+ Business Clients</p>
+                </div>
+                <div className="bg-white p-3 rounded-lg shadow-sm">
+                  <strong className="text-orange-600">Biophilic Design</strong>
+                  <p className="text-muted-foreground">Workplace Wellness Expert</p>
+                </div>
+              </div>
             </div>
           </div>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            "I've dedicated my career to helping Atlanta businesses and homeowners create beautiful, healthy plant environments. 
-            Every installation comes with my personal guarantee and ongoing support."
-          </p>
+          
+          <div className="mt-8 text-center">
+            <blockquote className="text-lg text-muted-foreground max-w-4xl mx-auto italic">
+              "I've dedicated my career to helping Atlanta businesses create beautiful, healthy plant environments. 
+              Every installation comes with my personal guarantee and ongoing support. My goal is to transform 
+              your workspace into a thriving, productive environment that your employees and clients will love."
+            </blockquote>
+            <cite className="text-green-700 font-semibold mt-4 block">– Nick, Founder & Head Horticulturalist</cite>
+          </div>
         </div>
       </div>
     </section>

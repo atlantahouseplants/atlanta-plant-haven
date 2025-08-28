@@ -95,12 +95,14 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold text-lg mb-4">Service Areas</h3>
             <ul className="space-y-2 text-gray-300 text-sm">
-              <li>Atlanta</li>
-              <li>Marietta</li>
-              <li>Alpharetta</li>
-              <li>Roswell</li>
-              <li>Sandy Springs</li>
-              <li>Buckhead</li>
+              <li>Buckhead & Midtown</li>
+              <li>Sandy Springs & Dunwoody</li>
+              <li>Alpharetta & Johns Creek</li>
+              <li>Marietta & Smyrna</li>
+              <li>Decatur & Virginia-Highland</li>
+              <li>Brookhaven & Chamblee</li>
+              <li>Vinings & East Cobb</li>
+              <li>Roswell & Milton</li>
             </ul>
           </div>
         </div>
