@@ -33,8 +33,8 @@ const SimplifiedHero = () => {
           
           <div className="mb-16 rounded-3xl overflow-hidden shadow-2xl max-w-5xl mx-auto ring-1 ring-black/5 hover:shadow-3xl transition-shadow duration-500">
             <img 
-              src="/lovable-uploads/24794cd6-d871-433d-8ce5-1b5d61120d74.png" 
-              alt="Luxurious corporate plant installation by Atlanta Houseplants"
+              src="/lovable-uploads/4b18516d-7bc4-4140-aa45-ac98dc21e101.png" 
+              alt="Stunning Bird of Paradise plant installation in Atlanta corporate office with skyline view"
               className="w-full h-96 md:h-[500px] object-cover hover:scale-[1.02] transition-transform duration-700"
             />
             {/* Image overlay gradient */}

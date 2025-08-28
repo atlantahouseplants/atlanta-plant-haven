@@ -8,15 +8,15 @@ const OurWork = () => {
 
   const portfolioProjects = [
     {
-      image: "/lovable-uploads/24794cd6-d871-433d-8ce5-1b5d61120d74.png",
+      image: "/lovable-uploads/4b18516d-7bc4-4140-aa45-ac98dc21e101.png",
       client: "OneStreet Residential Headquarters",
-      description: "Executive reception area transformation with premium biophilic design elements.",
+      description: "Executive reception area transformation with premium biophilic design elements featuring dramatic Bird of Paradise installations.",
       testimonial: "The professionalism and expertise are unmatched. Our lobby is now a true showpiece."
     },
     {
-      image: "/lovable-uploads/f3967d27-f426-48b4-af6c-5b4f0e316b29.png",
+      image: "/lovable-uploads/91809c55-8571-46c3-b671-b411d93dbe4e.png",
       client: "Archer Western Atlanta Office",
-      description: "Complete office plant ecosystem design for enhanced productivity and air quality.",
+      description: "Commercial outdoor installation featuring custom planters with seasonal color arrangements for enhanced curb appeal.",
       testimonial: "Employee satisfaction scores increased 23% since the installation."
     },
     {

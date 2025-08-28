@@ -13,7 +13,7 @@ const ServiceShowcase = () => {
       title: "Office Plant Design & Maintenance",
       subtitle: "Transform Your Workspace",
       description: "Complete plant solutions from FREE design to ongoing maintenance with 100% plant guarantee. Serving Buckhead, Midtown, Virginia-Highland, and all Atlanta metro businesses.",
-      image: "/lovable-uploads/e63a667a-2e0b-4f5e-bb35-9ca3f3059e0d.png",
+      image: "/lovable-uploads/4c82f760-9f02-4961-9064-4e01de1e97c2.png",
       primaryCTA: {
         text: "Get FREE Quote",
         action: () => openForm('business-quote'),

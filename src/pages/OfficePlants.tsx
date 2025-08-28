@@ -269,8 +269,8 @@ const OfficePlants = () => {
             {/* Case Study 2 */}
             <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
               <img
-                src="/lovable-uploads/e1930419-ea64-46bc-b42a-ed13b1f43ab1.png"
-                alt="Tech company office plant installation"
+                src="/lovable-uploads/8643a575-76e7-4931-8466-23c8bc19325a.png"
+                alt="Professional plant installation service in Atlanta high-rise office"
                 className="w-full h-64 object-cover"
               />
               <div className="p-8">
