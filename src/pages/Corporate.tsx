@@ -66,6 +66,10 @@ const Corporate = () => {
     document.getElementById('order-form')?.scrollIntoView({ behavior: 'smooth' });
   };
 
+  const scrollToProcess = () => {
+    document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   const getVolumeDiscount = (quantity: number) => {
     if (quantity >= 500) return "20% off";
     if (quantity >= 250) return "15% off";
@@ -90,32 +94,78 @@ const Corporate = () => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <Badge className="mb-4 bg-green-600 text-white px-4 py-2 text-sm">
-              Simple • Scalable • Local Atlanta Delivery
+              Automated • Seamless • No Hassle for HR
             </Badge>
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Atlanta Houseplants<br />Corporate Gift Collection
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
+              Effortless Employee Recognition.<br />Memorable Results.
             </h1>
-            <p className="text-2xl text-white/90 max-w-4xl mx-auto mb-4">
-              Skip the boring corporate mugs. Give your team something they'll actually love.
-            </p>
-            <p className="text-xl text-white/80 max-w-3xl mx-auto mb-8">
-              Professional plant gifts ready to order - from mini succulents to executive arrangements. 
-              Minimum 25 units, 5-7 day lead time.
+            <p className="text-2xl text-white/90 max-w-4xl mx-auto mb-8 leading-relaxed">
+              Introducing the Automated Gifting Program: A complete, 'set-it-and-forget-it' system for celebrating your team's milestones.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
-                onClick={scrollToOrder}
-                className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 text-lg"
+                onClick={scrollToProcess}
+                className="bg-green-600 hover:bg-green-700 text-white px-12 py-6 text-xl font-semibold rounded-xl shadow-2xl hover:shadow-green-500/25 transform hover:scale-105 transition-all duration-300"
               >
-                Browse Our Collection
+                See How It Works
+                <ArrowRight className="ml-3 h-6 w-6" />
               </Button>
-              <Button 
-                variant="outline"
-                className="border-white text-white hover:bg-white hover:text-green-600 px-8 py-4 text-lg"
-                onClick={() => window.open('tel:404-910-2994')}
-              >
-                Call: 404-910-2994
-              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Problem Section */}
+      <section className="py-20 bg-red-50/30">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-8">
+            Stop Giving Gifts That Get Forgotten.
+          </h2>
+          <p className="text-xl text-muted-foreground leading-relaxed max-w-4xl mx-auto">
+            Generic gift cards, branded swag, and one-off gifts are a logistical nightmare for your team and are quickly forgotten by employees. You need a scalable system that provides a consistently meaningful experience without adding to your workload.
+          </p>
+        </div>
+      </section>
+
+      {/* Solution Section */}
+      <section className="py-20 bg-green-50/30">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-8">
+            Deliver a Living, Lasting Impression.
+          </h2>
+          <p className="text-xl text-muted-foreground leading-relaxed max-w-4xl mx-auto">
+            Our Automated Gifting Program is the solution. We partner with Atlanta's leading companies to handle their entire employee recognition calendar. From welcoming new hires to celebrating work anniversaries, we deliver beautiful, living gifts that grow with your team, serving as a lasting reminder of your company's appreciation.
+          </p>
+        </div>
+      </section>
+
+      {/* How It Works - Core Section */}
+      <section id="how-it-works" className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+              Your Automated Gifting Program in 3 Simple Steps
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              No more last-minute scrambling or forgotten milestones. Set it once, and we handle everything.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-12 mb-12">
+            <div className="text-center">
+              <div className="w-20 h-20 bg-gradient-to-r from-green-600 to-green-500 text-white rounded-full flex items-center justify-center text-3xl font-bold mx-auto mb-6 shadow-xl">1</div>
+              <h3 className="text-2xl font-bold mb-4 text-foreground">Create Your Plan</h3>
+              <p className="text-lg text-muted-foreground leading-relaxed">We work with you to select the perfect gift tiers for your key milestones (new hires, anniversaries, client thank-yous).</p>
+            </div>
+            <div className="text-center">
+              <div className="w-20 h-20 bg-gradient-to-r from-green-600 to-green-500 text-white rounded-full flex items-center justify-center text-3xl font-bold mx-auto mb-6 shadow-xl">2</div>
+              <h3 className="text-2xl font-bold mb-4 text-foreground">Send Us Your List</h3>
+              <p className="text-lg text-muted-foreground leading-relaxed">Once a quarter, simply send us your list of recipients. That's it. Your work is done.</p>
+            </div>
+            <div className="text-center">
+              <div className="w-20 h-20 bg-gradient-to-r from-green-600 to-green-500 text-white rounded-full flex items-center justify-center text-3xl font-bold mx-auto mb-6 shadow-xl">3</div>
+              <h3 className="text-2xl font-bold mb-4 text-foreground">We Handle Everything</h3>
+              <p className="text-lg text-muted-foreground leading-relaxed">We handle the expert preparation, custom branding, and a single, consolidated delivery to your office. You get all the credit for a perfectly executed recognition program.</p>
             </div>
           </div>
         </div>
