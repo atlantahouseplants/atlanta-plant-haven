@@ -1,9 +1,11 @@
-import { Mail, MapPin, Facebook, Instagram, Youtube } from "lucide-react";
+import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin, Twitter, Youtube } from "lucide-react";
 
 const SimpleFooter = () => {
   const socialLinks = [
-    { name: "Facebook", icon: Facebook, url: "https://www.facebook.com/AtlantaHousePlants" },
-    { name: "Instagram", icon: Instagram, url: "https://www.instagram.com/atlantahouseplants/" },
+    { name: "Facebook", icon: Facebook, url: "https://www.facebook.com/atlantahouseplants/" },
+    { name: "Instagram", icon: Instagram, url: "https://www.instagram.com/atlanta_houseplants/" },
+    { name: "LinkedIn", icon: Linkedin, url: "https://www.linkedin.com/company/atlanta-houseplants/" },
+    { name: "Twitter", icon: Twitter, url: "https://twitter.com/ATL_Houseplants" },
     { name: "YouTube", icon: Youtube, url: "https://www.youtube.com/channel/UCIV-DyGixA6mChcP1FNpLdQ" }
   ];
 
@@ -43,6 +45,12 @@ const SimpleFooter = () => {
           <div>
             <h3 className="font-semibold text-lg mb-4 text-white">Contact</h3>
             <div className="space-y-4 text-gray-300">
+              <div className="flex items-center space-x-3">
+                <Phone className="h-5 w-5 text-green-400 flex-shrink-0" />
+                <a href="tel:+14045551234" className="hover:text-green-400 transition-colors">
+                  (404) 555-1234
+                </a>
+              </div>
               <div className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-green-400 flex-shrink-0" />
                 <a href="mailto:ana@atlantahouseplants.com" className="hover:text-green-400 transition-colors">
