@@ -16,6 +16,39 @@ const Index = () => {
         <Navigation />
         <Hero />
         <WhyChooseUs />
+        
+        {/* Trusted By Section */}
+        <section className="py-16 bg-white border-t border-gray-100">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
+                Trusted by Atlanta's Leading Firms
+              </h2>
+              <p className="text-lg text-muted-foreground">
+                Join these prestigious organizations who trust us with their plant care needs
+              </p>
+            </div>
+            
+            <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 opacity-60">
+              <div className="text-xl md:text-2xl font-semibold text-gray-600 hover:text-green-600 transition-colors">
+                Marriott
+              </div>
+              <div className="text-xl md:text-2xl font-semibold text-gray-600 hover:text-green-600 transition-colors">
+                Archer Western
+              </div>
+              <div className="text-xl md:text-2xl font-semibold text-gray-600 hover:text-green-600 transition-colors">
+                OneStreet Residential
+              </div>
+              <div className="text-xl md:text-2xl font-semibold text-gray-600 hover:text-green-600 transition-colors">
+                Perkins and Will
+              </div>
+              <div className="text-xl md:text-2xl font-semibold text-gray-600 hover:text-green-600 transition-colors">
+                Loria Ansley
+              </div>
+            </div>
+          </div>
+        </section>
+
         <ServiceShowcase />
         
         {/* Customer Reviews Section */}
