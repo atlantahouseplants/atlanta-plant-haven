@@ -54,6 +54,42 @@ const OurWork = () => {
       client: "Financial Services Reception",
       description: "Comprehensive office plant care service featuring professional maintenance and diverse plant arrangements.",
       testimonial: "The perfect balance of professionalism and warmth for our brand image."
+    },
+    {
+      image: "/lovable-uploads/6ce5cacc-3f1d-46f2-93e8-2c25414367dd.png",
+      client: "Atlanta Executive Tower",
+      description: "High-rise office transformation featuring premium croton plants with stunning Atlanta skyline backdrop.",
+      testimonial: "Our corner office has become the most sought-after meeting space in the building."
+    },
+    {
+      image: "/lovable-uploads/5fd9b530-50f9-413b-b16c-230ffffbda8d.png",
+      client: "Corporate Banking Headquarters",
+      description: "Sophisticated multi-plant installation creating natural privacy screens and air purification zones.",
+      testimonial: "The air quality improvement has been remarkable and our staff loves the atmosphere."
+    },
+    {
+      image: "/lovable-uploads/2ab58439-a84c-4527-9b77-51cc964b24a1.png",
+      client: "Luxury Resort Corporate Entrance",
+      description: "Custom artisan planters featuring vibrant seasonal arrangements for high-end hospitality branding.",
+      testimonial: "Guests consistently mention our entrance as their first impression of luxury and quality."
+    },
+    {
+      image: "/lovable-uploads/6a8a648b-686a-4774-b874-bfc9cced612f.png",
+      client: "Modern Corporate Campus",
+      description: "Sculptural topiary installations with coordinated seasonal color programs for executive outdoor spaces.",
+      testimonial: "The outdoor meeting areas have increased our employee retention and client satisfaction scores."
+    },
+    {
+      image: "/lovable-uploads/c3ee3638-8644-45e6-84ea-1e5b14729894.png",
+      client: "Downtown Professional Services",
+      description: "Hands-on plant care service ensuring optimal health and appearance of corporate plant investments.",
+      testimonial: "Their proactive maintenance approach means we never worry about plant health or appearance."
+    },
+    {
+      image: "/lovable-uploads/f816d29c-4694-4186-8770-9e16ab935892.png",
+      client: "Executive Outdoor Workspace",
+      description: "Premium outdoor plant arrangements designed for corporate terraces and client entertainment areas.",
+      testimonial: "These installations have transformed our outdoor meetings into memorable client experiences."
     }
   ];
 
