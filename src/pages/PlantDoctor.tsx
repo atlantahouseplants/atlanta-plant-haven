@@ -28,7 +28,8 @@ const PlantDoctor = () => {
     {
       title: "The 3 Best Plants for a Low-Light Conference Room",
       excerpt: "Discover which plants thrive in windowless meeting spaces and how they can improve air quality during long meetings.",
-      category: "Office Plants"
+      category: "Office Plants",
+      downloadUrl: "/3_Best_Plants_for_Low_Light_Offices.pdf"
     },
     {
       title: "How to Increase Air Quality in Your Office with Strategic Plant Placement",
@@ -174,10 +175,26 @@ const PlantDoctor = () => {
                   </div>
                   <h3 className="text-xl font-bold text-foreground mb-4">{tip.title}</h3>
                   <p className="text-muted-foreground mb-6">{tip.excerpt}</p>
-                  <Button variant="outline" className="w-full">
-                    Read Full Article
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
+                  {tip.downloadUrl ? (
+                    <Button 
+                      variant="outline" 
+                      className="w-full"
+                      onClick={() => {
+                        const link = document.createElement('a');
+                        link.href = tip.downloadUrl;
+                        link.download = tip.downloadUrl.split('/').pop() || 'download.pdf';
+                        link.click();
+                      }}
+                    >
+                      Download Free PDF Guide
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  ) : (
+                    <Button variant="outline" className="w-full">
+                      Read Full Article
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  )}
                 </CardContent>
               </Card>
             ))}

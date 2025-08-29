@@ -10,9 +10,13 @@
       "Bash(npm run build:*)",
       "Bash(git log:*)",
       "Bash(grep:*)",
-      "Bash(find:*)"
+      "Bash(find:*)",
+      "Read(C:\\Users\\wallg\\Downloads/**)"
     ],
     "deny": [],
-    "ask": []
+    "ask": [],
+    "additionalDirectories": [
+      "C:\\Users\\wallg\\Downloads"
+    ]
   }
 }
