@@ -9,50 +9,50 @@ const OurWork = () => {
   const portfolioProjects = [
     {
       image: "/lovable-uploads/4b18516d-7bc4-4140-aa45-ac98dc21e101.png",
-      client: "OneStreet Residential Headquarters",
+      client: "Atlanta Real Estate Corporate Office",
       description: "Executive reception area transformation with premium biophilic design elements featuring dramatic Bird of Paradise installations.",
       testimonial: "The professionalism and expertise are unmatched. Our lobby is now a true showpiece."
     },
     {
       image: "/lovable-uploads/91809c55-8571-46c3-b671-b411d93dbe4e.png",
-      client: "Archer Western Atlanta Office",
+      client: "Construction Management Firm",
       description: "Commercial outdoor installation featuring custom planters with seasonal color arrangements for enhanced curb appeal.",
-      testimonial: "Employee satisfaction scores increased 23% since the installation."
+      testimonial: "Employee satisfaction has noticeably improved since the installation."
     },
     {
-      image: "/lovable-uploads/418cda1f-5e4a-4a96-9b30-5650e06e8b97.png",
-      client: "Marriott Corporate Center",
-      description: "Large-scale plant installation across multiple floors and common areas.",
+      image: "/lovable-uploads/90b0c29e-5176-408d-a66b-6c895969c110.png",
+      client: "Hospitality Industry Corporate Center",
+      description: "Large-scale plant installation across multiple floors with elegant lobby planters featuring Bird of Paradise and fiddle leaf figs.",
       testimonial: "A turnkey solution that delivers real value with completely hands-off service."
     },
     {
-      image: "/lovable-uploads/c864df96-c7e3-4667-bfe2-e2ebaad928d8.png",
-      client: "Perkins and Will Design Studio",
-      description: "Seasonal plant rotation program to maintain year-round visual impact.",
+      image: "/lovable-uploads/30a84ea6-f741-4055-a3a0-8b27f2d24782.png",
+      client: "Architecture & Design Studio",
+      description: "Modern office space enhanced with statement floor plants creating a sophisticated, professional atmosphere.",
       testimonial: "The seasonal displays create such a welcoming atmosphere for our clients."
     },
     {
       image: "/lovable-uploads/b0543742-bb86-45d7-a641-7ccd52b9be1f.png",
-      client: "Loria Ansley Corporate Office",
-      description: "Industrial office space softened with strategic plant placement and maintenance.",
+      client: "Investment Management Firm",
+      description: "Industrial office space softened with strategic plant placement and maintenance, featuring custom blue planters.",
       testimonial: "Transformed our sterile environment into a space employees actually enjoy."
     },
     {
-      image: "/lovable-uploads/5a7b84a7-c04d-4727-b584-8b433bc5255a.png",
-      client: "Tech Startup Campus",
-      description: "Modern workspace design featuring living walls and desktop plant programs.",
+      image: "/lovable-uploads/3268169a-40c2-4366-9d04-649b592c107e.png",
+      client: "Atlanta Tech Company",
+      description: "Modern workspace design featuring desktop plant programs with low-maintenance succulents for individual workstations.",
       testimonial: "Our team productivity and morale have never been higher."
     },
     {
-      image: "/lovable-uploads/4b18516d-7bc4-4140-aa45-ac98dc21e101.png",
-      client: "Law Firm Conference Center",
-      description: "Professional plant arrangements designed to impress clients and staff.",
+      image: "/lovable-uploads/78887fa2-05dc-45a4-9045-b406854ccfa1.png",
+      client: "Executive Law Firm",
+      description: "Professional mixed plant arrangements designed to impress clients with sophisticated planters and diverse foliage.",
       testimonial: "Clients consistently compliment our office environment during meetings."
     },
     {
-      image: "/lovable-uploads/86c2026a-d63a-4bb9-b7b9-473883d52fc7.png",
+      image: "/lovable-uploads/6af17da1-48bd-4128-9ec9-22df7aebc7eb.png",
       client: "Financial Services Reception",
-      description: "Elegant plant design emphasizing trust and stability through natural elements.",
+      description: "Comprehensive office plant care service featuring professional maintenance and diverse plant arrangements.",
       testimonial: "The perfect balance of professionalism and warmth for our brand image."
     }
   ];
