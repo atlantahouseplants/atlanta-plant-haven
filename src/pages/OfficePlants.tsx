@@ -40,7 +40,7 @@ const OfficePlants = () => {
             
             <div className="relative">
               <img
-                src="/lovable-uploads/24794cd6-d871-433d-8ce5-1b5d61120d74.png"
+                src="/images/corporate-offices/anthurium-coffee-table-office-display.png"
                 alt="Stunning corporate reception area with professional plant installation"
                 className="w-full rounded-2xl shadow-2xl"
               />
@@ -151,8 +151,8 @@ const OfficePlants = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="relative">
               <img
-                src="/lovable-uploads/b0543742-bb86-45d7-a641-7ccd52b9be1f.png"
-                alt="Nick, Head Horticulturalist, in professional greenhouse setting"
+                src="/images/service-maintenance/nick-plant-doctor-lab-coat.png"
+                alt="Nick, Head Horticulturalist, in professional lab coat with plant specimen"
                 className="w-full rounded-2xl shadow-2xl"
               />
             </div>
@@ -240,8 +240,8 @@ const OfficePlants = () => {
             {/* Case Study 1 */}
             <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
               <img
-                src="/lovable-uploads/24794cd6-d871-433d-8ce5-1b5d61120d74.png"
-                alt="Heritage Distribution office transformation"
+                src="/images/corporate-offices/large-lobby-floor-plants.png"
+                alt="Heritage Distribution office transformation with large floor plants"
                 className="w-full h-64 object-cover"
               />
               <div className="p-8">
@@ -258,8 +258,8 @@ const OfficePlants = () => {
             {/* Case Study 2 */}
             <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
               <img
-                src="/lovable-uploads/8643a575-76e7-4931-8466-23c8bc19325a.png"
-                alt="Professional plant installation service in Atlanta high-rise office"
+                src="/images/corporate-offices/blue-cubicle-planters.png"
+                alt="Professional plant installation service in Atlanta high-rise office with blue planters"
                 className="w-full h-64 object-cover"
               />
               <div className="p-8">

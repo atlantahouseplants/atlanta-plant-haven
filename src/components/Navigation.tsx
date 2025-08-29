@@ -22,7 +22,7 @@ const Navigation = () => {
           <div className="flex items-center space-x-2">
             <Link to="/">
               <img 
-                src="/lovable-uploads/5f4fe99d-f892-4ded-9db1-53ffdfd0a592.png" 
+                src="/images/branding-assets/atlanta-house-plants-logo.png" 
                 alt="Atlanta House Plants - Professional Office Plant Services"
                 className="h-10 w-auto"
               />

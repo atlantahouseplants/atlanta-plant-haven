@@ -187,7 +187,7 @@ const Corporate = () => {
             {/* Welcome Tier */}
             <div className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300">
               <img
-                src="/lovable-uploads/d9e78ef6-8606-4f22-a41e-302ec5960fb9.png"
+                src="/images/arrangements-decorative/desktop-succulent-trio-welcome.png"
                 alt="Welcome Tier - Mini succulent gift for new hires"
                 className="w-full h-64 object-cover"
               />
@@ -216,7 +216,7 @@ const Corporate = () => {
                 MOST POPULAR
               </div>
               <img
-                src="/lovable-uploads/4b18516d-7bc4-4140-aa45-ac98dc21e101.png"
+                src="/images/arrangements-decorative/professional-desktop-plant-anniversary.png"
                 alt="Recognition Tier - Desktop plant for anniversaries"
                 className="w-full h-64 object-cover"
               />
@@ -242,7 +242,7 @@ const Corporate = () => {
             {/* Executive Tier */}
             <div className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300">
               <img
-                src="/lovable-uploads/24794cd6-d871-433d-8ce5-1b5d61120d74.png"
+                src="/images/arrangements-decorative/luxury-arrangement-executive-tier.png"
                 alt="Executive Tier - Designer arrangement for VIP recognition"
                 className="w-full h-64 object-cover"
               />
