@@ -40,7 +40,8 @@ const PlantDoctor = () => {
     {
       title: "Why Your Office Plants Keep Dying (And How to Fix It)",
       excerpt: "The most common mistakes office managers make and simple solutions to keep your corporate plants thriving year-round.",
-      category: "Plant Care"
+      category: "Plant Care",
+      downloadUrl: "/Why_Office_Plants_Keep_Dying_Solutions.pdf"
     },
     {
       title: "The ROI of Office Plants: Productivity Data You Need to See",
