@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import GoogleReviews from "@/components/GoogleReviews";
 import { Button } from "@/components/ui/button";
 import { useForm } from "@/components/forms/FormContext";
 
@@ -144,6 +145,9 @@ const OurWork = () => {
           </div>
         </div>
       </section>
+
+      {/* Client Reviews Section */}
+      <GoogleReviews />
 
       {/* Floating CTA - Sticky Button */}
       <div className="fixed bottom-8 right-8 z-50 group">
