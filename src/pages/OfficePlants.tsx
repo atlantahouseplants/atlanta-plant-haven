@@ -39,11 +39,17 @@ const OfficePlants = () => {
             </div>
             
             <div className="relative">
-              <img
-                src="/images/corporate-offices/anthurium-coffee-table-office-display.png"
-                alt="Stunning corporate reception area with professional plant installation"
+              <video
+                src="/images/corporate-offices/office-plants-hero-installation.mp4"
+                autoPlay
+                muted
+                loop
+                playsInline
                 className="w-full rounded-2xl shadow-2xl"
-              />
+              >
+                <source src="/images/corporate-offices/office-plants-hero-installation.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
             </div>
           </div>
         </div>

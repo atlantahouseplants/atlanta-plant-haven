@@ -73,7 +73,7 @@ const PlantDoctor = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
             <div className="relative">
               <img
-                src="/images/service-maintenance/nick-plant-doctor-professional-portrait.png"
+                src="/images/service-maintenance/nick-plant-doctor-lab-coat.png"
                 alt="Nick, certified horticulturalist and plant doctor"
                 className="w-full rounded-2xl shadow-2xl"
               />
