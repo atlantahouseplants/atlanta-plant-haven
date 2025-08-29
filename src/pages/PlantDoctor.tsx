@@ -46,7 +46,8 @@ const PlantDoctor = () => {
     {
       title: "The ROI of Office Plants: Productivity Data You Need to See",
       excerpt: "Real research showing how plants in the workplace can reduce sick days and increase employee satisfaction scores.",
-      category: "Business Benefits"
+      category: "Business Benefits",
+      downloadUrl: "/Office_Plants_ROI_Productivity_Data.pdf"
     }
   ];
 
