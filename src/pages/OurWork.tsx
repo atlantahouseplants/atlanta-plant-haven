@@ -9,85 +9,85 @@ const OurWork = () => {
 
   const portfolioProjects = [
     {
-      image: "/lovable-uploads/4b18516d-7bc4-4140-aa45-ac98dc21e101.png",
+      image: "/images/corporate-offices/bird-of-paradise-atlanta-skyline.png",
       client: "Atlanta Real Estate Corporate Office",
       description: "Executive reception area transformation with premium biophilic design elements featuring dramatic Bird of Paradise installations.",
       testimonial: "The professionalism and expertise are unmatched. Our lobby is now a true showpiece."
     },
     {
-      image: "/lovable-uploads/91809c55-8571-46c3-b671-b411d93dbe4e.png",
+      image: "/images/outdoor-commercial/seasonal-entrance-planters.png",
       client: "Construction Management Firm",
       description: "Commercial outdoor installation featuring custom planters with seasonal color arrangements for enhanced curb appeal.",
       testimonial: "Employee satisfaction has noticeably improved since the installation."
     },
     {
-      image: "/lovable-uploads/90b0c29e-5176-408d-a66b-6c895969c110.png",
+      image: "/images/corporate-offices/large-lobby-floor-plants.png",
       client: "Hospitality Industry Corporate Center",
       description: "Large-scale plant installation across multiple floors with elegant lobby planters featuring Bird of Paradise and fiddle leaf figs.",
       testimonial: "A turnkey solution that delivers real value with completely hands-off service."
     },
     {
-      image: "/lovable-uploads/30a84ea6-f741-4055-a3a0-8b27f2d24782.png",
+      image: "/images/corporate-offices/modern-office-floor-plant.png",
       client: "Architecture & Design Studio",
       description: "Modern office space enhanced with statement floor plants creating a sophisticated, professional atmosphere.",
       testimonial: "The seasonal displays create such a welcoming atmosphere for our clients."
     },
     {
-      image: "/lovable-uploads/b0543742-bb86-45d7-a641-7ccd52b9be1f.png",
+      image: "/images/corporate-offices/blue-cubicle-planters.png",
       client: "Investment Management Firm",
       description: "Industrial office space softened with strategic plant placement and maintenance, featuring custom blue planters.",
       testimonial: "Transformed our sterile environment into a space employees actually enjoy."
     },
     {
-      image: "/lovable-uploads/3268169a-40c2-4366-9d04-649b592c107e.png",
+      image: "/images/arrangements-decorative/desktop-succulent-arrangement.png",
       client: "Atlanta Tech Company",
       description: "Modern workspace design featuring desktop plant programs with low-maintenance succulents for individual workstations.",
       testimonial: "Our team productivity and morale have never been higher."
     },
     {
-      image: "/lovable-uploads/78887fa2-05dc-45a4-9045-b406854ccfa1.png",
+      image: "/images/arrangements-decorative/mixed-bowl-planter-colorful.png",
       client: "Executive Law Firm",
       description: "Professional mixed plant arrangements designed to impress clients with sophisticated planters and diverse foliage.",
       testimonial: "Clients consistently compliment our office environment during meetings."
     },
     {
-      image: "/lovable-uploads/6af17da1-48bd-4128-9ec9-22df7aebc7eb.png",
+      image: "/images/service-maintenance/plant-doctor-office-service.png",
       client: "Financial Services Reception",
       description: "Comprehensive office plant care service featuring professional maintenance and diverse plant arrangements.",
       testimonial: "The perfect balance of professionalism and warmth for our brand image."
     },
     {
-      image: "/lovable-uploads/6ce5cacc-3f1d-46f2-93e8-2c25414367dd.png",
+      image: "/images/corporate-offices/croton-plant-city-view.png",
       client: "Atlanta Executive Tower",
       description: "High-rise office transformation featuring premium croton plants with stunning Atlanta skyline backdrop.",
       testimonial: "Our corner office has become the most sought-after meeting space in the building."
     },
     {
-      image: "/lovable-uploads/5fd9b530-50f9-413b-b16c-230ffffbda8d.png",
+      image: "/images/corporate-offices/multi-plant-office-arrangement.png",
       client: "Corporate Banking Headquarters",
       description: "Sophisticated multi-plant installation creating natural privacy screens and air purification zones.",
       testimonial: "The air quality improvement has been remarkable and our staff loves the atmosphere."
     },
     {
-      image: "/lovable-uploads/2ab58439-a84c-4527-9b77-51cc964b24a1.png",
+      image: "/images/outdoor-commercial/luxury-artisan-entrance-planters.png",
       client: "Luxury Resort Corporate Entrance",
       description: "Custom artisan planters featuring vibrant seasonal arrangements for high-end hospitality branding.",
       testimonial: "Guests consistently mention our entrance as their first impression of luxury and quality."
     },
     {
-      image: "/lovable-uploads/6a8a648b-686a-4774-b874-bfc9cced612f.png",
+      image: "/images/outdoor-commercial/sculptural-topiary-outdoor.png",
       client: "Modern Corporate Campus",
       description: "Sculptural topiary installations with coordinated seasonal color programs for executive outdoor spaces.",
       testimonial: "The outdoor meeting areas have increased our employee retention and client satisfaction scores."
     },
     {
-      image: "/lovable-uploads/c3ee3638-8644-45e6-84ea-1e5b14729894.png",
+      image: "/images/service-maintenance/professional-plant-maintenance.png",
       client: "Downtown Professional Services",
       description: "Hands-on plant care service ensuring optimal health and appearance of corporate plant investments.",
       testimonial: "Their proactive maintenance approach means we never worry about plant health or appearance."
     },
     {
-      image: "/lovable-uploads/f816d29c-4694-4186-8770-9e16ab935892.png",
+      image: "/images/outdoor-commercial/executive-outdoor-terrace.png",
       client: "Executive Outdoor Workspace",
       description: "Premium outdoor plant arrangements designed for corporate terraces and client entertainment areas.",
       testimonial: "These installations have transformed our outdoor meetings into memorable client experiences."
