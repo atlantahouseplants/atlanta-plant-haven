@@ -34,7 +34,8 @@ const PlantDoctor = () => {
     {
       title: "How to Increase Air Quality in Your Office with Strategic Plant Placement",
       excerpt: "Learn the science behind biophilic design and which plants are proven to remove the most toxins from indoor air.",
-      category: "Workplace Wellness"
+      category: "Workplace Wellness",
+      downloadUrl: "/Increase_Air_Quality_Strategic_Plant_Placement.pdf"
     },
     {
       title: "Why Your Office Plants Keep Dying (And How to Fix It)",
