@@ -60,12 +60,14 @@ const PlantDoctor = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
-              Meet The Plant Doctor: 
-              <span className="block text-green-600">Expert Horticultural Insights for Atlanta's Workspaces</span>
+              <span className="bg-gradient-to-r from-green-600 via-emerald-500 to-green-600 bg-clip-text text-transparent">
+                Atlanta's Plant Doctor:
+              </span>
+              <span className="block text-foreground">Professional Horticultural Consultation</span>
             </h1>
             
-            <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-              Professional plant expertise that transforms office environments and solves workplace plant challenges
+            <p className="text-xl md:text-2xl text-blue-700 max-w-4xl mx-auto leading-relaxed font-semibold">
+              Expert plant consultation and strategic workplace design services backed by 15+ years of horticultural expertise and state certification.
             </p>
           </div>
 
@@ -86,18 +88,19 @@ const PlantDoctor = () => {
               </div>
               
               <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-                Your Regional Plant Authority
+                Georgia's Certified Plant Professional
               </h2>
               
-              <div className="text-lg text-muted-foreground leading-relaxed space-y-4">
+              <div className="text-lg text-gray-700 leading-relaxed space-y-4">
                 <p>
-                  Nick is Atlanta's most trusted plant professional, with over 15 years of experience transforming 
-                  corporate environments across the metro area. As a University of Georgia Horticulture graduate 
-                  and State of Georgia Certified Plant Professional, he brings scientific expertise to every project.
+                  As Atlanta's only State of Georgia Certified Plant Professional with University of Georgia credentials, 
+                  Nick combines scientific horticultural expertise with 15+ years of commercial experience. His data-driven 
+                  approach to workplace plant integration has transformed over 500 business environments across the metro area.
                 </p>
                 <p>
-                  His insights have helped over 500 Atlanta businesses create healthier, more productive workspaces. 
-                  From Fortune 500 headquarters to growing startups, Nick's expertise ensures plants don't just survive—they thrive.
+                  From Fortune 500 corporate headquarters to innovative startups, Nick's consultation services ensure 
+                  optimal plant health, strategic placement for maximum impact, and comprehensive care programs that 
+                  deliver measurable results in employee satisfaction and workplace productivity.
                 </p>
               </div>
               
@@ -124,11 +127,11 @@ const PlantDoctor = () => {
       <section className="py-20 bg-green-600 text-white">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Ready to Transform Your Office?
+            Schedule Your Professional Workspace Assessment
           </h2>
           <p className="text-xl mb-8 opacity-90 max-w-3xl mx-auto">
-            Get Nick's expert assessment of your workspace and discover how strategic plant placement 
-            can boost productivity, improve air quality, and impress your clients.
+            Receive a comprehensive horticultural consultation with Georgia's certified plant professional. 
+            Discover data-driven strategies for workplace enhancement through strategic biophilic design.
           </p>
           
           <Button 
@@ -136,22 +139,22 @@ const PlantDoctor = () => {
             onClick={() => openForm('business-quote')}
             className="bg-white text-green-600 hover:bg-gray-100 text-2xl px-12 py-6 mb-6"
           >
-            Book Your Complimentary B2B Design Audit
+            Schedule Professional Consultation
             <ArrowRight className="ml-2 h-6 w-6" />
           </Button>
           
           <div className="flex flex-wrap justify-center items-center gap-8 text-sm opacity-75">
             <div className="flex items-center">
               <CheckCircle className="h-5 w-5 mr-2" />
-              No Obligation Assessment
+              Certified Professional Assessment
             </div>
             <div className="flex items-center">
               <CheckCircle className="h-5 w-5 mr-2" />
-              Custom Visual Proposal
+              Strategic Implementation Plan
             </div>
             <div className="flex items-center">
               <CheckCircle className="h-5 w-5 mr-2" />
-              Expert Recommendations
+              Scientific Plant Recommendations
             </div>
           </div>
         </div>
@@ -162,10 +165,10 @@ const PlantDoctor = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-              Plant Doctor's Weekly Insights
+              Professional Horticultural Resources
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Expert tips focused on solving workplace plant challenges and maximizing the benefits of office greenery
+            <p className="text-xl text-blue-700 max-w-4xl mx-auto leading-relaxed">
+              Evidence-based guidance for workplace plant integration, productivity enhancement, and strategic biophilic design implementation.
             </p>
           </div>
 
@@ -189,12 +192,12 @@ const PlantDoctor = () => {
                         link.click();
                       }}
                     >
-                      Download Free PDF Guide
+                      Download Professional Guide
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
                   ) : (
                     <Button variant="outline" className="w-full">
-                      Read Full Article
+                      Access Professional Insights
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
                   )}
@@ -209,7 +212,7 @@ const PlantDoctor = () => {
       <section className="py-20 bg-muted/30">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-6">
-            For Residential Clients or Specific Plant Health Questions
+            Specialized Plant Health Consultation Services
           </h3>
           
           <div className="bg-card rounded-2xl p-8 border border-border max-w-2xl mx-auto">
@@ -220,23 +223,23 @@ const PlantDoctor = () => {
             </div>
             
             <h4 className="text-xl font-bold text-foreground mb-4">
-              Nick offers a limited number of 'Plant Doctor House Calls'
+              Individual Plant Health Consultation
             </h4>
             
-            <p className="text-muted-foreground mb-6">
-              Professional plant diagnosis and treatment for your home or individual plant health concerns. 
-              Same-week appointments available.
+            <p className="text-gray-700 mb-6">
+              Comprehensive plant diagnosis and treatment services for residential clients and specific plant health concerns. 
+              Professional assessment with customized care protocols and guaranteed solutions.
             </p>
             
             <Button 
               onClick={handleBookingClick}
               className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-3"
             >
-              Book Plant Doctor Visit - $149
+              Schedule Plant Health Consultation - $149
             </Button>
             
             <p className="text-sm text-muted-foreground mt-4">
-              ✓ Expert diagnosis • ✓ Custom care plan • ✓ Professional guarantee
+              ✓ Professional diagnosis • ✓ Scientific care protocol • ✓ Guaranteed results
             </p>
           </div>
         </div>
