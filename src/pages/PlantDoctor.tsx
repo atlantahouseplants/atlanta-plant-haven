@@ -184,21 +184,37 @@ const PlantDoctor = () => {
                   {tip.downloadUrl ? (
                     <Button 
                       variant="outline" 
-                      className="w-full"
+                      className="w-full border-green-200 bg-green-50 hover:bg-green-100 text-green-800 font-semibold"
                       onClick={() => {
+                        // Track the download
+                        if (typeof gtag !== 'undefined') {
+                          gtag('event', 'download', {
+                            'event_category': 'Lead Magnet',
+                            'event_label': tip.title,
+                            'value': 1
+                          });
+                        }
+                        
                         const link = document.createElement('a');
                         link.href = tip.downloadUrl;
                         link.download = tip.downloadUrl.split('/').pop() || 'download.pdf';
                         link.click();
                       }}
                     >
-                      Download Professional Guide
-                      <ArrowRight className="ml-2 h-4 w-4" />
+                      <span className="flex items-center justify-center">
+                        <svg className="h-4 w-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                        </svg>
+                        Download Professional Guide
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                      </span>
                     </Button>
                   ) : (
-                    <Button variant="outline" className="w-full">
-                      Access Professional Insights
-                      <ArrowRight className="ml-2 h-4 w-4" />
+                    <Button variant="outline" className="w-full border-blue-200 bg-blue-50 hover:bg-blue-100 text-blue-800 font-semibold">
+                      <span className="flex items-center justify-center">
+                        Access Professional Insights
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                      </span>
                     </Button>
                   )}
                 </CardContent>
