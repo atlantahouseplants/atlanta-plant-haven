@@ -11,6 +11,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import InlineLeadCapture from "@/components/InlineLeadCapture";
 
 const Corporate = () => {
   const { toast } = useToast();
@@ -316,6 +317,12 @@ const Corporate = () => {
           </div>
         </div>
       </section>
+
+      {/* Strategic Lead Capture - Case Studies */}
+      <InlineLeadCapture 
+        variant="case-studies" 
+        className="mx-4 sm:mx-6 lg:mx-8 mb-20"
+      />
 
       {/* Continuity Offer - Partner With Us & Save */}
       <section className="py-20 bg-gradient-to-br from-green-600 to-green-500 text-white">

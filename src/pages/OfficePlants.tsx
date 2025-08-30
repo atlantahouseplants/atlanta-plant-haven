@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { CheckCircle, Leaf, Award, Users, Building2, Star } from "lucide-react";
 import { useForm } from "@/components/forms/FormContext";
+import InlineLeadCapture from "@/components/InlineLeadCapture";
 
 const OfficePlants = () => {
   const { openForm } = useForm();
@@ -244,6 +245,12 @@ const OfficePlants = () => {
           </div>
         </div>
       </section>
+
+      {/* Strategic Lead Magnet Section */}
+      <InlineLeadCapture 
+        variant="roi-calculator" 
+        className="mx-4 sm:mx-6 lg:mx-8 mb-20"
+      />
 
       {/* 6. "Meet Your Expert" Section */}
       <section className="py-20 bg-muted/30">

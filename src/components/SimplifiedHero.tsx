@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import InlineLeadCapture from "@/components/InlineLeadCapture";
 
 const SimplifiedHero = () => {
   return (
@@ -191,6 +192,14 @@ const SimplifiedHero = () => {
             </div>
           </div>
         </div>
+
+        {/* Strategic Lead Magnets Section */}
+        <InlineLeadCapture 
+          variant="full-grid"
+          title="Free Strategic Business Resources"
+          subtitle="Professional tools trusted by 500+ Atlanta businesses to evaluate, implement, and optimize workplace plant programs."
+          className="mb-20"
+        />
 
         {/* Professional CTA Section */}
         <div className="text-center">
