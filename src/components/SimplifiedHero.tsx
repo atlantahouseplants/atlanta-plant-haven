@@ -12,69 +12,74 @@ const SimplifiedHero = () => {
         {/* Hero Section */}
         <div className="text-center mb-16">
           <div className="mb-8">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-black text-foreground leading-[0.95] mb-6 tracking-tight">
-              <span className="block text-red-600 mb-2">
-                Stop Watching Your Office Plants Die
+            <h1 className="text-5xl sm:text-6xl md:text-7xl font-black text-foreground leading-[0.9] mb-6 tracking-tight">
+              <span className="block bg-gradient-to-r from-green-600 via-emerald-500 to-green-600 bg-clip-text text-transparent mb-2">
+                Elevate Your Workplace
               </span>
               <span className="block text-foreground">
-                While Your Productivity Drops 23%
+                With Strategic Plant Design
               </span>
             </h1>
           </div>
           
-          <div className="max-w-5xl mx-auto mb-8">
-            <p className="text-2xl md:text-3xl text-green-700 leading-relaxed font-bold text-center mb-8">
-              Atlanta's #1 Plant Doctor Guarantees Thriving Office Plants That Boost Employee Performance (Or We Replace Them Free)
+          <div className="max-w-4xl mx-auto mb-8">
+            <p className="text-2xl md:text-3xl text-blue-700 leading-relaxed font-semibold text-center mb-12">
+              Transform your Atlanta workspace into a healthier, more productive environment with expert biophilic design and guaranteed plant care.
             </p>
             
-            {/* Problem Points */}
-            <div className="bg-red-50 border-l-4 border-red-500 p-6 rounded-r-lg max-w-3xl mx-auto mb-8">
-              <h3 className="text-xl font-bold text-red-700 mb-4">Are You Frustrated With...</h3>
-              <ul className="text-lg text-red-600 space-y-3">
-                <li className="flex items-start">
-                  <span className="text-red-500 mr-3">✗</span>
-                  Dead plants making your office look unprofessional?
-                </li>
-                <li className="flex items-start">
-                  <span className="text-red-500 mr-3">✗</span>
-                  Employees calling in sick 40% more often in sterile environments?
-                </li>
-                <li className="flex items-start">
-                  <span className="text-red-500 mr-3">✗</span>
-                  Clients noticing your lifeless, uninspiring workspace?
-                </li>
-                <li className="flex items-start">
-                  <span className="text-red-500 mr-3">✗</span>
-                  Wasting time and money on plants that keep dying?
-                </li>
-              </ul>
-            </div>
+            {/* Professional Benefits Grid */}
+            <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+              {/* Employee Wellness Benefits */}
+              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 border border-blue-200 p-8 rounded-2xl">
+                <h3 className="text-2xl font-bold text-blue-800 mb-6 flex items-center">
+                  <span className="mr-3">🏢</span>
+                  Employee Wellness Benefits
+                </h3>
+                <ul className="text-lg text-blue-700 space-y-4">
+                  <li className="flex items-start">
+                    <span className="text-blue-500 mr-3 mt-1">•</span>
+                    <span><strong>15% productivity increase</strong> with biophilic design</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-blue-500 mr-3 mt-1">•</span>
+                    <span><strong>37% stress reduction</strong> in plant-enhanced environments</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-blue-500 mr-3 mt-1">•</span>
+                    <span><strong>Improved air quality</strong> and oxygen levels</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-blue-500 mr-3 mt-1">•</span>
+                    <span><strong>Enhanced employee satisfaction</strong> and retention</span>
+                  </li>
+                </ul>
+              </div>
 
-            {/* Solution Benefits */}
-            <div className="bg-green-50 border-l-4 border-green-500 p-6 rounded-r-lg max-w-3xl mx-auto">
-              <h3 className="text-xl font-bold text-green-700 mb-4">Get These Guaranteed Results:</h3>
-              <ul className="text-lg text-green-600 space-y-3">
-                <li className="flex items-start">
-                  <span className="text-green-500 mr-3">✓</span>
-                  100% plant survival guarantee (or free replacement)
-                </li>
-                <li className="flex items-start">
-                  <span className="text-green-500 mr-3">✓</span>
-                  15% productivity increase (Harvard Business Review study)
-                </li>
-                <li className="flex items-start">
-                  <span className="text-green-500 mr-3">✓</span>
-                  37% employee stress reduction
-                </li>
-                <li className="flex items-start">
-                  <span className="text-green-500 mr-3">✓</span>
-                  Professional appearance that impresses every client
-                </li>
-                <li className="flex items-start">
-                  <span className="text-green-500 mr-3">✓</span>
-                  Zero maintenance required from your team
-                </li>
-              </ul>
+              {/* Business ROI Benefits */}
+              <div className="bg-gradient-to-br from-green-50 to-emerald-50 border border-green-200 p-8 rounded-2xl">
+                <h3 className="text-2xl font-bold text-green-800 mb-6 flex items-center">
+                  <span className="mr-3">📈</span>
+                  Business ROI Benefits
+                </h3>
+                <ul className="text-lg text-green-700 space-y-4">
+                  <li className="flex items-start">
+                    <span className="text-green-500 mr-3 mt-1">•</span>
+                    <span><strong>Professional brand image</strong> that impresses clients</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-green-500 mr-3 mt-1">•</span>
+                    <span><strong>Zero maintenance burden</strong> for your team</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-green-500 mr-3 mt-1">•</span>
+                    <span><strong>100% plant health guarantee</strong> with expert care</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-green-500 mr-3 mt-1">•</span>
+                    <span><strong>Customized design</strong> for your space and culture</span>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
           
@@ -88,43 +93,43 @@ const SimplifiedHero = () => {
             <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none"></div>
           </div>
 
-          {/* Urgency Element */}
-          <div className="bg-yellow-50 border-2 border-yellow-400 rounded-xl p-6 max-w-4xl mx-auto mb-12">
-            <div className="flex items-center justify-center mb-3">
-              <span className="text-2xl mr-2">⚠️</span>
-              <h3 className="text-2xl font-bold text-yellow-800">Limited Availability</h3>
+          {/* Professional Service Notice */}
+          <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-2xl p-8 max-w-4xl mx-auto mb-12">
+            <div className="flex items-center justify-center mb-4">
+              <span className="text-2xl mr-3">🌟</span>
+              <h3 className="text-2xl font-bold text-blue-800">Premium Service Commitment</h3>
             </div>
-            <p className="text-lg text-yellow-700 text-center">
-              Nick only accepts <strong>3 new office clients per month</strong> to ensure premium service quality.<br/>
-              Next available start date: <strong>March 15th, 2025</strong>
+            <p className="text-lg text-blue-700 text-center leading-relaxed">
+              To maintain our exceptional service standards, we carefully manage our client capacity.<br/>
+              <strong>Schedule your complimentary consultation</strong> to secure your preferred installation timeline.
             </p>
           </div>
 
-          {/* The Two Paths - Updated CTAs */}
+          {/* Professional CTAs */}
           <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto mb-16">
             <Link to="/office-plants" className="group">
               <Button 
                 size="lg"
-                className="w-full h-24 text-lg bg-gradient-to-r from-green-600 via-green-500 to-green-600 hover:from-green-700 hover:via-green-600 hover:to-green-700 text-white shadow-2xl hover:shadow-green-500/25 transform hover:scale-[1.02] transition-all duration-300 border-0 font-bold tracking-wide rounded-2xl"
+                className="w-full h-20 text-lg bg-gradient-to-r from-green-600 via-green-500 to-green-600 hover:from-green-700 hover:via-green-600 hover:to-green-700 text-white shadow-xl hover:shadow-green-500/25 transform hover:scale-[1.02] transition-all duration-300 border-0 font-semibold rounded-2xl"
               >
                 <span className="flex flex-col items-center">
-                  <span>Get My FREE Office Plant Audit</span>
-                  <span className="text-sm font-normal opacity-90">($200 Value - Book Now)</span>
+                  <span>Schedule Your Workspace Consultation</span>
+                  <span className="text-sm font-normal opacity-90">Complimentary Design Assessment</span>
                 </span>
-                <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="ml-3 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>
             
             <Link to="/corporate" className="group">
               <Button 
                 size="lg"
-                className="w-full h-24 text-lg bg-gradient-to-r from-blue-600 via-blue-500 to-blue-600 hover:from-blue-700 hover:via-blue-600 hover:to-blue-700 text-white shadow-2xl hover:shadow-blue-500/25 transform hover:scale-[1.02] transition-all duration-300 border-0 font-bold tracking-wide rounded-2xl"
+                className="w-full h-20 text-lg bg-gradient-to-r from-blue-600 via-blue-500 to-blue-600 hover:from-blue-700 hover:via-blue-600 hover:to-blue-700 text-white shadow-xl hover:shadow-blue-500/25 transform hover:scale-[1.02] transition-all duration-300 border-0 font-semibold rounded-2xl"
               >
                 <span className="flex flex-col items-center">
-                  <span>Automate Corporate Gifting</span>
-                  <span className="text-sm font-normal opacity-90">(20% Off Annual Plans)</span>
+                  <span>Explore Corporate Gifting Solutions</span>
+                  <span className="text-sm font-normal opacity-90">Automated Programs Available</span>
                 </span>
-                <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="ml-3 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>
           </div>
@@ -187,41 +192,41 @@ const SimplifiedHero = () => {
           </div>
         </div>
 
-        {/* Final Urgent CTA Section */}
+        {/* Professional CTA Section */}
         <div className="text-center">
-          <div className="bg-gradient-to-br from-red-50 to-orange-50 p-12 rounded-3xl shadow-xl border-2 border-red-200">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Don't Let Your Office Stay Lifeless Another Day
+          <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-12 rounded-3xl shadow-xl border border-green-200">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+              Ready to Enhance Your Workplace Environment?
             </h2>
-            <p className="text-xl text-gray-700 mb-8 max-w-3xl mx-auto">
-              Every day without professional plants costs you in productivity, employee satisfaction, and client impressions. 
-              <strong>Book your free audit before Nick's calendar fills up.</strong>
+            <p className="text-xl text-gray-700 mb-10 max-w-4xl mx-auto leading-relaxed">
+              Join 500+ Atlanta businesses who trust Atlanta Houseplants to create healthier, more productive workspaces. 
+              <strong>Schedule your complimentary consultation</strong> to discover how strategic plant design can transform your office culture.
             </p>
             
             <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
               <Link to="/office-plants" className="group">
                 <Button 
                   size="lg"
-                  className="w-full h-24 text-lg bg-gradient-to-r from-green-600 via-green-500 to-green-600 hover:from-green-700 hover:via-green-600 hover:to-green-700 text-white shadow-2xl hover:shadow-green-500/25 transform hover:scale-[1.02] transition-all duration-300 border-0 font-bold tracking-wide rounded-2xl"
+                  className="w-full h-20 text-lg bg-gradient-to-r from-green-600 via-green-500 to-green-600 hover:from-green-700 hover:via-green-600 hover:to-green-700 text-white shadow-xl hover:shadow-green-500/25 transform hover:scale-[1.02] transition-all duration-300 border-0 font-semibold rounded-2xl"
                 >
                   <span className="flex flex-col items-center">
-                    <span>🚀 Claim My FREE $200 Audit</span>
-                    <span className="text-sm font-normal opacity-90">(Limited to 3 clients/month)</span>
+                    <span>Begin Your Workplace Transformation</span>
+                    <span className="text-sm font-normal opacity-90">Complimentary consultation included</span>
                   </span>
-                  <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="ml-3 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </Link>
               
               <Link to="/corporate" className="group">
                 <Button 
                   size="lg"
-                  className="w-full h-24 text-lg bg-gradient-to-r from-blue-600 via-blue-500 to-blue-600 hover:from-blue-700 hover:via-blue-600 hover:to-blue-700 text-white shadow-2xl hover:shadow-blue-500/25 transform hover:scale-[1.02] transition-all duration-300 border-0 font-bold tracking-wide rounded-2xl"
+                  className="w-full h-20 text-lg bg-gradient-to-r from-blue-600 via-blue-500 to-blue-600 hover:from-blue-700 hover:via-blue-600 hover:to-blue-700 text-white shadow-xl hover:shadow-blue-500/25 transform hover:scale-[1.02] transition-all duration-300 border-0 font-semibold rounded-2xl"
                 >
                   <span className="flex flex-col items-center">
-                    <span>🎁 Automate Gifting & Save 20%</span>
-                    <span className="text-sm font-normal opacity-90">(Annual plans only)</span>
+                    <span>Streamline Your Corporate Gifting</span>
+                    <span className="text-sm font-normal opacity-90">Automated solutions available</span>
                   </span>
-                  <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="ml-3 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </Link>
             </div>
