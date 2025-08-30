@@ -137,7 +137,7 @@ const Corporate = () => {
         <div className="absolute inset-0 bg-black/60" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <Badge className="mb-4 bg-green-600 text-white px-4 py-2 text-sm">
+            <Badge className="mb-4 bg-blue-600 text-white px-4 py-2 text-sm">
               Automated • Seamless • No Hassle for HR
             </Badge>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
@@ -151,22 +151,22 @@ const Corporate = () => {
             </p>
             <div className="flex flex-wrap justify-center gap-6 mb-8 text-white/90">
               <div className="flex items-center">
-                <CheckCircle className="h-6 w-6 mr-2 text-green-400" />
+                <CheckCircle className="h-6 w-6 mr-2 text-emerald-300" />
                 <span className="font-semibold">8+ Years Experience</span>
               </div>
               <div className="flex items-center">
-                <CheckCircle className="h-6 w-6 mr-2 text-green-400" />
+                <CheckCircle className="h-6 w-6 mr-2 text-emerald-300" />
                 <span className="font-semibold">200+ Corporate Clients</span>
               </div>
               <div className="flex items-center">
-                <CheckCircle className="h-6 w-6 mr-2 text-green-400" />
+                <CheckCircle className="h-6 w-6 mr-2 text-emerald-300" />
                 <span className="font-semibold">50,000+ Plants Delivered</span>
               </div>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
                 onClick={() => document.getElementById('free-consultation')?.scrollIntoView({ behavior: 'smooth' })}
-                className="bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-white px-12 py-6 text-xl font-semibold rounded-xl shadow-2xl hover:shadow-yellow-500/25 transform hover:scale-105 transition-all duration-300"
+                className="bg-gradient-to-r from-green-600 to-emerald-500 hover:from-green-700 hover:to-emerald-600 text-white px-12 py-6 text-xl font-semibold rounded-xl shadow-2xl hover:shadow-green-500/25 transform hover:scale-105 transition-all duration-300"
               >
                 Get My FREE Plant Design Consultation
                 <Gift className="ml-3 h-6 w-6" />
@@ -205,19 +205,19 @@ const Corporate = () => {
           {/* Success Metrics */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-3xl font-bold text-green-600 mb-2">200+</div>
+              <div className="text-3xl font-bold text-blue-600 mb-2">200+</div>
               <div className="text-sm text-gray-600">Corporate Clients</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-green-600 mb-2">50,000+</div>
+              <div className="text-3xl font-bold text-blue-600 mb-2">50,000+</div>
               <div className="text-sm text-gray-600">Plants Delivered</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-green-600 mb-2">98%</div>
+              <div className="text-3xl font-bold text-blue-600 mb-2">98%</div>
               <div className="text-sm text-gray-600">Client Retention</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-green-600 mb-2">8+</div>
+              <div className="text-3xl font-bold text-blue-600 mb-2">8+</div>
               <div className="text-sm text-gray-600">Years Experience</div>
             </div>
           </div>
@@ -394,18 +394,18 @@ const Corporate = () => {
 
           <div className="grid md:grid-cols-3 gap-12 mb-12">
             <div className="text-center">
-              <div className="w-20 h-20 bg-gradient-to-r from-green-600 to-green-500 text-white rounded-full flex items-center justify-center text-3xl font-bold mx-auto mb-6 shadow-xl">1</div>
-              <h3 className="text-2xl font-bold mb-4 text-green-800">Strategic Program Design</h3>
+              <div className="w-20 h-20 bg-gradient-to-r from-blue-600 to-blue-500 text-white rounded-full flex items-center justify-center text-3xl font-bold mx-auto mb-6 shadow-xl">1</div>
+              <h3 className="text-2xl font-bold mb-4 text-blue-800">Strategic Program Design</h3>
               <p className="text-lg text-gray-700 leading-relaxed">We collaborate with your team to develop a comprehensive recognition strategy, selecting appropriate gift tiers and milestone triggers that align with your company culture.</p>
             </div>
             <div className="text-center">
-              <div className="w-20 h-20 bg-gradient-to-r from-green-600 to-green-500 text-white rounded-full flex items-center justify-center text-3xl font-bold mx-auto mb-6 shadow-xl">2</div>
-              <h3 className="text-2xl font-bold mb-4 text-blue-800">Streamlined Administration</h3>
+              <div className="w-20 h-20 bg-gradient-to-r from-green-600 to-emerald-500 text-white rounded-full flex items-center justify-center text-3xl font-bold mx-auto mb-6 shadow-xl">2</div>
+              <h3 className="text-2xl font-bold mb-4 text-green-800">Streamlined Administration</h3>
               <p className="text-lg text-gray-700 leading-relaxed">Quarterly recipient updates are all that's required from your team. Our system handles scheduling, customization, and delivery coordination automatically.</p>
             </div>
             <div className="text-center">
-              <div className="w-20 h-20 bg-gradient-to-r from-green-600 to-green-500 text-white rounded-full flex items-center justify-center text-3xl font-bold mx-auto mb-6 shadow-xl">3</div>
-              <h3 className="text-2xl font-bold mb-4 text-purple-800">Complete Program Management</h3>
+              <div className="w-20 h-20 bg-gradient-to-r from-emerald-600 to-green-500 text-white rounded-full flex items-center justify-center text-3xl font-bold mx-auto mb-6 shadow-xl">3</div>
+              <h3 className="text-2xl font-bold mb-4 text-emerald-800">Complete Program Management</h3>
               <p className="text-lg text-gray-700 leading-relaxed">Our team manages expert preparation, custom branding, consolidated delivery, and ongoing program optimization—ensuring consistent, professional recognition experiences.</p>
             </div>
           </div>
@@ -440,7 +440,7 @@ const Corporate = () => {
                     Professional succulent arrangements that create positive first impressions.
                   </p>
                   <div className="mb-6">
-                    <Badge className="bg-green-600 text-white text-lg px-4 py-2">
+                    <Badge className="bg-blue-600 text-white text-lg px-4 py-2">
                       One-Time: $12 each
                     </Badge>
                   </div>
@@ -452,8 +452,8 @@ const Corporate = () => {
             </div>
 
             {/* Recognition Tier */}
-            <div className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300 ring-2 ring-green-600">
-              <div className="bg-green-600 text-white text-center py-2 font-semibold">
+            <div className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300 ring-2 ring-blue-600">
+              <div className="bg-blue-600 text-white text-center py-2 font-semibold">
                 MOST POPULAR
               </div>
               <img
@@ -469,7 +469,7 @@ const Corporate = () => {
                     Sophisticated plants that reinforce professional relationships and company values.
                   </p>
                   <div className="mb-6">
-                    <Badge className="bg-blue-600 text-white text-lg px-4 py-2">
+                    <Badge className="bg-green-600 text-white text-lg px-4 py-2">
                       One-Time: $45 each
                     </Badge>
                   </div>
@@ -495,7 +495,7 @@ const Corporate = () => {
                     Distinctive pieces that reflect organizational excellence and premium brand standards.
                   </p>
                   <div className="mb-6">
-                    <Badge className="bg-purple-600 text-white text-lg px-4 py-2">
+                    <Badge className="bg-emerald-600 text-white text-lg px-4 py-2">
                       One-Time: $125 each
                     </Badge>
                   </div>
@@ -510,15 +510,15 @@ const Corporate = () => {
       </section>
 
       {/* Free Consultation Lead Magnet */}
-      <section id="free-consultation" className="py-20 bg-gradient-to-br from-yellow-50 to-orange-50 border-t-4 border-yellow-400">
+      <section id="free-consultation" className="py-20 bg-gradient-to-br from-green-50 to-emerald-50 border-t-4 border-green-500">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <div className="inline-block bg-yellow-400 text-yellow-900 px-6 py-2 rounded-full font-bold text-lg mb-6">
-              🎯 FREE CONSULTATION - LIMITED TIME
+            <div className="inline-block bg-green-100 border-2 border-green-500 text-green-800 px-6 py-2 rounded-full font-bold text-lg mb-6">
+              🌱 FREE CONSULTATION - LIMITED TIME
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               Get Your Custom Corporate Plant Design 
-              <span className="text-yellow-600">100% FREE</span>
+              <span className="text-green-600">100% FREE</span>
             </h2>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed mb-8">
               Our certified plant designers will create a custom recognition program blueprint specifically for your company - including plant selections, pricing tiers, and implementation timeline. 
@@ -560,9 +560,9 @@ const Corporate = () => {
                   </li>
                 </ul>
                 
-                <div className="mt-8 p-6 bg-green-50 border-l-4 border-green-500 rounded-r-lg">
-                  <p className="text-lg font-semibold text-green-800">
-                    💰 <strong>Bonus:</strong> Companies that implement our recommendations typically save 30-40% on their employee recognition costs while doubling engagement.
+                <div className="mt-8 p-6 bg-blue-50 border-l-4 border-blue-500 rounded-r-lg">
+                  <p className="text-lg font-semibold text-blue-800">
+                    🌱 <strong>Bonus:</strong> Companies that implement our recommendations typically save 30-40% on their employee recognition costs while doubling engagement.
                   </p>
                 </div>
               </div>
@@ -583,7 +583,7 @@ const Corporate = () => {
                         value={formData.name}
                         onChange={(e) => setFormData(prev => ({ ...prev, name: e.target.value }))}
                         required
-                        className="mt-1 border-2 border-gray-300 focus:border-yellow-500"
+                        className="mt-1 border-2 border-gray-300 focus:border-green-500"
                         placeholder="Your full name"
                       />
                     </div>
@@ -598,7 +598,7 @@ const Corporate = () => {
                         value={formData.email}
                         onChange={(e) => setFormData(prev => ({ ...prev, email: e.target.value }))}
                         required
-                        className="mt-1 border-2 border-gray-300 focus:border-yellow-500"
+                        className="mt-1 border-2 border-gray-300 focus:border-green-500"
                         placeholder="you@company.com"
                       />
                     </div>
@@ -612,7 +612,7 @@ const Corporate = () => {
                         value={formData.company}
                         onChange={(e) => setFormData(prev => ({ ...prev, company: e.target.value }))}
                         required
-                        className="mt-1 border-2 border-gray-300 focus:border-yellow-500"
+                        className="mt-1 border-2 border-gray-300 focus:border-green-500"
                         placeholder="Your company name"
                       />
                     </div>
@@ -627,7 +627,7 @@ const Corporate = () => {
                         value={formData.phone}
                         onChange={(e) => setFormData(prev => ({ ...prev, phone: e.target.value }))}
                         required
-                        className="mt-1 border-2 border-gray-300 focus:border-yellow-500"
+                        className="mt-1 border-2 border-gray-300 focus:border-green-500"
                         placeholder="(470) 555-0123"
                       />
                     </div>
@@ -652,9 +652,9 @@ const Corporate = () => {
 
                     <Button
                       type="submit"
-                      className="w-full bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-white py-4 text-lg font-bold rounded-xl shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
+                      className="w-full bg-gradient-to-r from-green-600 to-emerald-500 hover:from-green-700 hover:to-emerald-600 text-white py-4 text-lg font-bold rounded-xl shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
                     >
-                      🎯 GET MY FREE CONSULTATION NOW
+                      🌱 GET MY FREE CONSULTATION NOW
                     </Button>
 
                     <p className="text-xs text-gray-500 text-center mt-3">
@@ -693,12 +693,12 @@ const Corporate = () => {
       <section className="py-20 bg-gradient-to-br from-gray-900 to-gray-800 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="mb-12">
-            <div className="inline-block bg-yellow-400 text-yellow-900 px-6 py-2 rounded-full font-bold text-lg mb-6">
-              ⏰ LIMITED TIME: Free Consultation Available
+            <div className="inline-block bg-green-100 border-2 border-green-500 text-green-800 px-6 py-2 rounded-full font-bold text-lg mb-6">
+              🌱 LIMITED TIME: Free Consultation Available
             </div>
             <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
               Don't Let Your Employee Recognition 
-              <br />Stay <span className="text-yellow-400">Generic and Forgettable</span>
+              <br />Stay <span className="text-green-400">Generic and Forgettable</span>
             </h2>
             <div className="text-xl leading-relaxed max-w-3xl mx-auto">
               <p className="mb-6">
@@ -717,28 +717,28 @@ const Corporate = () => {
             <h3 className="text-2xl font-bold mb-4">What Happens When You Book Today:</h3>
             <div className="grid md:grid-cols-2 gap-6 text-left">
               <div className="flex items-start">
-                <div className="w-8 h-8 bg-yellow-400 text-yellow-900 rounded-full flex items-center justify-center font-bold mr-4 mt-1">1</div>
+                <div className="w-8 h-8 bg-green-500 text-white rounded-full flex items-center justify-center font-bold mr-4 mt-1">1</div>
                 <div>
                   <h4 className="font-semibold">Immediate Response (Within 4 Hours)</h4>
                   <p className="text-gray-300 text-sm">We'll call to schedule your consultation at your convenience</p>
                 </div>
               </div>
               <div className="flex items-start">
-                <div className="w-8 h-8 bg-yellow-400 text-yellow-900 rounded-full flex items-center justify-center font-bold mr-4 mt-1">2</div>
+                <div className="w-8 h-8 bg-green-500 text-white rounded-full flex items-center justify-center font-bold mr-4 mt-1">2</div>
                 <div>
                   <h4 className="font-semibold">30-Minute Strategy Session</h4>
                   <p className="text-gray-300 text-sm">Custom plant selection and program design for your company</p>
                 </div>
               </div>
               <div className="flex items-start">
-                <div className="w-8 h-8 bg-yellow-400 text-yellow-900 rounded-full flex items-center justify-center font-bold mr-4 mt-1">3</div>
+                <div className="w-8 h-8 bg-green-500 text-white rounded-full flex items-center justify-center font-bold mr-4 mt-1">3</div>
                 <div>
                   <h4 className="font-semibold">Complete Implementation Plan</h4>
                   <p className="text-gray-300 text-sm">Detailed roadmap with pricing and timeline to launch in 30 days</p>
                 </div>
               </div>
               <div className="flex items-start">
-                <div className="w-8 h-8 bg-yellow-400 text-yellow-900 rounded-full flex items-center justify-center font-bold mr-4 mt-1">4</div>
+                <div className="w-8 h-8 bg-green-500 text-white rounded-full flex items-center justify-center font-bold mr-4 mt-1">4</div>
                 <div>
                   <h4 className="font-semibold">No Pressure Decision</h4>
                   <p className="text-gray-300 text-sm">Take the plan and implement it yourself, or let us handle everything</p>
@@ -751,9 +751,9 @@ const Corporate = () => {
           <div className="space-y-6">
             <Button 
               onClick={() => document.getElementById('free-consultation')?.scrollIntoView({ behavior: 'smooth' })}
-              className="bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-white text-2xl px-12 py-6 shadow-2xl hover:shadow-yellow-500/25 transform hover:scale-105 transition-all duration-300 font-bold tracking-wide rounded-xl"
+              className="bg-gradient-to-r from-green-600 to-emerald-500 hover:from-green-700 hover:to-emerald-600 text-white text-2xl px-12 py-6 shadow-2xl hover:shadow-green-500/25 transform hover:scale-105 transition-all duration-300 font-bold tracking-wide rounded-xl"
             >
-              🎯 CLAIM MY FREE CONSULTATION NOW
+              🌱 CLAIM MY FREE CONSULTATION NOW
               <ArrowRight className="ml-4 h-7 w-7" />
             </Button>
             
@@ -762,7 +762,7 @@ const Corporate = () => {
               <Button 
                 variant="link"
                 onClick={() => window.open('tel:+14706644039')}
-                className="text-yellow-400 hover:text-yellow-300 text-xl font-bold"
+                className="text-green-400 hover:text-green-300 text-xl font-bold"
               >
                 📞 (470) 664-4039
               </Button>
@@ -770,7 +770,7 @@ const Corporate = () => {
             
             <p className="text-sm text-gray-400 max-w-2xl mx-auto">
               ⚡ Consultation requests are handled in order received. Current availability: 
-              <strong className="text-yellow-400"> Next-day appointments available</strong>
+              <strong className="text-green-400"> Next-day appointments available</strong>
             </p>
           </div>
         </div>
