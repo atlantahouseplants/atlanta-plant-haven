@@ -7,6 +7,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
 import { CheckCircle, Download, Building2, Users, TrendingUp, X } from "lucide-react";
+import { calculateLeadScore, formatLeadForMakeCom, type LeadData } from "@/data/leadScoringSystem";
 
 interface LeadMagnetModalProps {
   isOpen: boolean;
@@ -47,25 +48,69 @@ const LeadMagnetModal: React.FC<LeadMagnetModalProps> = ({
     e.preventDefault();
     
     try {
+      // Prepare enhanced lead data with scoring
+      const leadData: LeadData = {
+        firstName: formData.firstName,
+        lastName: formData.lastName,
+        email: formData.email,
+        company: formData.company,
+        title: formData.title,
+        employeeCount: formData.employeeCount,
+        leadMagnetDownloaded: magnetType,
+        formSubmitted: 'lead-magnet',
+        timeline: formData.timeline,
+        primaryInterest: formData.primaryInterest,
+        currentPlants: formData.currentPlants,
+        urgency: formData.timeline as any,
+        source: 'website'
+      };
+
+      // Calculate lead score and format for Make.com
+      const scoredLead = formatLeadForMakeCom(leadData);
+
       const response = await fetch("https://hook.us1.make.com/ksjtagxicktvi9jblyyj78demqsvuhp7", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          ...formData,
-          leadMagnet: magnetType,
+          ...scoredLead,
+          leadMagnetType: magnetType,
           leadMagnetTitle: title,
           service: "Lead Magnet Download",
+          
+          // Enhanced tracking for email optimization
+          downloadTrigger: `${magnetType}-download`,
+          personalizedSubject: `${formData.firstName}, your ${title} is ready + strategic implementation insights`,
+          emailSequenceTrigger: `${magnetType}-sequence`,
+          
+          // Performance tracking
+          modalSource: 'lead-magnet-modal',
+          pageUrl: window.location.href,
           timestamp: new Date().toISOString()
         }),
       });
 
       if (response.ok) {
+        // Dynamic success message based on lead score
+        const successMessage = getSuccessMessage(scoredLead.leadCategory, magnetType);
+        
         toast({
-          title: "Success! Your Resource is Ready",
-          description: "Check your email for the download link and additional strategic insights from our team.",
+          title: successMessage.title,
+          description: successMessage.description,
         });
+
+        // Track high-value conversion events
+        if (typeof gtag !== 'undefined') {
+          gtag('event', 'conversion', {
+            'event_category': 'Lead Magnet Download',
+            'event_label': `${magnetType}-${scoredLead.leadCategory}`,
+            'value': getLeadValue(scoredLead.leadCategory),
+            'lead_score': scoredLead.leadScore,
+            'employee_count': formData.employeeCount,
+            'timeline': formData.timeline
+          });
+        }
 
         // Reset form
         setFormData({
@@ -313,6 +358,41 @@ const LeadMagnetModal: React.FC<LeadMagnetModalProps> = ({
       </DialogContent>
     </Dialog>
   );
+};
+
+// Helper functions for dynamic messaging
+const getSuccessMessage = (leadCategory: string, magnetType: string) => {
+  const messages = {
+    'hot': {
+      title: "High Priority Download - Immediate Follow-up!",
+      description: "Based on your timeline, Nick will personally contact you within 4 hours to discuss strategic implementation. Check your email for your resource plus exclusive insights."
+    },
+    'warm': {
+      title: "Success! Your Professional Resource is Ready",
+      description: "Check your email for your download plus strategic implementation insights from our certified team. We'll follow up within 24 hours."
+    },
+    'cold': {
+      title: "Thank You! Your Business Resource is Ready",
+      description: "Check your email for your professional tool plus additional strategic insights. We'll send you valuable implementation tips over the next few days."
+    },
+    'nurture': {
+      title: "Resource Delivered Successfully!",
+      description: "Your professional resource is in your email along with strategic insights to support your planning process."
+    }
+  };
+  
+  return messages[leadCategory as keyof typeof messages] || messages.warm;
+};
+
+const getLeadValue = (leadCategory: string) => {
+  const values = {
+    'hot': 150,
+    'warm': 100,
+    'cold': 75,
+    'nurture': 50
+  };
+  
+  return values[leadCategory as keyof typeof values];
 };
 
 export default LeadMagnetModal;
