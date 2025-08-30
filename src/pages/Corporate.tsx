@@ -97,17 +97,20 @@ const Corporate = () => {
               Automated • Seamless • No Hassle for HR
             </Badge>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
-              Effortless Employee Recognition.<br />Memorable Results.
+              <span className="bg-gradient-to-r from-green-400 via-emerald-300 to-green-400 bg-clip-text text-transparent">
+                Strategic Employee Recognition
+              </span>
+              <br />Through Automated Plant Gifting
             </h1>
             <p className="text-2xl text-white/90 max-w-4xl mx-auto mb-8 leading-relaxed">
-              Introducing the Automated Gifting Program: A complete, 'set-it-and-forget-it' system for celebrating your team's milestones.
+              Transform your employee appreciation program with our comprehensive automated gifting system—designed to strengthen company culture while eliminating administrative burden.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
                 onClick={scrollToProcess}
                 className="bg-green-600 hover:bg-green-700 text-white px-12 py-6 text-xl font-semibold rounded-xl shadow-2xl hover:shadow-green-500/25 transform hover:scale-105 transition-all duration-300"
               >
-                See How It Works
+                Explore Our Solutions
                 <ArrowRight className="ml-3 h-6 w-6" />
               </Button>
             </div>
@@ -115,57 +118,103 @@ const Corporate = () => {
         </div>
       </section>
 
-      {/* Problem Section */}
-      <section className="py-20 bg-red-50/30">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-8">
-            Stop Giving Gifts That Get Forgotten.
-          </h2>
-          <p className="text-xl text-muted-foreground leading-relaxed max-w-4xl mx-auto">
-            Generic gift cards, branded swag, and one-off gifts are a logistical nightmare for your team and are quickly forgotten by employees. You need a scalable system that provides a consistently meaningful experience without adding to your workload.
-          </p>
+      {/* Challenge & Opportunity Section */}
+      <section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-8">
+              Elevate Your Employee Recognition Strategy
+            </h2>
+            <p className="text-xl text-blue-700 leading-relaxed max-w-4xl mx-auto">
+              Transform administrative burden into meaningful connections through strategic, automated gifting that strengthens company culture and employee engagement.
+            </p>
+          </div>
+
+          {/* Current vs Enhanced Approach */}
+          <div className="grid lg:grid-cols-2 gap-12">
+            {/* Current Challenge */}
+            <div className="bg-white border border-gray-200 p-8 rounded-2xl">
+              <h3 className="text-2xl font-bold text-gray-700 mb-6 flex items-center">
+                <span className="mr-3">📋</span>
+                Current Recognition Challenges
+              </h3>
+              <ul className="space-y-4 text-lg text-gray-600">
+                <li className="flex items-start">
+                  <span className="mr-3 mt-1">•</span>
+                  <span>Manual tracking of employee milestones and anniversaries</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-3 mt-1">•</span>
+                  <span>Generic gifts that lack personal meaning or lasting impact</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-3 mt-1">•</span>
+                  <span>Administrative burden on HR teams for gift coordination</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-3 mt-1">•</span>
+                  <span>Inconsistent recognition leading to missed opportunities</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* Strategic Solution */}
+            <div className="bg-gradient-to-br from-green-50 to-emerald-50 border border-green-200 p-8 rounded-2xl">
+              <h3 className="text-2xl font-bold text-green-800 mb-6 flex items-center">
+                <span className="mr-3">🌱</span>
+                Automated Recognition Benefits
+              </h3>
+              <ul className="space-y-4 text-lg text-green-700">
+                <li className="flex items-start">
+                  <span className="text-green-500 mr-3 mt-1">✓</span>
+                  <span><strong>Zero administrative burden</strong> with quarterly list updates</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-green-500 mr-3 mt-1">✓</span>
+                  <span><strong>Living gifts</strong> that grow and serve as lasting reminders</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-green-500 mr-3 mt-1">✓</span>
+                  <span><strong>Consistent brand experience</strong> with custom packaging</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-green-500 mr-3 mt-1">✓</span>
+                  <span><strong>Scalable system</strong> that grows with your organization</span>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Solution Section */}
-      <section className="py-20 bg-green-50/30">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-8">
-            Deliver a Living, Lasting Impression.
-          </h2>
-          <p className="text-xl text-muted-foreground leading-relaxed max-w-4xl mx-auto">
-            Our Automated Gifting Program is the solution. We partner with Atlanta's leading companies to handle their entire employee recognition calendar. From welcoming new hires to celebrating work anniversaries, we deliver beautiful, living gifts that grow with your team, serving as a lasting reminder of your company's appreciation.
-          </p>
-        </div>
-      </section>
 
       {/* How It Works - Core Section */}
       <section id="how-it-works" className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Your Automated Gifting Program in 3 Simple Steps
+              Professional 3-Step Implementation Process
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              No more last-minute scrambling or forgotten milestones. Set it once, and we handle everything.
+            <p className="text-xl text-blue-700 max-w-3xl mx-auto leading-relaxed">
+              From initial strategy development to ongoing program management, we handle every detail of your employee recognition system.
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-12 mb-12">
             <div className="text-center">
               <div className="w-20 h-20 bg-gradient-to-r from-green-600 to-green-500 text-white rounded-full flex items-center justify-center text-3xl font-bold mx-auto mb-6 shadow-xl">1</div>
-              <h3 className="text-2xl font-bold mb-4 text-foreground">Create Your Plan</h3>
-              <p className="text-lg text-muted-foreground leading-relaxed">We work with you to select the perfect gift tiers for your key milestones (new hires, anniversaries, client thank-yous).</p>
+              <h3 className="text-2xl font-bold mb-4 text-green-800">Strategic Program Design</h3>
+              <p className="text-lg text-gray-700 leading-relaxed">We collaborate with your team to develop a comprehensive recognition strategy, selecting appropriate gift tiers and milestone triggers that align with your company culture.</p>
             </div>
             <div className="text-center">
               <div className="w-20 h-20 bg-gradient-to-r from-green-600 to-green-500 text-white rounded-full flex items-center justify-center text-3xl font-bold mx-auto mb-6 shadow-xl">2</div>
-              <h3 className="text-2xl font-bold mb-4 text-foreground">Send Us Your List</h3>
-              <p className="text-lg text-muted-foreground leading-relaxed">Once a quarter, simply send us your list of recipients. That's it. Your work is done.</p>
+              <h3 className="text-2xl font-bold mb-4 text-blue-800">Streamlined Administration</h3>
+              <p className="text-lg text-gray-700 leading-relaxed">Quarterly recipient updates are all that's required from your team. Our system handles scheduling, customization, and delivery coordination automatically.</p>
             </div>
             <div className="text-center">
               <div className="w-20 h-20 bg-gradient-to-r from-green-600 to-green-500 text-white rounded-full flex items-center justify-center text-3xl font-bold mx-auto mb-6 shadow-xl">3</div>
-              <h3 className="text-2xl font-bold mb-4 text-foreground">We Handle Everything</h3>
-              <p className="text-lg text-muted-foreground leading-relaxed">We handle the expert preparation, custom branding, and a single, consolidated delivery to your office. You get all the credit for a perfectly executed recognition program.</p>
+              <h3 className="text-2xl font-bold mb-4 text-purple-800">Complete Program Management</h3>
+              <p className="text-lg text-gray-700 leading-relaxed">Our team manages expert preparation, custom branding, consolidated delivery, and ongoing program optimization—ensuring consistent, professional recognition experiences.</p>
             </div>
           </div>
         </div>
@@ -176,10 +225,10 @@ const Corporate = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-              The Milestone Collection: Curated for Every Occasion
+              Professional Recognition Tiers
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Three carefully designed tiers to match every recognition moment in your company's journey.
+            <p className="text-xl text-blue-700 max-w-4xl mx-auto leading-relaxed">
+              Thoughtfully curated plant gifts designed to match the significance of each milestone in your organization's employee journey.
             </p>
           </div>
 
@@ -194,9 +243,9 @@ const Corporate = () => {
               <div className="p-8">
                 <div className="text-center">
                   <h3 className="text-2xl font-bold text-foreground mb-4">Welcome Tier</h3>
-                  <p className="text-muted-foreground mb-6 leading-relaxed">
-                    Perfect for new hire welcome gifts, small thank-yous, and team appreciation. 
-                    Mini succulent arrangements that make a memorable first impression.
+                  <p className="text-gray-700 mb-6 leading-relaxed">
+                    Thoughtfully designed for new employee welcomes, team appreciation, and milestone acknowledgments. 
+                    Professional succulent arrangements that create positive first impressions.
                   </p>
                   <div className="mb-6">
                     <Badge className="bg-green-600 text-white text-lg px-4 py-2">
@@ -223,9 +272,9 @@ const Corporate = () => {
               <div className="p-8">
                 <div className="text-center">
                   <h3 className="text-2xl font-bold text-foreground mb-4">Recognition Tier</h3>
-                  <p className="text-muted-foreground mb-6 leading-relaxed">
-                    Professional desktop plants for work anniversaries, promotions, and client gifts. 
-                    Substantial plants that make a lasting impression.
+                  <p className="text-gray-700 mb-6 leading-relaxed">
+                    Premium desktop plants ideal for service anniversaries, promotions, and client appreciation. 
+                    Sophisticated plants that reinforce professional relationships and company values.
                   </p>
                   <div className="mb-6">
                     <Badge className="bg-blue-600 text-white text-lg px-4 py-2">
@@ -249,9 +298,9 @@ const Corporate = () => {
               <div className="p-8">
                 <div className="text-center">
                   <h3 className="text-2xl font-bold text-foreground mb-4">Executive Tier</h3>
-                  <p className="text-muted-foreground mb-6 leading-relaxed">
-                    Designer arrangements for executive recognition, major milestones, and VIP clients. 
-                    Statement pieces that reflect your company's premium standards.
+                  <p className="text-gray-700 mb-6 leading-relaxed">
+                    Luxury designer arrangements for executive recognition, significant achievements, and key stakeholder appreciation. 
+                    Distinctive pieces that reflect organizational excellence and premium brand standards.
                   </p>
                   <div className="mb-6">
                     <Badge className="bg-purple-600 text-white text-lg px-4 py-2">
@@ -271,16 +320,22 @@ const Corporate = () => {
       {/* Continuity Offer - Partner With Us & Save */}
       <section className="py-20 bg-gradient-to-br from-green-600 to-green-500 text-white">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-8 leading-tight">
-            Partner With Us & Save
-          </h2>
-          <div className="text-xl leading-relaxed mb-12 max-w-4xl mx-auto">
-            <p className="mb-6">
-              You can place one-time orders at our list price. However, our partners who enroll in the <strong>12-month Automated Gifting Program</strong> receive an immediate <strong>20% discount on all gifts</strong> and our complimentary branding package.
-            </p>
-            <p>
-              It's the most seamless and cost-effective way to manage your company's culture of recognition.
-            </p>
+          <div className="mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+              Annual Partnership Program Benefits
+            </h2>
+            <div className="text-xl leading-relaxed max-w-4xl mx-auto">
+              <p className="mb-6">
+                While individual orders are available at standard pricing, our <strong>Annual Partnership Program</strong> provides 
+                comprehensive value through <strong>20% savings on all gifts</strong> and complimentary custom branding services.
+              </p>
+              <div className="bg-white/20 border border-white/30 rounded-2xl p-6 mb-6">
+                <p className="text-lg">
+                  <strong>Partnership Benefits:</strong> Streamlined recognition management, consistent brand experience, 
+                  and significant cost savings for organizations committed to ongoing employee appreciation.
+                </p>
+              </div>
+            </div>
           </div>
           
           {/* Partnership Benefits */}
@@ -289,22 +344,22 @@ const Corporate = () => {
               <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-bold">20%</span>
               </div>
-              <h3 className="text-xl font-semibold mb-2">Immediate Savings</h3>
-              <p className="text-green-100">20% off all gifts for 12-month partners</p>
+              <h3 className="text-xl font-semibold mb-2">Partnership Savings</h3>
+              <p className="text-green-100">Immediate 20% discount on all recognition gifts</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Gift className="h-8 w-8" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Complimentary Branding</h3>
-              <p className="text-green-100">Custom logo cards and branded packaging included</p>
+              <h3 className="text-xl font-semibold mb-2">Custom Brand Integration</h3>
+              <p className="text-green-100">Professional logo cards and branded packaging included</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Clock className="h-8 w-8" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Set & Forget</h3>
-              <p className="text-green-100">Quarterly list updates - we handle everything else</p>
+              <h3 className="text-xl font-semibold mb-2">Automated Management</h3>
+              <p className="text-green-100">Quarterly updates only - complete program automation</p>
             </div>
           </div>
 
@@ -315,7 +370,7 @@ const Corporate = () => {
             className="bg-white text-green-700 hover:bg-green-50 border-2 border-white hover:border-green-100 text-2xl px-16 py-8 shadow-2xl hover:shadow-white/25 transform hover:scale-105 transition-all duration-300 font-bold tracking-wide rounded-xl"
           >
             <span className="flex items-center">
-              Schedule a Gifting Strategy Call
+              Discuss Your Recognition Program
               <Phone className="ml-4 h-7 w-7" />
             </span>
           </Button>
