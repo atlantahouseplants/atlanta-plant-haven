@@ -17,7 +17,8 @@
     "deny": [],
     "ask": [],
     "additionalDirectories": [
-      "C:\\Users\\wallg\\Downloads"
+      "C:\\Users\\wallg\\Downloads",
+      "C:\\Users\\wallg"
     ]
   }
 }
