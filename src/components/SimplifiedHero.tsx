@@ -30,7 +30,7 @@ const SimplifiedHero = () => {
           
           <div className="mb-16 rounded-3xl overflow-hidden shadow-2xl max-w-5xl mx-auto ring-1 ring-black/5 hover:shadow-3xl transition-shadow duration-500">
             <img 
-              src="/images/corporate-offices/generated-hero-august-2025.jpg" 
+              src="/images/corporate-offices/generated-hero-august-2025-corrected.jpg" 
               alt="Professional Atlanta workspace transformation featuring strategic plant installation and biophilic design elements"
               className="w-full h-96 md:h-[500px] object-cover hover:scale-[1.02] transition-transform duration-700"
             />
