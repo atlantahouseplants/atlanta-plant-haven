@@ -12,6 +12,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import InlineLeadCapture from "@/components/InlineLeadCapture";
+import BulkOrderForm from "@/components/forms/BulkOrderForm";
 
 const Corporate = () => {
   const { toast } = useToast();
@@ -107,7 +108,7 @@ const Corporate = () => {
   };
 
   const scrollToOrder = () => {
-    document.getElementById('order-form')?.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById('bulk-order')?.scrollIntoView({ behavior: 'smooth' });
   };
 
   const scrollToProcess = () => {
@@ -131,23 +132,23 @@ const Corporate = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: "url('/lovable-uploads/9c2eeabd-0020-4009-b76a-339b3a4dc21b.png')",
+            backgroundImage: "url('/images/corporate-offices/modern-restaurant-plant-installation-hero.jpg')",
           }}
         />
         <div className="absolute inset-0 bg-black/60" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <Badge className="mb-4 bg-blue-600 text-white px-4 py-2 text-sm">
-              Automated • Seamless • No Hassle for HR
+              Custom Branded • Volume Discounts • Atlanta Delivery
             </Badge>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
               <span className="bg-gradient-to-r from-green-400 via-emerald-300 to-green-400 bg-clip-text text-transparent">
-                Atlanta's #1 Corporate Plant Gifting
+                Atlanta Corporate Plant Gifts
               </span>
-              <br />Program - Trusted by 200+ Companies
+              <br />25-500+ Plants for Any Occasion
             </h1>
             <p className="text-2xl text-white/90 max-w-4xl mx-auto mb-4 leading-relaxed">
-              We handle everything from custom plant selection to branded delivery for companies like Coca-Cola, Delta, and Home Depot. Zero work for HR—maximum impact for employees.
+              Employee appreciation, client gifts, events, and CSR programs. Professional plant gifts from Atlanta's trusted plant specialists - trusted by Coca-Cola, Delta, and Home Depot.
             </p>
             <div className="flex flex-wrap justify-center gap-6 mb-8 text-white/90">
               <div className="flex items-center">
@@ -165,20 +166,44 @@ const Corporate = () => {
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
-                onClick={() => document.getElementById('free-consultation')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={scrollToOrder}
                 className="bg-gradient-to-r from-green-600 to-emerald-500 hover:from-green-700 hover:to-emerald-600 text-white px-12 py-6 text-xl font-semibold rounded-xl shadow-2xl hover:shadow-green-500/25 transform hover:scale-105 transition-all duration-300"
               >
-                Get My FREE Plant Design Consultation
+                Get Bulk Plant Quote
                 <Gift className="ml-3 h-6 w-6" />
               </Button>
               <Button 
-                onClick={scrollToProcess}
+                onClick={() => window.open('tel:+14706644039')}
                 variant="outline"
                 className="bg-white/10 border-white/30 text-white hover:bg-white/20 px-8 py-6 text-xl font-semibold rounded-xl backdrop-blur-sm"
               >
-                See How It Works
-                <ArrowRight className="ml-3 h-6 w-6" />
+                Call for Quick Quote
+                <Phone className="ml-3 h-6 w-6" />
               </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Quick Benefits Bar */}
+      <section className="py-8 bg-green-600 text-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-4 gap-6 text-center">
+            <div className="flex items-center justify-center">
+              <CheckCircle className="h-6 w-6 mr-2" />
+              <span className="font-semibold">4-Hour Quote Response</span>
+            </div>
+            <div className="flex items-center justify-center">
+              <CheckCircle className="h-6 w-6 mr-2" />
+              <span className="font-semibold">Custom Branding Available</span>
+            </div>
+            <div className="flex items-center justify-center">
+              <CheckCircle className="h-6 w-6 mr-2" />
+              <span className="font-semibold">Atlanta Area Delivery</span>
+            </div>
+            <div className="flex items-center justify-center">
+              <CheckCircle className="h-6 w-6 mr-2" />
+              <span className="font-semibold">Up to 20% Volume Discount</span>
             </div>
           </div>
         </div>
@@ -310,68 +335,76 @@ const Corporate = () => {
         </div>
       </section>
 
-      {/* Challenge & Opportunity Section */}
+      {/* Use Cases & Benefits Section */}
       <section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-8">
-              Elevate Your Employee Recognition Strategy
+              Perfect for Any Corporate Occasion
             </h2>
             <p className="text-xl text-blue-700 leading-relaxed max-w-4xl mx-auto">
-              Transform administrative burden into meaningful connections through strategic, automated gifting that strengthens company culture and employee engagement.
+              From employee appreciation to client gifts - professional plant gifts that make lasting impressions and strengthen business relationships.
             </p>
           </div>
 
-          {/* Current vs Enhanced Approach */}
+          {/* Use Cases Grid */}
           <div className="grid lg:grid-cols-2 gap-12">
-            {/* Current Challenge */}
+            {/* Popular Use Cases */}
             <div className="bg-white border border-gray-200 p-8 rounded-2xl">
               <h3 className="text-2xl font-bold text-gray-700 mb-6 flex items-center">
-                <span className="mr-3">📋</span>
-                Current Recognition Challenges
+                <Gift className="mr-3 h-7 w-7 text-green-600" />
+                Popular Corporate Uses
               </h3>
               <ul className="space-y-4 text-lg text-gray-600">
                 <li className="flex items-start">
-                  <span className="mr-3 mt-1">•</span>
-                  <span>Manual tracking of employee milestones and anniversaries</span>
+                  <span className="mr-3 mt-1">🎉</span>
+                  <span><strong>Employee Appreciation Events</strong> - Team lunches, quarterly recognition</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="mr-3 mt-1">•</span>
-                  <span>Generic gifts that lack personal meaning or lasting impact</span>
+                  <span className="mr-3 mt-1">🏆</span>
+                  <span><strong>Work Anniversaries & Promotions</strong> - Milestone celebrations</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="mr-3 mt-1">•</span>
-                  <span>Administrative burden on HR teams for gift coordination</span>
+                  <span className="mr-3 mt-1">🤝</span>
+                  <span><strong>Client Appreciation Gifts</strong> - Thank you for partnerships</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="mr-3 mt-1">•</span>
-                  <span>Inconsistent recognition leading to missed opportunities</span>
+                  <span className="mr-3 mt-1">🌍</span>
+                  <span><strong>CSR & Community Programs</strong> - Charitable plant donations</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-3 mt-1">📅</span>
+                  <span><strong>Conference & Event Giveaways</strong> - Professional networking gifts</span>
                 </li>
               </ul>
             </div>
 
-            {/* Strategic Solution */}
+            {/* Why Plant Gifts Work */}
             <div className="bg-gradient-to-br from-green-50 to-emerald-50 border border-green-200 p-8 rounded-2xl">
               <h3 className="text-2xl font-bold text-green-800 mb-6 flex items-center">
-                <span className="mr-3">🌱</span>
-                Automated Recognition Benefits
+                <Leaf className="mr-3 h-7 w-7 text-green-600" />
+                Why Plant Gifts Excel
               </h3>
               <ul className="space-y-4 text-lg text-green-700">
                 <li className="flex items-start">
                   <span className="text-green-500 mr-3 mt-1">✓</span>
-                  <span><strong>Zero administrative burden</strong> with quarterly list updates</span>
+                  <span><strong>Lasting impact</strong> - Lives and grows vs. consumed or forgotten</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-green-500 mr-3 mt-1">✓</span>
-                  <span><strong>Living gifts</strong> that grow and serve as lasting reminders</span>
+                  <span><strong>Office enhancement</strong> - Improves air quality and workspace aesthetics</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-green-500 mr-3 mt-1">✓</span>
-                  <span><strong>Consistent brand experience</strong> with custom packaging</span>
+                  <span><strong>Custom branding</strong> - Your logo and message on every pot</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-green-500 mr-3 mt-1">✓</span>
-                  <span><strong>Scalable system</strong> that grows with your organization</span>
+                  <span><strong>Volume savings</strong> - Up to 20% discount on large orders</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-green-500 mr-3 mt-1">✓</span>
+                  <span><strong>Professional delivery</strong> - Coordinated Atlanta-wide distribution</span>
                 </li>
               </ul>
             </div>
@@ -380,287 +413,247 @@ const Corporate = () => {
       </section>
 
 
-      {/* How It Works - Core Section */}
+      {/* Simple Process Section */}
       <section id="how-it-works" className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Professional 3-Step Implementation Process
+              Simple 3-Step Process
             </h2>
             <p className="text-xl text-blue-700 max-w-3xl mx-auto leading-relaxed">
-              From initial strategy development to ongoing program management, we handle every detail of your employee recognition system.
+              From quote to delivery in just a few days. No complex setups or ongoing commitments.
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-12 mb-12">
             <div className="text-center">
               <div className="w-20 h-20 bg-gradient-to-r from-blue-600 to-blue-500 text-white rounded-full flex items-center justify-center text-3xl font-bold mx-auto mb-6 shadow-xl">1</div>
-              <h3 className="text-2xl font-bold mb-4 text-blue-800">Strategic Program Design</h3>
-              <p className="text-lg text-gray-700 leading-relaxed">We collaborate with your team to develop a comprehensive recognition strategy, selecting appropriate gift tiers and milestone triggers that align with your company culture.</p>
+              <h3 className="text-2xl font-bold mb-4 text-blue-800">Get Quick Quote</h3>
+              <p className="text-lg text-gray-700 leading-relaxed">Tell us your quantity, occasion, and delivery date. We'll send you pricing and plant options within 4 hours.</p>
             </div>
             <div className="text-center">
               <div className="w-20 h-20 bg-gradient-to-r from-green-600 to-emerald-500 text-white rounded-full flex items-center justify-center text-3xl font-bold mx-auto mb-6 shadow-xl">2</div>
-              <h3 className="text-2xl font-bold mb-4 text-green-800">Streamlined Administration</h3>
-              <p className="text-lg text-gray-700 leading-relaxed">Quarterly recipient updates are all that's required from your team. Our system handles scheduling, customization, and delivery coordination automatically.</p>
+              <h3 className="text-2xl font-bold mb-4 text-green-800">Customize Your Order</h3>
+              <p className="text-lg text-gray-700 leading-relaxed">Choose from our plant recommendations, add custom branding, and approve delivery details. Simple approval process.</p>
             </div>
             <div className="text-center">
               <div className="w-20 h-20 bg-gradient-to-r from-emerald-600 to-green-500 text-white rounded-full flex items-center justify-center text-3xl font-bold mx-auto mb-6 shadow-xl">3</div>
-              <h3 className="text-2xl font-bold mb-4 text-emerald-800">Complete Program Management</h3>
-              <p className="text-lg text-gray-700 leading-relaxed">Our team manages expert preparation, custom branding, consolidated delivery, and ongoing program optimization—ensuring consistent, professional recognition experiences.</p>
+              <h3 className="text-2xl font-bold mb-4 text-emerald-800">Professional Delivery</h3>
+              <p className="text-lg text-gray-700 leading-relaxed">We handle preparation, packaging, and coordinated delivery across Atlanta. Your team just enjoys the results.</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* The Milestone Collection - 3 Solution Tiers */}
+      {/* Bulk Pricing & Packages */}
       <section className="py-20 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Professional Recognition Tiers
+              Simple Bulk Pricing
             </h2>
             <p className="text-xl text-blue-700 max-w-4xl mx-auto leading-relaxed">
-              Thoughtfully curated plant gifts designed to match the significance of each milestone in your organization's employee journey.
+              Professional plant gifts starting at $12 each. Desktop succulents, office plants, and executive arrangements with volume discounts up to 20% off.
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-3 gap-8">
-            {/* Welcome Tier */}
-            <div className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300">
-              <img
-                src="/images/arrangements-decorative/desktop-succulent-trio-welcome.png"
-                alt="Welcome Tier - Mini succulent gift for new hires"
-                className="w-full h-64 object-cover"
+          <div className="grid lg:grid-cols-3 gap-8 mb-16">
+            {/* Desktop Gifts */}
+            <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
+              <img 
+                src="/images/arrangements-decorative/desktop-succulent-arrangement.png" 
+                alt="Desktop succulent arrangement" 
+                className="w-full h-48 object-cover"
               />
-              <div className="p-8">
+              <div className="p-6">
                 <div className="text-center">
-                  <h3 className="text-2xl font-bold text-foreground mb-4">Welcome Tier</h3>
-                  <p className="text-gray-700 mb-6 leading-relaxed">
-                    Thoughtfully designed for new employee welcomes, team appreciation, and milestone acknowledgments. 
-                    Professional succulent arrangements that create positive first impressions.
+                  <h3 className="text-xl font-bold text-foreground mb-3">Desktop Collection</h3>
+                  <p className="text-gray-600 mb-4 text-sm">
+                    Perfect for employee appreciation, team thank-yous, and desk gifts. 
+                    Low-maintenance succulents and air plants.
                   </p>
-                  <div className="mb-6">
-                    <Badge className="bg-blue-600 text-white text-lg px-4 py-2">
-                      One-Time: $12 each
-                    </Badge>
+                  <div className="mb-4">
+                    <div className="text-2xl font-bold text-green-600">$12-18</div>
+                    <div className="text-sm text-gray-500">per plant</div>
                   </div>
-                  <p className="text-sm text-muted-foreground">
-                    Ideal for: New hires, team thank-yous, small milestones
+                  <p className="text-xs text-muted-foreground">
+                    2-4" pots • Care instructions included
                   </p>
                 </div>
               </div>
             </div>
 
-            {/* Recognition Tier */}
-            <div className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300 ring-2 ring-blue-600">
-              <div className="bg-blue-600 text-white text-center py-2 font-semibold">
+            {/* Office Plants */}
+            <div className="bg-white rounded-2xl shadow-xl overflow-hidden border-2 border-blue-500">
+              <div className="bg-blue-500 text-white text-center py-2 text-sm font-semibold">
                 MOST POPULAR
               </div>
-              <img
-                src="/images/arrangements-decorative/professional-desktop-plant-anniversary.png"
-                alt="Recognition Tier - Desktop plant for anniversaries"
-                className="w-full h-64 object-cover"
+              <img 
+                src="/images/corporate-offices/blue-cubicle-planters.png" 
+                alt="Office cubicle plants" 
+                className="w-full h-48 object-cover"
               />
-              <div className="p-8">
+              <div className="p-6">
                 <div className="text-center">
-                  <h3 className="text-2xl font-bold text-foreground mb-4">Recognition Tier</h3>
-                  <p className="text-gray-700 mb-6 leading-relaxed">
-                    Premium desktop plants ideal for service anniversaries, promotions, and client appreciation. 
-                    Sophisticated plants that reinforce professional relationships and company values.
+                  <h3 className="text-xl font-bold text-foreground mb-3">Professional Collection</h3>
+                  <p className="text-gray-600 mb-4 text-sm">
+                    Snake plants, pothos, and ZZ plants in modern pots. 
+                    Perfect for work anniversaries and client gifts.
                   </p>
-                  <div className="mb-6">
-                    <Badge className="bg-green-600 text-white text-lg px-4 py-2">
-                      One-Time: $45 each
-                    </Badge>
+                  <div className="mb-4">
+                    <div className="text-2xl font-bold text-green-600">$25-35</div>
+                    <div className="text-sm text-gray-500">per plant</div>
                   </div>
-                  <p className="text-sm text-muted-foreground">
-                    Ideal for: Work anniversaries, promotions, client thank-yous
+                  <p className="text-xs text-muted-foreground">
+                    4-6" pots • Office-friendly varieties
                   </p>
                 </div>
               </div>
             </div>
 
-            {/* Executive Tier */}
-            <div className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300">
-              <img
-                src="/images/arrangements-decorative/luxury-arrangement-executive-tier.png"
-                alt="Executive Tier - Designer arrangement for VIP recognition"
-                className="w-full h-64 object-cover"
+            {/* Executive Plants */}
+            <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
+              <img 
+                src="/images/corporate-offices/bird-of-paradise-atlanta-skyline.png" 
+                alt="Executive floor plant with Atlanta skyline" 
+                className="w-full h-48 object-cover"
               />
-              <div className="p-8">
+              <div className="p-6">
                 <div className="text-center">
-                  <h3 className="text-2xl font-bold text-foreground mb-4">Executive Tier</h3>
-                  <p className="text-gray-700 mb-6 leading-relaxed">
-                    Luxury designer arrangements for executive recognition, significant achievements, and key stakeholder appreciation. 
-                    Distinctive pieces that reflect organizational excellence and premium brand standards.
+                  <h3 className="text-xl font-bold text-foreground mb-3">Executive Collection</h3>
+                  <p className="text-gray-600 mb-4 text-sm">
+                    Statement floor plants and luxury arrangements. 
+                    Premium gifts for executives and VIP clients.
                   </p>
-                  <div className="mb-6">
-                    <Badge className="bg-emerald-600 text-white text-lg px-4 py-2">
-                      One-Time: $125 each
-                    </Badge>
+                  <div className="mb-4">
+                    <div className="text-2xl font-bold text-green-600">$45-65</div>
+                    <div className="text-sm text-gray-500">per plant</div>
                   </div>
-                  <p className="text-sm text-muted-foreground">
-                    Ideal for: Executive recognition, major milestones, VIP clients
+                  <p className="text-xs text-muted-foreground">
+                    6-8"+ pots • Premium varieties
                   </p>
                 </div>
               </div>
+            </div>
+          </div>
+
+          {/* Volume Discounts */}
+          <div className="bg-white rounded-2xl shadow-xl p-8 max-w-4xl mx-auto">
+            <h3 className="text-2xl font-bold text-center mb-8">Volume Discounts</h3>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+              <div className="p-4 bg-gray-50 rounded-lg">
+                <div className="font-bold text-lg">25-49 plants</div>
+                <div className="text-green-600 font-semibold">5% off</div>
+              </div>
+              <div className="p-4 bg-green-50 rounded-lg border-2 border-green-200">
+                <div className="font-bold text-lg">50-99 plants</div>
+                <div className="text-green-600 font-semibold">10% off</div>
+              </div>
+              <div className="p-4 bg-green-50 rounded-lg">
+                <div className="font-bold text-lg">100-249 plants</div>
+                <div className="text-green-600 font-semibold">15% off</div>
+              </div>
+              <div className="p-4 bg-green-100 rounded-lg border-2 border-green-400">
+                <div className="font-bold text-lg">250+ plants</div>
+                <div className="text-green-600 font-semibold">20% off</div>
+              </div>
+            </div>
+            <p className="text-center text-sm text-gray-500 mt-6">
+              All orders include: Professional plants • Decorative pots • Care instructions • Atlanta delivery
+            </p>
+            
+            <div className="text-center mt-8">
+              <Button 
+                onClick={scrollToOrder}
+                className="bg-gradient-to-r from-green-600 to-emerald-500 hover:from-green-700 hover:to-emerald-600 text-white px-8 py-4 text-lg font-semibold rounded-xl shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
+              >
+                Get My Quote Now
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Free Consultation Lead Magnet */}
-      <section id="free-consultation" className="py-20 bg-gradient-to-br from-green-50 to-emerald-50 border-t-4 border-green-500">
+      {/* Bulk Order Form Section */}
+      <section id="bulk-order" className="py-20 bg-gradient-to-br from-green-50 to-emerald-50 border-t-4 border-green-500">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <div className="inline-block bg-green-100 border-2 border-green-500 text-green-800 px-6 py-2 rounded-full font-bold text-lg mb-6">
-              🌱 FREE CONSULTATION - LIMITED TIME
+              🚀 QUICK QUOTE - RESPONSE IN 4 HOURS
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Get Your Custom Corporate Plant Design 
-              <span className="text-green-600">100% FREE</span>
+              Get Your Corporate Plant Quote 
+              <span className="text-green-600">Within Hours</span>
             </h2>
-            <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed mb-8">
-              Our certified plant designers will create a custom recognition program blueprint specifically for your company - including plant selections, pricing tiers, and implementation timeline. 
-              <strong> No obligation. No sales pitch. Just professional insights.</strong>
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed mb-6">
+              Tell us your quantity, occasion, and delivery date. We'll send you plant recommendations, exact pricing, and delivery timeline within 4 hours. 
+              <strong> No obligation. No surprises. Just professional service.</strong>
             </p>
+            <div className="flex justify-center items-center gap-8 text-sm text-gray-600">
+              <div className="flex items-center">
+                <Clock className="h-4 w-4 mr-1" />
+                <span>4-Hour Response</span>
+              </div>
+              <div className="flex items-center">
+                <Shield className="h-4 w-4 mr-1" />
+                <span>No Obligation</span>
+              </div>
+              <div className="flex items-center">
+                <CheckCircle className="h-4 w-4 mr-1" />
+                <span>Atlanta Delivery</span>
+              </div>
+            </div>
           </div>
 
           <div className="bg-white rounded-3xl shadow-2xl p-8 md:p-12">
             <div className="grid lg:grid-cols-2 gap-12">
-              {/* Left Side - What They Get */}
+              {/* Left Side - What's Included */}
               <div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-6">
-                  What You'll Receive in Your FREE Consultation:
+                  What's Included in Every Order:
                 </h3>
                 <ul className="space-y-4">
                   <li className="flex items-start">
                     <CheckCircle className="h-6 w-6 text-green-500 mr-3 mt-1 flex-shrink-0" />
                     <span className="text-lg text-gray-700">
-                      <strong>Custom Plant Selection Guide</strong> - Perfectly matched to your office environment and employee preferences
+                      <strong>Professional Plant Selection</strong> - Hardy, beautiful plants perfect for office environments
                     </span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="h-6 w-6 text-green-500 mr-3 mt-1 flex-shrink-0" />
                     <span className="text-lg text-gray-700">
-                      <strong>3-Tier Recognition Framework</strong> - Welcome, milestone, and executive gift recommendations with exact pricing
+                      <strong>Custom Branding Available</strong> - Add your logo and personalized messages to every pot
                     </span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="h-6 w-6 text-green-500 mr-3 mt-1 flex-shrink-0" />
                     <span className="text-lg text-gray-700">
-                      <strong>Implementation Timeline</strong> - Step-by-step roadmap to launch your program within 30 days
+                      <strong>Atlanta Area Delivery</strong> - Coordinated delivery across metro Atlanta on your schedule
                     </span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="h-6 w-6 text-green-500 mr-3 mt-1 flex-shrink-0" />
                     <span className="text-lg text-gray-700">
-                      <strong>Budget Analysis</strong> - Complete cost breakdown with volume discount calculations
+                      <strong>Care Instructions</strong> - Simple care cards so recipients can keep their plants thriving
                     </span>
                   </li>
                 </ul>
                 
                 <div className="mt-8 p-6 bg-blue-50 border-l-4 border-blue-500 rounded-r-lg">
                   <p className="text-lg font-semibold text-blue-800">
-                    🌱 <strong>Bonus:</strong> Companies that implement our recommendations typically save 30-40% on their employee recognition costs while doubling engagement.
+                    💡 <strong>Most orders are delivered within 5-7 business days.</strong> Rush orders available for urgent events.
                   </p>
                 </div>
               </div>
 
-              {/* Right Side - Form */}
+              {/* Right Side - Bulk Order Form */}
               <div>
                 <div className="bg-gray-50 rounded-2xl p-8">
                   <h3 className="text-xl font-bold text-gray-900 mb-6 text-center">
-                    Book Your FREE Design Consultation
+                    Get Your Bulk Plant Quote
                   </h3>
-                  <form onSubmit={handleSubmit} className="space-y-4">
-                    <div>
-                      <Label htmlFor="consultation-name" className="text-sm font-medium text-gray-700">
-                        Full Name *
-                      </Label>
-                      <Input
-                        id="consultation-name"
-                        value={formData.name}
-                        onChange={(e) => setFormData(prev => ({ ...prev, name: e.target.value }))}
-                        required
-                        className="mt-1 border-2 border-gray-300 focus:border-green-500"
-                        placeholder="Your full name"
-                      />
-                    </div>
-
-                    <div>
-                      <Label htmlFor="consultation-email" className="text-sm font-medium text-gray-700">
-                        Business Email *
-                      </Label>
-                      <Input
-                        id="consultation-email"
-                        type="email"
-                        value={formData.email}
-                        onChange={(e) => setFormData(prev => ({ ...prev, email: e.target.value }))}
-                        required
-                        className="mt-1 border-2 border-gray-300 focus:border-green-500"
-                        placeholder="you@company.com"
-                      />
-                    </div>
-
-                    <div>
-                      <Label htmlFor="consultation-company" className="text-sm font-medium text-gray-700">
-                        Company Name *
-                      </Label>
-                      <Input
-                        id="consultation-company"
-                        value={formData.company}
-                        onChange={(e) => setFormData(prev => ({ ...prev, company: e.target.value }))}
-                        required
-                        className="mt-1 border-2 border-gray-300 focus:border-green-500"
-                        placeholder="Your company name"
-                      />
-                    </div>
-
-                    <div>
-                      <Label htmlFor="consultation-phone" className="text-sm font-medium text-gray-700">
-                        Phone Number *
-                      </Label>
-                      <Input
-                        id="consultation-phone"
-                        type="tel"
-                        value={formData.phone}
-                        onChange={(e) => setFormData(prev => ({ ...prev, phone: e.target.value }))}
-                        required
-                        className="mt-1 border-2 border-gray-300 focus:border-green-500"
-                        placeholder="(470) 555-0123"
-                      />
-                    </div>
-
-                    <div>
-                      <Label htmlFor="consultation-employees" className="text-sm font-medium text-gray-700">
-                        Number of Employees
-                      </Label>
-                      <Select onValueChange={(value) => setFormData(prev => ({ ...prev, quantity: value }))}>
-                        <SelectTrigger className="mt-1 border-2 border-gray-300">
-                          <SelectValue placeholder="Select range" />
-                        </SelectTrigger>
-                        <SelectContent>
-                          <SelectItem value="1-25">1-25 employees</SelectItem>
-                          <SelectItem value="26-50">26-50 employees</SelectItem>
-                          <SelectItem value="51-100">51-100 employees</SelectItem>
-                          <SelectItem value="101-250">101-250 employees</SelectItem>
-                          <SelectItem value="250+">250+ employees</SelectItem>
-                        </SelectContent>
-                      </Select>
-                    </div>
-
-                    <Button
-                      type="submit"
-                      className="w-full bg-gradient-to-r from-green-600 to-emerald-500 hover:from-green-700 hover:to-emerald-600 text-white py-4 text-lg font-bold rounded-xl shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
-                    >
-                      🌱 GET MY FREE CONSULTATION NOW
-                    </Button>
-
-                    <p className="text-xs text-gray-500 text-center mt-3">
-                      We respect your privacy. No spam, just valuable insights.
-                    </p>
-                  </form>
+                  <BulkOrderForm />
                 </div>
               </div>
             </div>
@@ -669,21 +662,92 @@ const Corporate = () => {
           {/* Trust Signals */}
           <div className="text-center mt-12">
             <p className="text-lg text-gray-600 mb-6">
-              Join 200+ Atlanta companies who trust us with their employee recognition
+              Join 200+ Atlanta companies who trust us with their corporate plant gifts
             </p>
             <div className="flex justify-center items-center space-x-8 text-sm text-gray-500">
               <div className="flex items-center">
                 <Shield className="h-5 w-5 mr-2" />
-                <span>Fully Licensed & Insured</span>
+                <span>Licensed & Insured</span>
               </div>
               <div className="flex items-center">
                 <Award className="h-5 w-5 mr-2" />
-                <span>Certified Plant Specialists</span>
+                <span>Plant Specialists</span>
               </div>
               <div className="flex items-center">
-                <Star className="h-5 w-5 mr-2" />
-                <span>5-Star Client Reviews</span>
+                <Truck className="h-5 w-5 mr-2" />
+                <span>Atlanta Delivery</span>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Subscription Upsell Section */}
+      <section className="py-16 bg-blue-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-3xl p-8 md:p-12 text-white">
+            <div className="text-center mb-8">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                Love This Experience? Automate It!
+              </h2>
+              <p className="text-xl leading-relaxed max-w-3xl mx-auto">
+                Companies who start with bulk orders often ask: "Can you just handle this quarterly?" 
+                <strong> Yes, we can automate everything.</strong>
+              </p>
+            </div>
+            
+            <div className="grid lg:grid-cols-2 gap-8">
+              <div>
+                <h3 className="text-xl font-bold mb-4">After Your First Bulk Order:</h3>
+                <ul className="space-y-3">
+                  <li className="flex items-start">
+                    <CheckCircle className="h-5 w-5 mr-3 mt-1 text-green-300" />
+                    <span>Set up quarterly employee recognition deliveries</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="h-5 w-5 mr-3 mt-1 text-green-300" />
+                    <span>Automatic work anniversary plant gifts</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="h-5 w-5 mr-3 mt-1 text-green-300" />
+                    <span>Seasonal office plant refreshes</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="h-5 w-5 mr-3 mt-1 text-green-300" />
+                    <span>Zero work for your HR team</span>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="text-xl font-bold mb-4">Subscription Benefits:</h3>
+                <ul className="space-y-3">
+                  <li className="flex items-start">
+                    <span className="text-green-300 mr-3 mt-1">💰</span>
+                    <span>Additional 10% discount on all automated orders</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-green-300 mr-3 mt-1">⏰</span>
+                    <span>Never miss an important recognition moment</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-green-300 mr-3 mt-1">🎯</span>
+                    <span>Priority scheduling and rush delivery options</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-green-300 mr-3 mt-1">📊</span>
+                    <span>Quarterly employee satisfaction reports</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            
+            <div className="text-center mt-8">
+              <p className="text-lg mb-4">
+                <strong>95% of our bulk order clients upgrade to automation within 6 months</strong>
+              </p>
+              <p className="text-blue-100">
+                Start with a simple bulk order today. We'll show you how easy automation can be.
+              </p>
             </div>
           </div>
         </div>
@@ -694,54 +758,54 @@ const Corporate = () => {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="mb-12">
             <div className="inline-block bg-green-100 border-2 border-green-500 text-green-800 px-6 py-2 rounded-full font-bold text-lg mb-6">
-              🌱 LIMITED TIME: Free Consultation Available
+              🌱 READY TO ORDER? GET QUOTE IN 4 HOURS
             </div>
             <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-              Don't Let Your Employee Recognition 
-              <br />Stay <span className="text-green-400">Generic and Forgettable</span>
+              Give Your Team Something 
+              <br />They'll <span className="text-green-400">Actually Keep</span>
             </h2>
             <div className="text-xl leading-relaxed max-w-3xl mx-auto">
               <p className="mb-6">
-                While your competitors send gift cards that get forgotten in wallets, your employees could be receiving 
-                <strong> living reminders of your appreciation</strong> that sit on their desk every day.
+                While other companies give gift cards that disappear, your team could have 
+                <strong> living plants</strong> that brighten their workspace every single day.
               </p>
               <p className="mb-8 text-gray-300">
-                Book your FREE consultation now and discover exactly how companies like Coca-Cola and Delta create 
-                lasting employee connections through strategic plant gifting programs.
+                Join 200+ Atlanta companies who trust us with their corporate plant gifts. 
+                Get your quote today and see why bulk plant gifting works so well.
               </p>
             </div>
           </div>
 
-          {/* Urgency Elements */}
+          {/* Quick Benefits */}
           <div className="bg-white/10 border border-white/20 rounded-2xl p-8 mb-12">
-            <h3 className="text-2xl font-bold mb-4">What Happens When You Book Today:</h3>
+            <h3 className="text-2xl font-bold mb-4">What Happens When You Order Today:</h3>
             <div className="grid md:grid-cols-2 gap-6 text-left">
               <div className="flex items-start">
                 <div className="w-8 h-8 bg-green-500 text-white rounded-full flex items-center justify-center font-bold mr-4 mt-1">1</div>
                 <div>
-                  <h4 className="font-semibold">Immediate Response (Within 4 Hours)</h4>
-                  <p className="text-gray-300 text-sm">We'll call to schedule your consultation at your convenience</p>
+                  <h4 className="font-semibold">Fast Quote (Within 4 Hours)</h4>
+                  <p className="text-gray-300 text-sm">Exact pricing, plant options, and delivery timeline</p>
                 </div>
               </div>
               <div className="flex items-start">
                 <div className="w-8 h-8 bg-green-500 text-white rounded-full flex items-center justify-center font-bold mr-4 mt-1">2</div>
                 <div>
-                  <h4 className="font-semibold">30-Minute Strategy Session</h4>
-                  <p className="text-gray-300 text-sm">Custom plant selection and program design for your company</p>
+                  <h4 className="font-semibold">Simple Approval Process</h4>
+                  <p className="text-gray-300 text-sm">Review options, approve order, and schedule delivery</p>
                 </div>
               </div>
               <div className="flex items-start">
                 <div className="w-8 h-8 bg-green-500 text-white rounded-full flex items-center justify-center font-bold mr-4 mt-1">3</div>
                 <div>
-                  <h4 className="font-semibold">Complete Implementation Plan</h4>
-                  <p className="text-gray-300 text-sm">Detailed roadmap with pricing and timeline to launch in 30 days</p>
+                  <h4 className="font-semibold">Professional Delivery</h4>
+                  <p className="text-gray-300 text-sm">We handle everything - preparation, branding, and coordinated delivery</p>
                 </div>
               </div>
               <div className="flex items-start">
                 <div className="w-8 h-8 bg-green-500 text-white rounded-full flex items-center justify-center font-bold mr-4 mt-1">4</div>
                 <div>
-                  <h4 className="font-semibold">No Pressure Decision</h4>
-                  <p className="text-gray-300 text-sm">Take the plan and implement it yourself, or let us handle everything</p>
+                  <h4 className="font-semibold">Happy Team</h4>
+                  <p className="text-gray-300 text-sm">Your team enjoys beautiful plants that improve their workspace</p>
                 </div>
               </div>
             </div>
@@ -750,15 +814,15 @@ const Corporate = () => {
           {/* Final CTA */}
           <div className="space-y-6">
             <Button 
-              onClick={() => document.getElementById('free-consultation')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={scrollToOrder}
               className="bg-gradient-to-r from-green-600 to-emerald-500 hover:from-green-700 hover:to-emerald-600 text-white text-2xl px-12 py-6 shadow-2xl hover:shadow-green-500/25 transform hover:scale-105 transition-all duration-300 font-bold tracking-wide rounded-xl"
             >
-              🌱 CLAIM MY FREE CONSULTATION NOW
+              🌱 GET MY BULK QUOTE NOW
               <ArrowRight className="ml-4 h-7 w-7" />
             </Button>
             
             <div className="flex flex-col sm:flex-row justify-center items-center gap-4 text-gray-400">
-              <span>Or call directly:</span>
+              <span>Or call for immediate service:</span>
               <Button 
                 variant="link"
                 onClick={() => window.open('tel:+14706644039')}
@@ -769,8 +833,8 @@ const Corporate = () => {
             </div>
             
             <p className="text-sm text-gray-400 max-w-2xl mx-auto">
-              ⚡ Consultation requests are handled in order received. Current availability: 
-              <strong className="text-green-400"> Next-day appointments available</strong>
+              ⚡ Most quotes delivered within 4 hours during business hours. 
+              <strong className="text-green-400"> Rush orders available for urgent events</strong>
             </p>
           </div>
         </div>
