@@ -9,6 +9,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
 import { useToast } from '@/hooks/use-toast';
 import { useForm } from './FormContext';
+import { WEBHOOK_URLS } from '@/config/webhooks';
 
 const formSchema = z.object({
   companyName: z.string().min(2, 'Company name is required'),
@@ -53,7 +54,7 @@ const BusinessQuoteForm = () => {
         }
       };
 
-      const response = await fetch('https://hook.us1.make.com/crj4finfx3ubm8o2u7q4n4npa265tmrs', {
+      const response = await fetch(WEBHOOK_URLS.businessQuote, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

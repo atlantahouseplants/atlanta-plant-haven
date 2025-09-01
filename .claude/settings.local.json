@@ -12,7 +12,9 @@
       "Bash(grep:*)",
       "Bash(find:*)",
       "Read(C:\\Users\\wallg\\Downloads/**)",
-      "Bash(copy:*)"
+      "Bash(copy:*)",
+      "Bash(npm run dev:*)",
+      "Bash(npx tsc:*)"
     ],
     "deny": [],
     "ask": [],

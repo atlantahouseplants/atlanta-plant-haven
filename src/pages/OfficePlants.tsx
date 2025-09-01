@@ -1,120 +1,33 @@
-import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { 
-  Building2, 
-  ArrowRight, 
-  CheckCircle2,
-  Star,
-  Phone,
-  TrendingUp,
-  Users,
-  Brain,
-  Heart,
-  Calendar,
-  Shield,
-  Clock,
-  Award,
-  Sparkles
-} from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import { Button } from "@/components/ui/button";
+import { CheckCircle, Leaf, Award, Users, Building2, Star } from "lucide-react";
 import { useForm } from "@/components/forms/FormContext";
+import InlineLeadCapture from "@/components/InlineLeadCapture";
 
 const OfficePlants = () => {
   const { openForm } = useForm();
-  const [showStickyBar, setShowStickyBar] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      // Show sticky bar after scrolling past hero section
-      setShowStickyBar(window.scrollY > 400);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  const stats = [
-    { value: "15%", label: "Productivity Increase", icon: TrendingUp },
-    { value: "37%", label: "Stress Reduction", icon: Heart },
-    { value: "50%", label: "Better Air Quality", icon: Sparkles },
-    { value: "23%", label: "Happier Employees", icon: Users }
-  ];
-
-  const processSteps = [
-    {
-      number: "1",
-      title: "Free Assessment",
-      description: "We analyze your space, lighting, and environment",
-      duration: "30 minutes"
-    },
-    {
-      number: "2",
-      title: "Custom Design",
-      description: "Receive a personalized biophilic design plan",
-      duration: "48 hours"
-    },
-    {
-      number: "3",
-      title: "Professional Installation",
-      description: "Our team installs and arranges everything",
-      duration: "2-4 hours"
-    },
-    {
-      number: "4",
-      title: "Ongoing Care",
-      description: "Regular maintenance keeps plants thriving",
-      duration: "Bi-weekly"
-    }
-  ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-background">
       <Navigation />
       
-      {/* Sticky CTA Bar */}
-      <div className={`fixed top-20 left-0 right-0 z-40 transition-all duration-300 ${
-        showStickyBar ? "translate-y-0" : "-translate-y-full"
-      }`}>
-        <div className="bg-green-600 text-white py-3 shadow-lg">
-          <div className="max-w-7xl mx-auto px-4 flex items-center justify-between">
-            <div className="flex items-center space-x-4">
-              <Sparkles className="h-5 w-5" />
-              <p className="text-lg font-semibold">
-                Limited Availability: Get Your FREE Office Design Consultation ($500 Value)
-              </p>
-            </div>
-            <Button 
-              onClick={() => openForm('business-quote')}
-              className="bg-white text-green-600 hover:bg-green-50"
-            >
-              Claim Your Free Design
-            </Button>
-          </div>
-        </div>
-      </div>
-
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-green-50 to-white pt-24 pb-16">
-        <div className="max-w-7xl mx-auto px-4">
+      {/* 1. Hero Section */}
+      <section className="pt-24 pb-16 bg-gradient-to-br from-muted via-background to-muted/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <div className="inline-flex items-center bg-green-100 text-green-800 px-4 py-2 rounded-full mb-6">
-                <Award className="h-4 w-4 mr-2" />
-                <span className="text-sm font-semibold">Atlanta's #1 Office Plant Service</span>
-              </div>
-              
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                Transform Your Office Into a 
-                <span className="text-green-600"> Productive Oasis</span>
+            <div className="space-y-8">
+              <h1 className="text-4xl md:text-6xl font-bold text-foreground leading-tight">
+                <span className="bg-gradient-to-r from-green-600 via-emerald-500 to-green-600 bg-clip-text text-transparent">
+                  Strategic Plant Design
+                </span>
+                <br />
+                For Atlanta Workspaces
               </h1>
               
-              <p className="text-xl text-gray-600 mb-8">
-                Science-backed biophilic design that boosts productivity, 
-                reduces stress, and creates a workspace your team will love.
-              </p>
+              <h2 className="text-xl md:text-2xl text-blue-700 leading-relaxed font-semibold">
+                Create healthier, more productive work environments through expert biophilic design and guaranteed plant care—with zero maintenance burden on your team.
+              </h2>
 
               {/* Key Metrics Preview */}
               <div className="grid md:grid-cols-3 gap-6 py-6">

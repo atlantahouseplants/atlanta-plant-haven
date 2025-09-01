@@ -178,8 +178,8 @@ const Corporate = () => {
             {/* Hero Image/Visual */}
             <div className="relative">
               <img 
-                src="/api/placeholder/600/500" 
-                alt="Corporate plant gifts"
+                src="/images/corporate-offices/modern-office-floor-plant.png" 
+                alt="Corporate plant gifts and office installations"
                 className="rounded-2xl shadow-2xl"
               />
               <div className="absolute -bottom-6 -right-6 bg-white p-4 rounded-xl shadow-xl">
