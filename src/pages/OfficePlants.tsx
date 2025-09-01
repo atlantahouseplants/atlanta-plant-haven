@@ -401,6 +401,193 @@ const OfficePlants = () => {
         </div>
       </section>
 
+      {/* Strategic Portfolio Gallery */}
+      <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+              Proven Office Plant Transformations
+            </h2>
+            <p className="text-xl text-blue-700 max-w-4xl mx-auto leading-relaxed">
+              See how strategic plant integration has enhanced workplace culture, productivity, and brand image across diverse Atlanta businesses.
+            </p>
+          </div>
+          
+          <div className="grid lg:grid-cols-2 gap-12">
+            {/* Project 1 */}
+            <div className="group bg-gradient-to-br from-white to-gray-50/50 rounded-3xl shadow-2xl hover:shadow-green-500/10 overflow-hidden border-0 transform hover:scale-[1.01] hover:-translate-y-2 transition-all duration-500">
+              <div className="aspect-video overflow-hidden relative">
+                <img 
+                  src="/images/corporate-offices/bird-of-paradise-atlanta-skyline.png"
+                  alt="Atlanta Real Estate Corporate Office plant installation"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              </div>
+              <div className="p-10 relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-green-50/20 via-transparent to-blue-50/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none rounded-b-3xl"></div>
+                <div className="relative z-10">
+                  <h3 className="text-2xl font-bold text-foreground mb-4">Atlanta Real Estate Corporate Office</h3>
+                  <p className="text-muted-foreground mb-6 leading-relaxed">
+                    Strategic reception area enhancement utilizing premium biophilic design principles. Bird of Paradise installations create commanding first impressions while supporting air quality improvement.
+                  </p>
+                  <blockquote className="bg-gradient-to-r from-green-50 to-emerald-50 p-6 rounded-2xl border-l-4 border-green-500 shadow-inner group-hover:shadow-lg transition-shadow duration-300">
+                    <p className="text-foreground italic mb-2 text-lg leading-relaxed">"The professionalism and expertise are unmatched. Our lobby is now a true showpiece that reinforces our brand values with every client visit."</p>
+                  </blockquote>
+                </div>
+              </div>
+            </div>
+
+            {/* Project 2 */}
+            <div className="group bg-gradient-to-br from-white to-gray-50/50 rounded-3xl shadow-2xl hover:shadow-green-500/10 overflow-hidden border-0 transform hover:scale-[1.01] hover:-translate-y-2 transition-all duration-500">
+              <div className="aspect-video overflow-hidden relative">
+                <img 
+                  src="/images/corporate-offices/large-lobby-floor-plants.png"
+                  alt="Hospitality Industry Corporate Center multi-floor installation"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              </div>
+              <div className="p-10 relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-green-50/20 via-transparent to-blue-50/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none rounded-b-3xl"></div>
+                <div className="relative z-10">
+                  <h3 className="text-2xl font-bold text-foreground mb-4">Hospitality Corporate Center</h3>
+                  <p className="text-muted-foreground mb-6 leading-relaxed">
+                    Multi-floor biophilic integration featuring strategic plant placement for maximum air purification and productivity enhancement. Premium installations serve as natural focal points.
+                  </p>
+                  <blockquote className="bg-gradient-to-r from-green-50 to-emerald-50 p-6 rounded-2xl border-l-4 border-green-500 shadow-inner group-hover:shadow-lg transition-shadow duration-300">
+                    <p className="text-foreground italic mb-2 text-lg leading-relaxed">"A comprehensive solution that delivered measurable improvements in employee retention and client satisfaction. The completely hands-off service model allows us to focus on our core business."</p>
+                  </blockquote>
+                </div>
+              </div>
+            </div>
+
+            {/* Project 3 */}
+            <div className="group bg-gradient-to-br from-white to-gray-50/50 rounded-3xl shadow-2xl hover:shadow-green-500/10 overflow-hidden border-0 transform hover:scale-[1.01] hover:-translate-y-2 transition-all duration-500">
+              <div className="aspect-video overflow-hidden relative">
+                <img 
+                  src="/images/corporate-offices/modern-office-floor-plant.png"
+                  alt="Architecture & Design Studio contemporary workspace"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              </div>
+              <div className="p-10 relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-green-50/20 via-transparent to-blue-50/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none rounded-b-3xl"></div>
+                <div className="relative z-10">
+                  <h3 className="text-2xl font-bold text-foreground mb-4">Architecture & Design Studio</h3>
+                  <p className="text-muted-foreground mb-6 leading-relaxed">
+                    Contemporary workspace optimization through strategic statement plant placement. Design-forward installations enhance creative environments while supporting employee wellness.
+                  </p>
+                  <blockquote className="bg-gradient-to-r from-green-50 to-emerald-50 p-6 rounded-2xl border-l-4 border-green-500 shadow-inner group-hover:shadow-lg transition-shadow duration-300">
+                    <p className="text-foreground italic mb-2 text-lg leading-relaxed">"The thoughtfully curated plant displays have become conversation starters with clients and significantly enhanced our professional image."</p>
+                  </blockquote>
+                </div>
+              </div>
+            </div>
+
+            {/* Project 4 */}
+            <div className="group bg-gradient-to-br from-white to-gray-50/50 rounded-3xl shadow-2xl hover:shadow-green-500/10 overflow-hidden border-0 transform hover:scale-[1.01] hover:-translate-y-2 transition-all duration-500">
+              <div className="aspect-video overflow-hidden relative">
+                <img 
+                  src="/images/corporate-offices/croton-plant-city-view.png"
+                  alt="Atlanta Executive Tower executive space enhancement"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              </div>
+              <div className="p-10 relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-green-50/20 via-transparent to-blue-50/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none rounded-b-3xl"></div>
+                <div className="relative z-10">
+                  <h3 className="text-2xl font-bold text-foreground mb-4">Atlanta Executive Tower</h3>
+                  <p className="text-muted-foreground mb-6 leading-relaxed">
+                    Executive space enhancement leveraging natural light and skyline views through strategic croton placement. Premium plant selection complements architectural features.
+                  </p>
+                  <blockquote className="bg-gradient-to-r from-green-50 to-emerald-50 p-6 rounded-2xl border-l-4 border-green-500 shadow-inner group-hover:shadow-lg transition-shadow duration-300">
+                    <p className="text-foreground italic mb-2 text-lg leading-relaxed">"Our executive meeting space has become the most requested conference room in the building. The plant integration creates an environment that facilitates better meetings."</p>
+                  </blockquote>
+                </div>
+              </div>
+            </div>
+
+            {/* Project 5 */}
+            <div className="group bg-gradient-to-br from-white to-gray-50/50 rounded-3xl shadow-2xl hover:shadow-green-500/10 overflow-hidden border-0 transform hover:scale-[1.01] hover:-translate-y-2 transition-all duration-500">
+              <div className="aspect-video overflow-hidden relative">
+                <img 
+                  src="/images/corporate-offices/multi-plant-office-arrangement.png"
+                  alt="Corporate Banking Headquarters multi-species installation"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              </div>
+              <div className="p-10 relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-green-50/20 via-transparent to-blue-50/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none rounded-b-3xl"></div>
+                <div className="relative z-10">
+                  <h3 className="text-2xl font-bold text-foreground mb-4">Corporate Banking Headquarters</h3>
+                  <p className="text-muted-foreground mb-6 leading-relaxed">
+                    Strategic multi-species installation designed for functional space division and enhanced air quality. Natural privacy screens improve acoustic comfort.
+                  </p>
+                  <blockquote className="bg-gradient-to-r from-green-50 to-emerald-50 p-6 rounded-2xl border-l-4 border-green-500 shadow-inner group-hover:shadow-lg transition-shadow duration-300">
+                    <p className="text-foreground italic mb-2 text-lg leading-relaxed">"Measurable improvements in indoor air quality metrics and employee wellness scores. The natural space division has improved both privacy and collaboration."</p>
+                  </blockquote>
+                </div>
+              </div>
+            </div>
+
+            {/* Project 6 */}
+            <div className="group bg-gradient-to-br from-white to-gray-50/50 rounded-3xl shadow-2xl hover:shadow-green-500/10 overflow-hidden border-0 transform hover:scale-[1.01] hover:-translate-y-2 transition-all duration-500">
+              <div className="aspect-video overflow-hidden relative">
+                <img 
+                  src="/images/outdoor-commercial/executive-outdoor-terrace.png"
+                  alt="Executive Outdoor Workspace corporate terrace transformation"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              </div>
+              <div className="p-10 relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-green-50/20 via-transparent to-blue-50/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none rounded-b-3xl"></div>
+                <div className="relative z-10">
+                  <h3 className="text-2xl font-bold text-foreground mb-4">Executive Outdoor Workspace</h3>
+                  <p className="text-muted-foreground mb-6 leading-relaxed">
+                    Corporate terrace transformation through premium plant curation designed for client entertainment and outdoor meeting functionality.
+                  </p>
+                  <blockquote className="bg-gradient-to-r from-green-50 to-emerald-50 p-6 rounded-2xl border-l-4 border-green-500 shadow-inner group-hover:shadow-lg transition-shadow duration-300">
+                    <p className="text-foreground italic mb-2 text-lg leading-relaxed">"The outdoor installations have revolutionized our client entertainment capabilities. Outdoor meetings have become a competitive differentiator."</p>
+                  </blockquote>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Results Summary */}
+          <div className="mt-16 bg-white rounded-3xl p-12 shadow-xl">
+            <div className="text-center mb-8">
+              <h3 className="text-2xl font-bold text-foreground mb-4">Measurable Business Impact</h3>
+              <p className="text-lg text-gray-600">Results achieved across our office plant installations</p>
+            </div>
+            
+            <div className="grid md:grid-cols-4 gap-8">
+              <div className="text-center">
+                <div className="text-4xl font-bold text-green-600 mb-2">500+</div>
+                <div className="text-gray-600">Projects Completed</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl font-bold text-green-600 mb-2">15%</div>
+                <div className="text-gray-600">Avg. Productivity Increase</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl font-bold text-green-600 mb-2">37%</div>
+                <div className="text-gray-600">Stress Reduction</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl font-bold text-green-600 mb-2">100%</div>
+                <div className="text-gray-600">Client Retention</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* 9. Final CTA Section */}
       <section className="py-20 bg-green-600 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

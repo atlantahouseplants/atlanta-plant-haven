@@ -478,6 +478,145 @@ const Corporate = () => {
         </div>
       </section>
 
+      {/* Corporate Gifting Portfolio */}
+      <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+              Corporate Gifting Success Stories
+            </h2>
+            <p className="text-xl text-blue-700 max-w-4xl mx-auto leading-relaxed">
+              See how Atlanta companies have strengthened relationships, boosted morale, and enhanced their brand image through strategic plant gifting programs.
+            </p>
+          </div>
+          
+          <div className="grid lg:grid-cols-2 gap-12">
+            {/* Tech Company Project */}
+            <div className="group bg-gradient-to-br from-white to-gray-50/50 rounded-3xl shadow-2xl hover:shadow-blue-500/10 overflow-hidden border-0 transform hover:scale-[1.01] hover:-translate-y-2 transition-all duration-500">
+              <div className="aspect-video overflow-hidden relative">
+                <img 
+                  src="/images/arrangements-decorative/desktop-succulent-arrangement.png"
+                  alt="Atlanta Tech Company individual workstation enhancement program"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              </div>
+              <div className="p-10 relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-50/20 via-transparent to-green-50/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none rounded-b-3xl"></div>
+                <div className="relative z-10">
+                  <h3 className="text-2xl font-bold text-foreground mb-4">Atlanta Tech Company</h3>
+                  <p className="text-muted-foreground mb-6 leading-relaxed">
+                    Individual workstation enhancement program featuring carefully selected low-maintenance succulents. Personal plant installations improve individual focus and job satisfaction while maintaining consistent aesthetic standards.
+                  </p>
+                  <blockquote className="bg-gradient-to-r from-blue-50 to-indigo-50 p-6 rounded-2xl border-l-4 border-blue-500 shadow-inner group-hover:shadow-lg transition-shadow duration-300">
+                    <p className="text-foreground italic mb-2 text-lg leading-relaxed">"Quantifiable improvements in team productivity and employee satisfaction scores. The personal plant program has become a valued benefit that differentiates our workplace culture."</p>
+                  </blockquote>
+                </div>
+              </div>
+            </div>
+
+            {/* Law Firm Project */}
+            <div className="group bg-gradient-to-br from-white to-gray-50/50 rounded-3xl shadow-2xl hover:shadow-blue-500/10 overflow-hidden border-0 transform hover:scale-[1.01] hover:-translate-y-2 transition-all duration-500">
+              <div className="aspect-video overflow-hidden relative">
+                <img 
+                  src="/images/arrangements-decorative/mixed-bowl-planter-colorful.png"
+                  alt="Executive Law Firm sophisticated plant arrangements"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              </div>
+              <div className="p-10 relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-50/20 via-transparent to-green-50/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none rounded-b-3xl"></div>
+                <div className="relative z-10">
+                  <h3 className="text-2xl font-bold text-foreground mb-4">Executive Law Firm</h3>
+                  <p className="text-muted-foreground mb-6 leading-relaxed">
+                    Executive-level plant curation featuring diverse, sophisticated arrangements that reinforce professional credibility. Strategic species selection ensures year-round visual impact while supporting air quality goals in client-facing spaces.
+                  </p>
+                  <blockquote className="bg-gradient-to-r from-blue-50 to-indigo-50 p-6 rounded-2xl border-l-4 border-blue-500 shadow-inner group-hover:shadow-lg transition-shadow duration-300">
+                    <p className="text-foreground italic mb-2 text-lg leading-relaxed">"Client feedback consistently highlights our office environment as a differentiating factor in competitive presentations. The investment has enhanced our brand perception significantly."</p>
+                  </blockquote>
+                </div>
+              </div>
+            </div>
+
+            {/* Corporate Entrance Project */}
+            <div className="group bg-gradient-to-br from-white to-gray-50/50 rounded-3xl shadow-2xl hover:shadow-blue-500/10 overflow-hidden border-0 transform hover:scale-[1.01] hover:-translate-y-2 transition-all duration-500">
+              <div className="aspect-video overflow-hidden relative">
+                <img 
+                  src="/images/outdoor-commercial/luxury-artisan-entrance-planters.png"
+                  alt="Luxury Resort Corporate Entrance custom artisan planters"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              </div>
+              <div className="p-10 relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-50/20 via-transparent to-green-50/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none rounded-b-3xl"></div>
+                <div className="relative z-10">
+                  <h3 className="text-2xl font-bold text-foreground mb-4">Luxury Resort Corporate Entrance</h3>
+                  <p className="text-muted-foreground mb-6 leading-relaxed">
+                    Luxury hospitality entrance design featuring custom artisan planters with rotating seasonal displays. Premium plant curation reinforces brand positioning while creating memorable first impressions.
+                  </p>
+                  <blockquote className="bg-gradient-to-r from-blue-50 to-indigo-50 p-6 rounded-2xl border-l-4 border-blue-500 shadow-inner group-hover:shadow-lg transition-shadow duration-300">
+                    <p className="text-foreground italic mb-2 text-lg leading-relaxed">"Guest feedback consistently highlights our entrance design as reinforcing their perception of our luxury brand standards. The seasonal rotation ensures year-round visual impact."</p>
+                  </blockquote>
+                </div>
+              </div>
+            </div>
+
+            {/* Seasonal Entrance Project */}
+            <div className="group bg-gradient-to-br from-white to-gray-50/50 rounded-3xl shadow-2xl hover:shadow-blue-500/10 overflow-hidden border-0 transform hover:scale-[1.01] hover:-translate-y-2 transition-all duration-500">
+              <div className="aspect-video overflow-hidden relative">
+                <img 
+                  src="/images/outdoor-commercial/seasonal-entrance-planters.png"
+                  alt="Construction Management Firm seasonal entrance enhancement"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              </div>
+              <div className="p-10 relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-50/20 via-transparent to-green-50/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none rounded-b-3xl"></div>
+                <div className="relative z-10">
+                  <h3 className="text-2xl font-bold text-foreground mb-4">Construction Management Firm</h3>
+                  <p className="text-muted-foreground mb-6 leading-relaxed">
+                    Commercial exterior enhancement with custom planter systems designed for year-round visual impact. Seasonal color rotation maintains consistent brand presentation while creating positive psychological effects.
+                  </p>
+                  <blockquote className="bg-gradient-to-r from-blue-50 to-indigo-50 p-6 rounded-2xl border-l-4 border-blue-500 shadow-inner group-hover:shadow-lg transition-shadow duration-300">
+                    <p className="text-foreground italic mb-2 text-lg leading-relaxed">"Employee satisfaction scores increased measurably since installation. The welcoming exterior environment has become a significant recruitment advantage."</p>
+                  </blockquote>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Corporate Gifting Results */}
+          <div className="mt-16 bg-white rounded-3xl p-12 shadow-xl">
+            <div className="text-center mb-8">
+              <h3 className="text-2xl font-bold text-foreground mb-4">Corporate Gifting Impact</h3>
+              <p className="text-lg text-gray-600">Results from our corporate gifting programs</p>
+            </div>
+            
+            <div className="grid md:grid-cols-4 gap-8">
+              <div className="text-center">
+                <div className="text-4xl font-bold text-blue-600 mb-2">200+</div>
+                <div className="text-gray-600">Companies Served</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl font-bold text-blue-600 mb-2">15,000+</div>
+                <div className="text-gray-600">Plants Gifted</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl font-bold text-blue-600 mb-2">95%</div>
+                <div className="text-gray-600">Recipient Satisfaction</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl font-bold text-blue-600 mb-2">40%</div>
+                <div className="text-gray-600">Cost Savings vs. Traditional Gifts</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Final CTA */}
       <section className="py-20 bg-gradient-to-br from-blue-600 to-blue-700 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">

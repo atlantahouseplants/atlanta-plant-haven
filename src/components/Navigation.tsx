@@ -13,7 +13,7 @@ const Navigation = () => {
   const navItems = [
     { name: "Office Plants", href: "/office-plants" },
     { name: "Corporate Gifts", href: "/corporate" },
-    { name: "Our Work", href: "/our-work" },
+    { name: "Plant Doctor", href: "/plant-doctor" },
     { name: "About", href: "/about" },
   ];
 

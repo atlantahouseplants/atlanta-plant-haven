@@ -17,7 +17,6 @@ import Corporate from "./pages/Corporate";
 import HomeDesign from "./pages/HomeDesign";
 import Contact from "./pages/Contact";
 import SucculentsForSmiles from "./pages/SucculentsForSmiles";
-import OurWork from "./pages/OurWork";
 import Resources from "./pages/Resources";
 import About from "./pages/About";
 import NotFound from "./pages/NotFound";
@@ -36,7 +35,6 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/office-plants" element={<OfficePlants />} />
             <Route path="/corporate" element={<Corporate />} />
-            <Route path="/our-work" element={<OurWork />} />
             <Route path="/plant-doctor" element={<PlantDoctor />} />
             <Route path="/color-planters" element={<ColorPlanters />} />
             <Route path="/home-design" element={<HomeDesign />} />
