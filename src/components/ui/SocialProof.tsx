@@ -31,14 +31,14 @@ const SocialProofBar = () => {
           </div>
         </div>
 
-        {/* Animated Company Logos */}
-        <div className="relative overflow-hidden">
-          <div className="flex animate-fade-in">
-            <div className="flex space-x-12 animate-marquee">
+        {/* Animated Company Logos - Fixed alignment */}
+        <div className="relative overflow-hidden max-w-5xl mx-auto">
+          <div className="flex justify-center">
+            <div className="flex space-x-8 md:space-x-12 animate-marquee">
               {[...companies, ...companies].map((company, index) => (
                 <div
                   key={`${company}-${index}`}
-                  className="flex-shrink-0 text-xl md:text-2xl font-bold text-gray-600 hover:text-green-600 transition-colors duration-300 cursor-default"
+                  className="flex-shrink-0 text-lg md:text-xl font-bold text-gray-600 hover:text-green-600 transition-colors duration-300 cursor-default whitespace-nowrap"
                 >
                   {company}
                 </div>

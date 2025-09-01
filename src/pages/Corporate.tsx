@@ -502,8 +502,8 @@ const Corporate = () => {
           
           <p className="text-sm opacity-75">
             Questions? Call us at{" "}
-            <a href="tel:470-554-5662" className="underline">
-              470-554-5662
+            <a href="tel:470-664-4039" className="underline">
+              470-664-4039
             </a>
             {" "}for instant quotes
           </p>

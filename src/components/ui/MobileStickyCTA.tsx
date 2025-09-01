@@ -24,8 +24,8 @@ const MobileStickyCTA = () => {
   return (
     <div className="fixed bottom-0 left-0 right-0 z-40 md:hidden animate-slide-up">
       {/* Main CTA Bar */}
-      <div className="bg-white border-t border-gray-200 shadow-lg px-4 py-3">
-        <div className="flex items-center justify-between space-x-3">
+      <div className="bg-white border-t border-gray-200 shadow-lg px-4 py-3 max-w-full">
+        <div className="flex items-center justify-between space-x-3 max-w-sm mx-auto">
           <div className="flex-1">
             <Link to="/office-plants">
               <Button className={`${COMPONENT_STYLES.button.primary} w-full py-3 text-base font-semibold`}>
@@ -37,7 +37,7 @@ const MobileStickyCTA = () => {
           
           <div className="flex space-x-2">
             <a 
-              href="tel:470-554-5662" 
+              href="tel:470-664-4039" 
               className="flex items-center justify-center w-12 h-12 bg-blue-500 hover:bg-blue-600 text-white rounded-xl transition-colors"
               aria-label="Call us"
             >

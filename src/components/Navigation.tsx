@@ -67,9 +67,9 @@ const Navigation = () => {
 
           {/* Desktop CTA Buttons */}
           <div className="hidden md:flex items-center space-x-3">
-            <a href="tel:470-554-5662" className="flex items-center text-gray-600 hover:text-gray-900 transition-colors">
+            <a href="tel:470-664-4039" className="flex items-center text-gray-600 hover:text-gray-900 transition-colors">
               <Phone className="h-4 w-4 mr-1" />
-              <span className="text-sm font-medium hidden lg:block">(470) 554-5662</span>
+              <span className="text-sm font-medium hidden lg:block">(470) 664-4039</span>
             </a>
             <Link to="/office-plants" className="group">
               <Button className={`${COMPONENT_STYLES.button.primary} animate-scale-in`}>
@@ -81,7 +81,7 @@ const Navigation = () => {
 
           {/* Mobile menu button */}
           <div className="md:hidden flex items-center space-x-2">
-            <a href="tel:470-554-5662" className="p-2 text-gray-600 hover:text-gray-900 rounded-lg hover:bg-gray-100 transition-colors">
+            <a href="tel:470-664-4039" className="p-2 text-gray-600 hover:text-gray-900 rounded-lg hover:bg-gray-100 transition-colors">
               <Phone className="h-5 w-5" />
             </a>
             <Button
@@ -128,8 +128,8 @@ const Navigation = () => {
                 
                 {/* Mobile Contact */}
                 <div className="pt-4 text-center">
-                  <a href="tel:470-554-5662" className="text-gray-600 hover:text-gray-900 text-lg font-medium">
-                    📞 (470) 554-5662
+                  <a href="tel:470-664-4039" className="text-gray-600 hover:text-gray-900 text-lg font-medium">
+                    📞 (470) 664-4039
                   </a>
                 </div>
               </div>
