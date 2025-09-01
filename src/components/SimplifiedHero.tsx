@@ -2,6 +2,10 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import InlineLeadCapture from "@/components/InlineLeadCapture";
+import { SocialProofBar, StatsGrid, CustomerTestimonial } from "@/components/ui/SocialProof";
+import { ModernCard, CardContent } from "@/components/ui/ModernCard";
+import { HeroImage } from "@/components/ui/OptimizedImage";
+import { COMPONENT_STYLES } from "@/styles/design-system";
 
 const SimplifiedHero = () => {
   return (
@@ -28,67 +32,73 @@ const SimplifiedHero = () => {
               Transform your Atlanta workspace into a healthier, more productive environment with expert biophilic design and guaranteed plant care.
             </p>
             
-            {/* Professional Benefits Grid */}
+            {/* Professional Benefits Grid - Using Modern Cards */}
             <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
               {/* Employee Wellness Benefits */}
-              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 border border-blue-200 p-8 rounded-2xl">
-                <h3 className="text-2xl font-bold text-blue-800 mb-6 flex items-center">
-                  <span className="mr-3">🏢</span>
-                  Employee Wellness Benefits
-                </h3>
-                <ul className="text-lg text-blue-700 space-y-4">
-                  <li className="flex items-start">
-                    <span className="text-blue-500 mr-3 mt-1">•</span>
-                    <span><strong>15% productivity increase</strong> with biophilic design</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-blue-500 mr-3 mt-1">•</span>
-                    <span><strong>37% stress reduction</strong> in plant-enhanced environments</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-blue-500 mr-3 mt-1">•</span>
-                    <span><strong>Improved air quality</strong> and oxygen levels</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-blue-500 mr-3 mt-1">•</span>
-                    <span><strong>Enhanced employee satisfaction</strong> and retention</span>
-                  </li>
-                </ul>
-              </div>
+              <ModernCard variant="featured" className="animate-fade-in">
+                <CardContent>
+                  <h3 className="text-2xl font-bold text-blue-800 mb-6 flex items-center">
+                    <span className="mr-3">🏢</span>
+                    Employee Wellness Benefits
+                  </h3>
+                  <ul className="text-lg text-blue-700 space-y-4">
+                    <li className="flex items-start">
+                      <span className="text-blue-500 mr-3 mt-1">•</span>
+                      <span><strong>15% productivity increase</strong> with biophilic design</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-blue-500 mr-3 mt-1">•</span>
+                      <span><strong>37% stress reduction</strong> in plant-enhanced environments</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-blue-500 mr-3 mt-1">•</span>
+                      <span><strong>Improved air quality</strong> and oxygen levels</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-blue-500 mr-3 mt-1">•</span>
+                      <span><strong>Enhanced employee satisfaction</strong> and retention</span>
+                    </li>
+                  </ul>
+                </CardContent>
+              </ModernCard>
 
               {/* Business ROI Benefits */}
-              <div className="bg-gradient-to-br from-green-50 to-emerald-50 border border-green-200 p-8 rounded-2xl">
-                <h3 className="text-2xl font-bold text-green-800 mb-6 flex items-center">
-                  <span className="mr-3">📈</span>
-                  Business ROI Benefits
-                </h3>
-                <ul className="text-lg text-green-700 space-y-4">
-                  <li className="flex items-start">
-                    <span className="text-green-500 mr-3 mt-1">•</span>
-                    <span><strong>Professional brand image</strong> that impresses clients</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-green-500 mr-3 mt-1">•</span>
-                    <span><strong>Zero maintenance burden</strong> for your team</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-green-500 mr-3 mt-1">•</span>
-                    <span><strong>100% plant health guarantee</strong> with expert care</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-green-500 mr-3 mt-1">•</span>
-                    <span><strong>Customized design</strong> for your space and culture</span>
-                  </li>
-                </ul>
-              </div>
+              <ModernCard variant="featured" className="animate-fade-in" style={{ animationDelay: '200ms' }}>
+                <CardContent>
+                  <h3 className="text-2xl font-bold text-green-800 mb-6 flex items-center">
+                    <span className="mr-3">📈</span>
+                    Business ROI Benefits
+                  </h3>
+                  <ul className="text-lg text-green-700 space-y-4">
+                    <li className="flex items-start">
+                      <span className="text-green-500 mr-3 mt-1">•</span>
+                      <span><strong>Professional brand image</strong> that impresses clients</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-green-500 mr-3 mt-1">•</span>
+                      <span><strong>Zero maintenance burden</strong> for your team</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-green-500 mr-3 mt-1">•</span>
+                      <span><strong>100% plant health guarantee</strong> with expert care</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="text-green-500 mr-3 mt-1">•</span>
+                      <span><strong>Customized design</strong> for your space and culture</span>
+                    </li>
+                  </ul>
+                </CardContent>
+              </ModernCard>
             </div>
           </div>
           
-          <div className="mb-16 rounded-3xl overflow-hidden shadow-2xl max-w-5xl mx-auto ring-1 ring-black/5 hover:shadow-3xl transition-shadow duration-500">
-            <img 
+          <div className="mb-16 rounded-3xl overflow-hidden shadow-2xl max-w-5xl mx-auto ring-1 ring-black/5 hover:shadow-3xl transition-shadow duration-500 relative">
+            <HeroImage
               src="/images/corporate-offices/generated-hero-august-2025-corrected.jpg" 
               alt="Professional Atlanta workspace transformation featuring strategic plant installation and biophilic design elements"
-              className="w-full h-96 md:h-[500px] object-cover hover:scale-[1.02] transition-transform duration-700"
+              width={1200}
+              height={500}
+              aria-label="Modern office space with professional plant installations showcasing biophilic design"
             />
             {/* Image overlay gradient */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none"></div>
@@ -106,12 +116,12 @@ const SimplifiedHero = () => {
             </p>
           </div>
 
-          {/* Professional CTAs */}
+          {/* Enhanced Professional CTAs */}
           <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto mb-16">
-            <Link to="/office-plants" className="group">
+            <Link to="/office-plants" className="group animate-fade-in">
               <Button 
                 size="lg"
-                className="w-full h-20 text-lg bg-gradient-to-r from-green-600 via-green-500 to-green-600 hover:from-green-700 hover:via-green-600 hover:to-green-700 text-white shadow-xl hover:shadow-green-500/25 transform hover:scale-[1.02] transition-all duration-300 border-0 font-semibold rounded-2xl"
+                className={`${COMPONENT_STYLES.button.primary} w-full h-20 text-lg shadow-xl hover:shadow-green-500/25`}
               >
                 <span className="flex flex-col items-center">
                   <span>Schedule Your Workspace Consultation</span>
@@ -121,10 +131,10 @@ const SimplifiedHero = () => {
               </Button>
             </Link>
             
-            <Link to="/corporate" className="group">
+            <Link to="/corporate" className="group animate-fade-in" style={{ animationDelay: '100ms' }}>
               <Button 
                 size="lg"
-                className="w-full h-20 text-lg bg-gradient-to-r from-blue-600 via-blue-500 to-blue-600 hover:from-blue-700 hover:via-blue-600 hover:to-blue-700 text-white shadow-xl hover:shadow-blue-500/25 transform hover:scale-[1.02] transition-all duration-300 border-0 font-semibold rounded-2xl"
+                className={`${COMPONENT_STYLES.button.cta.replace('from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600', 'from-blue-600 via-blue-500 to-blue-600 hover:from-blue-700 hover:via-blue-600 hover:to-blue-700')} w-full h-20 shadow-xl hover:shadow-blue-500/25`}
               >
                 <span className="flex flex-col items-center">
                   <span>Explore Corporate Gifting Solutions</span>
@@ -137,61 +147,6 @@ const SimplifiedHero = () => {
           
         </div>
 
-        {/* Enhanced Social Proof */}
-        <div className="text-center mb-20">
-          <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-2xl border border-gray-200/50">
-            <h3 className="text-3xl font-bold text-foreground mb-6">
-              Trusted by 500+ Atlanta Businesses Since 2019
-            </h3>
-            
-            {/* Key Stats */}
-            <div className="grid md:grid-cols-3 gap-6 mb-8">
-              <div className="text-center">
-                <div className="text-4xl font-bold text-green-600">500+</div>
-                <div className="text-gray-600">Businesses Served</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-green-600">100%</div>
-                <div className="text-gray-600">Plant Survival Rate</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-green-600">5+ Years</div>
-                <div className="text-gray-600">Zero Failed Installations</div>
-              </div>
-            </div>
-            
-            <div className="flex flex-wrap justify-center items-center gap-8 lg:gap-12">
-              <div className="text-2xl font-bold text-foreground hover:text-green-600 transition-colors cursor-default">Marriott</div>
-              <div className="text-2xl font-bold text-foreground hover:text-green-600 transition-colors cursor-default">Archer Western</div>
-              <div className="text-2xl font-bold text-foreground hover:text-green-600 transition-colors cursor-default">OneStreet Residential</div>
-              <div className="text-2xl font-bold text-foreground hover:text-green-600 transition-colors cursor-default">Perkins and Will</div>
-              <div className="text-2xl font-bold text-foreground hover:text-green-600 transition-colors cursor-default">Loria Ansley</div>
-            </div>
-          </div>
-        </div>
-
-        {/* Nick's Authority Section */}
-        <div className="text-center mb-20">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-            Why Nick Is Atlanta's #1 Plant Doctor
-          </h2>
-          <div className="max-w-4xl mx-auto bg-blue-50 p-8 rounded-2xl border border-blue-200">
-            <div className="grid md:grid-cols-3 gap-6 text-center">
-              <div>
-                <div className="text-2xl font-bold text-blue-600">UGA Graduate</div>
-                <div className="text-gray-600">Certified Horticulturalist</div>
-              </div>
-              <div>
-                <div className="text-2xl font-bold text-blue-600">15+ Years</div>
-                <div className="text-gray-600">Professional Experience</div>
-              </div>
-              <div>
-                <div className="text-2xl font-bold text-blue-600">Only in Atlanta</div>
-                <div className="text-gray-600">State-Licensed Plant Professional</div>
-              </div>
-            </div>
-          </div>
-        </div>
 
         {/* Strategic Lead Magnets Section */}
         <InlineLeadCapture 
@@ -242,6 +197,15 @@ const SimplifiedHero = () => {
           </div>
         </div>
       </div>
+
+      {/* Enhanced Social Proof Section */}
+      <SocialProofBar />
+      
+      {/* Stats Grid */}
+      <StatsGrid />
+      
+      {/* Customer Testimonials */}
+      <CustomerTestimonial />
     </section>
   );
 };

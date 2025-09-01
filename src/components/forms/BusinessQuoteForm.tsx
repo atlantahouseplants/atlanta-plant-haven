@@ -10,6 +10,9 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '
 import { useToast } from '@/hooks/use-toast';
 import { useForm } from './FormContext';
 import { WEBHOOK_URLS } from '@/config/webhooks';
+import { LoadingSpinner, SuccessCheck } from '@/components/ui/LoadingSpinner';
+import { COMPONENT_STYLES } from '@/styles/design-system';
+import { CheckCircle } from 'lucide-react';
 
 const formSchema = z.object({
   companyName: z.string().min(2, 'Company name is required'),
@@ -28,6 +31,7 @@ type FormData = z.infer<typeof formSchema>;
 
 const BusinessQuoteForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
   const { toast } = useToast();
   const { closeForm } = useForm();
 
@@ -62,12 +66,17 @@ const BusinessQuoteForm = () => {
         body: JSON.stringify(payload),
       });
 
+      setIsSuccess(true);
+      
       toast({
         title: "Request Submitted!",
         description: "We'll contact you within 24 hours with your free quote and consultation details.",
       });
       
-      closeForm();
+      // Auto-close form after success animation
+      setTimeout(() => {
+        closeForm();
+      }, 2000);
     } catch (error) {
       console.error('Error submitting form:', error);
       toast({
@@ -247,15 +256,38 @@ const BusinessQuoteForm = () => {
 
         <Button 
           type="submit" 
-          disabled={isSubmitting}
-          className="w-full bg-green-600 hover:bg-green-700 text-white py-3 text-lg"
+          disabled={isSubmitting || isSuccess}
+          className={`${COMPONENT_STYLES.button.primary} w-full py-4 text-lg`}
         >
-          {isSubmitting ? 'Submitting...' : 'Get My FREE Quote'}
+          {isSuccess ? (
+            <div className="flex items-center">
+              <SuccessCheck />
+              <span className="ml-2">Submitted Successfully!</span>
+            </div>
+          ) : isSubmitting ? (
+            <div className="flex items-center">
+              <LoadingSpinner size="sm" color="white" />
+              <span className="ml-2">Submitting...</span>
+            </div>
+          ) : (
+            'Get My FREE Quote'
+          )}
         </Button>
         
-        <p className="text-sm text-center text-muted-foreground">
-          ✓ 24-hour response • ✓ Free on-site consultation • ✓ 100% plant guarantee
-        </p>
+        <div className="flex items-center justify-center space-x-6 text-sm text-gray-600 animate-fade-in">
+          <div className="flex items-center">
+            <CheckCircle className="h-4 w-4 text-green-500 mr-1" />
+            24-hour response
+          </div>
+          <div className="flex items-center">
+            <CheckCircle className="h-4 w-4 text-green-500 mr-1" />
+            Free consultation
+          </div>
+          <div className="flex items-center">
+            <CheckCircle className="h-4 w-4 text-green-500 mr-1" />
+            100% guarantee
+          </div>
+        </div>
       </form>
     </Form>
   );
