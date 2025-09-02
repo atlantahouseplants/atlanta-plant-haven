@@ -433,31 +433,31 @@
                 
                 <div class="calc-row">
                     <div class="calc-label">Employee Count</div>
-                    <div class="calc-input">_____ people</div>
-                    <div class="calc-result">× $45 = $ _____</div>
+                    <input type="number" class="calc-input" id="employees" placeholder="0" min="0" oninput="calculateROI()">
+                    <div class="calc-result" id="employeeCost">× $45 = $0</div>
                 </div>
                 
                 <div class="calc-row">
                     <div class="calc-label">Key Client/Partner Count</div>
-                    <div class="calc-input">_____ clients</div>
-                    <div class="calc-result">× $65 = $ _____</div>
+                    <input type="number" class="calc-input" id="clients" placeholder="0" min="0" oninput="calculateROI()">
+                    <div class="calc-result" id="clientCost">× $65 = $0</div>
                 </div>
                 
                 <div class="calc-row">
                     <div class="calc-label">Executive/VIP Count</div>
-                    <div class="calc-input">_____ executives</div>
-                    <div class="calc-result">× $95 = $ _____</div>
+                    <input type="number" class="calc-input" id="executives" placeholder="0" min="0" oninput="calculateROI()">
+                    <div class="calc-result" id="executiveCost">× $95 = $0</div>
                 </div>
                 
                 <div class="calc-row">
                     <div class="calc-label">Special Occasions (4 per year)</div>
-                    <div class="calc-input">_____ recipients</div>
-                    <div class="calc-result">× $35 = $ _____</div>
+                    <input type="number" class="calc-input" id="occasions" placeholder="0" min="0" oninput="calculateROI()">
+                    <div class="calc-result" id="occasionCost">× $35 = $0</div>
                 </div>
                 
                 <div class="total-roi">
                     <div class="total-title">Total Annual Investment</div>
-                    <div class="total-amount">$ ________</div>
+                    <div class="total-amount" id="totalCost">$0</div>
                     <p style="margin-top: 12px; font-size: 14px;">
                         <strong>Compare to traditional gifting:</strong> Typical savings of 40% vs. gift baskets, 60% vs. electronics
                     </p>
@@ -565,7 +565,7 @@
             <div class="contact-info">
                 <div style="margin-bottom: 8px;">📞 (470) 664-4039</div>
                 <div style="margin-bottom: 8px;">🌐 atlanta-plant-haven.com/corporate</div>
-                <div>📧 Schedule your free consultation today</div>
+                <div>📧 service@atlantahouseplants.com</div>
             </div>
             
             <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.3); font-size: 14px; opacity: 0.9;">
@@ -580,5 +580,29 @@
             Proudly serving Atlanta metro area businesses since 2020 • State of Georgia Certified Plant Professional
         </div>
     </div>
+    
+    <script>
+        function calculateROI() {
+            const employees = parseInt(document.getElementById('employees').value) || 0;
+            const clients = parseInt(document.getElementById('clients').value) || 0;
+            const executives = parseInt(document.getElementById('executives').value) || 0;
+            const occasions = parseInt(document.getElementById('occasions').value) || 0;
+            
+            const employeeCost = employees * 45;
+            const clientCost = clients * 65;
+            const executiveCost = executives * 95;
+            const occasionCost = occasions * 35;
+            const totalCost = employeeCost + clientCost + executiveCost + occasionCost;
+            
+            document.getElementById('employeeCost').textContent = `× $45 = $${employeeCost.toLocaleString()}`;
+            document.getElementById('clientCost').textContent = `× $65 = $${clientCost.toLocaleString()}`;
+            document.getElementById('executiveCost').textContent = `× $95 = $${executiveCost.toLocaleString()}`;
+            document.getElementById('occasionCost').textContent = `× $35 = $${occasionCost.toLocaleString()}`;
+            document.getElementById('totalCost').textContent = `$${totalCost.toLocaleString()}`;
+        }
+        
+        // Initialize with zeros
+        calculateROI();
+    </script>
 </body>
 </html>

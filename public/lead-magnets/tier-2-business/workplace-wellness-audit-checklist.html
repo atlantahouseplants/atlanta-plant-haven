@@ -110,11 +110,11 @@
         .checkbox {
             width: 20px;
             height: 20px;
-            border: 2px solid #10b981;
-            border-radius: 4px;
             margin-right: 12px;
             margin-top: 2px;
             flex-shrink: 0;
+            accent-color: #10b981;
+            cursor: pointer;
         }
         
         .item-text {
@@ -238,12 +238,102 @@
             margin-top: 40px;
         }
         
+        .score-display {
+            font-weight: 700;
+            font-size: 18px;
+            color: #047857;
+        }
+        
+        .total-score {
+            font-size: 24px;
+            font-weight: 700;
+            color: #047857;
+        }
+        
+        .category-score {
+            font-size: 20px;
+            font-weight: 700;
+            color: #047857;
+        }
+
         @media print {
             body { background: white; }
             .container { box-shadow: none; padding: 0.25in; }
             .audit-category { page-break-inside: avoid; }
         }
     </style>
+    <script>
+        function updateScores() {
+            // Calculate Air Quality score
+            const airQualityBoxes = document.querySelectorAll('.air-quality-checkbox');
+            let airQualityScore = 0;
+            airQualityBoxes.forEach(box => {
+                if (box.checked) airQualityScore++;
+            });
+            document.getElementById('air-quality-score').textContent = airQualityScore;
+            
+            // Calculate Lighting score
+            const lightingBoxes = document.querySelectorAll('.lighting-checkbox');
+            let lightingScore = 0;
+            lightingBoxes.forEach(box => {
+                if (box.checked) lightingScore++;
+            });
+            document.getElementById('lighting-score').textContent = lightingScore;
+            
+            // Calculate Biophilic score
+            const biophilicBoxes = document.querySelectorAll('.biophilic-checkbox');
+            let biophilicScore = 0;
+            biophilicBoxes.forEach(box => {
+                if (box.checked) biophilicScore++;
+            });
+            document.getElementById('biophilic-score').textContent = biophilicScore;
+            
+            // Calculate Wellness score
+            const wellnessBoxes = document.querySelectorAll('.wellness-checkbox');
+            let wellnessScore = 0;
+            wellnessBoxes.forEach(box => {
+                if (box.checked) wellnessScore++;
+            });
+            document.getElementById('wellness-score').textContent = wellnessScore;
+            
+            // Calculate total score
+            const totalScore = airQualityScore + lightingScore + biophilicScore + wellnessScore;
+            document.getElementById('total-score').textContent = totalScore;
+            document.getElementById('total-score-summary').textContent = totalScore;
+            
+            // Update individual category displays in summary
+            document.getElementById('summary-air').textContent = airQualityScore;
+            document.getElementById('summary-lighting').textContent = lightingScore;
+            document.getElementById('summary-biophilic').textContent = biophilicScore;
+            document.getElementById('summary-wellness').textContent = wellnessScore;
+            
+            // Update score interpretation
+            updateRecommendations(totalScore, airQualityScore, lightingScore, biophilicScore, wellnessScore);
+        }
+        
+        function updateRecommendations(total, air, lighting, biophilic, wellness) {
+            // Hide all priority sections first
+            document.getElementById('high-priority').style.display = 'none';
+            document.getElementById('medium-priority').style.display = 'none';
+            document.getElementById('enhancement').style.display = 'none';
+            
+            // Show relevant recommendations based on scores
+            if (air <= 2 || lighting <= 2 || biophilic <= 2 || wellness <= 2) {
+                document.getElementById('high-priority').style.display = 'block';
+            }
+            if ((air >= 3 && air <= 6) || (lighting >= 3 && lighting <= 6) || (biophilic >= 3 && biophilic <= 6) || (wellness >= 3 && wellness <= 6)) {
+                document.getElementById('medium-priority').style.display = 'block';
+            }
+            if (air >= 7 || lighting >= 7 || biophilic >= 7 || wellness >= 7) {
+                document.getElementById('enhancement').style.display = 'block';
+            }
+        }
+        
+        // Initialize scores on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            updateScores();
+        });
+    </script>
 </head>
 <body>
     <div class="container">
@@ -282,7 +372,7 @@
             
             <div class="checklist-grid">
                 <div class="checklist-item">
-                    <div class="checkbox"></div>
+                    <input type="checkbox" class="checkbox air-quality-checkbox" onchange="updateScores()">
                     <div class="item-text">
                         <div class="item-title">Natural ventilation present</div>
                         <div class="item-description">Windows open, air circulation systems working</div>
@@ -290,7 +380,7 @@
                 </div>
                 
                 <div class="checklist-item">
-                    <div class="checkbox"></div>
+                    <input type="checkbox" class="checkbox air-quality-checkbox" onchange="updateScores()">
                     <div class="item-text">
                         <div class="item-title">Low chemical/cleaning odors</div>
                         <div class="item-description">Minimal harsh cleaning products, air fresheners</div>
@@ -298,7 +388,7 @@
                 </div>
                 
                 <div class="checklist-item">
-                    <div class="checkbox"></div>
+                    <input type="checkbox" class="checkbox air-quality-checkbox" onchange="updateScores()">
                     <div class="item-text">
                         <div class="item-title">Humidity levels comfortable</div>
                         <div class="item-description">No excessive dryness or moisture issues</div>
@@ -306,7 +396,7 @@
                 </div>
                 
                 <div class="checklist-item">
-                    <div class="checkbox"></div>
+                    <input type="checkbox" class="checkbox air-quality-checkbox" onchange="updateScores()">
                     <div class="item-text">
                         <div class="item-title">Temperature consistently comfortable</div>
                         <div class="item-description">68-72°F range, minimal fluctuation</div>
@@ -314,7 +404,7 @@
                 </div>
                 
                 <div class="checklist-item">
-                    <div class="checkbox"></div>
+                    <input type="checkbox" class="checkbox air-quality-checkbox" onchange="updateScores()">
                     <div class="item-text">
                         <div class="item-title">No dust accumulation issues</div>
                         <div class="item-description">Regular cleaning, minimal visible dust</div>
@@ -322,7 +412,7 @@
                 </div>
                 
                 <div class="checklist-item">
-                    <div class="checkbox"></div>
+                    <input type="checkbox" class="checkbox air-quality-checkbox" onchange="updateScores()">
                     <div class="item-text">
                         <div class="item-title">HVAC system well-maintained</div>
                         <div class="item-description">Filters changed regularly, system functioning</div>
@@ -330,7 +420,7 @@
                 </div>
                 
                 <div class="checklist-item">
-                    <div class="checkbox"></div>
+                    <input type="checkbox" class="checkbox air-quality-checkbox" onchange="updateScores()">
                     <div class="item-text">
                         <div class="item-title">No mold/mildew concerns</div>
                         <div class="item-description">Dry conditions, no visible growth</div>
@@ -338,7 +428,7 @@
                 </div>
                 
                 <div class="checklist-item">
-                    <div class="checkbox"></div>
+                    <input type="checkbox" class="checkbox air-quality-checkbox" onchange="updateScores()">
                     <div class="item-text">
                         <div class="item-title">Fresh air intake adequate</div>
                         <div class="item-description">Building doesn't feel stuffy or stagnant</div>
@@ -346,7 +436,7 @@
                 </div>
                 
                 <div class="checklist-item">
-                    <div class="checkbox"></div>
+                    <input type="checkbox" class="checkbox air-quality-checkbox" onchange="updateScores()">
                     <div class="item-text">
                         <div class="item-title">Minimal air pollutants</div>
                         <div class="item-description">Limited VOCs from furniture, carpets</div>
@@ -354,7 +444,7 @@
                 </div>
                 
                 <div class="checklist-item">
-                    <div class="checkbox"></div>
+                    <input type="checkbox" class="checkbox air-quality-checkbox" onchange="updateScores()">
                     <div class="item-text">
                         <div class="item-title">Employees report good air quality</div>
                         <div class="item-description">No frequent respiratory complaints</div>
@@ -363,7 +453,7 @@
             </div>
             
             <div class="score-section">
-                <div class="score-title">Air Quality Score: _____ / 10 points</div>
+                <div class="score-title">Air Quality Score: <span id="air-quality-score" class="score-display">0</span> / 10 points</div>
                 <div class="score-grid">
                     <div class="score-item">
                         <div class="score-label">8-10 Points</div>
@@ -390,7 +480,7 @@
             
             <div class="checklist-grid">
                 <div class="checklist-item">
-                    <div class="checkbox"></div>
+                    <input type="checkbox" class="checkbox lighting-checkbox" onchange="updateScores()">
                     <div class="item-text">
                         <div class="item-title">Abundant natural light</div>
                         <div class="item-description">Windows, skylights, daylight access</div>
@@ -398,7 +488,7 @@
                 </div>
                 
                 <div class="checklist-item">
-                    <div class="checkbox"></div>
+                    <input type="checkbox" class="checkbox lighting-checkbox" onchange="updateScores()">
                     <div class="item-text">
                         <div class="item-title">Task lighting adequate</div>
                         <div class="item-description">Desk lamps, focused work lighting</div>
@@ -406,7 +496,7 @@
                 </div>
                 
                 <div class="checklist-item">
-                    <div class="checkbox"></div>
+                    <input type="checkbox" class="checkbox lighting-checkbox" onchange="updateScores()">
                     <div class="item-text">
                         <div class="item-title">No harsh fluorescent lighting</div>
                         <div class="item-description">LED or natural alternatives used</div>
@@ -414,7 +504,7 @@
                 </div>
                 
                 <div class="checklist-item">
-                    <div class="checkbox"></div>
+                    <input type="checkbox" class="checkbox lighting-checkbox" onchange="updateScores()">
                     <div class="item-text">
                         <div class="item-title">Light levels adjustable</div>
                         <div class="item-description">Dimmers, blinds, personal control</div>
@@ -422,7 +512,7 @@
                 </div>
                 
                 <div class="checklist-item">
-                    <div class="checkbox"></div>
+                    <input type="checkbox" class="checkbox lighting-checkbox" onchange="updateScores()">
                     <div class="item-text">
                         <div class="item-title">Visual variety in workspace</div>
                         <div class="item-description">Not monotonous, different zones</div>
@@ -430,7 +520,7 @@
                 </div>
                 
                 <div class="checklist-item">
-                    <div class="checkbox"></div>
+                    <input type="checkbox" class="checkbox lighting-checkbox" onchange="updateScores()">
                     <div class="item-text">
                         <div class="item-title">Warm color temperature (3000-4000K)</div>
                         <div class="item-description">Not harsh cool white lighting</div>
@@ -438,7 +528,7 @@
                 </div>
                 
                 <div class="checklist-item">
-                    <div class="checkbox"></div>
+                    <input type="checkbox" class="checkbox lighting-checkbox" onchange="updateScores()">
                     <div class="item-text">
                         <div class="item-title">No glare issues</div>
                         <div class="item-description">Computer screens, reflective surfaces managed</div>
@@ -446,7 +536,7 @@
                 </div>
                 
                 <div class="checklist-item">
-                    <div class="checkbox"></div>
+                    <input type="checkbox" class="checkbox lighting-checkbox" onchange="updateScores()">
                     <div class="item-text">
                         <div class="item-title">Pleasant views available</div>
                         <div class="item-description">Windows with nature/city views</div>
@@ -454,7 +544,7 @@
                 </div>
                 
                 <div class="checklist-item">
-                    <div class="checkbox"></div>
+                    <input type="checkbox" class="checkbox lighting-checkbox" onchange="updateScores()">
                     <div class="item-text">
                         <div class="item-title">Light supports circadian rhythm</div>
                         <div class="item-description">Changes throughout day, not constant</div>
@@ -462,7 +552,7 @@
                 </div>
                 
                 <div class="checklist-item">
-                    <div class="checkbox"></div>
+                    <input type="checkbox" class="checkbox lighting-checkbox" onchange="updateScores()">
                     <div class="item-text">
                         <div class="item-title">No eye strain complaints</div>
                         <div class="item-description">Employees comfortable with lighting</div>
@@ -471,7 +561,7 @@
             </div>
             
             <div class="score-section">
-                <div class="score-title">Lighting Score: _____ / 10 points</div>
+                <div class="score-title">Lighting Score: <span id="lighting-score" class="score-display">0</span> / 10 points</div>
             </div>
         </div>
 
@@ -484,7 +574,7 @@
             
             <div class="checklist-grid">
                 <div class="checklist-item">
-                    <div class="checkbox"></div>
+                    <input type="checkbox" class="checkbox biophilic-checkbox" onchange="updateScores()">
                     <div class="item-text">
                         <div class="item-title">Live plants present</div>
                         <div class="item-description">Any live plants in workspace</div>
@@ -492,7 +582,7 @@
                 </div>
                 
                 <div class="checklist-item">
-                    <div class="checkbox"></div>
+                    <input type="checkbox" class="checkbox biophilic-checkbox" onchange="updateScores()">
                     <div class="item-text">
                         <div class="item-title">Natural materials used</div>
                         <div class="item-description">Wood, stone, natural fibers visible</div>
@@ -500,7 +590,7 @@
                 </div>
                 
                 <div class="checklist-item">
-                    <div class="checkbox"></div>
+                    <input type="checkbox" class="checkbox biophilic-checkbox" onchange="updateScores()">
                     <div class="item-text">
                         <div class="item-title">Nature imagery/artwork</div>
                         <div class="item-description">Landscape photos, botanical prints</div>
@@ -508,7 +598,7 @@
                 </div>
                 
                 <div class="checklist-item">
-                    <div class="checkbox"></div>
+                    <input type="checkbox" class="checkbox biophilic-checkbox" onchange="updateScores()">
                     <div class="item-text">
                         <div class="item-title">Water features present</div>
                         <div class="item-description">Fountains, aquariums, water elements</div>
@@ -516,7 +606,7 @@
                 </div>
                 
                 <div class="checklist-item">
-                    <div class="checkbox"></div>
+                    <input type="checkbox" class="checkbox biophilic-checkbox" onchange="updateScores()">
                     <div class="item-text">
                         <div class="item-title">Natural color palette</div>
                         <div class="item-description">Greens, blues, earth tones prominent</div>
@@ -524,7 +614,7 @@
                 </div>
                 
                 <div class="checklist-item">
-                    <div class="checkbox"></div>
+                    <input type="checkbox" class="checkbox biophilic-checkbox" onchange="updateScores()">
                     <div class="item-text">
                         <div class="item-title">Organic shapes/patterns</div>
                         <div class="item-description">Curved lines, natural forms</div>
@@ -532,7 +622,7 @@
                 </div>
                 
                 <div class="checklist-item">
-                    <div class="checkbox"></div>
+                    <input type="checkbox" class="checkbox biophilic-checkbox" onchange="updateScores()">
                     <div class="item-text">
                         <div class="item-title">Fresh air circulation</div>
                         <div class="item-description">Natural ventilation when possible</div>
@@ -540,7 +630,7 @@
                 </div>
                 
                 <div class="checklist-item">
-                    <div class="checkbox"></div>
+                    <input type="checkbox" class="checkbox biophilic-checkbox" onchange="updateScores()">
                     <div class="item-text">
                         <div class="item-title">Seasonal awareness</div>
                         <div class="item-description">Changes reflect outside seasons</div>
@@ -548,7 +638,7 @@
                 </div>
                 
                 <div class="checklist-item">
-                    <div class="checkbox"></div>
+                    <input type="checkbox" class="checkbox biophilic-checkbox" onchange="updateScores()">
                     <div class="item-text">
                         <div class="item-title">Natural textures present</div>
                         <div class="item-description">Varied tactile surfaces, not all smooth</div>
@@ -556,7 +646,7 @@
                 </div>
                 
                 <div class="checklist-item">
-                    <div class="checkbox"></div>
+                    <input type="checkbox" class="checkbox biophilic-checkbox" onchange="updateScores()">
                     <div class="item-text">
                         <div class="item-title">Connection to outdoors</div>
                         <div class="item-description">Patio access, garden views</div>
@@ -565,7 +655,7 @@
             </div>
             
             <div class="score-section">
-                <div class="score-title">Biophilic Score: _____ / 10 points</div>
+                <div class="score-title">Biophilic Score: <span id="biophilic-score" class="score-display">0</span> / 10 points</div>
             </div>
         </div>
 
@@ -578,7 +668,7 @@
             
             <div class="checklist-grid">
                 <div class="checklist-item">
-                    <div class="checkbox"></div>
+                    <input type="checkbox" class="checkbox wellness-checkbox" onchange="updateScores()">
                     <div class="item-text">
                         <div class="item-title">Low sick day frequency</div>
                         <div class="item-description">Below industry average absenteeism</div>
@@ -586,7 +676,7 @@
                 </div>
                 
                 <div class="checklist-item">
-                    <div class="checkbox"></div>
+                    <input type="checkbox" class="checkbox wellness-checkbox" onchange="updateScores()">
                     <div class="item-text">
                         <div class="item-title">High energy levels reported</div>
                         <div class="item-description">Employees feel energetic at work</div>
@@ -594,7 +684,7 @@
                 </div>
                 
                 <div class="checklist-item">
-                    <div class="checkbox"></div>
+                    <input type="checkbox" class="checkbox wellness-checkbox" onchange="updateScores()">
                     <div class="item-text">
                         <div class="item-title">Good focus/concentration</div>
                         <div class="item-description">Minimal complaints about distractions</div>
@@ -602,7 +692,7 @@
                 </div>
                 
                 <div class="checklist-item">
-                    <div class="checkbox"></div>
+                    <input type="checkbox" class="checkbox wellness-checkbox" onchange="updateScores()">
                     <div class="item-text">
                         <div class="item-title">Low stress levels observed</div>
                         <div class="item-description">Calm workplace atmosphere</div>
@@ -610,7 +700,7 @@
                 </div>
                 
                 <div class="checklist-item">
-                    <div class="checkbox"></div>
+                    <input type="checkbox" class="checkbox wellness-checkbox" onchange="updateScores()">
                     <div class="item-text">
                         <div class="item-title">High job satisfaction scores</div>
                         <div class="item-description">Employee surveys show satisfaction</div>
@@ -618,7 +708,7 @@
                 </div>
                 
                 <div class="checklist-item">
-                    <div class="checkbox"></div>
+                    <input type="checkbox" class="checkbox wellness-checkbox" onchange="updateScores()">
                     <div class="item-text">
                         <div class="item-title">Good team collaboration</div>
                         <div class="item-description">Teams work well together</div>
@@ -626,7 +716,7 @@
                 </div>
                 
                 <div class="checklist-item">
-                    <div class="checkbox"></div>
+                    <input type="checkbox" class="checkbox wellness-checkbox" onchange="updateScores()">
                     <div class="item-text">
                         <div class="item-title">Creative problem-solving evident</div>
                         <div class="item-description">Innovation and creativity present</div>
@@ -634,7 +724,7 @@
                 </div>
                 
                 <div class="checklist-item">
-                    <div class="checkbox"></div>
+                    <input type="checkbox" class="checkbox wellness-checkbox" onchange="updateScores()">
                     <div class="item-text">
                         <div class="item-title">Low turnover rate</div>
                         <div class="item-description">Employees stay long-term</div>
@@ -642,7 +732,7 @@
                 </div>
                 
                 <div class="checklist-item">
-                    <div class="checkbox"></div>
+                    <input type="checkbox" class="checkbox wellness-checkbox" onchange="updateScores()">
                     <div class="item-text">
                         <div class="item-title">Positive workplace culture</div>
                         <div class="item-description">Supportive, encouraging environment</div>
@@ -650,7 +740,7 @@
                 </div>
                 
                 <div class="checklist-item">
-                    <div class="checkbox"></div>
+                    <input type="checkbox" class="checkbox wellness-checkbox" onchange="updateScores()">
                     <div class="item-text">
                         <div class="item-title">Physical comfort reported</div>
                         <div class="item-description">No frequent headaches, eye strain</div>
@@ -659,7 +749,7 @@
             </div>
             
             <div class="score-section">
-                <div class="score-title">Wellness Score: _____ / 10 points</div>
+                <div class="score-title">Wellness Score: <span id="wellness-score" class="score-display">0</span> / 10 points</div>
             </div>
         </div>
 
@@ -668,23 +758,23 @@
             <h2 class="section-title">📊 Total Assessment Results</h2>
             
             <div style="background: #f0fdf4; border: 3px solid #10b981; border-radius: 12px; padding: 30px; text-align: center; margin-bottom: 30px;">
-                <div style="font-size: 24px; font-weight: 700; margin-bottom: 12px;">Total Score: _____ / 40 Points</div>
+                <div style="font-size: 24px; font-weight: 700; margin-bottom: 12px;">Total Score: <span id="total-score-summary" class="total-score">0</span> / 40 Points</div>
                 <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 20px;">
                     <div style="background: white; border-radius: 8px; padding: 16px;">
                         <div style="font-size: 14px; color: #6b7280; margin-bottom: 4px;">Air Quality</div>
-                        <div style="font-size: 20px; font-weight: 700; color: #047857;">_____ / 10</div>
+                        <div style="font-size: 20px; font-weight: 700; color: #047857;"><span id="summary-air" class="category-score">0</span> / 10</div>
                     </div>
                     <div style="background: white; border-radius: 8px; padding: 16px;">
                         <div style="font-size: 14px; color: #6b7280; margin-bottom: 4px;">Lighting</div>
-                        <div style="font-size: 20px; font-weight: 700; color: #047857;">_____ / 10</div>
+                        <div style="font-size: 20px; font-weight: 700; color: #047857;"><span id="summary-lighting" class="category-score">0</span> / 10</div>
                     </div>
                     <div style="background: white; border-radius: 8px; padding: 16px;">
                         <div style="font-size: 14px; color: #6b7280; margin-bottom: 4px;">Biophilic</div>
-                        <div style="font-size: 20px; font-weight: 700; color: #047857;">_____ / 10</div>
+                        <div style="font-size: 20px; font-weight: 700; color: #047857;"><span id="summary-biophilic" class="category-score">0</span> / 10</div>
                     </div>
                     <div style="background: white; border-radius: 8px; padding: 16px;">
                         <div style="font-size: 14px; color: #6b7280; margin-bottom: 4px;">Wellness</div>
-                        <div style="font-size: 20px; font-weight: 700; color: #047857;">_____ / 10</div>
+                        <div style="font-size: 20px; font-weight: 700; color: #047857;"><span id="summary-wellness" class="category-score">0</span> / 10</div>
                     </div>
                 </div>
             </div>
@@ -702,7 +792,7 @@
                     </ul>
                 </div>
                 
-                <div class="priority-high">
+                <div id="high-priority" class="priority-high" style="display: none;">
                     <strong>🔴 High Priority (Scores 0-2 in any category):</strong>
                     <ul style="margin: 8px 0 0 20px;">
                         <li>Air-purifying plant installation for immediate air quality improvement</li>
@@ -712,7 +802,7 @@
                     </ul>
                 </div>
                 
-                <div class="priority-medium">
+                <div id="medium-priority" class="priority-medium" style="display: none;">
                     <strong>🟡 Medium Priority (Scores 3-6 in any category):</strong>
                     <ul style="margin: 8px 0 0 20px;">
                         <li>Strategic plant placement for biophilic design enhancement</li>
@@ -722,7 +812,7 @@
                     </ul>
                 </div>
                 
-                <div class="priority-low">
+                <div id="enhancement" class="priority-low" style="display: none;">
                     <strong>🟢 Enhancement Opportunities (Scores 7-10 in category):</strong>
                     <ul style="margin: 8px 0 0 20px;">
                         <li>Premium plant varieties for executive areas</li>
@@ -795,12 +885,12 @@
         <!-- Call to Action -->
         <div class="cta-section">
             <div style="font-size: 24px; font-weight: 700; margin-bottom: 12px;">Ready for Professional Assessment?</div>
-            <div style="font-size: 16px; margin-bottom: 20px; opacity: 0.9;">Schedule your complimentary workplace wellness consultation with our certified horticulturalist. Receive customized recommendations based on your audit results.</div>
+            <div style="font-size: 16px; margin-bottom: 20px; opacity: 0.9;">Schedule your complimentary workplace wellness consultation with our certified horticulturalist. Email service@atlantahouseplants.com for customized recommendations based on your audit results.</div>
             
             <div style="font-size: 18px; font-weight: 600; margin-bottom: 20px;">
                 <div style="margin-bottom: 8px;">📞 (470) 664-4039</div>
                 <div style="margin-bottom: 8px;">🌐 atlanta-plant-haven.com/office-plants</div>
-                <div>📧 Free consultation includes detailed improvement plan</div>
+                <div>📧 service@atlantahouseplants.com</div>
             </div>
             
             <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.3); font-size: 14px; opacity: 0.9;">
