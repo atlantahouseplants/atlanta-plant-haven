@@ -29,25 +29,25 @@ const PlantDoctor = () => {
       title: "The 3 Best Plants for a Low-Light Conference Room",
       excerpt: "Discover which plants thrive in windowless meeting spaces and how they can improve air quality during long meetings.",
       category: "Office Plants",
-      downloadUrl: "/3_Best_Plants_for_Low_Light_Offices.pdf"
+      downloadUrl: "/lead-magnets/tier-1-educational/3_Best_Plants_for_Low_Light_Offices.pdf"
     },
     {
       title: "How to Increase Air Quality in Your Office with Strategic Plant Placement",
       excerpt: "Learn the science behind biophilic design and which plants are proven to remove the most toxins from indoor air.",
       category: "Workplace Wellness",
-      downloadUrl: "/Increase_Air_Quality_Strategic_Plant_Placement.pdf"
+      downloadUrl: "/lead-magnets/tier-1-educational/Increase_Air_Quality_Strategic_Plant_Placement.pdf"
     },
     {
       title: "Why Your Office Plants Keep Dying (And How to Fix It)",
       excerpt: "The most common mistakes office managers make and simple solutions to keep your corporate plants thriving year-round.",
       category: "Plant Care",
-      downloadUrl: "/Why_Office_Plants_Keep_Dying_Solutions.pdf"
+      downloadUrl: "/lead-magnets/tier-1-educational/Why_Office_Plants_Keep_Dying_Solutions.pdf"
     },
     {
       title: "The ROI of Office Plants: Productivity Data You Need to See",
       excerpt: "Real research showing how plants in the workplace can reduce sick days and increase employee satisfaction scores.",
       category: "Business Benefits",
-      downloadUrl: "/Office_Plants_ROI_Productivity_Data.pdf"
+      downloadUrl: "/lead-magnets/tier-2-business/Office_Plants_ROI_Productivity_Data.pdf"
     }
   ];
 

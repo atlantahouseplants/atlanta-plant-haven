@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corporate Gift Planning Kit - Atlanta Houseplants</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+            background: #ffffff;
+        }
+        
+        .container {
+            max-width: 8.5in;
+            margin: 0 auto;
+            padding: 0.5in;
+            background: white;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 30px 0;
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            border-radius: 12px;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+        
+        .tagline {
+            font-size: 14px;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+        
+        .title {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        
+        .subtitle {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+            page-break-inside: avoid;
+        }
+        
+        .section-title {
+            font-size: 22px;
+            font-weight: 700;
+            color: #059669;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #10b981;
+            padding-bottom: 8px;
+        }
+        
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .month-card {
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 16px;
+            text-align: center;
+            background: #f8fafc;
+        }
+        
+        .month-name {
+            font-weight: 700;
+            color: #059669;
+            margin-bottom: 8px;
+            font-size: 16px;
+        }
+        
+        .occasion {
+            background: #ecfdf5;
+            border: 1px solid #10b981;
+            border-radius: 6px;
+            padding: 6px 10px;
+            margin: 4px 0;
+            font-size: 12px;
+            font-weight: 500;
+            color: #065f46;
+        }
+        
+        .high-impact {
+            background: #fef3c7;
+            border-color: #f59e0b;
+            color: #92400e;
+        }
+        
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .price-tier {
+            border: 2px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .tier-popular {
+            border-color: #10b981;
+            background: #ecfdf5;
+        }
+        
+        .tier-badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #10b981;
+            color: white;
+            padding: 4px 16px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        
+        .tier-title {
+            font-weight: 700;
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+        
+        .tier-price {
+            font-size: 24px;
+            font-weight: 800;
+            color: #059669;
+            margin-bottom: 12px;
+        }
+        
+        .tier-features {
+            list-style: none;
+            text-align: left;
+            font-size: 14px;
+        }
+        
+        .tier-features li {
+            padding: 4px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .tier-features li::before {
+            content: "✓";
+            color: #10b981;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        .roi-calculator {
+            background: #f0f9ff;
+            border: 2px solid #0ea5e9;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 30px;
+        }
+        
+        .calculator-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #0c4a6e;
+            margin-bottom: 16px;
+        }
+        
+        .calc-row {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 16px;
+            margin-bottom: 12px;
+            align-items: center;
+        }
+        
+        .calc-label {
+            font-weight: 600;
+        }
+        
+        .calc-input {
+            text-align: center;
+            font-weight: 600;
+            padding: 8px;
+            background: white;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+        }
+        
+        .calc-result {
+            text-align: center;
+            font-weight: 700;
+            color: #059669;
+            background: white;
+            padding: 8px;
+            border-radius: 6px;
+            border: 2px solid #10b981;
+        }
+        
+        .total-roi {
+            background: #ecfdf5;
+            border: 3px solid #10b981;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .total-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        
+        .total-amount {
+            font-size: 32px;
+            font-weight: 800;
+            color: #059669;
+        }
+        
+        .plant-catalog {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-bottom: 30px;
+        }
+        
+        .plant-item {
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 16px;
+            text-align: center;
+        }
+        
+        .plant-name {
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: #059669;
+        }
+        
+        .plant-price {
+            font-size: 18px;
+            font-weight: 800;
+            color: #1f2937;
+            margin-bottom: 8px;
+        }
+        
+        .plant-desc {
+            font-size: 12px;
+            color: #6b7280;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, #1e40af 0%, #1d4ed8 100%);
+            color: white;
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+            margin-top: 40px;
+        }
+        
+        .cta-title {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+        
+        .cta-text {
+            font-size: 16px;
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+        
+        .contact-info {
+            font-size: 18px;
+            font-weight: 600;
+        }
+        
+        @media print {
+            body { background: white; }
+            .container { box-shadow: none; padding: 0.25in; }
+            .cta-section { page-break-inside: avoid; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="logo">🌿 Atlanta Houseplants</div>
+            <div class="tagline">Professional Plant Services & Corporate Gifting Solutions</div>
+            <div class="title">Corporate Gift Planning Kit</div>
+            <div class="subtitle">2025 Annual Calendar • ROI Calculator • Complete Catalog</div>
+        </div>
+
+        <!-- Strategic Overview -->
+        <div class="section">
+            <h2 class="section-title">🎯 Strategic Corporate Gifting Overview</h2>
+            <p style="margin-bottom: 16px;"><strong>Why Atlanta Businesses Choose Plant Gifting:</strong></p>
+            <ul style="margin-left: 20px; margin-bottom: 20px;">
+                <li><strong>95% recipient satisfaction rate</strong> - Higher than traditional corporate gifts</li>
+                <li><strong>40% cost savings</strong> compared to gift baskets, flowers, or electronics</li>
+                <li><strong>Year-round impact</strong> - Recipients care for plants long-term, extending brand exposure</li>
+                <li><strong>Wellness positioning</strong> - Associates your brand with health, growth, and sustainability</li>
+                <li><strong>Zero waste</strong> - Environmentally responsible alternative to disposable gifts</li>
+            </ul>
+        </div>
+
+        <!-- 2025 Annual Gifting Calendar -->
+        <div class="section">
+            <h2 class="section-title">📅 2025 Annual Corporate Gifting Calendar</h2>
+            <p style="margin-bottom: 20px; font-weight: 500;">Never miss an important business occasion. Plan your corporate gifting strategy with optimal timing for maximum impact.</p>
+            
+            <div class="calendar-grid">
+                <div class="month-card">
+                    <div class="month-name">January</div>
+                    <div class="occasion">New Year Kickoff</div>
+                    <div class="occasion">Employee Appreciation</div>
+                    <div class="occasion">Goal Setting Motivation</div>
+                </div>
+                
+                <div class="month-card">
+                    <div class="month-name">February</div>
+                    <div class="occasion">Valentine's Day</div>
+                    <div class="occasion high-impact">Client Appreciation</div>
+                    <div class="occasion">Wellness Month</div>
+                </div>
+                
+                <div class="month-card">
+                    <div class="month-name">March</div>
+                    <div class="occasion">Spring Renewal</div>
+                    <div class="occasion">Women's History</div>
+                    <div class="occasion">New Business Launch</div>
+                </div>
+                
+                <div class="month-card">
+                    <div class="month-name">April</div>
+                    <div class="occasion">Earth Day</div>
+                    <div class="occasion high-impact">Admin Professionals</div>
+                    <div class="occasion">Q1 Recognition</div>
+                </div>
+                
+                <div class="month-card">
+                    <div class="month-name">May</div>
+                    <div class="occasion high-impact">Teacher Appreciation</div>
+                    <div class="occasion">Mother's Day</div>
+                    <div class="occasion">Graduation Season</div>
+                </div>
+                
+                <div class="month-card">
+                    <div class="month-name">June</div>
+                    <div class="occasion">Father's Day</div>
+                    <div class="occasion">Summer Wellness</div>
+                    <div class="occasion">Q2 Celebration</div>
+                </div>
+                
+                <div class="month-card">
+                    <div class="month-name">July</div>
+                    <div class="occasion">Mid-Year Motivation</div>
+                    <div class="occasion">Client Summer Events</div>
+                    <div class="occasion">Office Refresh</div>
+                </div>
+                
+                <div class="month-card">
+                    <div class="month-name">August</div>
+                    <div class="occasion">Back-to-School</div>
+                    <div class="occasion">New Employee Welcome</div>
+                    <div class="occasion">Summer Appreciation</div>
+                </div>
+                
+                <div class="month-card">
+                    <div class="month-name">September</div>
+                    <div class="occasion">Fall Renewal</div>
+                    <div class="occasion high-impact">Boss's Day Prep</div>
+                    <div class="occasion">Q3 Recognition</div>
+                </div>
+                
+                <div class="month-card">
+                    <div class="month-name">October</div>
+                    <div class="occasion high-impact">Boss's Day</div>
+                    <div class="occasion">Halloween Fun</div>
+                    <div class="occasion">Client Appreciation</div>
+                </div>
+                
+                <div class="month-card">
+                    <div class="month-name">November</div>
+                    <div class="occasion high-impact">Thanksgiving Gratitude</div>
+                    <div class="occasion">Holiday Season Kickoff</div>
+                    <div class="occasion">Vendor Appreciation</div>
+                </div>
+                
+                <div class="month-card">
+                    <div class="month-name">December</div>
+                    <div class="occasion high-impact">Holiday Gifting</div>
+                    <div class="occasion">Year-End Appreciation</div>
+                    <div class="occasion">Team Celebration</div>
+                </div>
+            </div>
+            
+            <p style="background: #fef3c7; padding: 16px; border-radius: 8px; border-left: 4px solid #f59e0b; margin-top: 20px;">
+                <strong>💡 Pro Tip:</strong> High-impact occasions (highlighted in yellow) typically see 3x higher recipient engagement and stronger business relationship building. Plan major campaigns around these dates.
+            </p>
+        </div>
+
+        <!-- ROI Calculator -->
+        <div class="section">
+            <h2 class="section-title">📊 Corporate Gifting ROI Calculator</h2>
+            <div class="roi-calculator">
+                <div class="calculator-title">Calculate Your Annual Corporate Gifting Investment</div>
+                
+                <div class="calc-row">
+                    <div class="calc-label">Employee Count</div>
+                    <div class="calc-input">_____ people</div>
+                    <div class="calc-result">× $45 = $ _____</div>
+                </div>
+                
+                <div class="calc-row">
+                    <div class="calc-label">Key Client/Partner Count</div>
+                    <div class="calc-input">_____ clients</div>
+                    <div class="calc-result">× $65 = $ _____</div>
+                </div>
+                
+                <div class="calc-row">
+                    <div class="calc-label">Executive/VIP Count</div>
+                    <div class="calc-input">_____ executives</div>
+                    <div class="calc-result">× $95 = $ _____</div>
+                </div>
+                
+                <div class="calc-row">
+                    <div class="calc-label">Special Occasions (4 per year)</div>
+                    <div class="calc-input">_____ recipients</div>
+                    <div class="calc-result">× $35 = $ _____</div>
+                </div>
+                
+                <div class="total-roi">
+                    <div class="total-title">Total Annual Investment</div>
+                    <div class="total-amount">$ ________</div>
+                    <p style="margin-top: 12px; font-size: 14px;">
+                        <strong>Compare to traditional gifting:</strong> Typical savings of 40% vs. gift baskets, 60% vs. electronics
+                    </p>
+                </div>
+            </div>
+            
+            <div style="background: #ecfdf5; border: 2px solid #10b981; border-radius: 8px; padding: 16px; margin-top: 16px;">
+                <strong>🎯 Expected ROI Benefits:</strong>
+                <ul style="margin-left: 20px; margin-top: 8px;">
+                    <li><strong>Employee Retention:</strong> 15% improvement in satisfaction scores</li>
+                    <li><strong>Client Relationship:</strong> 25% increase in positive brand association</li>
+                    <li><strong>Referral Generation:</strong> 20% more word-of-mouth recommendations</li>
+                    <li><strong>Brand Exposure:</strong> 12+ months of ongoing visibility per plant</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Plant Catalog -->
+        <div class="section">
+            <h2 class="section-title">🌱 2025 Corporate Gift Plant Catalog</h2>
+            <p style="margin-bottom: 20px; font-weight: 500;">Premium plants selected for professional environments and gifting impact. All prices include decorative pot, care instructions, and delivery within Atlanta metro.</p>
+            
+            <div class="plant-catalog">
+                <div class="plant-item">
+                    <div class="plant-name">Succulent Gardens</div>
+                    <div class="plant-price">$35 - $45</div>
+                    <div class="plant-desc">Perfect for desk spaces. Low maintenance, high visual impact. Includes custom planters.</div>
+                </div>
+                
+                <div class="plant-item">
+                    <div class="plant-name">Snake Plants</div>
+                    <div class="plant-price">$45 - $65</div>
+                    <div class="plant-desc">Professional favorite. Air-purifying, thrives in any light condition. Premium ceramic pots.</div>
+                </div>
+                
+                <div class="plant-item">
+                    <div class="plant-name">Peace Lilies</div>
+                    <div class="plant-price">$55 - $75</div>
+                    <div class="plant-desc">Elegant flowering plant. Excellent for client gifts. Includes decorative cache pot.</div>
+                </div>
+                
+                <div class="plant-item">
+                    <div class="plant-name">Fiddle Leaf Figs</div>
+                    <div class="plant-price">$85 - $125</div>
+                    <div class="plant-desc">Executive statement plant. Floor or desk sizes available. Premium designer planters.</div>
+                </div>
+                
+                <div class="plant-item">
+                    <div class="plant-name">Bird of Paradise</div>
+                    <div class="plant-price">$95 - $150</div>
+                    <div class="plant-desc">Impressive lobby or office plant. Creates dramatic focal points. Professional installation.</div>
+                </div>
+                
+                <div class="plant-item">
+                    <div class="plant-name">Custom Arrangements</div>
+                    <div class="plant-price">$125 - $300</div>
+                    <div class="plant-desc">Bespoke designs for special occasions. Brand colors available. White-glove service.</div>
+                </div>
+            </div>
+            
+            <div style="background: #f0f9ff; border: 2px solid #0ea5e9; border-radius: 8px; padding: 16px;">
+                <strong>🚚 Volume Pricing Available:</strong>
+                <ul style="margin-left: 20px; margin-top: 8px;">
+                    <li><strong>25-49 plants:</strong> 15% discount</li>
+                    <li><strong>50-99 plants:</strong> 20% discount</li>
+                    <li><strong>100+ plants:</strong> 25% discount + free setup</li>
+                    <li><strong>Annual contracts:</strong> Additional 10% discount</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Implementation Guide -->
+        <div class="section">
+            <h2 class="section-title">⚡ Quick Implementation Guide</h2>
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;">
+                <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 20px;">
+                    <h3 style="color: #059669; font-weight: 700; margin-bottom: 12px;">📋 Planning Phase (Week 1)</h3>
+                    <ul style="margin-left: 16px; font-size: 14px;">
+                        <li>Define recipient lists</li>
+                        <li>Set annual budget using ROI calculator</li>
+                        <li>Select key occasions from calendar</li>
+                        <li>Choose plant varieties for each occasion</li>
+                        <li>Schedule initial consultation</li>
+                    </ul>
+                </div>
+                
+                <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 20px;">
+                    <h3 style="color: #059669; font-weight: 700; margin-bottom: 12px;">🚀 Execution Phase (Week 2)</h3>
+                    <ul style="margin-left: 16px; font-size: 14px;">
+                        <li>Confirm delivery addresses & timing</li>
+                        <li>Customize cards/messaging</li>
+                        <li>Schedule recurring deliveries</li>
+                        <li>Set up automated reordering</li>
+                        <li>Track recipient feedback</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="cta-section">
+            <div class="cta-title">Ready to Transform Your Corporate Gifting Strategy?</div>
+            <div class="cta-text">Join 200+ Atlanta companies using plants to strengthen business relationships and show appreciation.</div>
+            
+            <div class="contact-info">
+                <div style="margin-bottom: 8px;">📞 (470) 664-4039</div>
+                <div style="margin-bottom: 8px;">🌐 atlanta-plant-haven.com/corporate</div>
+                <div>📧 Schedule your free consultation today</div>
+            </div>
+            
+            <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.3); font-size: 14px; opacity: 0.9;">
+                <strong>🎁 New Client Special:</strong> 25% off your first order of 50+ plants<br>
+                <strong>⚡ Rush Orders:</strong> Same-week delivery available for urgent gifting needs<br>
+                <strong>🔄 Automated Programs:</strong> Set it and forget it - we handle everything
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 30px; color: #6b7280; font-size: 12px;">
+            © 2025 Atlanta Houseplants • Professional Plant Services & Corporate Gifting Solutions<br>
+            Proudly serving Atlanta metro area businesses since 2020 • State of Georgia Certified Plant Professional
+        </div>
+    </div>
+</body>
+</html>

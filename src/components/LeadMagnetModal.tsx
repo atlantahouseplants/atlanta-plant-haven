@@ -127,11 +127,20 @@ const LeadMagnetModal: React.FC<LeadMagnetModalProps> = ({
         
         onClose();
         
-        // Simulate download trigger (would be actual download in production)
+        // Download the appropriate resource based on magnetType
         setTimeout(() => {
+          const downloadMap: Record<string, string> = {
+            'roi-calculator': '/lead-magnets/tier-2-business/executive-roi-calculator.html',
+            'audit-checklist': '/lead-magnets/tier-2-business/workplace-wellness-audit-checklist.html',
+            'plant-guide': '/lead-magnets/tier-2-business/atlanta-office-plant-selection-guide.html', // Phase 2
+            'case-studies': '/lead-magnets/tier-2-business/business-transformation-case-studies.html', // Phase 2
+            'automation-guide': '/lead-magnets/tier-2-business/plant-care-automation-playbook.html', // Phase 2
+            'proposal-template': '/lead-magnets/tier-3-implementation/plant-program-proposal-template.html' // Phase 2
+          };
+
           const link = document.createElement('a');
-          link.href = `/lead-magnets/${magnetType}.pdf`;
-          link.download = `${title.replace(/\s+/g, '_')}.pdf`;
+          link.href = downloadMap[magnetType] || `/lead-magnets/tier-2-business/${magnetType}.html`;
+          link.target = '_blank'; // Open in new tab for HTML files
           link.click();
         }, 500);
         

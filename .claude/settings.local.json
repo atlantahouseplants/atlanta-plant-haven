@@ -14,7 +14,8 @@
       "Read(C:\\Users\\wallg\\Downloads/**)",
       "Bash(copy:*)",
       "Bash(npm run dev:*)",
-      "Bash(npx tsc:*)"
+      "Bash(npx tsc:*)",
+      "Bash(ls:*)"
     ],
     "deny": [],
     "ask": [],

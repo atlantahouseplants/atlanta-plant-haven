@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workplace Wellness Audit Checklist - Atlanta Houseplants</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+            background: #ffffff;
+        }
+        
+        .container {
+            max-width: 8.5in;
+            margin: 0 auto;
+            padding: 0.5in;
+            background: white;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 30px 0;
+            background: linear-gradient(135deg, #059669 0%, #047857 100%);
+            color: white;
+            border-radius: 12px;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+        
+        .tagline {
+            font-size: 14px;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+        
+        .title {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        
+        .subtitle {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+            page-break-inside: avoid;
+        }
+        
+        .section-title {
+            font-size: 22px;
+            font-weight: 700;
+            color: #047857;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #10b981;
+            padding-bottom: 8px;
+        }
+        
+        .audit-category {
+            background: #f0fdf4;
+            border: 2px solid #10b981;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 24px;
+        }
+        
+        .category-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #047857;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .category-icon {
+            margin-right: 12px;
+            font-size: 24px;
+        }
+        
+        .checklist-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+        
+        .checklist-item {
+            background: white;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            padding: 16px;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .checkbox {
+            width: 20px;
+            height: 20px;
+            border: 2px solid #10b981;
+            border-radius: 4px;
+            margin-right: 12px;
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+        
+        .item-text {
+            flex-grow: 1;
+        }
+        
+        .item-title {
+            font-weight: 600;
+            margin-bottom: 4px;
+            color: #1f2937;
+        }
+        
+        .item-description {
+            font-size: 14px;
+            color: #6b7280;
+        }
+        
+        .score-section {
+            background: #fef3c7;
+            border: 2px solid #f59e0b;
+            border-radius: 8px;
+            padding: 16px;
+            margin-top: 16px;
+        }
+        
+        .score-title {
+            font-weight: 700;
+            color: #92400e;
+            margin-bottom: 8px;
+        }
+        
+        .score-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin-top: 12px;
+        }
+        
+        .score-item {
+            text-align: center;
+            background: white;
+            border-radius: 6px;
+            padding: 12px;
+        }
+        
+        .score-label {
+            font-size: 12px;
+            color: #6b7280;
+            margin-bottom: 4px;
+        }
+        
+        .score-value {
+            font-size: 18px;
+            font-weight: 700;
+        }
+        
+        .recommendations {
+            background: #eff6ff;
+            border: 2px solid #3b82f6;
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        
+        .rec-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #1d4ed8;
+            margin-bottom: 16px;
+        }
+        
+        .priority-high {
+            border-left: 4px solid #ef4444;
+            background: #fef2f2;
+            padding: 12px;
+            margin-bottom: 12px;
+            border-radius: 6px;
+        }
+        
+        .priority-medium {
+            border-left: 4px solid #f59e0b;
+            background: #fffbeb;
+            padding: 12px;
+            margin-bottom: 12px;
+            border-radius: 6px;
+        }
+        
+        .priority-low {
+            border-left: 4px solid #10b981;
+            background: #f0fdf4;
+            padding: 12px;
+            margin-bottom: 12px;
+            border-radius: 6px;
+        }
+        
+        .implementation-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        
+        .implementation-table th,
+        .implementation-table td {
+            border: 1px solid #d1d5db;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        .implementation-table th {
+            background: #047857;
+            color: white;
+            font-weight: 700;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, #059669 0%, #047857 100%);
+            color: white;
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+            margin-top: 40px;
+        }
+        
+        @media print {
+            body { background: white; }
+            .container { box-shadow: none; padding: 0.25in; }
+            .audit-category { page-break-inside: avoid; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="logo">✅ Atlanta Houseplants</div>
+            <div class="tagline">Professional Workplace Assessment • Evidence-Based Solutions</div>
+            <div class="title">Workplace Wellness Audit Checklist</div>
+            <div class="subtitle">40-Point Professional Assessment • Used by 500+ Atlanta Businesses</div>
+        </div>
+
+        <!-- Instructions -->
+        <div class="section">
+            <h2 class="section-title">📋 Assessment Instructions</h2>
+            <div style="background: #f8fafc; border: 2px solid #e2e8f0; border-radius: 8px; padding: 20px;">
+                <p style="margin-bottom: 16px;"><strong>How to Use This Checklist:</strong></p>
+                <ol style="margin-left: 20px; line-height: 1.8;">
+                    <li><strong>Check each box</strong> that applies to your current workplace environment</li>
+                    <li><strong>Calculate your scores</strong> for each category using the scoring guides</li>
+                    <li><strong>Review recommendations</strong> based on your total assessment score</li>
+                    <li><strong>Prioritize improvements</strong> using the implementation planning section</li>
+                    <li><strong>Schedule professional consultation</strong> for detailed analysis and solutions</li>
+                </ol>
+                <div style="background: #ecfdf5; border: 1px solid #10b981; border-radius: 6px; padding: 12px; margin-top: 16px;">
+                    <strong>📊 Scoring:</strong> Each checked item = 1 point • Maximum score = 40 points • Higher scores indicate better workplace wellness foundation
+                </div>
+            </div>
+        </div>
+
+        <!-- Category 1: Air Quality & Environment -->
+        <div class="audit-category">
+            <div class="category-title">
+                <span class="category-icon">🌬️</span>
+                Air Quality & Environmental Factors (10 Points)
+            </div>
+            
+            <div class="checklist-grid">
+                <div class="checklist-item">
+                    <div class="checkbox"></div>
+                    <div class="item-text">
+                        <div class="item-title">Natural ventilation present</div>
+                        <div class="item-description">Windows open, air circulation systems working</div>
+                    </div>
+                </div>
+                
+                <div class="checklist-item">
+                    <div class="checkbox"></div>
+                    <div class="item-text">
+                        <div class="item-title">Low chemical/cleaning odors</div>
+                        <div class="item-description">Minimal harsh cleaning products, air fresheners</div>
+                    </div>
+                </div>
+                
+                <div class="checklist-item">
+                    <div class="checkbox"></div>
+                    <div class="item-text">
+                        <div class="item-title">Humidity levels comfortable</div>
+                        <div class="item-description">No excessive dryness or moisture issues</div>
+                    </div>
+                </div>
+                
+                <div class="checklist-item">
+                    <div class="checkbox"></div>
+                    <div class="item-text">
+                        <div class="item-title">Temperature consistently comfortable</div>
+                        <div class="item-description">68-72°F range, minimal fluctuation</div>
+                    </div>
+                </div>
+                
+                <div class="checklist-item">
+                    <div class="checkbox"></div>
+                    <div class="item-text">
+                        <div class="item-title">No dust accumulation issues</div>
+                        <div class="item-description">Regular cleaning, minimal visible dust</div>
+                    </div>
+                </div>
+                
+                <div class="checklist-item">
+                    <div class="checkbox"></div>
+                    <div class="item-text">
+                        <div class="item-title">HVAC system well-maintained</div>
+                        <div class="item-description">Filters changed regularly, system functioning</div>
+                    </div>
+                </div>
+                
+                <div class="checklist-item">
+                    <div class="checkbox"></div>
+                    <div class="item-text">
+                        <div class="item-title">No mold/mildew concerns</div>
+                        <div class="item-description">Dry conditions, no visible growth</div>
+                    </div>
+                </div>
+                
+                <div class="checklist-item">
+                    <div class="checkbox"></div>
+                    <div class="item-text">
+                        <div class="item-title">Fresh air intake adequate</div>
+                        <div class="item-description">Building doesn't feel stuffy or stagnant</div>
+                    </div>
+                </div>
+                
+                <div class="checklist-item">
+                    <div class="checkbox"></div>
+                    <div class="item-text">
+                        <div class="item-title">Minimal air pollutants</div>
+                        <div class="item-description">Limited VOCs from furniture, carpets</div>
+                    </div>
+                </div>
+                
+                <div class="checklist-item">
+                    <div class="checkbox"></div>
+                    <div class="item-text">
+                        <div class="item-title">Employees report good air quality</div>
+                        <div class="item-description">No frequent respiratory complaints</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="score-section">
+                <div class="score-title">Air Quality Score: _____ / 10 points</div>
+                <div class="score-grid">
+                    <div class="score-item">
+                        <div class="score-label">8-10 Points</div>
+                        <div class="score-value" style="color: #059669;">Excellent</div>
+                    </div>
+                    <div class="score-item">
+                        <div class="score-label">5-7 Points</div>
+                        <div class="score-value" style="color: #f59e0b;">Needs Work</div>
+                    </div>
+                    <div class="score-item">
+                        <div class="score-label">0-4 Points</div>
+                        <div class="score-value" style="color: #ef4444;">Priority Fix</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Category 2: Lighting & Visual Environment -->
+        <div class="audit-category">
+            <div class="category-title">
+                <span class="category-icon">💡</span>
+                Lighting & Visual Environment (10 Points)
+            </div>
+            
+            <div class="checklist-grid">
+                <div class="checklist-item">
+                    <div class="checkbox"></div>
+                    <div class="item-text">
+                        <div class="item-title">Abundant natural light</div>
+                        <div class="item-description">Windows, skylights, daylight access</div>
+                    </div>
+                </div>
+                
+                <div class="checklist-item">
+                    <div class="checkbox"></div>
+                    <div class="item-text">
+                        <div class="item-title">Task lighting adequate</div>
+                        <div class="item-description">Desk lamps, focused work lighting</div>
+                    </div>
+                </div>
+                
+                <div class="checklist-item">
+                    <div class="checkbox"></div>
+                    <div class="item-text">
+                        <div class="item-title">No harsh fluorescent lighting</div>
+                        <div class="item-description">LED or natural alternatives used</div>
+                    </div>
+                </div>
+                
+                <div class="checklist-item">
+                    <div class="checkbox"></div>
+                    <div class="item-text">
+                        <div class="item-title">Light levels adjustable</div>
+                        <div class="item-description">Dimmers, blinds, personal control</div>
+                    </div>
+                </div>
+                
+                <div class="checklist-item">
+                    <div class="checkbox"></div>
+                    <div class="item-text">
+                        <div class="item-title">Visual variety in workspace</div>
+                        <div class="item-description">Not monotonous, different zones</div>
+                    </div>
+                </div>
+                
+                <div class="checklist-item">
+                    <div class="checkbox"></div>
+                    <div class="item-text">
+                        <div class="item-title">Warm color temperature (3000-4000K)</div>
+                        <div class="item-description">Not harsh cool white lighting</div>
+                    </div>
+                </div>
+                
+                <div class="checklist-item">
+                    <div class="checkbox"></div>
+                    <div class="item-text">
+                        <div class="item-title">No glare issues</div>
+                        <div class="item-description">Computer screens, reflective surfaces managed</div>
+                    </div>
+                </div>
+                
+                <div class="checklist-item">
+                    <div class="checkbox"></div>
+                    <div class="item-text">
+                        <div class="item-title">Pleasant views available</div>
+                        <div class="item-description">Windows with nature/city views</div>
+                    </div>
+                </div>
+                
+                <div class="checklist-item">
+                    <div class="checkbox"></div>
+                    <div class="item-text">
+                        <div class="item-title">Light supports circadian rhythm</div>
+                        <div class="item-description">Changes throughout day, not constant</div>
+                    </div>
+                </div>
+                
+                <div class="checklist-item">
+                    <div class="checkbox"></div>
+                    <div class="item-text">
+                        <div class="item-title">No eye strain complaints</div>
+                        <div class="item-description">Employees comfortable with lighting</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="score-section">
+                <div class="score-title">Lighting Score: _____ / 10 points</div>
+            </div>
+        </div>
+
+        <!-- Category 3: Natural Elements & Biophilia -->
+        <div class="audit-category">
+            <div class="category-title">
+                <span class="category-icon">🌿</span>
+                Natural Elements & Biophilic Design (10 Points)
+            </div>
+            
+            <div class="checklist-grid">
+                <div class="checklist-item">
+                    <div class="checkbox"></div>
+                    <div class="item-text">
+                        <div class="item-title">Live plants present</div>
+                        <div class="item-description">Any live plants in workspace</div>
+                    </div>
+                </div>
+                
+                <div class="checklist-item">
+                    <div class="checkbox"></div>
+                    <div class="item-text">
+                        <div class="item-title">Natural materials used</div>
+                        <div class="item-description">Wood, stone, natural fibers visible</div>
+                    </div>
+                </div>
+                
+                <div class="checklist-item">
+                    <div class="checkbox"></div>
+                    <div class="item-text">
+                        <div class="item-title">Nature imagery/artwork</div>
+                        <div class="item-description">Landscape photos, botanical prints</div>
+                    </div>
+                </div>
+                
+                <div class="checklist-item">
+                    <div class="checkbox"></div>
+                    <div class="item-text">
+                        <div class="item-title">Water features present</div>
+                        <div class="item-description">Fountains, aquariums, water elements</div>
+                    </div>
+                </div>
+                
+                <div class="checklist-item">
+                    <div class="checkbox"></div>
+                    <div class="item-text">
+                        <div class="item-title">Natural color palette</div>
+                        <div class="item-description">Greens, blues, earth tones prominent</div>
+                    </div>
+                </div>
+                
+                <div class="checklist-item">
+                    <div class="checkbox"></div>
+                    <div class="item-text">
+                        <div class="item-title">Organic shapes/patterns</div>
+                        <div class="item-description">Curved lines, natural forms</div>
+                    </div>
+                </div>
+                
+                <div class="checklist-item">
+                    <div class="checkbox"></div>
+                    <div class="item-text">
+                        <div class="item-title">Fresh air circulation</div>
+                        <div class="item-description">Natural ventilation when possible</div>
+                    </div>
+                </div>
+                
+                <div class="checklist-item">
+                    <div class="checkbox"></div>
+                    <div class="item-text">
+                        <div class="item-title">Seasonal awareness</div>
+                        <div class="item-description">Changes reflect outside seasons</div>
+                    </div>
+                </div>
+                
+                <div class="checklist-item">
+                    <div class="checkbox"></div>
+                    <div class="item-text">
+                        <div class="item-title">Natural textures present</div>
+                        <div class="item-description">Varied tactile surfaces, not all smooth</div>
+                    </div>
+                </div>
+                
+                <div class="checklist-item">
+                    <div class="checkbox"></div>
+                    <div class="item-text">
+                        <div class="item-title">Connection to outdoors</div>
+                        <div class="item-description">Patio access, garden views</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="score-section">
+                <div class="score-title">Biophilic Score: _____ / 10 points</div>
+            </div>
+        </div>
+
+        <!-- Category 4: Employee Wellness Indicators -->
+        <div class="audit-category">
+            <div class="category-title">
+                <span class="category-icon">💚</span>
+                Employee Wellness Indicators (10 Points)
+            </div>
+            
+            <div class="checklist-grid">
+                <div class="checklist-item">
+                    <div class="checkbox"></div>
+                    <div class="item-text">
+                        <div class="item-title">Low sick day frequency</div>
+                        <div class="item-description">Below industry average absenteeism</div>
+                    </div>
+                </div>
+                
+                <div class="checklist-item">
+                    <div class="checkbox"></div>
+                    <div class="item-text">
+                        <div class="item-title">High energy levels reported</div>
+                        <div class="item-description">Employees feel energetic at work</div>
+                    </div>
+                </div>
+                
+                <div class="checklist-item">
+                    <div class="checkbox"></div>
+                    <div class="item-text">
+                        <div class="item-title">Good focus/concentration</div>
+                        <div class="item-description">Minimal complaints about distractions</div>
+                    </div>
+                </div>
+                
+                <div class="checklist-item">
+                    <div class="checkbox"></div>
+                    <div class="item-text">
+                        <div class="item-title">Low stress levels observed</div>
+                        <div class="item-description">Calm workplace atmosphere</div>
+                    </div>
+                </div>
+                
+                <div class="checklist-item">
+                    <div class="checkbox"></div>
+                    <div class="item-text">
+                        <div class="item-title">High job satisfaction scores</div>
+                        <div class="item-description">Employee surveys show satisfaction</div>
+                    </div>
+                </div>
+                
+                <div class="checklist-item">
+                    <div class="checkbox"></div>
+                    <div class="item-text">
+                        <div class="item-title">Good team collaboration</div>
+                        <div class="item-description">Teams work well together</div>
+                    </div>
+                </div>
+                
+                <div class="checklist-item">
+                    <div class="checkbox"></div>
+                    <div class="item-text">
+                        <div class="item-title">Creative problem-solving evident</div>
+                        <div class="item-description">Innovation and creativity present</div>
+                    </div>
+                </div>
+                
+                <div class="checklist-item">
+                    <div class="checkbox"></div>
+                    <div class="item-text">
+                        <div class="item-title">Low turnover rate</div>
+                        <div class="item-description">Employees stay long-term</div>
+                    </div>
+                </div>
+                
+                <div class="checklist-item">
+                    <div class="checkbox"></div>
+                    <div class="item-text">
+                        <div class="item-title">Positive workplace culture</div>
+                        <div class="item-description">Supportive, encouraging environment</div>
+                    </div>
+                </div>
+                
+                <div class="checklist-item">
+                    <div class="checkbox"></div>
+                    <div class="item-text">
+                        <div class="item-title">Physical comfort reported</div>
+                        <div class="item-description">No frequent headaches, eye strain</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="score-section">
+                <div class="score-title">Wellness Score: _____ / 10 points</div>
+            </div>
+        </div>
+
+        <!-- Total Score & Recommendations -->
+        <div class="section">
+            <h2 class="section-title">📊 Total Assessment Results</h2>
+            
+            <div style="background: #f0fdf4; border: 3px solid #10b981; border-radius: 12px; padding: 30px; text-align: center; margin-bottom: 30px;">
+                <div style="font-size: 24px; font-weight: 700; margin-bottom: 12px;">Total Score: _____ / 40 Points</div>
+                <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 20px;">
+                    <div style="background: white; border-radius: 8px; padding: 16px;">
+                        <div style="font-size: 14px; color: #6b7280; margin-bottom: 4px;">Air Quality</div>
+                        <div style="font-size: 20px; font-weight: 700; color: #047857;">_____ / 10</div>
+                    </div>
+                    <div style="background: white; border-radius: 8px; padding: 16px;">
+                        <div style="font-size: 14px; color: #6b7280; margin-bottom: 4px;">Lighting</div>
+                        <div style="font-size: 20px; font-weight: 700; color: #047857;">_____ / 10</div>
+                    </div>
+                    <div style="background: white; border-radius: 8px; padding: 16px;">
+                        <div style="font-size: 14px; color: #6b7280; margin-bottom: 4px;">Biophilic</div>
+                        <div style="font-size: 20px; font-weight: 700; color: #047857;">_____ / 10</div>
+                    </div>
+                    <div style="background: white; border-radius: 8px; padding: 16px;">
+                        <div style="font-size: 14px; color: #6b7280; margin-bottom: 4px;">Wellness</div>
+                        <div style="font-size: 20px; font-weight: 700; color: #047857;">_____ / 10</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="recommendations">
+                <div class="rec-title">🎯 Your Customized Recommendations</div>
+                
+                <div style="margin-bottom: 24px;">
+                    <h4 style="font-weight: 700; margin-bottom: 12px;">Score Interpretation:</h4>
+                    <ul style="margin-left: 20px; line-height: 1.8;">
+                        <li><strong>32-40 Points:</strong> Excellent foundation - optimize with targeted plant integration</li>
+                        <li><strong>24-31 Points:</strong> Good baseline - strategic improvements will yield high ROI</li>
+                        <li><strong>16-23 Points:</strong> Moderate issues - comprehensive wellness program recommended</li>
+                        <li><strong>0-15 Points:</strong> Priority intervention needed - multiple improvement areas</li>
+                    </ul>
+                </div>
+                
+                <div class="priority-high">
+                    <strong>🔴 High Priority (Scores 0-2 in any category):</strong>
+                    <ul style="margin: 8px 0 0 20px;">
+                        <li>Air-purifying plant installation for immediate air quality improvement</li>
+                        <li>Professional lighting assessment and adjustments</li>
+                        <li>Employee wellness survey to identify specific concerns</li>
+                        <li>HVAC system evaluation and maintenance</li>
+                    </ul>
+                </div>
+                
+                <div class="priority-medium">
+                    <strong>🟡 Medium Priority (Scores 3-6 in any category):</strong>
+                    <ul style="margin: 8px 0 0 20px;">
+                        <li>Strategic plant placement for biophilic design enhancement</li>
+                        <li>Natural material integration in common areas</li>
+                        <li>Seasonal plant rotation program</li>
+                        <li>Employee wellness program expansion</li>
+                    </ul>
+                </div>
+                
+                <div class="priority-low">
+                    <strong>🟢 Enhancement Opportunities (Scores 7-10 in category):</strong>
+                    <ul style="margin: 8px 0 0 20px;">
+                        <li>Premium plant varieties for executive areas</li>
+                        <li>Advanced biophilic design elements</li>
+                        <li>Wellness metrics tracking and optimization</li>
+                        <li>Employee plant care engagement programs</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Implementation Planning -->
+        <div class="section">
+            <h2 class="section-title">⚡ Implementation Planning Guide</h2>
+            
+            <table class="implementation-table">
+                <thead>
+                    <tr>
+                        <th>Improvement Area</th>
+                        <th>Timeline</th>
+                        <th>Investment Level</th>
+                        <th>Expected Impact</th>
+                        <th>Success Metrics</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Air-Purifying Plants</strong><br>Snake plants, pothos, peace lilies</td>
+                        <td>Week 1-2</td>
+                        <td>Low-Medium</td>
+                        <td>Immediate air quality improvement</td>
+                        <td>Employee respiratory health, energy levels</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Strategic Plant Placement</strong><br>High-traffic, common areas</td>
+                        <td>Week 2-3</td>
+                        <td>Medium</td>
+                        <td>Visual appeal, stress reduction</td>
+                        <td>Employee satisfaction surveys</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Biophilic Design Elements</strong><br>Natural materials, nature imagery</td>
+                        <td>Month 1-2</td>
+                        <td>Medium-High</td>
+                        <td>Enhanced creativity, wellness</td>
+                        <td>Productivity metrics, turnover rates</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Comprehensive Plant Program</strong><br>Professional maintenance, rotation</td>
+                        <td>Month 2-3</td>
+                        <td>Medium</td>
+                        <td>Long-term wellness culture</td>
+                        <td>ROI analysis, employee retention</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Advanced Wellness Integration</strong><br>Seasonal programs, employee engagement</td>
+                        <td>Month 3-6</td>
+                        <td>Low-Medium</td>
+                        <td>Sustained culture change</td>
+                        <td>Annual wellness assessments</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div style="background: #f0f9ff; border: 2px solid #3b82f6; border-radius: 8px; padding: 16px; margin-top: 20px;">
+                <strong>💡 Pro Tip:</strong> Start with high-impact, low-cost improvements (air-purifying plants) while planning comprehensive biophilic design upgrades. This approach provides immediate benefits while building momentum for larger investments.
+            </div>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="cta-section">
+            <div style="font-size: 24px; font-weight: 700; margin-bottom: 12px;">Ready for Professional Assessment?</div>
+            <div style="font-size: 16px; margin-bottom: 20px; opacity: 0.9;">Schedule your complimentary workplace wellness consultation with our certified horticulturalist. Receive customized recommendations based on your audit results.</div>
+            
+            <div style="font-size: 18px; font-weight: 600; margin-bottom: 20px;">
+                <div style="margin-bottom: 8px;">📞 (470) 664-4039</div>
+                <div style="margin-bottom: 8px;">🌐 atlanta-plant-haven.com/office-plants</div>
+                <div>📧 Free consultation includes detailed improvement plan</div>
+            </div>
+            
+            <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.3); font-size: 14px; opacity: 0.9;">
+                <strong>🎯 Assessment Special:</strong> Free professional audit when you schedule within 30 days<br>
+                <strong>⚡ Fast Implementation:</strong> Priority plant installation for audit completers<br>
+                <strong>📊 Results Tracking:</strong> Complimentary 90-day wellness metrics analysis
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 30px; color: #6b7280; font-size: 12px;">
+            © 2025 Atlanta Houseplants • Professional Workplace Wellness Solutions<br>
+            State of Georgia Certified Plant Professional • Evidence-Based Biophilic Design
+        </div>
+    </div>
+</body>
+</html>
