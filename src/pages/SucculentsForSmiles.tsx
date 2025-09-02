@@ -22,7 +22,7 @@ const SucculentsForSmiles = () => {
         <div className="max-w-6xl mx-auto text-center">
           <div className="mb-8">
             <img 
-              src="/lovable-uploads/451d8ad9-03df-4e1a-adb7-e5cb659ec97c.png" 
+              src="/images/branding-assets/atlanta-houseplants-team-member-succulent-tray.png" 
               alt="Atlanta Houseplants team member with succulent delivery" 
               className="w-full max-w-md mx-auto rounded-lg shadow-lg"
             />
@@ -50,7 +50,7 @@ const SucculentsForSmiles = () => {
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div>
               <img 
-                src="/lovable-uploads/a2edcd76-33eb-47c3-be9d-83d44ff108f8.png" 
+                src="/images/arrangements-decorative/healing-succulent-hospital-arrangement.png" 
                 alt="Succulents for Smiles arrangement" 
                 className="w-full rounded-lg shadow-lg"
               />
@@ -120,11 +120,11 @@ const SucculentsForSmiles = () => {
           <h2 className="text-3xl font-bold text-center mb-12">Our Beautiful Mini Succulents</h2>
           <p className="text-center text-gray-600 mb-8">Each succulent comes in a 2.5-inch nursery pot and is carefully selected for beauty, resilience, and ease of care</p>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            <img src="/lovable-uploads/82c57176-6510-45f2-9b31-ab2696220e36.png" alt="Variety of mini succulents" className="rounded-lg shadow-md" />
-            <img src="/lovable-uploads/195074f0-2046-483e-ad8d-35d862966bdb.png" alt="Succulent arrangement" className="rounded-lg shadow-md" />
-            <img src="/lovable-uploads/ce5e1a18-b364-4032-bdda-4689a953b2c4.png" alt="Succulents in white pots" className="rounded-lg shadow-md" />
-            <img src="/lovable-uploads/ae5f54e7-6aa1-44d6-a928-2b4a01400f0a.png" alt="Colorful succulent variety" className="rounded-lg shadow-md" />
-            <img src="/lovable-uploads/4110ddef-7a6a-4fe9-b268-50b8f7fc8d95.png" alt="Greenhouse succulent display" className="rounded-lg shadow-md" />
+            <img src="/images/individual-plants/mini-succulent-variety-collection.png" alt="Variety of mini succulents" className="rounded-lg shadow-md" />
+            <img src="/images/arrangements-decorative/succulents-for-smiles-display.png" alt="Succulent arrangement" className="rounded-lg shadow-md" />
+            <img src="/images/individual-plants/succulents-white-ceramic-pots.png" alt="Succulents in white pots" className="rounded-lg shadow-md" />
+            <img src="/images/individual-plants/colorful-succulent-variety-display.png" alt="Colorful succulent variety" className="rounded-lg shadow-md" />
+            <img src="/images/individual-plants/greenhouse-succulent-collection-display.png" alt="Greenhouse succulent display" className="rounded-lg shadow-md" />
           </div>
           <div className="text-center mt-8">
             <Button onClick={scrollToForm} size="lg">

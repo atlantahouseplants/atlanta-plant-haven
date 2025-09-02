@@ -18,7 +18,7 @@ const WhyChooseNick = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
             <img 
-              src="/lovable-uploads/28593236-95fc-4036-9a18-8ba385a7e907.png" 
+              src="/images/service-maintenance/nick-working-with-plants-professional.png" 
               alt="Nick working with plants"
               className="rounded-lg shadow-lg w-full"
             />

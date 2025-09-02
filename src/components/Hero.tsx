@@ -52,7 +52,7 @@ const Hero = () => {
           <div className="bg-white p-8 rounded-2xl shadow-xl border border-green-100 relative overflow-hidden">
             <div className="mb-6 rounded-xl overflow-hidden aspect-video">
               <img 
-                src="/lovable-uploads/24794cd6-d871-433d-8ce5-1b5d61120d74.png" 
+                src="/images/corporate-offices/modern-office-professional-plant-installation.png" 
                 alt="Professional office plants in modern Atlanta office"
                 className="w-full h-full object-cover"
               />
@@ -98,7 +98,7 @@ const Hero = () => {
           <div className="bg-white p-8 rounded-2xl shadow-xl border border-orange-100 relative overflow-hidden">
             <div className="mb-6 rounded-xl overflow-hidden aspect-video">
               <img
-                src="/lovable-uploads/b0543742-bb86-45d7-a641-7ccd52b9be1f.png"
+                src="/images/branding-assets/nick-plant-doctor-professional-portrait.png"
                 alt="Nick, your plant doctor, providing expert plant care"
                 className="w-full h-full object-cover"
               />

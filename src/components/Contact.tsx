@@ -385,7 +385,7 @@ const Contact = () => {
             <div className="bg-blue-50 p-6 rounded-lg text-center">
               <div className="flex items-center justify-center mb-4">
                 <img 
-                  src="/lovable-uploads/9a6a89cb-90a7-48df-a670-52cf61f223ea.png" 
+                  src="/images/branding-assets/nick-plant-doctor-portrait-circular.png" 
                   alt="Nick, Your Plant Doctor"
                   className="w-20 h-20 rounded-full object-cover mr-4"
                 />

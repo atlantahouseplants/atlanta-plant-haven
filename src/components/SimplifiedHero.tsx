@@ -106,6 +106,54 @@ const SimplifiedHero = () => {
             <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none"></div>
           </div>
 
+          {/* Atlanta Business Context - Week 1 Enhancement */}
+          <div className="mb-16">
+            <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-3xl p-8 border border-blue-200 shadow-lg">
+              <div className="text-center mb-8">
+                <h3 className="text-2xl md:text-3xl font-bold text-blue-800 mb-4">
+                  Trusted by Atlanta's Leading Businesses
+                </h3>
+                <p className="text-lg text-blue-700">
+                  From Buckhead high-rises to Midtown startups, we enhance workplaces across metro Atlanta
+                </p>
+              </div>
+              
+              <div className="grid md:grid-cols-2 gap-8">
+                <div className="relative rounded-2xl overflow-hidden shadow-lg">
+                  <img
+                    src="/images/corporate-offices/bird-of-paradise-atlanta-skyline.png"
+                    alt="Executive office with Bird of Paradise and Atlanta skyline view"
+                    className="w-full h-64 object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                  <div className="absolute bottom-4 left-4 right-4 text-white">
+                    <h4 className="text-xl font-bold mb-2">Executive Offices</h4>
+                    <p className="text-sm opacity-90">Premium installations for C-suite environments with Atlanta skyline views</p>
+                  </div>
+                </div>
+                
+                <div className="relative rounded-2xl overflow-hidden shadow-lg">
+                  <img
+                    src="/images/corporate-offices/croton-plant-city-view.png"
+                    alt="Modern office space with strategic plant placement"
+                    className="w-full h-64 object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                  <div className="absolute bottom-4 left-4 right-4 text-white">
+                    <h4 className="text-xl font-bold mb-2">Corporate Transformations</h4>
+                    <p className="text-sm opacity-90">Strategic workplace design enhancing productivity and employee wellness</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="text-center mt-8">
+                <p className="text-blue-700 font-semibold">
+                  Join 500+ Atlanta businesses creating healthier, more productive workspaces
+                </p>
+              </div>
+            </div>
+          </div>
+
           {/* Professional Service Notice */}
           <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-2xl p-8 max-w-4xl mx-auto mb-12">
             <div className="flex items-center justify-center mb-4">

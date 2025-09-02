@@ -16,7 +16,7 @@ const ServicesOverview = () => {
       action: () => openForm('business-quote'),
       cta: "Get FREE Quote",
       learnMore: "/office-plants",
-      image: "/lovable-uploads/0744c293-0606-4a7d-b73a-140d0a4405ea.png"
+      image: "/images/corporate-offices/office-cubicle-planter-arrangement.png"
     },
     {
       icon: Gift,
@@ -26,7 +26,7 @@ const ServicesOverview = () => {
       action: () => openForm('bulk-order'),
       cta: "Get Bulk Quote",
       learnMore: "/corporate",
-      image: "/lovable-uploads/f6771e8f-e3c7-432a-ae46-88584325a2f5.png"
+      image: "/images/corporate-offices/corporate-plant-gifting-employee-appreciation.png"
     },
     {
       icon: Users,
@@ -36,7 +36,7 @@ const ServicesOverview = () => {
       action: () => openForm('bulk-order'),
       cta: "Start CSR Program",
       learnMore: "/corporate",
-      image: "/lovable-uploads/6538df31-b81f-40ef-9b80-c3d85951126b.png"
+      image: "/images/arrangements-decorative/succulents-for-smiles-csr-community.png"
     },
     {
       icon: Building2,
@@ -46,7 +46,7 @@ const ServicesOverview = () => {
       action: () => openForm('business-quote'),
       cta: "View Options",
       learnMore: "/color-planters",
-      image: "/lovable-uploads/24794cd6-d871-433d-8ce5-1b5d61120d74.png"
+      image: "/images/corporate-offices/modern-office-professional-plant-installation.png"
     }
   ];
 
@@ -60,7 +60,7 @@ const ServicesOverview = () => {
       cta: "Book Appointment - $149",
       learnMore: "/plant-doctor",
       popular: true,
-      image: "/lovable-uploads/cc2424e3-3025-4f30-be79-6a4763fca0a5.png"
+      image: "/images/branding-assets/nick-plant-doctor-professional-consultation.png"
     },
     {
       icon: Home,
@@ -70,7 +70,7 @@ const ServicesOverview = () => {
       action: () => openForm('home-consultation'),
       cta: "Request Consultation",
       learnMore: "/home-design",
-      image: "/lovable-uploads/24794cd6-d871-433d-8ce5-1b5d61120d74.png"
+      image: "/images/corporate-offices/modern-office-professional-plant-installation.png"
     }
   ];
 
@@ -255,7 +255,7 @@ const ServicesOverview = () => {
         <div className="bg-gradient-to-r from-green-600 to-green-500 text-white p-12 rounded-2xl text-center shadow-2xl">
           <div className="flex items-center justify-center mb-6">
             <img 
-              src="/lovable-uploads/cc2424e3-3025-4f30-be79-6a4763fca0a5.png" 
+              src="/images/branding-assets/nick-plant-doctor-professional-consultation.png" 
               alt="Nick - Your Plant Doctor"
               className="w-20 h-20 rounded-full object-cover mr-4 border-2 border-white"
             />

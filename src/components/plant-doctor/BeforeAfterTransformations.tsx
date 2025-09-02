@@ -9,11 +9,11 @@ interface BeforeAfterTransformationsProps {
 const BeforeAfterTransformations = ({ onBookingClick }: BeforeAfterTransformationsProps) => {
   const transformations = [
     {
-      beforeImage: "/lovable-uploads/fc5fc2c0-d97a-49cf-93a7-c0893643e76d.png",
+      beforeImage: "/images/service-maintenance/monstera-before-mealybug-infestation-damaged.png",
       beforeAlt: "Monstera plant before treatment - showing mealybug infestation with white powdery substance",
       beforeTitle: "Severe Mealybug Infestation",
       beforeDescription: "This Monstera was severely infested with mealybugs, showing white cottony masses throughout the leaves",
-      afterImage: "/lovable-uploads/d672b585-049a-4105-8673-8b69bd60e0aa.png",
+      afterImage: "/images/service-maintenance/monstera-after-pest-treatment-healthy.png",
       afterAlt: "Monstera plant after treatment - healthy and vibrant with lush green foliage",
       afterTitle: "Completely Pest-Free & Thriving",
       afterDescription: "After Nick's treatment, the Monstera shows vibrant, healthy foliage with no signs of pest damage",
@@ -22,11 +22,11 @@ const BeforeAfterTransformations = ({ onBookingClick }: BeforeAfterTransformatio
       resultAchieved: "Complete pest elimination with preventive care plan to maintain plant health"
     },
     {
-      beforeImage: "/lovable-uploads/5090e472-45e2-4dc2-b388-6cbf2f73ab20.png",
+      beforeImage: "/images/service-maintenance/monstera-before-damaged-yellowing-leaves.png",
       beforeAlt: "Monstera plant before treatment - showing damaged and yellowing leaves",
       beforeTitle: "Severely Damaged Plant",
       beforeDescription: "This Monstera was struggling with multiple issues including yellowing leaves and poor structural support",
-      afterImage: "/lovable-uploads/0cd7e1d1-f0c2-4b95-8bb0-b76188510016.png",
+      afterImage: "/images/individual-plants/monstera-deliciosa-terracotta-pot.png",
       afterAlt: "Monstera plant after treatment - healthy and well-structured",
       afterTitle: "Fully Restored & Thriving",
       afterDescription: "After Nick's expert care, the plant shows vibrant green foliage and proper structural support",
@@ -35,11 +35,11 @@ const BeforeAfterTransformations = ({ onBookingClick }: BeforeAfterTransformatio
       resultAchieved: "Complete structural recovery with healthy new growth and proper care plan"
     },
     {
-      beforeImage: "/lovable-uploads/bc3f5f45-3dba-4329-a207-3bea64600ef6.png",
+      beforeImage: "/images/service-maintenance/rubber-plant-before-sparse-growth-poor-condition.png",
       beforeAlt: "Rubber plant before treatment - showing sparse growth and poor condition",
       beforeTitle: "Struggling Rubber Plant",
       beforeDescription: "This rubber plant was showing poor growth with sparse foliage and weak structure",
-      afterImage: "/lovable-uploads/e87cc43c-6531-4cd6-99c5-7f957c7cb232.png",
+      afterImage: "/images/service-maintenance/rubber-plants-after-lush-healthy-growth.png",
       afterAlt: "Rubber plants after treatment - showing lush, healthy growth",
       afterTitle: "Lush & Thriving Growth",
       afterDescription: "After Nick's treatment, the rubber plants show dense, healthy foliage and strong growth patterns",
@@ -48,11 +48,11 @@ const BeforeAfterTransformations = ({ onBookingClick }: BeforeAfterTransformatio
       resultAchieved: "Dramatic improvement in growth density and overall plant health with sustained vitality"
     },
     {
-      beforeImage: "/lovable-uploads/0ee768e7-a10f-4219-a860-91c34c9c9260.png",
+      beforeImage: "/images/individual-plants/calathea-ornata-striped-leaves.png",
       beforeAlt: "Prayer plant before treatment - showing damaged and browning leaves",
       beforeTitle: "Severely Damaged Prayer Plant",
       beforeDescription: "This prayer plant showed extensive leaf damage with browning, curling, and deteriorating foliage",
-      afterImage: "/lovable-uploads/e4f0d6d8-1d3c-48b2-bcf5-9faff676a5f7.png",
+      afterImage: "/images/service-maintenance/prayer-plant-after-vibrant-healthy-foliage.png"
       afterAlt: "Prayer plant after treatment - showing vibrant, healthy foliage",
       afterTitle: "Stunning Recovery & New Growth",
       afterDescription: "After Nick's expert care, the prayer plant displays beautiful, vibrant patterns and healthy new foliage",
@@ -61,11 +61,11 @@ const BeforeAfterTransformations = ({ onBookingClick }: BeforeAfterTransformatio
       resultAchieved: "Complete recovery with vibrant leaf patterns and healthy new growth demonstrating proper care"
     },
     {
-      beforeImage: "/lovable-uploads/27ae64dd-28fd-4ad5-896b-047a9f7be996.png",
+      beforeImage: "/images/service-maintenance/palm-before-browning-tips-poor-growth.png",
       beforeAlt: "Palm plant before treatment - showing browning tips and poor growth",
       beforeTitle: "Struggling Palm with Browning Tips",
       beforeDescription: "This palm plant was showing stress with browning leaf tips and overall poor growth patterns",
-      afterImage: "/lovable-uploads/fb7e6b4c-0fab-4f87-b2e0-2db548134229.png",
+      afterImage: "/images/service-maintenance/palm-after-vibrant-healthy-growth.png",
       afterAlt: "Palm plant after treatment - showing healthy, vibrant growth",
       afterTitle: "Vibrant & Healthy Palm",
       afterDescription: "After Nick's treatment, the palm displays lush, healthy foliage with proper growth and no browning",
@@ -74,11 +74,11 @@ const BeforeAfterTransformations = ({ onBookingClick }: BeforeAfterTransformatio
       resultAchieved: "Eliminated browning with healthy new growth and improved overall plant vitality and appearance"
     },
     {
-      beforeImage: "/lovable-uploads/54465ae0-122d-46dd-b0a9-80ffe7493e0b.png",
+      beforeImage: "/images/service-maintenance/fiddle-leaf-fig-before-sparse-struggling.png",
       beforeAlt: "Fiddle leaf fig before treatment - showing sparse growth and poor structure",
       beforeTitle: "Sparse & Struggling Fiddle Leaf Fig",
       beforeDescription: "This fiddle leaf fig was showing poor growth with sparse foliage and weak branching structure",
-      afterImage: "/lovable-uploads/286015e9-74f5-487d-af3d-a40e9941d8c0.png",
+      afterImage: "/images/service-maintenance/fiddle-leaf-fig-after-full-flourishing.png",
       afterAlt: "Fiddle leaf fig after treatment - showing full, healthy growth",
       afterTitle: "Full & Flourishing Tree",
       afterDescription: "After Nick's expert care, the fiddle leaf fig displays dense, healthy foliage and strong tree structure",
@@ -87,11 +87,11 @@ const BeforeAfterTransformations = ({ onBookingClick }: BeforeAfterTransformatio
       resultAchieved: "Dramatic transformation into a full, tree-like structure with dense foliage and strong branching"
     },
     {
-      beforeImage: "/lovable-uploads/c5aa43fe-7c16-46b2-a97e-f03c2bb8b54d.png",
+      beforeImage: "/images/service-maintenance/plant-cuttings-before-struggling-propagations.png",
       beforeAlt: "Plant cuttings before treatment - showing root-bound and struggling propagations",
       beforeTitle: "Struggling Plant Propagations",
       beforeDescription: "These plant cuttings were root-bound and struggling with poor soil conditions and inadequate care",
-      afterImage: "/lovable-uploads/46abee56-4c9b-4d52-a903-076cd8b81c48.png",
+      afterImage: "/images/service-maintenance/plant-after-propagation-recovery-healthy.png"
       afterAlt: "Plant after propagation and recovery - showing healthy, vibrant growth",
       afterTitle: "Thriving & Healthy Plant",
       afterDescription: "After Nick's expert propagation techniques, the plant shows lush, healthy foliage and strong root development",

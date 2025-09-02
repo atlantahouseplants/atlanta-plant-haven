@@ -1,31 +1,31 @@
 const PlantGallery = () => {
   const installations = [
     {
-      image: "/lovable-uploads/e1930419-ea64-46bc-b42a-ed13b1f43ab1.png",
-      title: "Corporate Office Design",
-      description: "Monstera installation enhancing productivity and air quality",
-      setting: "Executive Office Suite",
-      projectValue: "$5,200",
-      plantsCount: "15 plants"
+      image: "/images/corporate-offices/bird-of-paradise-atlanta-skyline.png",
+      title: "Executive Atlanta Skyline Office",
+      description: "Premium Bird of Paradise installation with Atlanta city view backdrop",
+      setting: "C-Suite Executive Office",
+      projectValue: "$8,500",
+      plantsCount: "12 premium plants"
     },
     {
-      image: "/lovable-uploads/d5e71052-5399-473b-9c63-f6157490d96d.png",
-      title: "Reception Area Centerpiece",
-      description: "Money Tree creating welcoming first impressions",
+      image: "/images/corporate-offices/croton-plant-city-view.png",
+      title: "Premium Corporate Transformation",
+      description: "Executive-level Croton installation reinforcing professional brand image",
+      setting: "Corporate Headquarters",
+      projectValue: "$6,400",
+      plantsCount: "18 plants"
+    },
+    {
+      image: "/images/corporate-offices/large-lobby-floor-plants.png",
+      title: "Luxury Lobby Enhancement",
+      description: "Large-scale floor plant installation creating impressive first impressions",
       setting: "Corporate Lobby",
-      projectValue: "$3,800",
-      plantsCount: "8 plants"
+      projectValue: "$12,000",
+      plantsCount: "25 plants"
     },
     {
-      image: "/lovable-uploads/4c82f760-9f02-4961-9064-4e01de1e97c2.png",
-      title: "Conference Room Elegance",
-      description: "Ficus trees improving meeting room atmosphere",
-      setting: "Conference Room",
-      projectValue: "$2,400",
-      plantsCount: "6 plants"
-    },
-    {
-      image: "/lovable-uploads/9a6a89cb-90a7-48df-a670-52cf61f223ea.png",
+      image: "/images/branding-assets/nick-plant-doctor-portrait-circular.png",
       title: "Plant Doctor in Action",
       description: "Nick providing professional plant care in high-rise office",
       setting: "Corporate High-Rise",
@@ -33,7 +33,7 @@ const PlantGallery = () => {
       plantsCount: "Professional care"
     },
     {
-      image: "/lovable-uploads/8643a575-76e7-4931-8466-23c8bc19325a.png",
+      image: "/images/service-maintenance/expert-plant-maintenance-assessment.png",
       title: "Expert Plant Maintenance",
       description: "Comprehensive plant health assessment and care",
       setting: "Office Environment",
@@ -41,7 +41,7 @@ const PlantGallery = () => {
       plantsCount: "Health assessment"
     },
     {
-      image: "/lovable-uploads/f816d29c-4694-4186-8770-9e16ab935892.png",
+      image: "/images/outdoor-commercial/patio-planters-flowers-shrubs.png",
       title: "Custom Color Planters",
       description: "Handmade seasonal outdoor planters for business patios",
       setting: "Business Patio",
@@ -49,7 +49,7 @@ const PlantGallery = () => {
       plantsCount: "4 planters"
     },
     {
-      image: "/lovable-uploads/009139fd-5ef7-4193-aaf0-52d32a3bc636.png",
+      image: "/images/outdoor-commercial/yellow-planter-commercial-storefront.png",
       title: "Vibrant Office Entrance",
       description: "Bright color planter creating stunning first impressions",
       setting: "Office Building Entrance",
@@ -57,7 +57,7 @@ const PlantGallery = () => {
       plantsCount: "Custom design"
     },
     {
-      image: "/lovable-uploads/91809c55-8571-46c3-b671-b411d93dbe4e.png",
+      image: "/images/outdoor-commercial/restaurant-patio-mixed-planters-dining.png",
       title: "Restaurant Outdoor Design",
       description: "Mixed planters enhancing dining atmosphere",
       setting: "Restaurant Patio",
@@ -65,7 +65,7 @@ const PlantGallery = () => {
       plantsCount: "6 planters"
     },
     {
-      image: "/lovable-uploads/a9b4bf22-dd33-4cb1-a543-c9b890bc6146.png",
+      image: "/images/service-maintenance/professional-planter-installation-nick.png",
       title: "Professional Planter Installation",
       description: "Nick installing custom seasonal color planters",
       setting: "Commercial Property",
@@ -73,7 +73,7 @@ const PlantGallery = () => {
       plantsCount: "Planter design"
     },
     {
-      image: "/lovable-uploads/6ff8c577-b398-4b80-990c-e948788ec260.png",
+      image: "/images/arrangements-decorative/elegant-ceramic-bowl-seasonal-arrangement.png",
       title: "Elegant Seasonal Bowls",
       description: "Custom ceramic bowl arrangements with festive touches",
       setting: "Corporate Entrance",
@@ -81,7 +81,7 @@ const PlantGallery = () => {
       plantsCount: "3 bowls"
     },
     {
-      image: "/lovable-uploads/6eb64e7a-2313-4a09-82f2-73a7f9476f8f.png",
+      image: "/images/outdoor-commercial/colorful-balcony-display-seasonal-blooms.png",
       title: "Colorful Balcony Display",
       description: "Vibrant seasonal blooms for outdoor spaces",
       setting: "High-rise Balcony",
@@ -89,7 +89,7 @@ const PlantGallery = () => {
       plantsCount: "Planter box"
     },
     {
-      image: "/lovable-uploads/5dc2ebdc-1068-42bb-811b-6c05f8b694d7.png",
+      image: "/images/outdoor-commercial/rooftop-garden-design-mixed-seasonal.png",
       title: "Rooftop Garden Design",
       description: "Mixed seasonal arrangements for rooftop spaces",
       setting: "Apartment Balcony",

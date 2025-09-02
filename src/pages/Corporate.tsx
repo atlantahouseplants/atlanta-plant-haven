@@ -175,13 +175,18 @@ const Corporate = () => {
               </div>
             </div>
 
-            {/* Hero Image/Visual */}
+            {/* Executive Hero Image - Week 1 Enhancement */}
             <div className="relative">
               <img 
-                src="/images/corporate-offices/modern-office-floor-plant.png" 
-                alt="Corporate plant gifts and office installations"
+                src="/images/corporate-offices/bird-of-paradise-atlanta-skyline.png" 
+                alt="Executive office space with premium plant installation overlooking Atlanta skyline"
                 className="rounded-2xl shadow-2xl"
               />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent rounded-2xl"></div>
+              <div className="absolute bottom-6 left-6 right-6 text-white">
+                <h4 className="text-xl font-bold mb-2">Premium Corporate Positioning</h4>
+                <p className="text-sm opacity-90">Executive-level installations that impress C-suite clients and partners</p>
+              </div>
               <div className="absolute -bottom-6 -right-6 bg-white p-4 rounded-xl shadow-xl">
                 <div className="flex items-center space-x-3">
                   <Truck className="h-8 w-8 text-blue-600" />
@@ -289,6 +294,76 @@ const Corporate = () => {
               </p>
             </CardContent>
           </Card>
+        </div>
+      </section>
+
+      {/* Executive Positioning Section - Week 1 Enhancement */}
+      <section className="py-20 bg-gradient-to-br from-gray-900 to-blue-900 text-white">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Trusted by Atlanta's C-Suite Leaders
+            </h2>
+            <p className="text-xl opacity-90 max-w-4xl mx-auto">
+              When executive presence matters, our premium plant programs enhance your professional image and create lasting impressions with clients, partners, and stakeholders.
+            </p>
+          </div>
+          
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <img
+                src="/images/corporate-offices/croton-plant-city-view.png"
+                alt="Executive office with premium plant installation and city view"
+                className="rounded-2xl shadow-2xl"
+              />
+            </div>
+            
+            <div className="space-y-8">
+              <div className="bg-white/10 backdrop-blur rounded-2xl p-8">
+                <h3 className="text-2xl font-bold mb-6">Executive-Level Benefits</h3>
+                <div className="space-y-4">
+                  <div className="flex items-start space-x-4">
+                    <Building2 className="h-6 w-6 text-blue-400 flex-shrink-0 mt-1" />
+                    <div>
+                      <h4 className="font-bold mb-1">Enhanced Brand Perception</h4>
+                      <p className="text-sm opacity-90">Premium environments reflect your commitment to excellence and attention to detail</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-4">
+                    <Users className="h-6 w-6 text-blue-400 flex-shrink-0 mt-1" />
+                    <div>
+                      <h4 className="font-bold mb-1">Client Impression Management</h4>
+                      <p className="text-sm opacity-90">Strategic biophilic design reinforces your market position in competitive presentations</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-4">
+                    <TrendingUp className="h-6 w-6 text-blue-400 flex-shrink-0 mt-1" />
+                    <div>
+                      <h4 className="font-bold mb-1">Measurable ROI</h4>
+                      <p className="text-sm opacity-90">Employee satisfaction and client feedback improvements translate to business value</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-4">
+                    <Heart className="h-6 w-6 text-blue-400 flex-shrink-0 mt-1" />
+                    <div>
+                      <h4 className="font-bold mb-1">Executive Wellness</h4>
+                      <p className="text-sm opacity-90">Stress reduction and air quality improvements support peak executive performance</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="text-center">
+                <Button 
+                  onClick={() => document.getElementById('lead-magnet-form')?.scrollIntoView({ behavior: 'smooth' })}
+                  className="bg-white text-gray-900 hover:bg-gray-100 text-lg px-8 py-4"
+                >
+                  Schedule Executive Consultation
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

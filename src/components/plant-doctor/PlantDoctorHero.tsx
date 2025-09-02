@@ -38,7 +38,7 @@ const PlantDoctorHero = ({ onBookingClick }: PlantDoctorHeroProps) => {
           </div>
           <div className="relative">
             <img 
-              src="/lovable-uploads/adc22a4b-2da2-4d41-81ef-8d805c712e3b.png" 
+              src="/images/branding-assets/nick-certified-plant-doctor-professional-portrait.png" 
               alt="Nick - Your Certified Plant Doctor"
               className="rounded-lg shadow-lg w-full"
             />

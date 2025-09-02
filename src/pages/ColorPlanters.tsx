@@ -75,12 +75,12 @@ const ColorPlanters = () => {
 
           <div className="grid lg:grid-cols-2 gap-8">
             <img
-              src="/lovable-uploads/dac0e271-0075-4ddf-9fa0-4806974546f4.png"
+              src="/images/service-maintenance/professional-installing-outdoor-color-planters.png"
               alt="Professional installing custom outdoor color planters"
               className="w-full rounded-lg shadow-lg"
             />
             <img
-              src="/lovable-uploads/b68c4092-c52d-4d4a-9bde-73aca712548f.png"
+              src="/images/arrangements-decorative/indoor-color-bowl-office-arrangements.png"
               alt="Indoor color bowl arrangements for offices"
               className="w-full rounded-lg shadow-lg"
             />
@@ -244,27 +244,27 @@ const ColorPlanters = () => {
             <div className="mb-16">
               <h4 className="text-2xl font-semibold mb-6 text-purple-600">Outdoor Color Planters</h4>
               <div className="grid md:grid-cols-3 gap-6 mb-8">
-                <img src="/lovable-uploads/4304e00c-b951-4fd7-9d6b-a9fb316e9084.png" alt="Seasonal outdoor planters with colorful blooms" className="w-full h-64 object-cover rounded-lg shadow-md" />
-                <img src="/lovable-uploads/894e3588-fd78-45ec-a66a-d38adba26f7f.png" alt="Custom outdoor planters for commercial spaces" className="w-full h-64 object-cover rounded-lg shadow-md" />
-                <img src="/lovable-uploads/5c12d8b0-6716-4d13-93da-7cf2237ef880.png" alt="Colorful seasonal outdoor arrangement" className="w-full h-64 object-cover rounded-lg shadow-md" />
+                <img src="/images/outdoor-commercial/seasonal-outdoor-planters-colorful-blooms.png" alt="Seasonal outdoor planters with colorful blooms" className="w-full h-64 object-cover rounded-lg shadow-md" />
+                <img src="/images/outdoor-commercial/custom-outdoor-planters-commercial-spaces.png" alt="Custom outdoor planters for commercial spaces" className="w-full h-64 object-cover rounded-lg shadow-md" />
+                <img src="/images/outdoor-commercial/colorful-seasonal-outdoor-arrangement.png" alt="Colorful seasonal outdoor arrangement" className="w-full h-64 object-cover rounded-lg shadow-md" />
               </div>
               <div className="grid md:grid-cols-2 gap-6 mb-8">
-                <img src="/lovable-uploads/df58d580-3b02-4989-a642-40ce17cce555.png" alt="Poolside planters for luxury hotels" className="w-full h-64 object-cover rounded-lg shadow-md" />
-                <img src="/lovable-uploads/2ab58439-a84c-4527-9b77-51cc964b24a1.png" alt="Restaurant patio seasonal planters" className="w-full h-64 object-cover rounded-lg shadow-md" />
+                <img src="/images/outdoor-commercial/poolside-planters-luxury-hotels.png" alt="Poolside planters for luxury hotels" className="w-full h-64 object-cover rounded-lg shadow-md" />
+                <img src="/images/outdoor-commercial/restaurant-patio-seasonal-planters.png" alt="Restaurant patio seasonal planters" className="w-full h-64 object-cover rounded-lg shadow-md" />
               </div>
               <div className="grid md:grid-cols-3 gap-6 mb-8">
-                <img src="/lovable-uploads/1e9f2a96-ad5e-43d3-88a4-bae956c8196e.png" alt="Window box planter with colorful blooms" className="w-full h-64 object-cover rounded-lg shadow-md" />
-                <img src="/lovable-uploads/d833a0e8-8747-4f0e-9b98-bc768a20bf24.png" alt="Window box with orange flowers and colorful spikes" className="w-full h-64 object-cover rounded-lg shadow-md" />
-                <img src="/lovable-uploads/8bf1fcc2-deee-4413-bb51-93dd4f122fe5.png" alt="Ceramic bowl with colorful foliage and white blooms" className="w-full h-64 object-cover rounded-lg shadow-md" />
+                <img src="/images/outdoor-commercial/window-box-flower-arrangement-storefront.png" alt="Window box planter with colorful blooms" className="w-full h-64 object-cover rounded-lg shadow-md" />
+                <img src="/images/outdoor-commercial/window-box-orange-flowers-colorful-spikes.png" alt="Window box with orange flowers and colorful spikes" className="w-full h-64 object-cover rounded-lg shadow-md" />
+                <img src="/images/arrangements-decorative/ceramic-bowl-colorful-foliage-white-blooms.png" alt="Ceramic bowl with colorful foliage and white blooms" className="w-full h-64 object-cover rounded-lg shadow-md" />
               </div>
               <div className="grid md:grid-cols-4 gap-6 mb-8">
-                <img src="/lovable-uploads/3b22ae44-b55b-40e0-b578-43cf9e992bf9.png" alt="Modern white planter with mixed colorful plants" className="w-full h-64 object-cover rounded-lg shadow-md" />
-                <img src="/lovable-uploads/6a8a648b-686a-4774-b874-bfc9cced612f.png" alt="Holiday themed large planters with seasonal displays" className="w-full h-64 object-cover rounded-lg shadow-md" />
-                <img src="/lovable-uploads/3db88ecc-7dc5-4ead-9725-1dc765097751.png" alt="Modern commercial planter with colorful flowers" className="w-full h-64 object-cover rounded-lg shadow-md" />
-                <img src="/lovable-uploads/de561043-6cdc-4946-be66-aea8a936bd9c.png" alt="Evergreen and colorful flower combination planter" className="w-full h-64 object-cover rounded-lg shadow-md" />
+                <img src="/images/outdoor-commercial/modern-white-planter-mixed-colorful-plants.png" alt="Modern white planter with mixed colorful plants" className="w-full h-64 object-cover rounded-lg shadow-md" />
+                <img src="/images/outdoor-commercial/holiday-themed-large-planters-seasonal-displays.png" alt="Holiday themed large planters with seasonal displays" className="w-full h-64 object-cover rounded-lg shadow-md" />
+                <img src="/images/outdoor-commercial/modern-commercial-planter-colorful-flowers.png" alt="Modern commercial planter with colorful flowers" className="w-full h-64 object-cover rounded-lg shadow-md" />
+                <img src="/images/outdoor-commercial/evergreen-colorful-flower-combination-planter.png" alt="Evergreen and colorful flower combination planter" className="w-full h-64 object-cover rounded-lg shadow-md" />
               </div>
               <div className="grid md:grid-cols-1 gap-6">
-                <img src="/lovable-uploads/c3f3979d-8c40-4b0b-8837-76d0e33de106.png" alt="Bright yellow commercial planter with cascading plants" className="w-full h-64 object-cover rounded-lg shadow-md" />
+                <img src="/images/outdoor-commercial/bright-yellow-commercial-planter-cascading-plants.png" alt="Bright yellow commercial planter with cascading plants" className="w-full h-64 object-cover rounded-lg shadow-md" />
               </div>
             </div>
 
@@ -272,24 +272,24 @@ const ColorPlanters = () => {
             <div>
               <h4 className="text-2xl font-semibold mb-6 text-pink-600">Indoor Color Bowls</h4>
               <div className="grid md:grid-cols-3 gap-6 mb-6">
-                <img src="/lovable-uploads/0a46f717-6a07-43f8-b46f-98f8203dc460.png" alt="Lush tropical indoor color bowl with bird's nest fern and prayer plants" className="w-full h-64 object-cover rounded-lg shadow-md" />
-                <img src="/lovable-uploads/5a7b84a7-c04d-4727-b584-8b433bc5255a.png" alt="Mixed foliage color bowl with alocasia and tropical plants" className="w-full h-64 object-cover rounded-lg shadow-md" />
-                <img src="/lovable-uploads/78887fa2-05dc-45a4-9045-b406854ccfa1.png" alt="Vibrant color bowl with ti plants and tropical mix" className="w-full h-64 object-cover rounded-lg shadow-md" />
+                <img src="/images/individual-plants/birds-nest-fern-decorative-bowl.png" alt="Lush tropical indoor color bowl with bird's nest fern and prayer plants" className="w-full h-64 object-cover rounded-lg shadow-md" />
+                <img src="/images/arrangements-decorative/mixed-foliage-color-bowl-alocasia-tropical.png" alt="Mixed foliage color bowl with alocasia and tropical plants" className="w-full h-64 object-cover rounded-lg shadow-md" />
+                <img src="/images/arrangements-decorative/vibrant-color-bowl-ti-plants-tropical-mix.png" alt="Vibrant color bowl with ti plants and tropical mix" className="w-full h-64 object-cover rounded-lg shadow-md" />
               </div>
               <div className="grid md:grid-cols-3 gap-6 mb-6">
-                <img src="/lovable-uploads/27610228-d006-4087-ac11-aefff1e4f4ac.png" alt="Sophisticated green foliage arrangement with peace lily and ferns" className="w-full h-64 object-cover rounded-lg shadow-md" />
-                <img src="/lovable-uploads/94ec742e-bb3c-453c-b5f6-f550fd68f23b.png" alt="Colorful ceramic bowl with croton and snake plant arrangement" className="w-full h-64 object-cover rounded-lg shadow-md" />
-                <img src="/lovable-uploads/6f13f0c8-6f80-423e-bc59-eca698c3dfa2.png" alt="Modern succulent and air plant arrangement in geometric planter" className="w-full h-64 object-cover rounded-lg shadow-md" />
+                <img src="/images/arrangements-decorative/sophisticated-green-foliage-peace-lily-ferns.png" alt="Sophisticated green foliage arrangement with peace lily and ferns" className="w-full h-64 object-cover rounded-lg shadow-md" />
+                <img src="/images/arrangements-decorative/colorful-ceramic-bowl-croton-snake-plant.png" alt="Colorful ceramic bowl with croton and snake plant arrangement" className="w-full h-64 object-cover rounded-lg shadow-md" />
+                <img src="/images/arrangements-decorative/modern-succulent-air-plant-geometric-planter.png" alt="Modern succulent and air plant arrangement in geometric planter" className="w-full h-64 object-cover rounded-lg shadow-md" />
               </div>
               <div className="grid md:grid-cols-4 gap-6 mb-6">
-                <img src="/lovable-uploads/aa4da4dc-1bef-4425-bb6b-c8cfcee357fd.png" alt="Detailed succulent arrangement with jade pearls and colorful varieties" className="w-full h-64 object-cover rounded-lg shadow-md" />
-                <img src="/lovable-uploads/b7db9856-d25e-494f-972e-e5208818fe58.png" alt="Bright anthurium centerpiece with tropical foliage mix" className="w-full h-64 object-cover rounded-lg shadow-md" />
-                <img src="/lovable-uploads/4f80ca81-72b0-4505-96f2-e595c5e60781.png" alt="Elegant snake plant and tropical arrangement in decorative pot" className="w-full h-64 object-cover rounded-lg shadow-md" />
-                <img src="/lovable-uploads/97354911-b016-495e-8c04-e86e474912c9.png" alt="Artistic ceramic bowl with croton and tropical plant mix" className="w-full h-64 object-cover rounded-lg shadow-md" />
+                <img src="/images/arrangements-decorative/detailed-succulent-arrangement-jade-pearls-colorful.png" alt="Detailed succulent arrangement with jade pearls and colorful varieties" className="w-full h-64 object-cover rounded-lg shadow-md" />
+                <img src="/images/arrangements-decorative/bright-anthurium-centerpiece-tropical-foliage.png" alt="Bright anthurium centerpiece with tropical foliage mix" className="w-full h-64 object-cover rounded-lg shadow-md" />
+                <img src="/images/arrangements-decorative/elegant-snake-plant-tropical-arrangement-decorative-pot.png" alt="Elegant snake plant and tropical arrangement in decorative pot" className="w-full h-64 object-cover rounded-lg shadow-md" />
+                <img src="/images/arrangements-decorative/artistic-ceramic-bowl-croton-tropical-plant-mix.png" alt="Artistic ceramic bowl with croton and tropical plant mix" className="w-full h-64 object-cover rounded-lg shadow-md" />
               </div>
               <div className="grid md:grid-cols-2 gap-6">
-                <img src="/lovable-uploads/c2622f62-937e-49d4-a647-df30191973e4.png" alt="Executive office color bowl with mixed tropical plants" className="w-full h-64 object-cover rounded-lg shadow-md" />
-                <img src="/lovable-uploads/63df0b99-19df-41a5-b30f-002f4ddc8191.png" alt="Vibrant color bowl arrangement for reception area" className="w-full h-64 object-cover rounded-lg shadow-md" />
+                <img src="/images/arrangements-decorative/executive-office-color-bowl-mixed-tropical-plants.png" alt="Executive office color bowl with mixed tropical plants" className="w-full h-64 object-cover rounded-lg shadow-md" />
+                <img src="/images/arrangements-decorative/vibrant-color-bowl-arrangement-reception-area.png" alt="Vibrant color bowl arrangement for reception area" className="w-full h-64 object-cover rounded-lg shadow-md" />
               </div>
             </div>
           </div>

@@ -1,0 +1,80 @@
+IMAGE CATEGORIZATION LOG - ATLANTA PLANT HAVEN
+=================================================
+Date: 2025-09-02
+Total Images: 165
+Source: C:\Users\wallg\AnaGITGW\ana-wall-atlanta-homes\atlanta-plant-haven\public\lovable-uploads
+Target: C:\Users\wallg\AnaGITGW\ana-wall-atlanta-homes\atlanta-plant-haven\public\images
+
+CATEGORIZATION STRATEGY BASED ON ANALYSIS:
+==========================================
+
+ARRANGEMENTS-DECORATIVE (decorative plant arrangements, groupings, styled displays):
+- Wicker baskets with mixed plants
+- Succulent arrangements and displays
+- Decorative plant groupings
+- Styled plant combinations
+- Gift arrangements and displays
+
+BRANDING-ASSETS (logos, branded materials, marketing graphics):
+- Images with "Atlanta House of Plants" branding
+- Marketing displays with company signage
+- Branded plant displays
+- Company promotional materials
+
+CORPORATE-OFFICES (office environments with plants, corporate installations):
+- Office cubicle planters
+- Conference room plants
+- Office lobby installations
+- Corporate workspace greenery
+- Business environment plants
+
+INDIVIDUAL-PLANTS (single plant photos, plant portraits):
+- Single plant specimens
+- Plant portraits in pots
+- Individual species photography
+- Standalone plant shots
+
+OUTDOOR-COMMERCIAL (exterior landscaping, outdoor plant installations):
+- Storefront planters
+- Window box arrangements
+- Commercial exterior plants
+- Outdoor business landscaping
+
+SERVICE-MAINTENANCE (maintenance activities, care processes, equipment):
+- Repotting activities
+- Plant care demonstrations
+- Maintenance procedures
+- Root system images
+
+MISCELLANEOUS (anything that doesn't fit other categories):
+- Unclear or unique images
+- Multiple category fits
+- Special cases
+
+INITIAL SAMPLE CATEGORIZATIONS (First 20 images analyzed):
+========================================================
+009139fd-5ef7-4193-aaf0-52d32a3bc636.png → outdoor-commercial (yellow-planter-commercial-storefront.png)
+05ea5854-590a-4b34-aff0-6642ce355ca4.png → arrangements-decorative (wicker-basket-mixed-plants-arrangement.png)
+0744c293-0606-4a7d-b73a-140d0a4405ea.png → corporate-offices (office-cubicle-planter-arrangement.png)
+0807f37e-1602-486a-ab78-3899b7d83fb1.png → individual-plants (dracaena-marginata-office-corner.png)
+0a46f717-6a07-43f8-b46f-98f8203dc460.png → individual-plants (birds-nest-fern-decorative-bowl.png)
+0b7e580d-7c48-4a2c-85fa-db09007330cc.png → corporate-offices (bird-of-paradise-office-lobby.png)
+0cd7e1d1-f0c2-4b95-8bb0-b76188510016.png → individual-plants (monstera-deliciosa-terracotta-pot.png)
+0ce46e4f-6354-42d3-98b8-2239be3bbd31.png → arrangements-decorative (wicker-basket-mixed-plants-arrangement-2.png)
+0d2b0535-9e7a-417b-a65e-66fa2e7aa4a6.png → arrangements-decorative (modern-dining-room-plant-arrangement.png)
+0ee768e7-a10f-4219-a860-91c34c9c9260.png → individual-plants (calathea-ornata-striped-leaves.png)
+0feaa11c-af07-4bbc-bdfc-4941bfac8593.png → corporate-offices (fiddle-leaf-fig-office-lobby.png)
+14be2c1e-669b-4578-b1a4-96497d23a645.png → corporate-offices (office-space-mixed-plant-installation.png)
+15d3c644-63db-450b-84cb-57bade84ab3f.png → arrangements-decorative (succulent-arrangement-decorative-bowl.png)
+1683fbf6-99c1-4c4c-818b-2e3644960f47.png → individual-plants (spider-plant-white-ceramic-pot.png)
+195074f0-2046-483e-ad8d-35d862966bdb.png → arrangements-decorative (succulents-for-smiles-display.png)
+1bd45f7a-3658-4382-ae7e-22ae907bef12.png → arrangements-decorative (tiered-succulent-display-wooden-stand.png)
+1d594861-1b48-453b-b860-d23e913d9397.png → branding-assets (atlanta-house-plants-branded-succulent-display.png)
+1e3d40d2-3db3-4934-a543-ce5283ac50b4.png → individual-plants (herb-garden-white-planter.png)
+1e9f2a96-ad5e-43d3-88a4-bae956c8196e.png → outdoor-commercial (window-box-flower-arrangement-storefront.png)
+1f78b53b-2623-4bc4-b83c-246c1a7fd6a7.png → individual-plants (rubber-plant-wicker-basket-office.png)
+2156f2f3-8215-4569-802c-791ca5b929c8.png → individual-plants (air-plant-wooden-holder-minimal.png)
+23e1d9b7-3cb4-4ddf-babe-3263f443aeaf.png → service-maintenance (plant-repotting-root-system-care.png)
+
+PROCESSING STATUS: 
+Started systematic categorization of all 165 images...

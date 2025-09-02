@@ -160,6 +160,88 @@ const PlantDoctor = () => {
         </div>
       </section>
 
+      {/* Before/After Transformations - HIGH IMPACT SECTION */}
+      <BeforeAfterTransformations onBookingClick={handleBookingClick} />
+
+      {/* Service Process Visualization - Week 1 Enhancement */}
+      <section className="py-20 bg-gradient-to-br from-blue-50 to-green-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+              Professional Plant Doctor Process
+            </h2>
+            <p className="text-xl text-blue-700 max-w-4xl mx-auto leading-relaxed">
+              See how Nick's systematic approach delivers guaranteed results through scientific plant health assessment and treatment
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-3 gap-8 mb-16">
+            {/* Step 1: Diagnosis */}
+            <div className="text-center">
+              <div className="relative mb-8">
+                <img 
+                  src="/images/service-maintenance/nick-plant-doctor-lab-coat.png"
+                  alt="Nick performing professional plant diagnosis"
+                  className="w-full h-64 object-cover rounded-2xl shadow-lg"
+                />
+                <div className="absolute -top-4 -left-4 bg-red-600 text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl shadow-lg">
+                  1
+                </div>
+              </div>
+              <h3 className="text-2xl font-bold text-foreground mb-4">Professional Diagnosis</h3>
+              <p className="text-gray-700">
+                Comprehensive plant health assessment using scientific methodology to identify root causes of plant problems and stress factors.
+              </p>
+            </div>
+
+            {/* Step 2: Treatment */}
+            <div className="text-center">
+              <div className="relative mb-8">
+                <img 
+                  src="/images/service-maintenance/professional-plant-maintenance.png"
+                  alt="Professional plant treatment and care"
+                  className="w-full h-64 object-cover rounded-2xl shadow-lg"
+                />
+                <div className="absolute -top-4 -left-4 bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl shadow-lg">
+                  2
+                </div>
+              </div>
+              <h3 className="text-2xl font-bold text-foreground mb-4">Expert Treatment</h3>
+              <p className="text-gray-700">
+                Targeted therapeutic interventions including soil treatment, pest management, pruning, and environmental optimization.
+              </p>
+            </div>
+
+            {/* Step 3: Results */}
+            <div className="text-center">
+              <div className="relative mb-8">
+                <img 
+                  src="/images/corporate-offices/bird-of-paradise-atlanta-skyline.png"
+                  alt="Healthy thriving plants after treatment"
+                  className="w-full h-64 object-cover rounded-2xl shadow-lg"
+                />
+                <div className="absolute -top-4 -left-4 bg-green-600 text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl shadow-lg">
+                  3
+                </div>
+              </div>
+              <h3 className="text-2xl font-bold text-foreground mb-4">Guaranteed Results</h3>
+              <p className="text-gray-700">
+                Vibrant, healthy plants with customized care protocols ensuring long-term success and workplace enhancement.
+              </p>
+            </div>
+          </div>
+
+          <div className="text-center">
+            <Button 
+              onClick={handleBookingClick}
+              className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 text-lg"
+            >
+              Experience the Professional Difference - $149
+            </Button>
+          </div>
+        </div>
+      </section>
+
       {/* Plant Doctor's Tip Content Hub */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

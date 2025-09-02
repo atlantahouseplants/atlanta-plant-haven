@@ -6,25 +6,25 @@ import { ArrowRight } from "lucide-react";
 const GalleryPreview = () => {
   const featuredProjects = [
     {
-      image: "/lovable-uploads/e1930419-ea64-46bc-b42a-ed13b1f43ab1.png",
+      image: "/images/corporate-offices/monstera-installation-office-productivity.png",
       title: "Corporate Office Design",
       description: "Monstera installation enhancing productivity",
       category: "Office Plants"
     },
     {
-      image: "/lovable-uploads/f816d29c-4694-4186-8770-9e16ab935892.png",
+      image: "/images/outdoor-commercial/patio-planters-flowers-shrubs.png",
       title: "Custom Color Planters",
       description: "Seasonal outdoor planters for business patio",
       category: "Color Planters"
     },
     {
-      image: "/lovable-uploads/9a6a89cb-90a7-48df-a670-52cf61f223ea.png",
+      image: "/images/branding-assets/nick-plant-doctor-portrait-circular.png",
       title: "Plant Doctor in Action",
       description: "Professional plant care service",
       category: "Plant Doctor"
     },
     {
-      image: "/lovable-uploads/6ff8c577-b398-4b80-990c-e948788ec260.png",
+      image: "/images/arrangements-decorative/elegant-ceramic-bowl-seasonal-arrangement.png",
       title: "Elegant Seasonal Bowls",
       description: "Custom ceramic bowl arrangements",
       category: "Color Bowls"

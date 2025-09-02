@@ -66,7 +66,7 @@ const WhyChooseUs = () => {
           <div className="grid lg:grid-cols-2 gap-8 items-center">
             <div className="flex items-center">
               <img 
-                src="/lovable-uploads/9a6a89cb-90a7-48df-a670-52cf61f223ea.png" 
+                src="/images/branding-assets/nick-plant-doctor-portrait-circular.png" 
                 alt="Nick - Plant Doctor providing professional plant care"
                 className="w-28 h-28 rounded-full object-cover border-4 border-green-600 shadow-lg"
               />

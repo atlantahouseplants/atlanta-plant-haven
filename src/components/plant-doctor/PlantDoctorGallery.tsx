@@ -9,32 +9,32 @@ const PlantDoctorGallery = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {[
             {
-              src: "/lovable-uploads/c3ee3638-8644-45e6-84ea-1e5b14729894.png",
+              src: "/images/service-maintenance/nick-office-plant-health-check-assessment.png",
               title: "Office Plant Health Check",
               description: "Comprehensive plant assessment and treatment"
             },
             {
-              src: "/lovable-uploads/8c5ed3a9-b558-49b8-b17a-bb0cb35c3af7.png", 
+              src: "/images/service-maintenance/nick-professional-repotting-expert-soil-care.png", 
               title: "Professional Repotting",
               description: "Expert repotting with proper soil and care"
             },
             {
-              src: "/lovable-uploads/6af17da1-48bd-4128-9ec9-22df7aebc7eb.png",
+              src: "/images/service-maintenance/nick-plant-problem-diagnosis-treatment.png",
               title: "Plant Problem Diagnosis",
               description: "Identifying and treating plant health issues"
             },
             {
-              src: "/lovable-uploads/23e1d9b7-3cb4-4ddf-babe-3263f443aeaf.png",
+              src: "/images/service-maintenance/plant-repotting-root-system-care.png",
               title: "Root Health Analysis", 
               description: "Detailed examination of root systems"
             },
             {
-              src: "/lovable-uploads/4355b0a9-2fd8-44cd-b9f9-2901fc3ba442.png",
+              src: "/images/service-maintenance/nick-plant-care-education-teaching.png",
               title: "Plant Care Education",
               description: "Teaching proper plant care techniques"
             },
             {
-              src: "/lovable-uploads/b5845403-04cf-4ea1-8d82-89020044c1bd.png",
+              src: "/images/service-maintenance/nick-follow-up-care-plant-thriving.png"
               title: "Follow-up Care",
               description: "Ensuring plants continue to thrive"
             }
