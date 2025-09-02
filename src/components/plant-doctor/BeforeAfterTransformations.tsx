@@ -52,7 +52,7 @@ const BeforeAfterTransformations = ({ onBookingClick }: BeforeAfterTransformatio
       beforeAlt: "Prayer plant before treatment - showing damaged and browning leaves",
       beforeTitle: "Severely Damaged Prayer Plant",
       beforeDescription: "This prayer plant showed extensive leaf damage with browning, curling, and deteriorating foliage",
-      afterImage: "/images/service-maintenance/prayer-plant-after-vibrant-healthy-foliage.png"
+      afterImage: "/images/service-maintenance/prayer-plant-after-vibrant-healthy-foliage.png",
       afterAlt: "Prayer plant after treatment - showing vibrant, healthy foliage",
       afterTitle: "Stunning Recovery & New Growth",
       afterDescription: "After Nick's expert care, the prayer plant displays beautiful, vibrant patterns and healthy new foliage",
