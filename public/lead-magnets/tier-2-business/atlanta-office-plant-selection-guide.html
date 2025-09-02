@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atlanta Office Plant Selection Guide - Atlanta Houseplants</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+            background: #ffffff;
+        }
+        
+        .container {
+            max-width: 8.5in;
+            margin: 0 auto;
+            padding: 0.5in;
+            background: white;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 30px 0;
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            border-radius: 12px;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+        
+        .tagline {
+            font-size: 14px;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+        
+        .title {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        
+        .subtitle {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+            page-break-inside: avoid;
+        }
+        
+        .section-title {
+            font-size: 22px;
+            font-weight: 700;
+            color: #059669;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #10b981;
+            padding-bottom: 8px;
+        }
+        
+        .climate-overview {
+            background: #ecfdf5;
+            border: 2px solid #10b981;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .plant-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .plant-card {
+            background: #f8fafc;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .plant-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            border-color: #10b981;
+        }
+        
+        .plant-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+        
+        .plant-icon {
+            font-size: 24px;
+            margin-right: 12px;
+        }
+        
+        .plant-name {
+            font-size: 18px;
+            font-weight: 700;
+            color: #059669;
+            flex-grow: 1;
+        }
+        
+        .difficulty-badge {
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        
+        .easy { background: #dcfce7; color: #166534; }
+        .moderate { background: #fef3c7; color: #92400e; }
+        .advanced { background: #fecaca; color: #991b1b; }
+        
+        .plant-details {
+            margin-bottom: 16px;
+        }
+        
+        .detail-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+        
+        .detail-label {
+            color: #6b7280;
+            font-weight: 500;
+        }
+        
+        .detail-value {
+            font-weight: 600;
+            color: #1f2937;
+        }
+        
+        .plant-benefits {
+            background: white;
+            border-radius: 8px;
+            padding: 12px;
+            border: 1px solid #d1d5db;
+        }
+        
+        .benefits-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: #059669;
+            margin-bottom: 8px;
+        }
+        
+        .benefits-list {
+            font-size: 12px;
+            color: #374151;
+            line-height: 1.5;
+        }
+        
+        .rating-stars {
+            color: #f59e0b;
+            margin-left: 8px;
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 14px;
+        }
+        
+        .comparison-table th,
+        .comparison-table td {
+            border: 1px solid #d1d5db;
+            padding: 12px 8px;
+            text-align: center;
+        }
+        
+        .comparison-table th {
+            background: #059669;
+            color: white;
+            font-weight: 700;
+        }
+        
+        .comparison-table tr:nth-child(even) {
+            background: #f9fafb;
+        }
+        
+        .placement-guide {
+            background: #f0f9ff;
+            border: 2px solid #3b82f6;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .placement-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-top: 16px;
+        }
+        
+        .placement-zone {
+            background: white;
+            border-radius: 8px;
+            padding: 16px;
+            border: 1px solid #cbd5e1;
+            text-align: center;
+        }
+        
+        .zone-title {
+            font-weight: 700;
+            color: #1d4ed8;
+            margin-bottom: 8px;
+        }
+        
+        .zone-plants {
+            font-size: 12px;
+            color: #475569;
+        }
+        
+        .care-calendar {
+            background: #fef3c7;
+            border: 2px solid #f59e0b;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+            margin-top: 16px;
+        }
+        
+        .season-card {
+            background: white;
+            border-radius: 8px;
+            padding: 12px;
+            text-align: center;
+            border: 1px solid #f59e0b;
+        }
+        
+        .season-name {
+            font-weight: 700;
+            color: #92400e;
+            margin-bottom: 8px;
+        }
+        
+        .season-tasks {
+            font-size: 11px;
+            color: #78716c;
+            line-height: 1.4;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+            margin-top: 40px;
+        }
+        
+        @media print {
+            body { background: white; }
+            .container { box-shadow: none; padding: 0.25in; }
+            .plant-card { page-break-inside: avoid; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="logo">🌿 Atlanta Houseplants</div>
+            <div class="tagline">Climate-Specific Plant Solutions • Professional Office Environments</div>
+            <div class="title">Atlanta Office Plant Selection Guide</div>
+            <div class="subtitle">25+ Climate-Optimized Plants • Professional Placement Strategies • Seasonal Care Calendar</div>
+        </div>
+
+        <!-- Climate Overview -->
+        <div class="section">
+            <h2 class="section-title">🌡️ Atlanta Climate Considerations</h2>
+            <div class="climate-overview">
+                <h3 style="font-weight: 700; color: #059669; margin-bottom: 16px;">Why Atlanta Offices Need Specialized Plant Selection</h3>
+                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;">
+                    <div>
+                        <h4 style="font-weight: 600; margin-bottom: 8px; color: #1f2937;">Climate Challenges:</h4>
+                        <ul style="margin-left: 20px; font-size: 14px; line-height: 1.6;">
+                            <li><strong>High humidity summers</strong> (75-85%) - Requires good air circulation</li>
+                            <li><strong>Dry winter heating</strong> (30-40%) - Plants need humidity support</li>
+                            <li><strong>Variable light conditions</strong> - Due to frequent weather changes</li>
+                            <li><strong>HVAC fluctuations</strong> - Commercial buildings create microclimates</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 style="font-weight: 600; margin-bottom: 8px; color: #1f2937;">Office-Specific Factors:</h4>
+                        <ul style="margin-left: 20px; font-size: 14px; line-height: 1.6;">
+                            <li><strong>Fluorescent lighting</strong> - Most common in Atlanta offices</li>
+                            <li><strong>Limited natural light</strong> - Interior spaces need low-light plants</li>
+                            <li><strong>Consistent temperatures</strong> - 68-72°F year-round</li>
+                            <li><strong>Low maintenance needs</strong> - Professional environments require reliability</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Top Tier Plants -->
+        <div class="section">
+            <h2 class="section-title">⭐ Top Tier: Essential Atlanta Office Plants</h2>
+            <p style="margin-bottom: 20px; font-weight: 500;">These 8 plants are specifically chosen for Atlanta's climate and have proven success rates above 95% in local office environments:</p>
+            
+            <div class="plant-grid">
+                <div class="plant-card">
+                    <div class="plant-header">
+                        <div class="plant-icon">🐍</div>
+                        <div class="plant-name">Snake Plant</div>
+                        <div class="difficulty-badge easy">Easy</div>
+                    </div>
+                    <div class="plant-details">
+                        <div class="detail-row">
+                            <span class="detail-label">Light Needs:</span>
+                            <span class="detail-value">Low to Bright <span class="rating-stars">★★★★★</span></span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Water Frequency:</span>
+                            <span class="detail-value">Every 3-4 weeks</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Atlanta Success Rate:</span>
+                            <span class="detail-value">98%</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Air Purification:</span>
+                            <span class="detail-value">Excellent <span class="rating-stars">★★★★★</span></span>
+                        </div>
+                    </div>
+                    <div class="plant-benefits">
+                        <div class="benefits-title">Perfect for Atlanta Offices:</div>
+                        <div class="benefits-list">
+                            Thrives in HVAC environments • Handles humidity fluctuations • Removes formaldehyde and benzene • NASA-approved air purifier • Minimal care requirements
+                        </div>
+                    </div>
+                </div>
+
+                <div class="plant-card">
+                    <div class="plant-header">
+                        <div class="plant-icon">🌿</div>
+                        <div class="plant-name">ZZ Plant</div>
+                        <div class="difficulty-badge easy">Easy</div>
+                    </div>
+                    <div class="plant-details">
+                        <div class="detail-row">
+                            <span class="detail-label">Light Needs:</span>
+                            <span class="detail-value">Low to Moderate <span class="rating-stars">★★★★☆</span></span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Water Frequency:</span>
+                            <span class="detail-value">Every 2-3 weeks</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Atlanta Success Rate:</span>
+                            <span class="detail-value">96%</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Air Purification:</span>
+                            <span class="detail-value">Very Good <span class="rating-stars">★★★★☆</span></span>
+                        </div>
+                    </div>
+                    <div class="plant-benefits">
+                        <div class="benefits-title">Perfect for Atlanta Offices:</div>
+                        <div class="benefits-list">
+                            Glossy professional appearance • Tolerates neglect • Removes xylene and toluene • Drought resistant • Ideal for interior offices
+                        </div>
+                    </div>
+                </div>
+
+                <div class="plant-card">
+                    <div class="plant-header">
+                        <div class="plant-icon">🕊️</div>
+                        <div class="plant-name">Peace Lily</div>
+                        <div class="difficulty-badge moderate">Moderate</div>
+                    </div>
+                    <div class="plant-details">
+                        <div class="detail-row">
+                            <span class="detail-label">Light Needs:</span>
+                            <span class="detail-value">Low to Moderate <span class="rating-stars">★★★☆☆</span></span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Water Frequency:</span>
+                            <span class="detail-value">Weekly</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Atlanta Success Rate:</span>
+                            <span class="detail-value">94%</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Air Purification:</span>
+                            <span class="detail-value">Excellent <span class="rating-stars">★★★★★</span></span>
+                        </div>
+                    </div>
+                    <div class="plant-benefits">
+                        <div class="benefits-title">Perfect for Atlanta Offices:</div>
+                        <div class="benefits-list">
+                            Beautiful white flowers • Humidity indicator (wilts when thirsty) • Removes ammonia and acetone • Excellent for conference rooms • Professional aesthetic
+                        </div>
+                    </div>
+                </div>
+
+                <div class="plant-card">
+                    <div class="plant-header">
+                        <div class="plant-icon">🌱</div>
+                        <div class="plant-name">Pothos</div>
+                        <div class="difficulty-badge easy">Easy</div>
+                    </div>
+                    <div class="plant-details">
+                        <div class="detail-row">
+                            <span class="detail-label">Light Needs:</span>
+                            <span class="detail-label">Low to Bright <span class="rating-stars">★★★★★</span></span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Water Frequency:</span>
+                            <span class="detail-value">Every 1-2 weeks</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Atlanta Success Rate:</span>
+                            <span class="detail-value">97%</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Air Purification:</span>
+                            <span class="detail-value">Very Good <span class="rating-stars">★★★★☆</span></span>
+                        </div>
+                    </div>
+                    <div class="plant-benefits">
+                        <div class="benefits-title">Perfect for Atlanta Offices:</div>
+                        <div class="benefits-list">
+                            Trailing vine perfect for shelves • Fast-growing for quick impact • Removes carbon monoxide • Thrives in fluorescent light • Easy propagation
+                        </div>
+                    </div>
+                </div>
+
+                <div class="plant-card">
+                    <div class="plant-header">
+                        <div class="plant-icon">🌳</div>
+                        <div class="plant-name">Rubber Tree</div>
+                        <div class="difficulty-badge moderate">Moderate</div>
+                    </div>
+                    <div class="plant-details">
+                        <div class="detail-row">
+                            <span class="detail-label">Light Needs:</span>
+                            <span class="detail-value">Bright Indirect <span class="rating-stars">★★★☆☆</span></span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Water Frequency:</span>
+                            <span class="detail-value">Every 2 weeks</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Atlanta Success Rate:</span>
+                            <span class="detail-value">92%</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Air Purification:</span>
+                            <span class="detail-value">Excellent <span class="rating-stars">★★★★★</span></span>
+                        </div>
+                    </div>
+                    <div class="plant-benefits">
+                        <div class="benefits-title">Perfect for Atlanta Offices:</div>
+                        <div class="benefits-list">
+                            Impressive statement plant • Glossy leaves make professional impact • Top air purifier for offices • Fast-growing • Ideal for lobbies and reception areas
+                        </div>
+                    </div>
+                </div>
+
+                <div class="plant-card">
+                    <div class="plant-header">
+                        <div class="plant-icon">🌸</div>
+                        <div class="plant-name">Philodendron</div>
+                        <div class="difficulty-badge easy">Easy</div>
+                    </div>
+                    <div class="plant-details">
+                        <div class="detail-row">
+                            <span class="detail-label">Light Needs:</span>
+                            <span class="detail-value">Low to Bright <span class="rating-stars">★★★★☆</span></span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Water Frequency:</span>
+                            <span class="detail-value">Every 1-2 weeks</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Atlanta Success Rate:</span>
+                            <span class="detail-value">95%</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Air Purification:</span>
+                            <span class="detail-value">Good <span class="rating-stars">★★★☆☆</span></span>
+                        </div>
+                    </div>
+                    <div class="plant-benefits">
+                        <div class="benefits-title">Perfect for Atlanta Offices:</div>
+                        <div class="benefits-list">
+                            Heart-shaped leaves add warmth • Multiple varieties available • Adapts to office lighting • Low maintenance • Perfect for desk spaces
+                        </div>
+                    </div>
+                </div>
+
+                <div class="plant-card">
+                    <div class="plant-header">
+                        <div class="plant-icon">🕷️</div>
+                        <div class="plant-name">Spider Plant</div>
+                        <div class="difficulty-badge easy">Easy</div>
+                    </div>
+                    <div class="plant-details">
+                        <div class="detail-row">
+                            <span class="detail-label">Light Needs:</span>
+                            <span class="detail-value">Moderate to Bright <span class="rating-stars">★★★☆☆</span></span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Water Frequency:</span>
+                            <span class="detail-value">Every 1-2 weeks</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Atlanta Success Rate:</span>
+                            <span class="detail-value">93%</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Air Purification:</span>
+                            <span class="detail-value">Very Good <span class="rating-stars">★★★★☆</span></span>
+                        </div>
+                    </div>
+                    <div class="plant-benefits">
+                        <div class="benefits-title">Perfect for Atlanta Offices:</div>
+                        <div class="benefits-list">
+                            Produces baby plants • Excellent for hanging baskets • Removes formaldehyde • Safe for offices with pets • Creates visual interest
+                        </div>
+                    </div>
+                </div>
+
+                <div class="plant-card">
+                    <div class="plant-header">
+                        <div class="plant-icon">🌵</div>
+                        <div class="plant-name">Dracaena</div>
+                        <div class="difficulty-badge moderate">Moderate</div>
+                    </div>
+                    <div class="plant-details">
+                        <div class="detail-row">
+                            <span class="detail-label">Light Needs:</span>
+                            <span class="detail-value">Low to Moderate <span class="rating-stars">★★★★☆</span></span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Water Frequency:</span>
+                            <span class="detail-value">Every 2-3 weeks</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Atlanta Success Rate:</span>
+                            <span class="detail-value">91%</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Air Purification:</span>
+                            <span class="detail-value">Excellent <span class="rating-stars">★★★★★</span></span>
+                        </div>
+                    </div>
+                    <div class="plant-benefits">
+                        <div class="benefits-title">Perfect for Atlanta Offices:</div>
+                        <div class="benefits-list">
+                            Architectural appearance • Multiple varieties (Marginata, Janet Craig) • Excellent corner plants • Removes benzene and trichloroethylene • Professional aesthetic
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Selection Comparison -->
+        <div class="section">
+            <h2 class="section-title">📊 Quick Selection Comparison Chart</h2>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Plant</th>
+                        <th>Light Tolerance</th>
+                        <th>Water Frequency</th>
+                        <th>Atlanta Success</th>
+                        <th>Air Purification</th>
+                        <th>Best Office Zone</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Snake Plant</strong></td>
+                        <td>★★★★★</td>
+                        <td>3-4 weeks</td>
+                        <td>98%</td>
+                        <td>★★★★★</td>
+                        <td>Any</td>
+                    </tr>
+                    <tr>
+                        <td><strong>ZZ Plant</strong></td>
+                        <td>★★★★☆</td>
+                        <td>2-3 weeks</td>
+                        <td>96%</td>
+                        <td>★★★★☆</td>
+                        <td>Interior Offices</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Peace Lily</strong></td>
+                        <td>★★★☆☆</td>
+                        <td>1 week</td>
+                        <td>94%</td>
+                        <td>★★★★★</td>
+                        <td>Conference Rooms</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Pothos</strong></td>
+                        <td>★★★★★</td>
+                        <td>1-2 weeks</td>
+                        <td>97%</td>
+                        <td>★★★★☆</td>
+                        <td>Shelves & High Areas</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Rubber Tree</strong></td>
+                        <td>★★★☆☆</td>
+                        <td>2 weeks</td>
+                        <td>92%</td>
+                        <td>★★★★★</td>
+                        <td>Reception & Lobbies</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Philodendron</strong></td>
+                        <td>★★★★☆</td>
+                        <td>1-2 weeks</td>
+                        <td>95%</td>
+                        <td>★★★☆☆</td>
+                        <td>Desk Areas</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Spider Plant</strong></td>
+                        <td>★★★☆☆</td>
+                        <td>1-2 weeks</td>
+                        <td>93%</td>
+                        <td>★★★★☆</td>
+                        <td>Hanging Displays</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Dracaena</strong></td>
+                        <td>★★★★☆</td>
+                        <td>2-3 weeks</td>
+                        <td>91%</td>
+                        <td>★★★★★</td>
+                        <td>Corners & Tall Spaces</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Strategic Placement Guide -->
+        <div class="section">
+            <h2 class="section-title">📍 Strategic Office Placement Guide</h2>
+            <div class="placement-guide">
+                <h3 style="font-weight: 700; color: #1d4ed8; margin-bottom: 16px;">Maximize Impact with Professional Placement</h3>
+                <div class="placement-grid">
+                    <div class="placement-zone">
+                        <div class="zone-title">Reception & Lobby</div>
+                        <div class="zone-plants">
+                            <strong>Best Plants:</strong><br>
+                            Rubber Tree, Peace Lily, Large Snake Plants
+                            <br><br>
+                            <strong>Strategy:</strong><br>
+                            Create impressive first impressions with statement plants that handle high-traffic areas
+                        </div>
+                    </div>
+                    
+                    <div class="placement-zone">
+                        <div class="zone-title">Individual Offices</div>
+                        <div class="zone-plants">
+                            <strong>Best Plants:</strong><br>
+                            ZZ Plant, Small Snake Plants, Philodendron
+                            <br><br>
+                            <strong>Strategy:</strong><br>
+                            Low-maintenance options that thrive in varying light conditions and limited space
+                        </div>
+                    </div>
+                    
+                    <div class="placement-zone">
+                        <div class="zone-title">Open Office Areas</div>
+                        <div class="zone-plants">
+                            <strong>Best Plants:</strong><br>
+                            Pothos on shelves, Snake Plants as dividers, Spider Plants hanging
+                            <br><br>
+                            <strong>Strategy:</strong><br>
+                            Use plants to create natural boundaries and improve air quality for multiple employees
+                        </div>
+                    </div>
+                    
+                    <div class="placement-zone">
+                        <div class="zone-title">Conference Rooms</div>
+                        <div class="zone-plants">
+                            <strong>Best Plants:</strong><br>
+                            Peace Lily, Medium Dracaena, Philodendron
+                            <br><br>
+                            <strong>Strategy:</strong><br>
+                            Plants that enhance focus and air quality during meetings without being distracting
+                        </div>
+                    </div>
+                    
+                    <div class="placement-zone">
+                        <div class="zone-title">Break Rooms</div>
+                        <div class="zone-plants">
+                            <strong>Best Plants:</strong><br>
+                            Pothos, Spider Plants, Peace Lily
+                            <br><br>
+                            <strong>Strategy:</strong><br>
+                            Create a relaxing atmosphere that encourages stress relief during breaks
+                        </div>
+                    </div>
+                    
+                    <div class="placement-zone">
+                        <div class="zone-title">Hallways & Corridors</div>
+                        <div class="zone-plants">
+                            <strong>Best Plants:</strong><br>
+                            Tall Snake Plants, Dracaena varieties, ZZ Plants
+                            <br><br>
+                            <strong>Strategy:</strong><br>
+                            Low-light tolerant plants that add life to transitional spaces without obstruction
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Atlanta Seasonal Care Calendar -->
+        <div class="section">
+            <h2 class="section-title">📅 Atlanta Seasonal Care Calendar</h2>
+            <div class="care-calendar">
+                <h3 style="font-weight: 700; color: #92400e; margin-bottom: 16px;">Optimize Care for Atlanta's Climate Seasons</h3>
+                <div class="calendar-grid">
+                    <div class="season-card">
+                        <div class="season-name">Spring (Mar-May)</div>
+                        <div class="season-tasks">
+                            <strong>Key Tasks:</strong><br>
+                            • Increase watering frequency<br>
+                            • Begin monthly fertilizing<br>
+                            • Rotate plants quarterly<br>
+                            • Check for new growth<br>
+                            • Adjust for increasing daylight
+                        </div>
+                    </div>
+                    
+                    <div class="season-card">
+                        <div class="season-name">Summer (Jun-Aug)</div>
+                        <div class="season-tasks">
+                            <strong>Key Tasks:</strong><br>
+                            • Monitor humidity levels<br>
+                            • Increase air circulation<br>
+                            • Weekly watering checks<br>
+                            • Move plants away from vents<br>
+                            • Peak growing season care
+                        </div>
+                    </div>
+                    
+                    <div class="season-card">
+                        <div class="season-name">Fall (Sep-Nov)</div>
+                        <div class="season-tasks">
+                            <strong>Key Tasks:</strong><br>
+                            • Reduce watering frequency<br>
+                            • Stop fertilizing by October<br>
+                            • Prepare for heating season<br>
+                            • Rotate for changing light<br>
+                            • Clean leaves monthly
+                        </div>
+                    </div>
+                    
+                    <div class="season-card">
+                        <div class="season-name">Winter (Dec-Feb)</div>
+                        <div class="season-tasks">
+                            <strong>Key Tasks:</strong><br>
+                            • Add humidifiers near plants<br>
+                            • Reduce watering significantly<br>
+                            • Check for heating damage<br>
+                            • Maintain minimum temperatures<br>
+                            • Plan for spring growth
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 20px; background: white; border-radius: 8px; padding: 16px; border: 1px solid #f59e0b;">
+                    <strong>💡 Atlanta-Specific Tips:</strong>
+                    <ul style="margin-left: 20px; margin-top: 8px; font-size: 14px; line-height: 1.6;">
+                        <li><strong>Humidity Management:</strong> Atlanta's summer humidity can cause overwatering - reduce frequency June-August</li>
+                        <li><strong>Winter Heating:</strong> Office heating systems create very dry conditions - use humidity trays</li>
+                        <li><strong>Pollen Season:</strong> Clean leaves more frequently during Atlanta's intense pollen season (March-May)</li>
+                        <li><strong>Storm Season:</strong> Have backup plans for power outages affecting HVAC systems</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Professional Implementation -->
+        <div class="section">
+            <h2 class="section-title">⚡ Professional Implementation Strategy</h2>
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;">
+                <div style="background: #f8fafc; border: 2px solid #e2e8f0; border-radius: 12px; padding: 20px;">
+                    <h3 style="color: #059669; font-weight: 700; margin-bottom: 12px;">🎯 Phase 1: Foundation (Week 1-2)</h3>
+                    <ul style="margin-left: 16px; font-size: 14px; line-height: 1.6;">
+                        <li>Start with 3-5 Top Tier plants in high-visibility areas</li>
+                        <li>Focus on Reception, Conference Rooms, and Break Areas</li>
+                        <li>Choose only Easy difficulty plants for initial success</li>
+                        <li>Establish watering and care protocols</li>
+                        <li>Document employee response and feedback</li>
+                    </ul>
+                </div>
+                
+                <div style="background: #f8fafc; border: 2px solid #e2e8f0; border-radius: 12px; padding: 20px;">
+                    <h3 style="color: #059669; font-weight: 700; margin-bottom: 12px;">🚀 Phase 2: Expansion (Week 3-4)</h3>
+                    <ul style="margin-left: 16px; font-size: 14px; line-height: 1.6;">
+                        <li>Add plants to individual offices and workstations</li>
+                        <li>Introduce Moderate difficulty plants as confidence builds</li>
+                        <li>Create plant clusters for maximum air purification impact</li>
+                        <li>Train office managers on basic care techniques</li>
+                        <li>Implement quarterly plant rotation schedule</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div style="background: #ecfdf5; border: 2px solid #10b981; border-radius: 8px; padding: 16px; margin-top: 20px;">
+                <strong>🎁 Atlanta Houseplants Advantage:</strong>
+                <ul style="margin-left: 20px; margin-top: 8px; font-size: 14px; line-height: 1.6;">
+                    <li><strong>Local Climate Expertise:</strong> 5+ years optimizing plants for Atlanta office conditions</li>
+                    <li><strong>Professional Installation:</strong> Strategic placement based on your specific office layout</li>
+                    <li><strong>Maintenance Programs:</strong> Weekly, bi-weekly, or monthly service to ensure 100% plant health</li>
+                    <li><strong>Seasonal Adjustments:</strong> We handle Atlanta's climate challenges so you don't have to</li>
+                    <li><strong>Success Guarantee:</strong> 100% plant replacement guarantee with professional maintenance</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="cta-section">
+            <div style="font-size: 24px; font-weight: 700; margin-bottom: 12px;">Ready to Transform Your Atlanta Office?</div>
+            <div style="font-size: 16px; margin-bottom: 20px; opacity: 0.9;">Schedule your complimentary office assessment and receive a customized plant selection plan based on your specific space, lighting, and team preferences.</div>
+            
+            <div style="font-size: 18px; font-weight: 600; margin-bottom: 20px;">
+                <div style="margin-bottom: 8px;">📞 (470) 664-4039</div>
+                <div style="margin-bottom: 8px;">🌐 atlantahouseplants.com</div>
+                <div>📧 service@atlantahouseplants.com</div>
+            </div>
+            
+            <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.3); font-size: 14px; opacity: 0.9;">
+                <strong>🎯 Free Assessment Includes:</strong> Light analysis, air quality evaluation, custom plant recommendations<br>
+                <strong>⚡ Fast Implementation:</strong> Plants installed within 1 week of approval<br>
+                <strong>📊 Results Tracking:</strong> Monthly wellness impact reports and plant health monitoring
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 30px; color: #6b7280; font-size: 12px;">
+            © 2025 Atlanta Houseplants • Professional Plant Solutions for Atlanta Businesses<br>
+            State of Georgia Certified Plant Professional • Climate-Optimized Plant Selection Since 2019
+        </div>
+    </div>
+</body>
+</html>

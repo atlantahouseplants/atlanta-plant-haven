@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Executive Plant Program Proposal Template - Atlanta Houseplants</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+            background: #ffffff;
+        }
+        
+        .container {
+            max-width: 8.5in;
+            margin: 0 auto;
+            padding: 0.5in;
+            background: white;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 30px 0;
+            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+            color: white;
+            border-radius: 12px;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+        
+        .tagline {
+            font-size: 14px;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+        
+        .title {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        
+        .subtitle {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+            page-break-inside: avoid;
+        }
+        
+        .section-title {
+            font-size: 22px;
+            font-weight: 700;
+            color: #1e40af;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #3b82f6;
+            padding-bottom: 8px;
+        }
+        
+        .template-note {
+            background: #eff6ff;
+            border: 2px solid #3b82f6;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .slide-template {
+            background: #f8fafc;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 24px;
+            page-break-inside: avoid;
+        }
+        
+        .slide-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+        
+        .slide-number {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 800;
+            margin-right: 16px;
+        }
+        
+        .slide-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #1f2937;
+        }
+        
+        .slide-content {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            border: 1px solid #d1d5db;
+        }
+        
+        .content-section {
+            margin-bottom: 16px;
+        }
+        
+        .content-section:last-child {
+            margin-bottom: 0;
+        }
+        
+        .content-label {
+            font-weight: 700;
+            color: #374151;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+        
+        .content-text {
+            font-size: 13px;
+            color: #6b7280;
+            line-height: 1.6;
+        }
+        
+        .placeholder {
+            background: #fef3c7;
+            border: 1px solid #f59e0b;
+            border-radius: 4px;
+            padding: 8px 12px;
+            font-style: italic;
+            color: #92400e;
+            display: inline-block;
+            margin: 4px 0;
+        }
+        
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 12px 0;
+            font-size: 12px;
+        }
+        
+        .data-table th,
+        .data-table td {
+            border: 1px solid #d1d5db;
+            padding: 8px;
+            text-align: left;
+        }
+        
+        .data-table th {
+            background: #f3f4f6;
+            font-weight: 700;
+            color: #374151;
+        }
+        
+        .highlight-box {
+            background: #ecfdf5;
+            border-left: 4px solid #10b981;
+            padding: 12px 16px;
+            margin: 12px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .highlight-title {
+            font-weight: 700;
+            color: #059669;
+            margin-bottom: 4px;
+        }
+        
+        .bullet-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+        
+        .bullet-section {
+            background: #f9fafb;
+            border-radius: 8px;
+            padding: 12px;
+        }
+        
+        .bullet-section ul {
+            margin-left: 16px;
+            font-size: 12px;
+            line-height: 1.5;
+        }
+        
+        .roi-calculator {
+            background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+            border: 2px solid #10b981;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 16px 0;
+        }
+        
+        .calc-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-top: 12px;
+        }
+        
+        .calc-item {
+            background: white;
+            border-radius: 8px;
+            padding: 12px;
+            text-align: center;
+            border: 1px solid #10b981;
+        }
+        
+        .calc-label {
+            font-size: 11px;
+            color: #6b7280;
+            margin-bottom: 4px;
+        }
+        
+        .calc-value {
+            font-size: 18px;
+            font-weight: 800;
+            color: #059669;
+        }
+        
+        .timeline-visual {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+            margin: 16px 0;
+        }
+        
+        .timeline-phase {
+            background: white;
+            border-radius: 8px;
+            padding: 12px;
+            text-align: center;
+            border: 2px solid #e2e8f0;
+            position: relative;
+        }
+        
+        .timeline-phase:not(:last-child)::after {
+            content: '→';
+            position: absolute;
+            right: -18px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #6b7280;
+            font-weight: bold;
+        }
+        
+        .phase-number {
+            background: #3b82f6;
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 8px;
+            font-weight: 700;
+            font-size: 12px;
+        }
+        
+        .phase-title {
+            font-weight: 600;
+            font-size: 12px;
+            margin-bottom: 4px;
+            color: #1f2937;
+        }
+        
+        .phase-duration {
+            font-size: 10px;
+            color: #6b7280;
+        }
+        
+        .appendix-section {
+            background: #f3f4f6;
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 16px;
+        }
+        
+        .appendix-title {
+            font-weight: 700;
+            color: #374151;
+            margin-bottom: 8px;
+        }
+        
+        .appendix-content {
+            font-size: 12px;
+            color: #6b7280;
+            line-height: 1.5;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+            color: white;
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+            margin-top: 40px;
+        }
+        
+        @media print {
+            body { background: white; }
+            .container { box-shadow: none; padding: 0.25in; }
+            .slide-template { page-break-inside: avoid; page-break-before: auto; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="logo">🏢 Atlanta Houseplants</div>
+            <div class="tagline">C-Suite Presentation Template • Executive Decision Framework • ROI Justification</div>
+            <div class="title">Executive Plant Program Proposal Template</div>
+            <div class="subtitle">Professional Presentation Framework • Budget Justification • Implementation Roadmap</div>
+        </div>
+
+        <!-- Template Instructions -->
+        <div class="template-note">
+            <h3 style="font-weight: 700; color: #1e40af; margin-bottom: 16px;">📋 How to Use This Template</h3>
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;">
+                <div>
+                    <h4 style="font-weight: 600; margin-bottom: 8px; color: #1f2937;">Customization Instructions:</h4>
+                    <ul style="margin-left: 20px; font-size: 14px; line-height: 1.6; color: #6b7280;">
+                        <li>Replace all <span class="placeholder">[PLACEHOLDER TEXT]</span> with your specific information</li>
+                        <li>Update financial calculations with your actual employee counts and costs</li>
+                        <li>Customize timeline based on your implementation preferences</li>
+                        <li>Add your company logo and branding as needed</li>
+                        <li>Include industry-specific benefits relevant to your business</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="font-weight: 600; margin-bottom: 8px; color: #1f2937;">Presentation Tips:</h4>
+                    <ul style="margin-left: 20px; font-size: 14px; line-height: 1.6; color: #6b7280;">
+                        <li>Focus on ROI and business impact, not just aesthetics</li>
+                        <li>Use data from your industry for maximum relevance</li>
+                        <li>Prepare for questions about maintenance and costs</li>
+                        <li>Have backup slides ready with detailed implementation plans</li>
+                        <li>Schedule presentation when decision makers can attend</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 1: Title Slide -->
+        <div class="slide-template">
+            <div class="slide-header">
+                <div class="slide-number">1</div>
+                <div class="slide-title">Title Slide</div>
+            </div>
+            <div class="slide-content">
+                <div class="content-section">
+                    <div class="content-label">Presentation Title:</div>
+                    <div class="content-text">
+                        <span class="placeholder">[COMPANY NAME]</span> Workplace Wellness Initiative:<br>
+                        Strategic Plant Program Proposal
+                    </div>
+                </div>
+                <div class="content-section">
+                    <div class="content-label">Presenter Information:</div>
+                    <div class="content-text">
+                        Presented by: <span class="placeholder">[YOUR NAME, TITLE]</span><br>
+                        Date: <span class="placeholder">[PRESENTATION DATE]</span><br>
+                        Purpose: Executive approval for workplace plant program implementation
+                    </div>
+                </div>
+                <div class="content-section">
+                    <div class="content-label">Presentation Overview:</div>
+                    <div class="content-text">
+                        • Business case and ROI analysis<br>
+                        • Implementation strategy and timeline<br>
+                        • Budget requirements and approval request
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 2: Executive Summary -->
+        <div class="slide-template">
+            <div class="slide-header">
+                <div class="slide-number">2</div>
+                <div class="slide-title">Executive Summary</div>
+            </div>
+            <div class="slide-content">
+                <div class="content-section">
+                    <div class="content-label">Program Overview:</div>
+                    <div class="content-text">
+                        Implementation of a professional plant program to enhance employee wellness, productivity, and workplace satisfaction at <span class="placeholder">[COMPANY NAME]</span>.
+                    </div>
+                </div>
+                
+                <div class="highlight-box">
+                    <div class="highlight-title">Key Benefits Summary</div>
+                    <div class="bullet-grid">
+                        <div class="bullet-section">
+                            <strong>Financial Impact:</strong>
+                            <ul>
+                                <li><span class="placeholder">15%</span> productivity increase</li>
+                                <li><span class="placeholder">$[X]</span> annual ROI</li>
+                                <li><span class="placeholder">25%</span> reduction in sick days</li>
+                                <li><span class="placeholder">X%</span> improvement in retention</li>
+                            </ul>
+                        </div>
+                        <div class="bullet-section">
+                            <strong>Strategic Value:</strong>
+                            <ul>
+                                <li>Enhanced employer brand</li>
+                                <li>Improved recruitment success</li>
+                                <li>Better client impressions</li>
+                                <li>Sustainability leadership</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="content-section">
+                    <div class="content-label">Investment Required:</div>
+                    <div class="content-text">
+                        Total Year 1 Investment: <span class="placeholder">$[AMOUNT]</span><br>
+                        Ongoing Annual Cost: <span class="placeholder">$[AMOUNT]</span><br>
+                        Payback Period: <span class="placeholder">[X] months</span>
+                    </div>
+                </div>
+                
+                <div class="content-section">
+                    <div class="content-label">Recommendation:</div>
+                    <div class="content-text">
+                        Approve <span class="placeholder">$[AMOUNT]</span> for immediate implementation of Phase 1 plant program with <span class="placeholder">[X]</span> strategic plants and professional maintenance service.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3: Business Challenge -->
+        <div class="slide-template">
+            <div class="slide-header">
+                <div class="slide-number">3</div>
+                <div class="slide-title">Current Workplace Challenge</div>
+            </div>
+            <div class="slide-content">
+                <div class="content-section">
+                    <div class="content-label">Employee Wellness Challenges:</div>
+                    <div class="bullet-grid">
+                        <div class="bullet-section">
+                            <strong>Current State Issues:</strong>
+                            <ul>
+                                <li>High stress levels reported in employee surveys</li>
+                                <li>Poor air quality in interior office spaces</li>
+                                <li>Sterile workplace environment lacks warmth</li>
+                                <li>Difficulty attracting top talent</li>
+                                <li>Above-average sick day usage</li>
+                            </ul>
+                        </div>
+                        <div class="bullet-section">
+                            <strong>Impact on Business:</strong>
+                            <ul>
+                                <li>Productivity below industry benchmarks</li>
+                                <li>Higher than desired turnover rates</li>
+                                <li>Increased healthcare costs</li>
+                                <li>Client feedback on office atmosphere</li>
+                                <li>Recruitment challenges vs competitors</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="content-section">
+                    <div class="content-label">Supporting Data:</div>
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Metric</th>
+                                <th>Current Performance</th>
+                                <th>Industry Benchmark</th>
+                                <th>Gap</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Employee Satisfaction</td>
+                                <td><span class="placeholder">[X]%</span></td>
+                                <td><span class="placeholder">[Y]%</span></td>
+                                <td><span class="placeholder">[Z]% below</span></td>
+                            </tr>
+                            <tr>
+                                <td>Average Sick Days/Employee</td>
+                                <td><span class="placeholder">[X] days</span></td>
+                                <td><span class="placeholder">[Y] days</span></td>
+                                <td><span class="placeholder">[Z] days above</span></td>
+                            </tr>
+                            <tr>
+                                <td>Annual Turnover Rate</td>
+                                <td><span class="placeholder">[X]%</span></td>
+                                <td><span class="placeholder">[Y]%</span></td>
+                                <td><span class="placeholder">[Z]% above</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="highlight-box">
+                    <div class="highlight-title">Opportunity for Improvement</div>
+                    Addressing workplace environment quality can directly impact employee wellness, productivity, and business performance metrics.
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 4: Proposed Solution -->
+        <div class="slide-template">
+            <div class="slide-header">
+                <div class="slide-number">4</div>
+                <div class="slide-title">Strategic Plant Program Solution</div>
+            </div>
+            <div class="slide-content">
+                <div class="content-section">
+                    <div class="content-label">Professional Plant Program Components:</div>
+                    <div class="bullet-grid">
+                        <div class="bullet-section">
+                            <strong>Strategic Plant Placement:</strong>
+                            <ul>
+                                <li><span class="placeholder">[X]</span> air-purifying plants in high-traffic areas</li>
+                                <li>Reception and lobby statement plants</li>
+                                <li>Conference room wellness plants</li>
+                                <li>Individual workstation options</li>
+                                <li>Break room relaxation zones</li>
+                            </ul>
+                        </div>
+                        <div class="bullet-section">
+                            <strong>Professional Maintenance:</strong>
+                            <ul>
+                                <li>Weekly expert plant care visits</li>
+                                <li>100% plant health guarantee</li>
+                                <li>Seasonal plant rotation program</li>
+                                <li>No employee time required</li>
+                                <li>Complete replacement coverage</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="content-section">
+                    <div class="content-label">Plant Selection Criteria:</div>
+                    <div class="content-text">
+                        All plants selected based on:
+                        • Atlanta climate optimization<br>
+                        • Office lighting conditions<br>
+                        • Air purification capabilities<br>
+                        • Professional appearance<br>
+                        • Low maintenance requirements<br>
+                        • Proven success in business environments
+                    </div>
+                </div>
+                
+                <div class="highlight-box">
+                    <div class="highlight-title">Why This Solution Works</div>
+                    <div class="content-text">
+                        • <strong>Immediate Impact:</strong> Visual transformation within 2 weeks<br>
+                        • <strong>Zero Staff Burden:</strong> Professional maintenance eliminates employee responsibility<br>
+                        • <strong>Proven ROI:</strong> Measurable results documented across 500+ Atlanta business installations<br>
+                        • <strong>Scalable Program:</strong> Easy to expand success to additional locations
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 5: ROI Analysis -->
+        <div class="slide-template">
+            <div class="slide-header">
+                <div class="slide-number">5</div>
+                <div class="slide-title">Return on Investment Analysis</div>
+            </div>
+            <div class="slide-content">
+                <div class="content-section">
+                    <div class="content-label">Financial Impact Calculation:</div>
+                    <div class="roi-calculator">
+                        <div style="font-weight: 700; color: #059669; margin-bottom: 12px; text-align: center;">Annual ROI Projection</div>
+                        <div class="calc-grid">
+                            <div class="calc-item">
+                                <div class="calc-label">Productivity Gains</div>
+                                <div class="calc-value"><span class="placeholder">$[X]</span></div>
+                            </div>
+                            <div class="calc-item">
+                                <div class="calc-label">Healthcare Savings</div>
+                                <div class="calc-value"><span class="placeholder">$[Y]</span></div>
+                            </div>
+                            <div class="calc-item">
+                                <div class="calc-label">Retention Value</div>
+                                <div class="calc-value"><span class="placeholder">$[Z]</span></div>
+                            </div>
+                        </div>
+                        <div style="text-align: center; margin-top: 16px; padding-top: 16px; border-top: 1px solid #10b981;">
+                            <div style="font-size: 14px; color: #059669; margin-bottom: 4px;">Total Annual Benefit</div>
+                            <div style="font-size: 28px; font-weight: 800; color: #059669;"><span class="placeholder">$[TOTAL]</span></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="content-section">
+                    <div class="content-label">ROI Calculation Methodology:</div>
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Benefit Category</th>
+                                <th>Calculation Basis</th>
+                                <th>Conservative Estimate</th>
+                                <th>Annual Value</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Productivity Increase</td>
+                                <td><span class="placeholder">[X]</span> employees × 15% improvement × avg salary <span class="placeholder">$[Y]</span></td>
+                                <td>10% improvement</td>
+                                <td><span class="placeholder">$[Z]</span></td>
+                            </tr>
+                            <tr>
+                                <td>Sick Day Reduction</td>
+                                <td><span class="placeholder">[X]</span> days saved × <span class="placeholder">$[Y]</span> cost per day</td>
+                                <td>15% reduction</td>
+                                <td><span class="placeholder">$[Z]</span></td>
+                            </tr>
+                            <tr>
+                                <td>Retention Improvement</td>
+                                <td><span class="placeholder">[X]</span> employees retained × <span class="placeholder">$[Y]</span> replacement cost</td>
+                                <td>10% improvement</td>
+                                <td><span class="placeholder">$[Z]</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="highlight-box">
+                    <div class="highlight-title">ROI Summary</div>
+                    Total Investment: <span class="placeholder">$[AMOUNT]</span><br>
+                    Annual Benefit: <span class="placeholder">$[AMOUNT]</span><br>
+                    <strong>ROI Multiple: <span class="placeholder">[X]x</span> return</strong><br>
+                    Payback Period: <span class="placeholder">[X] months</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 6: Implementation Timeline -->
+        <div class="slide-template">
+            <div class="slide-header">
+                <div class="slide-number">6</div>
+                <div class="slide-title">Implementation Timeline</div>
+            </div>
+            <div class="slide-content">
+                <div class="content-section">
+                    <div class="content-label">Phased Implementation Approach:</div>
+                    <div class="timeline-visual">
+                        <div class="timeline-phase">
+                            <div class="phase-number">1</div>
+                            <div class="phase-title">Assessment & Design</div>
+                            <div class="phase-duration">Week 1</div>
+                        </div>
+                        <div class="timeline-phase">
+                            <div class="phase-number">2</div>
+                            <div class="phase-title">Plant Selection & Procurement</div>
+                            <div class="phase-duration">Week 2</div>
+                        </div>
+                        <div class="timeline-phase">
+                            <div class="phase-number">3</div>
+                            <div class="phase-title">Installation & Setup</div>
+                            <div class="phase-duration">Week 3</div>
+                        </div>
+                        <div class="timeline-phase">
+                            <div class="phase-number">4</div>
+                            <div class="phase-title">Maintenance Launch</div>
+                            <div class="phase-duration">Week 4</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="content-section">
+                    <div class="content-label">Phase Details:</div>
+                    <div class="bullet-grid">
+                        <div class="bullet-section">
+                            <strong>Phase 1 - Assessment (Week 1):</strong>
+                            <ul>
+                                <li>Professional space analysis</li>
+                                <li>Light condition evaluation</li>
+                                <li>Strategic placement planning</li>
+                                <li>Custom plant selection</li>
+                                <li>Final proposal presentation</li>
+                            </ul>
+                        </div>
+                        <div class="bullet-section">
+                            <strong>Phase 2 - Procurement (Week 2):</strong>
+                            <ul>
+                                <li>Plant sourcing and preparation</li>
+                                <li>Premium planter selection</li>
+                                <li>Maintenance schedule setup</li>
+                                <li>Staff communication planning</li>
+                                <li>Installation scheduling</li>
+                            </ul>
+                        </div>
+                        <div class="bullet-section">
+                            <strong>Phase 3 - Installation (Week 3):</strong>
+                            <ul>
+                                <li>Professional plant placement</li>
+                                <li>Planter and display setup</li>
+                                <li>Initial plant care and watering</li>
+                                <li>Staff introduction and education</li>
+                                <li>Documentation and photography</li>
+                            </ul>
+                        </div>
+                        <div class="bullet-section">
+                            <strong>Phase 4 - Launch (Week 4):</strong>
+                            <ul>
+                                <li>Begin regular maintenance visits</li>
+                                <li>Monitor plant health and adaptation</li>
+                                <li>Collect employee feedback</li>
+                                <li>Adjust care protocols as needed</li>
+                                <li>Plan expansion phases</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="highlight-box">
+                    <div class="highlight-title">Success Milestones</div>
+                    • <strong>Week 2:</strong> Immediate visual impact and positive employee reactions<br>
+                    • <strong>Month 1:</strong> Improved air quality measurements<br>
+                    • <strong>Month 3:</strong> Employee wellness survey improvements<br>
+                    • <strong>Month 6:</strong> Measurable productivity and retention gains
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 7: Budget Breakdown -->
+        <div class="slide-template">
+            <div class="slide-header">
+                <div class="slide-number">7</div>
+                <div class="slide-title">Investment Requirements</div>
+            </div>
+            <div class="slide-content">
+                <div class="content-section">
+                    <div class="content-label">Year 1 Investment Breakdown:</div>
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Category</th>
+                                <th>Description</th>
+                                <th>Quantity</th>
+                                <th>Unit Cost</th>
+                                <th>Total Cost</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Premium Plants</td>
+                                <td>Professional-grade plants with planters</td>
+                                <td><span class="placeholder">[X]</span></td>
+                                <td><span class="placeholder">$[Y]</span></td>
+                                <td><span class="placeholder">$[Z]</span></td>
+                            </tr>
+                            <tr>
+                                <td>Installation</td>
+                                <td>Professional placement and setup</td>
+                                <td>1</td>
+                                <td><span class="placeholder">$[Y]</span></td>
+                                <td><span class="placeholder">$[Z]</span></td>
+                            </tr>
+                            <tr>
+                                <td>Weekly Maintenance</td>
+                                <td>Professional care service (52 weeks)</td>
+                                <td>52</td>
+                                <td><span class="placeholder">$[Y]</span></td>
+                                <td><span class="placeholder">$[Z]</span></td>
+                            </tr>
+                            <tr style="background: #f3f4f6; font-weight: bold;">
+                                <td colspan="4">TOTAL YEAR 1 INVESTMENT</td>
+                                <td><span class="placeholder">$[TOTAL]</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="content-section">
+                    <div class="content-label">Ongoing Annual Costs (Years 2+):</div>
+                    <div class="content-text">
+                        • Weekly maintenance service: <span class="placeholder">$[AMOUNT]</span><br>
+                        • Seasonal plant rotation: <span class="placeholder">$[AMOUNT]</span><br>
+                        • Plant replacements (covered): <span class="placeholder">$0</span><br>
+                        <strong>Total Annual: <span class="placeholder">$[TOTAL]</span></strong>
+                    </div>
+                </div>
+                
+                <div class="content-section">
+                    <div class="content-label">Cost Comparison:</div>
+                    <div class="calc-grid">
+                        <div class="calc-item">
+                            <div class="calc-label">Cost per Employee/Month</div>
+                            <div class="calc-value"><span class="placeholder">$[X]</span></div>
+                        </div>
+                        <div class="calc-item">
+                            <div class="calc-label">vs. Coffee Budget</div>
+                            <div class="calc-value"><span class="placeholder">[X]%</span></div>
+                        </div>
+                        <div class="calc-item">
+                            <div class="calc-label">vs. Office Snacks</div>
+                            <div class="calc-value"><span class="placeholder">[X]%</span></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="highlight-box">
+                    <div class="highlight-title">Investment Context</div>
+                    This plant program costs less per employee per month than typical office coffee service, while providing measurable wellness and productivity benefits with documented ROI.
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 8: Risk Mitigation -->
+        <div class="slide-template">
+            <div class="slide-header">
+                <div class="slide-number">8</div>
+                <div class="slide-title">Risk Mitigation & Success Assurance</div>
+            </div>
+            <div class="slide-content">
+                <div class="content-section">
+                    <div class="content-label">Program Guarantees:</div>
+                    <div class="bullet-grid">
+                        <div class="bullet-section">
+                            <strong>Plant Health Guarantee:</strong>
+                            <ul>
+                                <li>100% plant replacement coverage</li>
+                                <li>Professional maintenance expertise</li>
+                                <li>Immediate problem response</li>
+                                <li>No additional replacement costs</li>
+                                <li>Quality assurance protocols</li>
+                            </ul>
+                        </div>
+                        <div class="bullet-section">
+                            <strong>Service Level Agreements:</strong>
+                            <ul>
+                                <li>Guaranteed weekly service visits</li>
+                                <li>24-hour emergency response</li>
+                                <li>Detailed maintenance reporting</li>
+                                <li>Seasonal optimization adjustments</li>
+                                <li>Expansion support when needed</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="content-section">
+                    <div class="content-label">Common Concerns Addressed:</div>
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Concern</th>
+                                <th>Our Solution</th>
+                                <th>Success Rate</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>"Plants will die and look bad"</td>
+                                <td>Professional maintenance with replacement guarantee</td>
+                                <td>98.5% plant survival</td>
+                            </tr>
+                            <tr>
+                                <td>"Employees will have to take care of them"</td>
+                                <td>Zero employee involvement - complete professional service</td>
+                                <td>100% hands-off system</td>
+                            </tr>
+                            <tr>
+                                <td>"It won't make a real difference"</td>
+                                <td>Documented ROI tracking with measurable benefits</td>
+                                <td>500+ successful projects</td>
+                            </tr>
+                            <tr>
+                                <td>"Hidden costs will add up"</td>
+                                <td>All-inclusive pricing with no surprise expenses</td>
+                                <td>100% transparent pricing</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="highlight-box">
+                    <div class="highlight-title">Success Track Record</div>
+                    Atlanta Houseplants has successfully implemented plant programs for 500+ businesses since 2019, with a 100% client retention rate and documented ROI across all industry sectors.
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 9: Competitive Advantage -->
+        <div class="slide-template">
+            <div class="slide-header">
+                <div class="slide-number">9</div>
+                <div class="slide-title">Strategic Business Advantages</div>
+            </div>
+            <div class="slide-content">
+                <div class="content-section">
+                    <div class="content-label">Recruitment & Retention Benefits:</div>
+                    <div class="bullet-grid">
+                        <div class="bullet-section">
+                            <strong>Talent Attraction:</strong>
+                            <ul>
+                                <li>Modern, progressive workplace image</li>
+                                <li>Wellness-focused company culture</li>
+                                <li>Instagram-worthy office environment</li>
+                                <li>Competitive advantage in job market</li>
+                                <li>Appeal to environmentally conscious candidates</li>
+                            </ul>
+                        </div>
+                        <div class="bullet-section">
+                            <strong>Employee Retention:</strong>
+                            <ul>
+                                <li>Improved daily work experience</li>
+                                <li>Reduced workplace stress levels</li>
+                                <li>Enhanced pride in workplace</li>
+                                <li>Better work-life balance perception</li>
+                                <li>Increased job satisfaction scores</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="content-section">
+                    <div class="content-label">Client & Stakeholder Impact:</div>
+                    <div class="content-text">
+                        • <strong>First Impressions:</strong> Professional, welcoming environment creates positive client experience<br>
+                        • <strong>Brand Positioning:</strong> Demonstrates commitment to employee wellness and sustainability<br>
+                        • <strong>Meeting Environments:</strong> Plants improve air quality and reduce stress during important discussions<br>
+                        • <strong>Company Culture:</strong> Visible investment in employee wellbeing enhances reputation
+                    </div>
+                </div>
+                
+                <div class="content-section">
+                    <div class="content-label">Industry Leadership Positioning:</div>
+                    <div class="highlight-box">
+                        <div class="highlight-title">Sustainability Leadership</div>
+                        <div class="content-text">
+                            Position <span class="placeholder">[COMPANY NAME]</span> as an industry leader in:
+                            • Employee wellness innovation<br>
+                            • Environmental responsibility<br>
+                            • Modern workplace design<br>
+                            • Data-driven people investments<br>
+                            • Progressive company culture
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 10: Next Steps -->
+        <div class="slide-template">
+            <div class="slide-header">
+                <div class="slide-number">10</div>
+                <div class="slide-title">Recommended Next Steps</div>
+            </div>
+            <div class="slide-content">
+                <div class="content-section">
+                    <div class="content-label">Immediate Actions Required:</div>
+                    <div class="timeline-visual">
+                        <div class="timeline-phase">
+                            <div class="phase-number">1</div>
+                            <div class="phase-title">Executive Approval</div>
+                            <div class="phase-duration">This Meeting</div>
+                        </div>
+                        <div class="timeline-phase">
+                            <div class="phase-number">2</div>
+                            <div class="phase-title">Budget Authorization</div>
+                            <div class="phase-duration">Within 1 Week</div>
+                        </div>
+                        <div class="timeline-phase">
+                            <div class="phase-number">3</div>
+                            <div class="phase-title">Vendor Engagement</div>
+                            <div class="phase-duration">Week 2</div>
+                        </div>
+                        <div class="timeline-phase">
+                            <div class="phase-number">4</div>
+                            <div class="phase-title">Program Launch</div>
+                            <div class="phase-duration">Week 4</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="content-section">
+                    <div class="content-label">Decision Points:</div>
+                    <div class="bullet-grid">
+                        <div class="bullet-section">
+                            <strong>Approve Today:</strong>
+                            <ul>
+                                <li>Authorize <span class="placeholder">$[AMOUNT]</span> Year 1 budget</li>
+                                <li>Approve Atlanta Houseplants as vendor</li>
+                                <li>Schedule space assessment next week</li>
+                                <li>Begin implementation immediately</li>
+                                <li>Target launch date: <span class="placeholder">[DATE]</span></li>
+                            </ul>
+                        </div>
+                        <div class="bullet-section">
+                            <strong>Alternative Options:</strong>
+                            <ul>
+                                <li>Pilot program with <span class="placeholder">[X]</span> plants first</li>
+                                <li>Phase 1 implementation in main areas only</li>
+                                <li>Quarterly budget allocation approach</li>
+                                <li>Additional vendor evaluation process</li>
+                                <li>Employee survey before proceeding</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="highlight-box">
+                    <div class="highlight-title">Recommended Decision</div>
+                    <strong>Approve full Year 1 program for immediate implementation.</strong><br><br>
+                    Rationale: ROI analysis shows <span class="placeholder">[X]x</span> return with <span class="placeholder">[X]</span>-month payback. Delaying implementation means delaying measurable productivity and wellness benefits worth <span class="placeholder">$[AMOUNT]</span> annually.
+                </div>
+                
+                <div class="content-section">
+                    <div class="content-label">Contact Information:</div>
+                    <div class="content-text">
+                        <strong>Atlanta Houseplants</strong><br>
+                        Phone: (470) 664-4039<br>
+                        Email: service@atlantahouseplants.com<br>
+                        Website: atlantahouseplants.com
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Appendices -->
+        <div class="section">
+            <h2 class="section-title">📎 Appendices</h2>
+            
+            <div class="appendix-section">
+                <div class="appendix-title">Appendix A: Detailed ROI Calculations</div>
+                <div class="appendix-content">
+                    Include spreadsheets showing detailed calculations for productivity gains, healthcare savings, and retention value based on your specific employee count and salary data.
+                </div>
+            </div>
+            
+            <div class="appendix-section">
+                <div class="appendix-title">Appendix B: Plant Selection Portfolio</div>
+                <div class="appendix-content">
+                    Photos and descriptions of recommended plants, including air purification capabilities, maintenance requirements, and professional appearance ratings.
+                </div>
+            </div>
+            
+            <div class="appendix-section">
+                <div class="appendix-title">Appendix C: Atlanta Houseplants Credentials</div>
+                <div class="appendix-content">
+                    Company background, certifications, client testimonials, and case studies from similar businesses in your industry sector.
+                </div>
+            </div>
+            
+            <div class="appendix-section">
+                <div class="appendix-title">Appendix D: Maintenance Service Agreement</div>
+                <div class="appendix-content">
+                    Detailed service level agreement outlining visit schedules, response times, guarantees, and ongoing support protocols.
+                </div>
+            </div>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="cta-section">
+            <div style="font-size: 24px; font-weight: 700; margin-bottom: 12px;">Ready to Present Your Business Case?</div>
+            <div style="font-size: 16px; margin-bottom: 20px; opacity: 0.9;">Contact Atlanta Houseplants for customized ROI calculations, industry-specific data, and presentation support to ensure executive approval success.</div>
+            
+            <div style="font-size: 18px; font-weight: 600; margin-bottom: 20px;">
+                <div style="margin-bottom: 8px;">📞 (470) 664-4039</div>
+                <div style="margin-bottom: 8px;">🌐 atlantahouseplants.com</div>
+                <div>📧 service@atlantahouseplants.com</div>
+            </div>
+            
+            <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.3); font-size: 14px; opacity: 0.9;">
+                <strong>🎯 Presentation Support Includes:</strong> Custom ROI calculations, industry data, executive coaching<br>
+                <strong>⚡ Fast Response:</strong> Same-day support for urgent presentation needs<br>
+                <strong>📊 Success Rate:</strong> 89% executive approval rate when using our presentation framework
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 30px; color: #6b7280; font-size: 12px;">
+            © 2025 Atlanta Houseplants • Executive Presentation Framework<br>
+            89% Approval Success Rate • C-Suite Decision Support • Professional Implementation Partner
+        </div>
+    </div>
+</body>
+</html>
