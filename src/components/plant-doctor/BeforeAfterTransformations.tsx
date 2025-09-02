@@ -91,7 +91,7 @@ const BeforeAfterTransformations = ({ onBookingClick }: BeforeAfterTransformatio
       beforeAlt: "Plant cuttings before treatment - showing root-bound and struggling propagations",
       beforeTitle: "Struggling Plant Propagations",
       beforeDescription: "These plant cuttings were root-bound and struggling with poor soil conditions and inadequate care",
-      afterImage: "/images/service-maintenance/plant-after-propagation-recovery-healthy.png"
+      afterImage: "/images/service-maintenance/plant-after-propagation-recovery-healthy.png",
       afterAlt: "Plant after propagation and recovery - showing healthy, vibrant growth",
       afterTitle: "Thriving & Healthy Plant",
       afterDescription: "After Nick's expert propagation techniques, the plant shows lush, healthy foliage and strong root development",
