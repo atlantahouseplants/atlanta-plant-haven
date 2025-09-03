@@ -178,7 +178,7 @@ const Corporate = () => {
             {/* Corporate Gift Hero Image */}
             <div className="relative">
               <img 
-                src="/images/arrangements-decorative/premium-succulent-bowl-corporate-gift.png" 
+                src="/images/arrangements-decorative/premium-succulent-bowl-corporate-gift.jpg" 
                 alt="Premium corporate gift featuring diverse succulent arrangement in elegant wooden bowl"
                 className="rounded-2xl shadow-2xl"
               />
