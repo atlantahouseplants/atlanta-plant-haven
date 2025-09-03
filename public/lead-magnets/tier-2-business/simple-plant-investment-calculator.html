@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Office Plant Investment Calculator - Atlanta Houseplants</title>
+    <title>Office Plant Benefits Assessment - Atlanta Houseplants</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
         
@@ -24,6 +24,7 @@
             border-radius: 12px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.05);
             margin-top: 40px;
+            margin-bottom: 40px;
         }
         
         .header {
@@ -52,7 +53,7 @@
             opacity: 0.9;
         }
         
-        .calculator-section {
+        .assessment-form {
             background: #f0fdf4;
             border: 2px solid #10b981;
             border-radius: 12px;
@@ -60,176 +61,144 @@
             margin-bottom: 30px;
         }
         
-        .input-group {
+        .question {
             margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #d1fae5;
         }
         
-        .input-label {
+        .question:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+        
+        .question-label {
             font-size: 18px;
             font-weight: 600;
             color: #047857;
-            margin-bottom: 12px;
+            margin-bottom: 15px;
             display: block;
         }
         
-        .employee-slider {
-            width: 100%;
-            height: 8px;
-            border-radius: 4px;
-            background: #d1fae5;
-            outline: none;
-            margin-bottom: 12px;
-        }
-        
-        .employee-slider::-webkit-slider-thumb {
-            appearance: none;
-            width: 24px;
-            height: 24px;
-            border-radius: 50%;
-            background: #059669;
-            cursor: pointer;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-        }
-        
-        .employee-slider::-moz-range-thumb {
-            width: 24px;
-            height: 24px;
-            border-radius: 50%;
-            background: #059669;
-            cursor: pointer;
-            border: none;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-        }
-        
-        .employee-display {
-            text-align: center;
-            font-size: 24px;
-            font-weight: 700;
-            color: #059669;
-            background: white;
-            padding: 12px;
-            border-radius: 8px;
-            border: 2px solid #10b981;
-        }
-        
-        .results-grid {
+        .question-options {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 12px;
         }
         
-        .result-card {
+        .option {
+            position: relative;
+            cursor: pointer;
+        }
+        
+        .option input[type="radio"] {
+            display: none;
+        }
+        
+        .option-label {
+            display: block;
+            padding: 15px;
             background: white;
             border: 2px solid #e5e7eb;
-            border-radius: 12px;
-            padding: 24px;
+            border-radius: 8px;
             text-align: center;
+            font-weight: 500;
+            transition: all 0.3s ease;
         }
         
-        .result-title {
-            font-size: 14px;
-            color: #6b7280;
-            margin-bottom: 8px;
-            text-transform: uppercase;
-            font-weight: 600;
+        .option input[type="radio"]:checked + .option-label {
+            border-color: #10b981;
+            background: #ecfdf5;
+            color: #047857;
         }
         
-        .result-value {
-            font-size: 32px;
-            font-weight: 800;
-            color: #059669;
-            margin-bottom: 8px;
+        .option-label:hover {
+            border-color: #10b981;
+            background: #f0fdf4;
         }
         
-        .result-subtitle {
-            font-size: 14px;
-            color: #6b7280;
+        .calculate-btn {
+            width: 100%;
+            padding: 18px;
+            background: linear-gradient(135deg, #059669 0%, #047857 100%);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 18px;
+            font-weight: 700;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: transform 0.2s ease;
         }
         
-        .comparison-section {
+        .calculate-btn:hover {
+            transform: translateY(-1px);
+        }
+        
+        .calculate-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        .results-section {
+            display: none;
             background: #eff6ff;
             border: 2px solid #3b82f6;
             border-radius: 12px;
             padding: 30px;
-            margin: 30px 0;
+            margin-top: 30px;
         }
         
-        .comparison-title {
-            font-size: 20px;
+        .results-title {
+            font-size: 24px;
             font-weight: 700;
             color: #1d4ed8;
             margin-bottom: 20px;
             text-align: center;
         }
         
-        .comparison-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
-        
-        .package-card {
-            background: white;
-            border: 2px solid #e5e7eb;
-            border-radius: 12px;
-            padding: 20px;
+        .assessment-score {
             text-align: center;
-            transition: all 0.3s ease;
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            border: 2px solid #3b82f6;
         }
         
-        .package-card.recommended {
-            border-color: #10b981;
-            background: #f0fdf4;
-        }
-        
-        .package-name {
-            font-size: 18px;
-            font-weight: 700;
+        .score-label {
+            font-size: 16px;
+            color: #6b7280;
             margin-bottom: 8px;
         }
         
-        .package-price {
-            font-size: 24px;
+        .score-value {
+            font-size: 36px;
             font-weight: 800;
-            color: #059669;
-            margin-bottom: 12px;
+            color: #1d4ed8;
+            margin-bottom: 8px;
         }
         
-        .package-features {
-            list-style: none;
-            font-size: 14px;
-            color: #6b7280;
-        }
-        
-        .package-features li {
-            margin-bottom: 4px;
-        }
-        
-        .benefits-section {
-            margin: 30px 0;
-        }
-        
-        .benefits-title {
-            font-size: 20px;
-            font-weight: 700;
+        .score-description {
+            font-size: 18px;
+            font-weight: 600;
             color: #1f2937;
-            margin-bottom: 20px;
-            text-align: center;
         }
         
         .benefits-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 20px;
+            margin-bottom: 25px;
         }
         
-        .benefit-item {
-            text-align: center;
+        .benefit-card {
+            background: white;
             padding: 20px;
-            background: #f8fafc;
             border-radius: 12px;
             border: 1px solid #e5e7eb;
+            text-align: center;
         }
         
         .benefit-icon {
@@ -237,43 +206,124 @@
             margin-bottom: 12px;
         }
         
-        .benefit-stat {
-            font-size: 20px;
+        .benefit-title {
+            font-size: 16px;
             font-weight: 700;
-            color: #059669;
-            margin-bottom: 4px;
+            color: #1f2937;
+            margin-bottom: 8px;
         }
         
-        .benefit-label {
+        .benefit-description {
             font-size: 14px;
             color: #6b7280;
         }
         
-        .cta-section {
-            background: linear-gradient(135deg, #1e40af 0%, #1d4ed8 100%);
-            color: white;
+        .recommendations {
+            background: white;
+            padding: 25px;
             border-radius: 12px;
-            padding: 30px;
-            text-align: center;
-            margin-top: 40px;
+            margin-bottom: 25px;
         }
         
-        .cta-title {
-            font-size: 24px;
+        .recommendations-title {
+            font-size: 20px;
             font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 15px;
+        }
+        
+        .recommendation-item {
+            padding: 15px;
+            background: #f8fafc;
+            border-radius: 8px;
+            margin-bottom: 12px;
+            border-left: 4px solid #10b981;
+        }
+        
+        .recommendation-item:last-child {
+            margin-bottom: 0;
+        }
+        
+        .recommendation-title {
+            font-weight: 600;
+            color: #047857;
+            margin-bottom: 4px;
+        }
+        
+        .cta-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 25px;
+        }
+        
+        .cta-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            border: 2px solid #e5e7eb;
+            transition: all 0.3s ease;
+        }
+        
+        .cta-card.primary {
+            border-color: #10b981;
+            background: #f0fdf4;
+        }
+        
+        .cta-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .cta-icon {
+            font-size: 24px;
             margin-bottom: 12px;
         }
         
-        .cta-subtitle {
-            font-size: 16px;
-            opacity: 0.9;
-            margin-bottom: 20px;
+        .cta-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 8px;
         }
         
-        .contact-info {
-            font-size: 18px;
+        .cta-description {
+            font-size: 14px;
+            color: #6b7280;
+            margin-bottom: 15px;
+        }
+        
+        .cta-button {
+            padding: 12px 24px;
+            border: 2px solid #10b981;
+            background: #10b981;
+            color: white;
+            border-radius: 8px;
             font-weight: 600;
-            margin-bottom: 20px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+        
+        .cta-button.secondary {
+            background: white;
+            color: #10b981;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-1px);
+        }
+        
+        @media (max-width: 768px) {
+            .question-options {
+                grid-template-columns: 1fr;
+            }
+            
+            .benefits-grid,
+            .cta-section {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -281,169 +331,389 @@
     <div class="container">
         <div class="header">
             <div class="logo">🌿 Atlanta Houseplants</div>
-            <div class="title">Office Plant Investment Calculator</div>
-            <div class="subtitle">Quick ROI estimate for your office plant program</div>
+            <div class="title">Office Plant Benefits Assessment</div>
+            <div class="subtitle">Discover how plants can transform your workplace in just 5 questions</div>
         </div>
-
-        <div class="calculator-section">
-            <div class="input-group">
-                <label for="employees" class="input-label">How many employees work in your office?</label>
-                <input type="range" id="employees" class="employee-slider" min="5" max="200" value="25" oninput="updateCalculation()">
-                <div class="employee-display" id="employee-count">25 employees</div>
+        
+        <div class="assessment-form">
+            <form id="assessment-form">
+                <div class="question">
+                    <label class="question-label">1. How many people work in your office?</label>
+                    <div class="question-options">
+                        <div class="option">
+                            <input type="radio" id="size-small" name="office-size" value="small">
+                            <label for="size-small" class="option-label">5-15 employees</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="size-medium" name="office-size" value="medium">
+                            <label for="size-medium" class="option-label">16-50 employees</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="size-large" name="office-size" value="large">
+                            <label for="size-large" class="option-label">51-100 employees</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="size-enterprise" name="office-size" value="enterprise">
+                            <label for="size-enterprise" class="option-label">100+ employees</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <label class="question-label">2. What's your biggest workplace challenge?</label>
+                    <div class="question-options">
+                        <div class="option">
+                            <input type="radio" id="challenge-morale" name="challenge" value="morale">
+                            <label for="challenge-morale" class="option-label">Low morale</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="challenge-stress" name="challenge" value="stress">
+                            <label for="challenge-stress" class="option-label">High stress</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="challenge-air" name="challenge" value="air">
+                            <label for="challenge-air" class="option-label">Poor air quality</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="challenge-focus" name="challenge" value="focus">
+                            <label for="challenge-focus" class="option-label">Lack of focus</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="challenge-turnover" name="challenge" value="turnover">
+                            <label for="challenge-turnover" class="option-label">Employee turnover</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="challenge-image" name="challenge" value="image">
+                            <label for="challenge-image" class="option-label">Professional image</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <label class="question-label">3. How would you describe your current office environment?</label>
+                    <div class="question-options">
+                        <div class="option">
+                            <input type="radio" id="environment-sterile" name="environment" value="sterile">
+                            <label for="environment-sterile" class="option-label">Sterile/corporate</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="environment-modern" name="environment" value="modern">
+                            <label for="environment-modern" class="option-label">Modern but cold</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="environment-welcoming" name="environment" value="welcoming">
+                            <label for="environment-welcoming" class="option-label">Somewhat welcoming</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="environment-vibrant" name="environment" value="vibrant">
+                            <label for="environment-vibrant" class="option-label">Vibrant and energetic</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <label class="question-label">4. How much natural light does your office have?</label>
+                    <div class="question-options">
+                        <div class="option">
+                            <input type="radio" id="light-lots" name="lighting" value="lots">
+                            <label for="light-lots" class="option-label">Lots of windows</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="light-some" name="lighting" value="some">
+                            <label for="light-some" class="option-label">Some natural light</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="light-limited" name="lighting" value="limited">
+                            <label for="light-limited" class="option-label">Limited windows</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="light-artificial" name="lighting" value="artificial">
+                            <label for="light-artificial" class="option-label">Mostly artificial</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <label class="question-label">5. What matters most to your leadership team?</label>
+                    <div class="question-options">
+                        <div class="option">
+                            <input type="radio" id="priority-wellness" name="priority" value="wellness">
+                            <label for="priority-wellness" class="option-label">Employee wellness</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="priority-image" name="priority" value="image">
+                            <label for="priority-image" class="option-label">Professional image</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="priority-productivity" name="priority" value="productivity">
+                            <label for="priority-productivity" class="option-label">Productivity</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="priority-cost" name="priority" value="cost">
+                            <label for="priority-cost" class="option-label">Cost savings</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" id="priority-sustainability" name="priority" value="sustainability">
+                            <label for="priority-sustainability" class="option-label">Sustainability</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <button type="button" class="calculate-btn" onclick="calculateResults()" id="calculate-btn" disabled>
+                    Get Your Personalized Plant Benefits Report
+                </button>
+            </form>
+        </div>
+        
+        <div class="results-section" id="results-section">
+            <div class="results-title">Your Office Plant Benefits Report</div>
+            
+            <div class="assessment-score">
+                <div class="score-label">Your Plant Readiness Score</div>
+                <div class="score-value" id="score-value">--</div>
+                <div class="score-description" id="score-description">Complete assessment above</div>
             </div>
             
-            <div class="results-grid">
-                <div class="result-card">
-                    <div class="result-title">Annual Investment</div>
-                    <div class="result-value" id="annual-cost">$3,750</div>
-                    <div class="result-subtitle">Plants + Maintenance</div>
-                </div>
-                
-                <div class="result-card">
-                    <div class="result-title">Expected Benefits</div>
-                    <div class="result-value" id="annual-benefits">$8,750</div>
-                    <div class="result-subtitle">Productivity + Wellness</div>
-                </div>
-                
-                <div class="result-card">
-                    <div class="result-title">ROI</div>
-                    <div class="result-value" id="roi-multiple">2.3x</div>
-                    <div class="result-subtitle">Return on Investment</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="comparison-section">
-            <div class="comparison-title">Choose Your Plant Program Package</div>
-            <div class="comparison-grid">
-                <div class="package-card" id="starter-package">
-                    <div class="package-name">Starter</div>
-                    <div class="package-price" id="starter-price">$1,500</div>
-                    <ul class="package-features">
-                        <li>5-10 low-maintenance plants</li>
-                        <li>Monthly check-ups</li>
-                        <li>Basic care guide</li>
-                        <li>6-month guarantee</li>
-                    </ul>
-                </div>
-                
-                <div class="package-card recommended" id="professional-package">
-                    <div class="package-name">Professional ⭐</div>
-                    <div class="package-price" id="professional-price">$3,750</div>
-                    <ul class="package-features">
-                        <li>15-25 mixed plants</li>
-                        <li>Bi-weekly maintenance</li>
-                        <li>Plant replacement included</li>
-                        <li>12-month guarantee</li>
-                    </ul>
-                </div>
-                
-                <div class="package-card" id="executive-package">
-                    <div class="package-name">Executive</div>
-                    <div class="package-price" id="executive-price">$7,500</div>
-                    <ul class="package-features">
-                        <li>30+ premium plants</li>
-                        <li>Weekly maintenance</li>
-                        <li>Seasonal refreshes</li>
-                        <li>24-month guarantee</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="benefits-section">
-            <div class="benefits-title">What You Can Expect</div>
-            <div class="benefits-grid">
-                <div class="benefit-item">
-                    <div class="benefit-icon">🧠</div>
-                    <div class="benefit-stat">15%</div>
-                    <div class="benefit-label">Productivity Boost</div>
-                </div>
-                
-                <div class="benefit-item">
-                    <div class="benefit-icon">😊</div>
-                    <div class="benefit-stat">25%</div>
-                    <div class="benefit-label">Fewer Sick Days</div>
-                </div>
-                
-                <div class="benefit-item">
-                    <div class="benefit-icon">💨</div>
-                    <div class="benefit-stat">40%</div>
-                    <div class="benefit-label">Better Air Quality</div>
-                </div>
-                
-                <div class="benefit-item">
-                    <div class="benefit-icon">👥</div>
-                    <div class="benefit-stat">92%</div>
-                    <div class="benefit-label">Employee Satisfaction</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="cta-section">
-            <div class="cta-title">Ready to Get Started?</div>
-            <div class="cta-subtitle">Get a free office assessment and customized plant plan</div>
-            
-            <div class="contact-info">
-                📞 (470) 664-4039<br>
-                🌐 atlantahouseplants.com<br>
-                📧 service@atlantahouseplants.com
+            <div class="benefits-grid" id="benefits-grid">
+                <!-- Benefits will be populated by JavaScript -->
             </div>
             
-            <div style="font-size: 14px; opacity: 0.9; margin-top: 16px;">
-                ✅ Free consultation • ✅ 100% plant guarantee • ✅ Professional maintenance included
+            <div class="recommendations" id="recommendations">
+                <div class="recommendations-title">Recommended Next Steps</div>
+                <!-- Recommendations will be populated by JavaScript -->
+            </div>
+            
+            <div class="cta-section" id="cta-section">
+                <!-- CTAs will be populated by JavaScript -->
             </div>
         </div>
     </div>
     
     <script>
-        function updateCalculation() {
-            const employees = parseInt(document.getElementById('employees').value);
-            document.getElementById('employee-count').textContent = employees + ' employees';
+        // Enable submit button when all questions are answered
+        function checkFormComplete() {
+            const questions = ['office-size', 'challenge', 'environment', 'lighting', 'priority'];
+            const allAnswered = questions.every(question => 
+                document.querySelector(`input[name="${question}"]:checked`)
+            );
             
-            // Simple pricing calculation
-            const costPerEmployee = 150; // Annual cost per employee
-            const benefitPerEmployee = 350; // Conservative benefit estimate
-            
-            const annualCost = employees * costPerEmployee;
-            const annualBenefits = employees * benefitPerEmployee;
-            const roiMultiple = (annualBenefits / annualCost).toFixed(1);
-            
-            document.getElementById('annual-cost').textContent = '$' + annualCost.toLocaleString();
-            document.getElementById('annual-benefits').textContent = '$' + annualBenefits.toLocaleString();
-            document.getElementById('roi-multiple').textContent = roiMultiple + 'x';
-            
-            // Update package recommendations
-            updatePackageRecommendations(employees);
+            document.getElementById('calculate-btn').disabled = !allAnswered;
         }
         
-        function updatePackageRecommendations(employees) {
-            // Reset all package cards
-            document.querySelectorAll('.package-card').forEach(card => {
-                card.classList.remove('recommended');
+        // Add event listeners to all radio buttons
+        document.querySelectorAll('input[type="radio"]').forEach(radio => {
+            radio.addEventListener('change', checkFormComplete);
+        });
+        
+        function calculateResults() {
+            const formData = new FormData(document.getElementById('assessment-form'));
+            const responses = Object.fromEntries(formData);
+            
+            // Calculate score and determine profile
+            const profile = determineProfile(responses);
+            
+            // Show results
+            document.getElementById('results-section').style.display = 'block';
+            document.getElementById('results-section').scrollIntoView({ behavior: 'smooth' });
+            
+            // Populate results
+            populateResults(profile, responses);
+        }
+        
+        function determineProfile(responses) {
+            // Logic to determine user profile based on responses
+            let score = 0;
+            let profileType = '';
+            
+            // Score based on office readiness
+            const scoring = {
+                'office-size': { small: 1, medium: 2, large: 3, enterprise: 4 },
+                'challenge': { morale: 3, stress: 3, air: 4, focus: 2, turnover: 4, image: 2 },
+                'environment': { sterile: 4, modern: 3, welcoming: 2, vibrant: 1 },
+                'lighting': { lots: 1, some: 2, limited: 3, artificial: 4 },
+                'priority': { wellness: 3, image: 2, productivity: 3, cost: 1, sustainability: 2 }
+            };
+            
+            Object.entries(responses).forEach(([key, value]) => {
+                score += scoring[key][value] || 0;
             });
             
-            // Simple package logic
-            if (employees <= 15) {
-                document.getElementById('starter-package').classList.add('recommended');
-            } else if (employees <= 50) {
-                document.getElementById('professional-package').classList.add('recommended');
+            // Determine profile type
+            if (score >= 15) {
+                profileType = 'high-impact';
+            } else if (score >= 11) {
+                profileType = 'good-opportunity';
+            } else if (score >= 7) {
+                profileType = 'moderate-benefit';
             } else {
-                document.getElementById('executive-package').classList.add('recommended');
+                profileType = 'low-priority';
             }
             
-            // Update pricing based on employee count
-            const starterBase = Math.max(1500, employees * 60);
-            const professionalBase = Math.max(2500, employees * 120);
-            const executiveBase = Math.max(4500, employees * 180);
-            
-            document.getElementById('starter-price').textContent = '$' + starterBase.toLocaleString();
-            document.getElementById('professional-price').textContent = '$' + professionalBase.toLocaleString();
-            document.getElementById('executive-price').textContent = '$' + executiveBase.toLocaleString();
+            return { score, profileType, responses };
         }
         
-        // Initialize with default values
-        updateCalculation();
+        function populateResults(profile, responses) {
+            const { score, profileType } = profile;
+            
+            // Score display
+            document.getElementById('score-value').textContent = `${Math.min(score * 5, 100)}%`;
+            
+            const descriptions = {
+                'high-impact': 'Excellent Plant Opportunity',
+                'good-opportunity': 'Strong Plant Benefits',
+                'moderate-benefit': 'Good Plant Potential', 
+                'low-priority': 'Some Plant Benefits'
+            };
+            
+            document.getElementById('score-description').textContent = descriptions[profileType];
+            
+            // Benefits
+            const benefits = getBenefits(profileType, responses);
+            const benefitsGrid = document.getElementById('benefits-grid');
+            benefitsGrid.innerHTML = benefits.map(benefit => `
+                <div class="benefit-card">
+                    <div class="benefit-icon">${benefit.icon}</div>
+                    <div class="benefit-title">${benefit.title}</div>
+                    <div class="benefit-description">${benefit.description}</div>
+                </div>
+            `).join('');
+            
+            // Recommendations
+            const recommendations = getRecommendations(profileType, responses);
+            document.getElementById('recommendations').innerHTML = `
+                <div class="recommendations-title">Recommended Next Steps</div>
+                ${recommendations.map(rec => `
+                    <div class="recommendation-item">
+                        <div class="recommendation-title">${rec.title}</div>
+                        <div>${rec.description}</div>
+                    </div>
+                `).join('')}
+            `;
+            
+            // CTAs
+            const ctas = getCTAs(profileType, responses);
+            document.getElementById('cta-section').innerHTML = ctas.map((cta, index) => `
+                <div class="cta-card ${index === 0 ? 'primary' : ''}">
+                    <div class="cta-icon">${cta.icon}</div>
+                    <div class="cta-title">${cta.title}</div>
+                    <div class="cta-description">${cta.description}</div>
+                    <a href="${cta.link}" class="cta-button ${index === 0 ? 'primary' : 'secondary'}">
+                        ${cta.buttonText}
+                    </a>
+                </div>
+            `).join('');
+        }
+        
+        function getBenefits(profileType, responses) {
+            const baseBenefits = [
+                { icon: '🌱', title: 'Air Quality', description: 'Remove toxins and improve oxygen levels' },
+                { icon: '😊', title: 'Employee Wellness', description: 'Reduce stress and boost mood' },
+                { icon: '🎯', title: 'Productivity', description: 'Increase focus and creativity' },
+                { icon: '💼', title: 'Professional Image', description: 'Enhance your office environment' }
+            ];
+            
+            // Customize benefits based on their top challenge
+            const challengeBenefits = {
+                morale: { icon: '😊', title: 'Boost Morale', description: 'Plants significantly improve workplace satisfaction' },
+                stress: { icon: '🧘', title: 'Reduce Stress', description: 'Natural environments lower cortisol levels' },
+                air: { icon: '💨', title: 'Clean Air', description: 'Remove 87% of common office toxins' },
+                focus: { icon: '🎯', title: 'Improve Focus', description: 'Increase concentration by up to 15%' },
+                turnover: { icon: '🤝', title: 'Retain Talent', description: 'Green offices have 19% better retention' },
+                image: { icon: '✨', title: 'Impress Clients', description: 'Create memorable first impressions' }
+            };
+            
+            const topChallenge = responses.challenge;
+            if (challengeBenefits[topChallenge]) {
+                baseBenefits[0] = challengeBenefits[topChallenge];
+            }
+            
+            return baseBenefits;
+        }
+        
+        function getRecommendations(profileType, responses) {
+            const baseRecs = [];
+            
+            // Lighting-based recommendations
+            if (responses.lighting === 'artificial' || responses.lighting === 'limited') {
+                baseRecs.push({
+                    title: 'Low-Light Plant Selection',
+                    description: 'Choose plants like ZZ plants, snake plants, and pothos that thrive in office lighting'
+                });
+            }
+            
+            // Size-based recommendations
+            if (responses['office-size'] === 'small') {
+                baseRecs.push({
+                    title: 'Start Small',
+                    description: 'Begin with 3-5 statement plants in key areas like reception and meeting rooms'
+                });
+            } else if (responses['office-size'] === 'enterprise') {
+                baseRecs.push({
+                    title: 'Comprehensive Program',
+                    description: 'Implement a full plant program with maintenance service for maximum impact'
+                });
+            }
+            
+            // Challenge-specific recommendations
+            if (responses.challenge === 'air') {
+                baseRecs.push({
+                    title: 'Air-Purifying Varieties',
+                    description: 'Focus on NASA-certified air cleaning plants for maximum toxin removal'
+                });
+            }
+            
+            // Always include professional consultation
+            baseRecs.push({
+                title: 'Professional Assessment',
+                description: 'Get a custom plant plan designed specifically for your space and needs'
+            });
+            
+            return baseRecs.slice(0, 3); // Limit to 3 recommendations
+        }
+        
+        function getCTAs(profileType, responses) {
+            const ctas = [];
+            
+            // Primary CTA based on profile
+            if (profileType === 'high-impact' || profileType === 'good-opportunity') {
+                ctas.push({
+                    icon: '📞',
+                    title: 'Free Consultation Call',
+                    description: 'Get a custom plant plan for your office',
+                    buttonText: 'Schedule Free Call',
+                    link: 'tel:404-755-5555'
+                });
+            } else {
+                ctas.push({
+                    icon: '🌿',
+                    title: 'Plant Care Guide',
+                    description: 'Start with our essential office plant guide',
+                    buttonText: 'Download Guide',
+                    link: '/lead-magnets/tier-1-educational/3-best-plants-low-light-offices.html'
+                });
+            }
+            
+            // Secondary CTA
+            if (responses['office-size'] === 'enterprise' || responses['office-size'] === 'large') {
+                ctas.push({
+                    icon: '🏢',
+                    title: 'Office Design Service',
+                    description: 'Full-service plant design and maintenance',
+                    buttonText: 'Learn More',
+                    link: '/office-plants'
+                });
+            } else {
+                ctas.push({
+                    icon: '📋',
+                    title: 'Plant Assessment',
+                    description: 'Take our detailed plant readiness quiz',
+                    buttonText: 'Start Assessment',
+                    link: '/lead-magnets/tier-2-business/office-readiness-assessment.html'
+                });
+            }
+            
+            return ctas;
+        }
     </script>
 </body>
 </html>
