@@ -26,20 +26,6 @@ const InlineLeadCapture: React.FC<InlineLeadCaptureProps> = ({
   } | null>(null);
 
   const leadMagnets = {
-    'roi-calculator': {
-      title: "Office Plant Investment Calculator",
-      subtitle: "Quick ROI Estimate Tool",
-      description: "Simple calculator that shows investment costs, expected benefits, and ROI multiple based on your employee count. Get instant results with package recommendations.",
-      icon: Calculator,
-      color: "blue",
-      value: "3-minute calculator",
-      benefits: [
-        "Instant ROI calculation based on employee count",
-        "Package recommendations for your office size", 
-        "Conservative benefit estimates",
-        "Budget-friendly option comparisons"
-      ]
-    },
     'plant-investment-calculator': {
       title: "Office Plant Investment Calculator",
       subtitle: "Quick ROI Estimate Tool",
@@ -52,20 +38,6 @@ const InlineLeadCapture: React.FC<InlineLeadCaptureProps> = ({
         "Package recommendations for your office size", 
         "Conservative benefit estimates",
         "Budget-friendly option comparisons"
-      ]
-    },
-    'audit-checklist': {
-      title: "Office Plant Readiness Assessment",
-      subtitle: "10-Question Evaluation",
-      description: "Quick assessment to determine the best plant strategy for your office. Get personalized recommendations based on your environment, budget, and goals.",
-      icon: CheckCircle,
-      color: "green",
-      value: "10-question assessment",
-      benefits: [
-        "Customized plant variety recommendations",
-        "Environment-specific solutions",
-        "Budget and maintenance matching",
-        "Implementation roadmap included"
       ]
     },
     'office-readiness-assessment': {
