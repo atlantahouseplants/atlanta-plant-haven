@@ -9,95 +9,43 @@ interface BeforeAfterTransformationsProps {
 const BeforeAfterTransformations = ({ onBookingClick }: BeforeAfterTransformationsProps) => {
   const transformations = [
     {
-      beforeImage: "/images/service-maintenance/monstera-before-mealybug-infestation-damaged.png",
-      beforeAlt: "Monstera plant before treatment - showing mealybug infestation with white powdery substance",
-      beforeTitle: "Severe Mealybug Infestation",
-      beforeDescription: "This Monstera was severely infested with mealybugs, showing white cottony masses throughout the leaves",
-      afterImage: "/images/service-maintenance/monstera-after-pest-treatment-healthy.png",
-      afterAlt: "Monstera plant after treatment - healthy and vibrant with lush green foliage",
-      afterTitle: "Completely Pest-Free & Thriving",
-      afterDescription: "After Nick's treatment, the Monstera shows vibrant, healthy foliage with no signs of pest damage",
-      problemDiagnosed: "Severe mealybug infestation with white cottony masses covering multiple leaves",
-      treatmentApplied: "Professional pest removal, systemic treatment, thorough leaf cleaning, and soil treatment",
-      resultAchieved: "Complete pest elimination with preventive care plan to maintain plant health"
-    },
-    {
-      beforeImage: "/images/service-maintenance/monstera-before-damaged-yellowing-leaves.png",
-      beforeAlt: "Monstera plant before treatment - showing damaged and yellowing leaves",
-      beforeTitle: "Severely Damaged Plant",
-      beforeDescription: "This Monstera was struggling with multiple issues including yellowing leaves and poor structural support",
+      beforeImage: "/images/service-maintenance/nick-plant-care-action.png",
+      beforeAlt: "Plant showing stress and health issues before professional treatment",
+      beforeTitle: "Struggling Office Plants",
+      beforeDescription: "Multiple plants showing common office problems: yellowing leaves, pest issues, and poor growth",
       afterImage: "/images/individual-plants/monstera-deliciosa-terracotta-pot.png",
-      afterAlt: "Monstera plant after treatment - healthy and well-structured",
-      afterTitle: "Fully Restored & Thriving",
-      afterDescription: "After Nick's expert care, the plant shows vibrant green foliage and proper structural support",
-      problemDiagnosed: "Multiple leaf damage, poor soil conditions, and inadequate structural support",
-      treatmentApplied: "Professional repotting, soil amendment, pruning, and proper support system installation",
-      resultAchieved: "Complete structural recovery with healthy new growth and proper care plan"
+      afterAlt: "Healthy, vibrant Monstera after professional plant doctor treatment",
+      afterTitle: "Thriving & Healthy Plants",
+      afterDescription: "After Nick's treatment, plants show vibrant, healthy foliage with proper structure and care",
+      problemDiagnosed: "Multiple issues: pest infestations, poor soil conditions, inadequate lighting, overwatering",
+      treatmentApplied: "Comprehensive plant health assessment, pest treatment, soil amendment, proper positioning guidance",
+      resultAchieved: "Complete plant health recovery with customized care plan and ongoing maintenance protocols"
     },
     {
-      beforeImage: "/images/service-maintenance/rubber-plant-before-sparse-growth-poor-condition.png",
-      beforeAlt: "Rubber plant before treatment - showing sparse growth and poor condition",
-      beforeTitle: "Struggling Rubber Plant",
-      beforeDescription: "This rubber plant was showing poor growth with sparse foliage and weak structure",
-      afterImage: "/images/service-maintenance/rubber-plants-after-lush-healthy-growth.png",
-      afterAlt: "Rubber plants after treatment - showing lush, healthy growth",
-      afterTitle: "Lush & Thriving Growth",
-      afterDescription: "After Nick's treatment, the rubber plants show dense, healthy foliage and strong growth patterns",
-      problemDiagnosed: "Poor soil nutrition, inadequate lighting conditions, and improper watering schedule",
-      treatmentApplied: "Soil enrichment, optimal placement guidance, proper watering schedule, and growth enhancement",
-      resultAchieved: "Dramatic improvement in growth density and overall plant health with sustained vitality"
+      beforeImage: "/images/corporate-offices/monstera-office-corner-professional.png",
+      beforeAlt: "Office plant in corner showing signs of neglect and poor health",
+      beforeTitle: "Neglected Office Corner Plant",
+      beforeDescription: "Corporate plant suffering from inadequate care, poor positioning, and environmental stress",
+      afterImage: "/images/individual-plants/monstera-deliciosa-wicker-basket.png",
+      afterAlt: "Beautifully restored office plant in optimal condition",
+      afterTitle: "Professional Office Plant Display",
+      afterDescription: "Transformed into a stunning focal point with proper care, positioning, and maintenance schedule",
+      problemDiagnosed: "Environmental stress, improper watering schedule, poor soil conditions, suboptimal lighting",
+      treatmentApplied: "Strategic repositioning, soil replacement, customized watering schedule, professional maintenance plan",
+      resultAchieved: "Complete transformation into thriving office centerpiece with sustainable care protocols"
     },
     {
-      beforeImage: "/images/individual-plants/calathea-ornata-striped-leaves.png",
-      beforeAlt: "Prayer plant before treatment - showing damaged and browning leaves",
-      beforeTitle: "Severely Damaged Prayer Plant",
-      beforeDescription: "This prayer plant showed extensive leaf damage with browning, curling, and deteriorating foliage",
-      afterImage: "/images/service-maintenance/prayer-plant-after-vibrant-healthy-foliage.png",
-      afterAlt: "Prayer plant after treatment - showing vibrant, healthy foliage",
-      afterTitle: "Stunning Recovery & New Growth",
-      afterDescription: "After Nick's expert care, the prayer plant displays beautiful, vibrant patterns and healthy new foliage",
-      problemDiagnosed: "Environmental stress, humidity issues, and potential root problems causing widespread leaf damage",
-      treatmentApplied: "Humidity optimization, proper placement guidance, soil treatment, and specialized prayer plant care",
-      resultAchieved: "Complete recovery with vibrant leaf patterns and healthy new growth demonstrating proper care"
-    },
-    {
-      beforeImage: "/images/service-maintenance/palm-before-browning-tips-poor-growth.png",
-      beforeAlt: "Palm plant before treatment - showing browning tips and poor growth",
-      beforeTitle: "Struggling Palm with Browning Tips",
-      beforeDescription: "This palm plant was showing stress with browning leaf tips and overall poor growth patterns",
-      afterImage: "/images/service-maintenance/palm-after-vibrant-healthy-growth.png",
-      afterAlt: "Palm plant after treatment - showing healthy, vibrant growth",
-      afterTitle: "Vibrant & Healthy Palm",
-      afterDescription: "After Nick's treatment, the palm displays lush, healthy foliage with proper growth and no browning",
-      problemDiagnosed: "Leaf tip burn from water quality issues, improper humidity levels, and nutrient deficiencies",
-      treatmentApplied: "Water quality improvement, humidity optimization, proper fertilization, and pruning of damaged fronds",
-      resultAchieved: "Eliminated browning with healthy new growth and improved overall plant vitality and appearance"
-    },
-    {
-      beforeImage: "/images/service-maintenance/fiddle-leaf-fig-before-sparse-struggling.png",
-      beforeAlt: "Fiddle leaf fig before treatment - showing sparse growth and poor structure",
-      beforeTitle: "Sparse & Struggling Fiddle Leaf Fig",
-      beforeDescription: "This fiddle leaf fig was showing poor growth with sparse foliage and weak branching structure",
-      afterImage: "/images/service-maintenance/fiddle-leaf-fig-after-full-flourishing.png",
-      afterAlt: "Fiddle leaf fig after treatment - showing full, healthy growth",
-      afterTitle: "Full & Flourishing Tree",
-      afterDescription: "After Nick's expert care, the fiddle leaf fig displays dense, healthy foliage and strong tree structure",
-      problemDiagnosed: "Poor branching structure, inadequate light conditions, and improper pruning leading to sparse growth",
-      treatmentApplied: "Strategic pruning, proper repotting, optimal positioning guidance, and growth enhancement techniques",
-      resultAchieved: "Dramatic transformation into a full, tree-like structure with dense foliage and strong branching"
-    },
-    {
-      beforeImage: "/images/service-maintenance/plant-cuttings-before-struggling-propagations.png",
-      beforeAlt: "Plant cuttings before treatment - showing root-bound and struggling propagations",
-      beforeTitle: "Struggling Plant Propagations",
-      beforeDescription: "These plant cuttings were root-bound and struggling with poor soil conditions and inadequate care",
-      afterImage: "/images/service-maintenance/plant-after-propagation-recovery-healthy.png",
-      afterAlt: "Plant after propagation and recovery - showing healthy, vibrant growth",
-      afterTitle: "Thriving & Healthy Plant",
-      afterDescription: "After Nick's expert propagation techniques, the plant shows lush, healthy foliage and strong root development",
-      problemDiagnosed: "Root-bound propagations with poor soil quality, inadequate drainage, and stunted growth",
-      treatmentApplied: "Professional propagation techniques, proper soil preparation, root care, and optimal growing conditions",
-      resultAchieved: "Successful propagation recovery with healthy root system and vibrant leaf development"
+      beforeImage: "/images/service-maintenance/nick-plant-doctor-casual.png",
+      beforeAlt: "Nick assessing multiple struggling plants in office environment",
+      beforeTitle: "Multiple Plant Health Issues",
+      beforeDescription: "Office environment with several plants showing various health problems requiring expert intervention",
+      afterImage: "/images/corporate-offices/bird-of-paradise-atlanta-skyline.png",
+      afterAlt: "Healthy office plants creating vibrant workspace environment",
+      afterTitle: "Complete Office Plant Transformation",
+      afterDescription: "Professional plant care resulting in lush, healthy office environment enhancing workplace productivity",
+      problemDiagnosed: "Systematic plant health issues across office environment, improper care protocols, environmental factors",
+      treatmentApplied: "Comprehensive office plant audit, individual plant treatment plans, staff training, ongoing maintenance",
+      resultAchieved: "Complete office plant ecosystem transformation with measurable improvements in plant health and workplace atmosphere"
     }
   ];
 
@@ -106,10 +54,10 @@ const BeforeAfterTransformations = ({ onBookingClick }: BeforeAfterTransformatio
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-            Real Results: Before & After Plant Transformations
+            Professional Plant Doctor Success Stories
           </h2>
           <p className="text-lg text-muted-foreground">
-            See the dramatic improvements Nick achieves with his expert plant doctor services
+            Discover how Nick's expert plant care transforms struggling office environments into thriving, healthy workspaces
           </p>
         </div>
 
