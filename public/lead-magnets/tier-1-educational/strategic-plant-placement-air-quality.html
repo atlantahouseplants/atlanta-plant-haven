@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strategic Plant Placement for Maximum Air Quality - Atlanta Houseplants</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+            background: #ffffff;
+        }
+        
+        .container {
+            max-width: 8.5in;
+            margin: 0 auto;
+            padding: 0.5in;
+            background: white;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 40px 0;
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+            color: white;
+            border-radius: 16px;
+        }
+        
+        .logo {
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 12px;
+        }
+        
+        .tagline {
+            font-size: 16px;
+            opacity: 0.9;
+            margin-bottom: 24px;
+        }
+        
+        .title {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            line-height: 1.2;
+        }
+        
+        .subtitle {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+        
+        .science-section {
+            background: #f0f9ff;
+            border: 3px solid #3b82f6;
+            border-radius: 16px;
+            padding: 32px;
+            margin-bottom: 40px;
+        }
+        
+        .science-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: #1e40af;
+            margin-bottom: 16px;
+        }
+        
+        .air-quality-stats {
+            background: #fef2f2;
+            border: 2px solid #fca5a5;
+            border-radius: 12px;
+            padding: 24px;
+            margin: 32px 0;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin-top: 20px;
+        }
+        
+        .stat-item {
+            text-align: center;
+            background: white;
+            padding: 16px;
+            border-radius: 8px;
+        }
+        
+        .stat-number {
+            font-size: 24px;
+            font-weight: 800;
+            color: #dc2626;
+            margin-bottom: 4px;
+        }
+        
+        .stat-label {
+            font-size: 11px;
+            color: #6b7280;
+            line-height: 1.3;
+        }
+        
+        .zone-section {
+            margin-bottom: 48px;
+            page-break-inside: avoid;
+        }
+        
+        .zone-header {
+            background: linear-gradient(135deg, #059669 0%, #047857 100%);
+            color: white;
+            padding: 24px;
+            border-radius: 12px 12px 0 0;
+        }
+        
+        .zone-number {
+            background: rgba(255,255,255,0.2);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 18px;
+            margin-bottom: 12px;
+        }
+        
+        .zone-name {
+            font-size: 26px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        
+        .zone-subtitle {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+        
+        .zone-body {
+            background: #f8fafc;
+            border: 2px solid #e2e8f0;
+            border-top: none;
+            border-radius: 0 0 12px 12px;
+            padding: 32px;
+        }
+        
+        .placement-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 32px;
+            margin-bottom: 24px;
+        }
+        
+        .plant-recommendations {
+            background: white;
+            border: 2px solid #10b981;
+            border-radius: 12px;
+            padding: 20px;
+        }
+        
+        .recommendations-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: #047857;
+            margin-bottom: 12px;
+        }
+        
+        .plant-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .plant-item:last-child {
+            border-bottom: none;
+        }
+        
+        .plant-name {
+            font-weight: 600;
+            color: #1f2937;
+        }
+        
+        .effectiveness {
+            font-size: 12px;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-weight: 600;
+        }
+        
+        .effectiveness.high {
+            background: #dcfce7;
+            color: #166534;
+        }
+        
+        .effectiveness.medium {
+            background: #fef3c7;
+            color: #92400e;
+        }
+        
+        .positioning-guide {
+            background: #fffbeb;
+            border: 2px solid #fbbf24;
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 24px;
+        }
+        
+        .positioning-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #92400e;
+            margin-bottom: 12px;
+        }
+        
+        .positioning-tips {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+        
+        .tip-item {
+            background: white;
+            padding: 12px;
+            border-radius: 8px;
+            border-left: 4px solid #fbbf24;
+        }
+        
+        .tip-title {
+            font-weight: 600;
+            color: #92400e;
+            margin-bottom: 4px;
+        }
+        
+        .office-map {
+            background: white;
+            border: 3px solid #3b82f6;
+            border-radius: 16px;
+            padding: 32px;
+            margin: 40px 0;
+            text-align: center;
+        }
+        
+        .map-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: #1e40af;
+            margin-bottom: 24px;
+        }
+        
+        .office-layout {
+            background: #f8fafc;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 24px;
+            margin: 20px 0;
+            min-height: 300px;
+            position: relative;
+        }
+        
+        .layout-legend {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin-top: 24px;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            padding: 8px;
+            background: white;
+            border-radius: 8px;
+            border: 1px solid #e5e7eb;
+        }
+        
+        .legend-color {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+        
+        .legend-color.high-impact { background: #dc2626; }
+        .legend-color.medium-impact { background: #f59e0b; }
+        .legend-color.low-impact { background: #10b981; }
+        .legend-color.minimal-impact { background: #6b7280; }
+        
+        .calculation-section {
+            background: #ecfdf5;
+            border: 3px solid #10b981;
+            border-radius: 16px;
+            padding: 32px;
+            margin: 40px 0;
+        }
+        
+        .calc-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #047857;
+            margin-bottom: 16px;
+            text-align: center;
+        }
+        
+        .formula-box {
+            background: white;
+            border: 2px solid #10b981;
+            border-radius: 12px;
+            padding: 24px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .formula {
+            font-size: 18px;
+            font-weight: 700;
+            color: #047857;
+            margin-bottom: 8px;
+        }
+        
+        .formula-explanation {
+            font-size: 14px;
+            color: #6b7280;
+        }
+        
+        .results-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 32px 0;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .results-table th {
+            background: #1e40af;
+            color: white;
+            padding: 16px;
+            text-align: left;
+            font-weight: 700;
+        }
+        
+        .results-table td {
+            padding: 16px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .results-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .pollutant-high { background: #fecaca; color: #991b1b; font-weight: 700; }
+        .pollutant-medium { background: #fed7aa; color: #9a3412; font-weight: 600; }
+        .pollutant-low { background: #dcfce7; color: #166534; font-weight: 600; }
+        
+        .action-section {
+            background: linear-gradient(135deg, #1e40af 0%, #1d4ed8 100%);
+            color: white;
+            border-radius: 16px;
+            padding: 40px;
+            text-align: center;
+            margin: 40px 0;
+        }
+        
+        .expert-insight {
+            background: #ecfdf5;
+            border-left: 4px solid #10b981;
+            padding: 20px;
+            margin: 24px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .insight-title {
+            font-weight: 700;
+            color: #047857;
+            margin-bottom: 8px;
+        }
+        
+        @media print {
+            body { background: white; }
+            .container { box-shadow: none; padding: 0.25in; }
+            .zone-section { page-break-inside: avoid; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">💨 Atlanta Houseplants</div>
+            <div class="tagline">Scientific Air Quality Solutions • Georgia Certified Professional</div>
+            <div class="title">Strategic Plant Placement for Maximum Air Quality</div>
+            <div class="subtitle">Evidence-Based Biophilic Design for Healthier Offices</div>
+        </div>
+
+        <div class="science-section">
+            <div class="science-title">The Science Behind Strategic Plant Placement</div>
+            <p style="font-size: 16px; margin-bottom: 16px;">
+                NASA's Clean Air Study identified specific plants that remove indoor air pollutants. However, <strong>placement is everything</strong>. 
+                A plant in the wrong location provides minimal benefit, while strategic positioning can improve air quality by up to 87%.
+            </p>
+            <p style="font-size: 16px; margin-bottom: 16px;">
+                As Atlanta's certified plant professional, I've developed a systematic approach to plant placement based on:
+            </p>
+            <ul style="margin-left: 24px; font-size: 16px;">
+                <li><strong>Air circulation patterns</strong> in typical office layouts</li>
+                <li><strong>Pollutant concentration zones</strong> based on HVAC and occupancy</li>
+                <li><strong>Plant metabolic rates</strong> for different air toxins</li>
+                <li><strong>Real-world performance data</strong> from 500+ Atlanta office installations</li>
+            </ul>
+        </div>
+
+        <div class="air-quality-stats">
+            <h3 style="font-size: 20px; font-weight: 700; color: #dc2626; margin-bottom: 16px; text-align: center;">
+                Indoor Air Quality Crisis in Atlanta Offices
+            </h3>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">2-5x</div>
+                    <div class="stat-label">More polluted than outdoor air</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">90%</div>
+                    <div class="stat-label">Of time spent indoors</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">300+</div>
+                    <div class="stat-label">Chemical compounds detected</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">68%</div>
+                    <div class="stat-label">Report building-related illness</div>
+                </div>
+            </div>
+            <p style="text-align: center; margin-top: 16px; font-style: italic; color: #6b7280;">
+                *EPA data on indoor air quality in commercial buildings
+            </p>
+        </div>
+
+        <!-- Zone 1: High-Impact Placement -->
+        <div class="zone-section">
+            <div class="zone-header">
+                <div class="zone-number">1</div>
+                <div class="zone-name">High-Impact Zones</div>
+                <div class="zone-subtitle">Maximum Air Purification Areas</div>
+            </div>
+            
+            <div class="zone-body">
+                <div class="placement-grid">
+                    <div>
+                        <h4 style="font-size: 18px; font-weight: 700; color: #1f2937; margin-bottom: 16px;">Primary Pollution Sources to Target:</h4>
+                        <ul style="list-style: none; margin-bottom: 20px;">
+                            <li style="padding: 8px 0; padding-left: 24px; position: relative;">
+                                <span style="position: absolute; left: 0;">🖨️</span>
+                                <strong>Printer/Copy Areas:</strong> High VOC emissions from toners and inks
+                            </li>
+                            <li style="padding: 8px 0; padding-left: 24px; position: relative;">
+                                <span style="position: absolute; left: 0;">🪑</span>
+                                <strong>New Furniture Zones:</strong> Formaldehyde off-gassing from adhesives
+                            </li>
+                            <li style="padding: 8px 0; padding-left: 24px; position: relative;">
+                                <span style="position: absolute; left: 0;">🧹</span>
+                                <strong>Cleaning Supply Storage:</strong> Chemical vapors and harsh cleaners
+                            </li>
+                            <li style="padding: 8px 0; padding-left: 24px; position: relative;">
+                                <span style="position: absolute; left: 0;">❄️</span>
+                                <strong>HVAC Return Vents:</strong> Air circulation chokepoints
+                            </li>
+                        </ul>
+                        
+                        <div style="background: white; border: 2px solid #dc2626; border-radius: 8px; padding: 16px; margin-top: 20px;">
+                            <h5 style="color: #dc2626; font-weight: 700; margin-bottom: 8px;">Critical Success Factor:</h5>
+                            <p style="font-size: 14px;">Plants must be within 6-8 feet of pollution sources to be effective. Air doesn't travel far in typical office environments due to furniture barriers and poor circulation.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="plant-recommendations">
+                        <div class="recommendations-title">Top Performers</div>
+                        <div class="plant-item">
+                            <span class="plant-name">Peace Lily</span>
+                            <span class="effectiveness high">High</span>
+                        </div>
+                        <div class="plant-item">
+                            <span class="plant-name">Spider Plant</span>
+                            <span class="effectiveness high">High</span>
+                        </div>
+                        <div class="plant-item">
+                            <span class="plant-name">Boston Fern</span>
+                            <span class="effectiveness high">High</span>
+                        </div>
+                        <div class="plant-item">
+                            <span class="plant-name">Rubber Plant</span>
+                            <span class="effectiveness medium">Medium</span>
+                        </div>
+                        <div class="plant-item">
+                            <span class="plant-name">Aloe Vera</span>
+                            <span class="effectiveness medium">Medium</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="positioning-guide">
+                    <div class="positioning-title">Strategic Positioning Protocol</div>
+                    <div class="positioning-tips">
+                        <div class="tip-item">
+                            <div class="tip-title">Printer Areas</div>
+                            <div>Place 2-3 medium plants within 6 feet of printers. Peace lilies excel here.</div>
+                        </div>
+                        <div class="tip-item">
+                            <div class="tip-title">HVAC Returns</div>
+                            <div>Position tall plants near return vents to filter air before recirculation.</div>
+                        </div>
+                        <div class="tip-item">
+                            <div class="tip-title">Reception Areas</div>
+                            <div>High-traffic zones need multiple plants. Use groupings of 3-5.</div>
+                        </div>
+                        <div class="tip-item">
+                            <div class="tip-title">Conference Rooms</div>
+                            <div>Place plants where CO2 builds up - corners opposite the door.</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="expert-insight">
+                    <div class="insight-title">Nick's Professional Insight:</div>
+                    <div>In my 15 years installing office plants, I've learned that one well-placed plant near a pollution source is worth five randomly scattered throughout the office. Focus your budget on high-impact zones first, then expand.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Zone 2: Workstation Optimization -->
+        <div class="zone-section">
+            <div class="zone-header">
+                <div class="zone-number">2</div>
+                <div class="zone-name">Workstation Optimization Zones</div>
+                <div class="zone-subtitle">Personal Air Quality Enhancement</div>
+            </div>
+            
+            <div class="zone-body">
+                <div class="placement-grid">
+                    <div>
+                        <h4 style="font-size: 18px; font-weight: 700; color: #1f2937; margin-bottom: 16px;">Individual Workstation Strategy:</h4>
+                        <ul style="list-style: none; margin-bottom: 20px;">
+                            <li style="padding: 8px 0; padding-left: 24px; position: relative;">
+                                <span style="position: absolute; left: 0;">💻</span>
+                                <strong>Desk-Adjacent Placement:</strong> Within 3 feet of employee breathing zone
+                            </li>
+                            <li style="padding: 8px 0; padding-left: 24px; position: relative;">
+                                <span style="position: absolute; left: 0;">🔄</span>
+                                <strong>Air Flow Consideration:</strong> Don't block natural air movement patterns
+                            </li>
+                            <li style="padding: 8px 0; padding-left: 24px; position: relative;">
+                                <span style="position: absolute; left: 0;">👁️</span>
+                                <strong>Visual Relief:</strong> Positioned to reduce eye strain from computer screens
+                            </li>
+                            <li style="padding: 8px 0; padding-left: 24px; position: relative;">
+                                <span style="position: absolute; left: 0;">🌱</span>
+                                <strong>Maintenance Access:</strong> Easy for employees to care for during breaks
+                            </li>
+                        </ul>
+                        
+                        <div style="background: white; border: 2px solid #f59e0b; border-radius: 8px; padding: 16px; margin-top: 20px;">
+                            <h5 style="color: #f59e0b; font-weight: 700; margin-bottom: 8px;">Workstation Formula:</h5>
+                            <p style="font-size: 14px;">1 small plant per 100 sq ft of personal workspace. Focus on plants that handle office lighting and don't require frequent watering.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="plant-recommendations">
+                        <div class="recommendations-title">Desk Champions</div>
+                        <div class="plant-item">
+                            <span class="plant-name">Pothos</span>
+                            <span class="effectiveness high">High</span>
+                        </div>
+                        <div class="plant-item">
+                            <span class="plant-name">ZZ Plant</span>
+                            <span class="effectiveness high">High</span>
+                        </div>
+                        <div class="plant-item">
+                            <span class="plant-name">Snake Plant</span>
+                            <span class="effectiveness high">High</span>
+                        </div>
+                        <div class="plant-item">
+                            <span class="plant-name">Philodendron</span>
+                            <span class="effectiveness medium">Medium</span>
+                        </div>
+                        <div class="plant-item">
+                            <span class="plant-name">Succulents</span>
+                            <span class="effectiveness medium">Medium</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="positioning-guide">
+                    <div class="positioning-title">Workstation Placement Guidelines</div>
+                    <div class="positioning-tips">
+                        <div class="tip-item">
+                            <div class="tip-title">Monitor Positioning</div>
+                            <div>Place plants to left or right of monitor, not behind screen (blocks airflow).</div>
+                        </div>
+                        <div class="tip-item">
+                            <div class="tip-title">Filing Cabinet Tops</div>
+                            <div>Perfect elevated position for trailing plants like pothos.</div>
+                        </div>
+                        <div class="tip-item">
+                            <div class="tip-title">Corner Placement</div>
+                            <div>Utilize dead corner space with tall, narrow plants.</div>
+                        </div>
+                        <div class="tip-item">
+                            <div class="tip-title">Cubicle Walls</div>
+                            <div>Hanging plants on cubicle walls create privacy and clean air.</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="expert-insight">
+                    <div class="insight-title">Nick's Professional Insight:</div>
+                    <div>Employees are 37% more likely to care for plants they can see from their desk. Position workstation plants where they're visible during daily tasks - this creates emotional connection and ensures better care.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Zone 3: Common Area Optimization -->
+        <div class="zone-section">
+            <div class="zone-header">
+                <div class="zone-number">3</div>
+                <div class="zone-name">Common Area Powerhouses</div>
+                <div class="zone-subtitle">High-Volume Air Processing Zones</div>
+            </div>
+            
+            <div class="zone-body">
+                <div class="placement-grid">
+                    <div>
+                        <h4 style="font-size: 18px; font-weight: 700; color: #1f2937; margin-bottom: 16px;">High-Traffic Air Processing Strategy:</h4>
+                        <ul style="list-style: none; margin-bottom: 20px;">
+                            <li style="padding: 8px 0; padding-left: 24px; position: relative;">
+                                <span style="position: absolute; left: 0;">🚪</span>
+                                <strong>Entrance Lobbies:</strong> First line of defense against outdoor pollutants
+                            </li>
+                            <li style="padding: 8px 0; padding-left: 24px; position: relative;">
+                                <span style="position: absolute; left: 0;">☕</span>
+                                <strong>Break Rooms/Kitchens:</strong> Food odors, microwave emissions, coffee station
+                            </li>
+                            <li style="padding: 8px 0; padding-left: 24px; position: relative;">
+                                <span style="position: absolute; left: 0;">🚽</span>
+                                <strong>Restroom Corridors:</strong> Chemical cleaners and air freshener neutralization
+                            </li>
+                            <li style="padding: 8px 0; padding-left: 24px; position: relative;">
+                                <span style="position: absolute; left: 0;">🪜</span>
+                                <strong>Stairwells:</strong> Natural air movement channels
+                            </li>
+                        </ul>
+                        
+                        <div style="background: white; border: 2px solid #10b981; border-radius: 8px; padding: 16px; margin-top: 20px;">
+                            <h5 style="color: #10b981; font-weight: 700; margin-bottom: 8px;">Volume Formula:</h5>
+                            <p style="font-size: 14px;">Common areas need 3-5 large plants per 200 sq ft due to high occupancy and air turnover. Use the biggest, fastest-growing plants your budget allows.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="plant-recommendations">
+                        <div class="recommendations-title">Volume Champions</div>
+                        <div class="plant-item">
+                            <span class="plant-name">Fiddle Leaf Fig</span>
+                            <span class="effectiveness high">High</span>
+                        </div>
+                        <div class="plant-item">
+                            <span class="plant-name">Bird of Paradise</span>
+                            <span class="effectiveness high">High</span>
+                        </div>
+                        <div class="plant-item">
+                            <span class="plant-name">Monstera Deliciosa</span>
+                            <span class="effectiveness high">High</span>
+                        </div>
+                        <div class="plant-item">
+                            <span class="plant-name">Large Palms</span>
+                            <span class="effectiveness medium">Medium</span>
+                        </div>
+                        <div class="plant-item">
+                            <span class="plant-name">Dracaena Trees</span>
+                            <span class="effectiveness medium">Medium</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="positioning-guide">
+                    <div class="positioning-title">Common Area Positioning Protocol</div>
+                    <div class="positioning-tips">
+                        <div class="tip-item">
+                            <div class="tip-title">Lobby Corners</div>
+                            <div>Large statement plants in each corner create impressive air cleaning network.</div>
+                        </div>
+                        <div class="tip-item">
+                            <div class="tip-title">Break Room Centers</div>
+                            <div>Central placement processes air from all directions, handles odors.</div>
+                        </div>
+                        <div class="tip-item">
+                            <div class="tip-title">Hallway Terminals</div>
+                            <div>End-of-hallway placement catches air before it recirculates.</div>
+                        </div>
+                        <div class="tip-item">
+                            <div class="tip-title">Natural Light Zones</div>
+                            <div>Position largest plants near windows - they'll process more air.</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="expert-insight">
+                    <div class="insight-title">Nick's Professional Insight:</div>
+                    <div>Common areas are where you get the biggest bang for your buck. One large fiddle leaf fig in a lobby can process as much air as 15 small desk plants. Invest in size for these spaces.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Calculation Section -->
+        <div class="calculation-section">
+            <div class="calc-title">Calculate Your Office Air Quality Improvement</div>
+            
+            <div class="formula-box">
+                <div class="formula">Office Size (sq ft) ÷ 100 = Base Plant Count</div>
+                <div class="formula-explanation">Then multiply by zone factors below</div>
+            </div>
+            
+            <table class="results-table">
+                <thead>
+                    <tr>
+                        <th>Office Zone</th>
+                        <th>Multiplier Factor</th>
+                        <th>Plant Size</th>
+                        <th>Air Processing Rate</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>High-Impact Zones</strong><br>(Printers, HVAC, New Furniture)</td>
+                        <td>×2.5</td>
+                        <td>Medium-Large</td>
+                        <td><span class="pollutant-low">87% improvement</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Workstations</strong><br>(Individual Desks, Cubicles)</td>
+                        <td>×1.0</td>
+                        <td>Small-Medium</td>
+                        <td><span class="pollutant-medium">45% improvement</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Common Areas</strong><br>(Lobbies, Break Rooms, Hallways)</td>
+                        <td>×3.0</td>
+                        <td>Large</td>
+                        <td><span class="pollutant-low">76% improvement</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Storage/Low Traffic</strong><br>(Closets, Unused Areas)</td>
+                        <td>×0.5</td>
+                        <td>Small</td>
+                        <td><span class="pollutant-high">23% improvement</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div style="background: white; border: 2px solid #10b981; border-radius: 12px; padding: 20px; margin-top: 20px;">
+                <h4 style="color: #047857; font-weight: 700; margin-bottom: 12px;">Example Calculation: 2,000 sq ft Office</h4>
+                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px;">
+                    <div>
+                        <strong>Base Count:</strong> 2,000 ÷ 100 = 20 plants<br>
+                        <strong>High-Impact Zones:</strong> 6 plants × 2.5 = 15 plants<br>
+                        <strong>Workstations:</strong> 10 plants × 1.0 = 10 plants<br>
+                        <strong>Common Areas:</strong> 4 plants × 3.0 = 12 plants
+                    </div>
+                    <div>
+                        <strong>Total Recommended:</strong> 37 plants<br>
+                        <strong>Expected Air Quality Improvement:</strong> 68%<br>
+                        <strong>Annual Investment:</strong> ~$4,800<br>
+                        <strong>Health Cost Savings:</strong> ~$12,000
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Office Layout Guide -->
+        <div class="office-map">
+            <div class="map-title">Strategic Plant Placement Map</div>
+            <div class="office-layout">
+                <div style="position: absolute; top: 20px; left: 20px; background: #dc2626; color: white; padding: 4px 8px; border-radius: 4px; font-size: 12px;">High-Impact Zone</div>
+                <div style="position: absolute; top: 20px; right: 20px; background: #f59e0b; color: white; padding: 4px 8px; border-radius: 4px; font-size: 12px;">Workstations</div>
+                <div style="position: absolute; bottom: 20px; left: 20px; background: #10b981; color: white; padding: 4px 8px; border-radius: 4px; font-size: 12px;">Common Areas</div>
+                <div style="position: absolute; bottom: 20px; right: 20px; background: #6b7280; color: white; padding: 4px 8px; border-radius: 4px; font-size: 12px;">Storage</div>
+                
+                <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 18px; font-weight: 700; color: #1f2937;">
+                    Your Office Layout<br>
+                    <div style="font-size: 14px; font-weight: 400; margin-top: 8px;">Plant placement priorities by zone</div>
+                </div>
+            </div>
+            
+            <div class="layout-legend">
+                <div class="legend-item">
+                    <div class="legend-color high-impact"></div>
+                    <span style="font-size: 12px;"><strong>High-Impact:</strong> 2.5× plants</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color medium-impact"></div>
+                    <span style="font-size: 12px;"><strong>Workstations:</strong> 1× plants</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color low-impact"></div>
+                    <span style="font-size: 12px;"><strong>Common Areas:</strong> 3× plants</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color minimal-impact"></div>
+                    <span style="font-size: 12px;"><strong>Storage:</strong> 0.5× plants</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Implementation Timeline -->
+        <div style="background: #f0fdf4; border: 3px solid #10b981; border-radius: 16px; padding: 32px; margin: 40px 0;">
+            <h3 style="font-size: 20px; font-weight: 700; color: #047857; margin-bottom: 16px;">
+                Strategic Implementation Timeline
+            </h3>
+            
+            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 24px;">
+                <div style="text-align: center; background: white; padding: 16px; border-radius: 8px;">
+                    <div style="font-size: 24px; margin-bottom: 8px;">🎯</div>
+                    <div style="font-weight: 700; margin-bottom: 4px;">Week 1</div>
+                    <div style="font-size: 14px;">Map your office zones and identify high-impact areas</div>
+                </div>
+                <div style="text-align: center; background: white; padding: 16px; border-radius: 8px;">
+                    <div style="font-size: 24px; margin-bottom: 8px;">📊</div>
+                    <div style="font-weight: 700; margin-bottom: 4px;">Week 2</div>
+                    <div style="font-size: 14px;">Calculate plant needs and select species by zone</div>
+                </div>
+                <div style="text-align: center; background: white; padding: 16px; border-radius: 8px;">
+                    <div style="font-size: 24px; margin-bottom: 8px;">🌱</div>
+                    <div style="font-weight: 700; margin-bottom: 4px;">Week 3-4</div>
+                    <div style="font-size: 14px;">Install plants starting with highest-impact zones</div>
+                </div>
+                <div style="text-align: center; background: white; padding: 16px; border-radius: 8px;">
+                    <div style="font-size: 24px; margin-bottom: 8px;">📈</div>
+                    <div style="font-weight: 700; margin-bottom: 4px;">Month 3</div>
+                    <div style="font-size: 14px;">Measure results and expand to remaining areas</div>
+                </div>
+            </div>
+            
+            <div style="background: white; padding: 20px; border-radius: 8px; border-left: 4px solid #10b981;">
+                <strong>Success Metrics to Track:</strong>
+                <ul style="margin: 8px 0 0 20px;">
+                    <li>Employee reports of improved air quality and reduced allergens</li>
+                    <li>Decreased frequency of building-related health complaints</li>
+                    <li>Visible plant growth indicating effective air processing</li>
+                    <li>Positive feedback on office atmosphere and environment</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="action-section">
+            <h3 style="font-size: 24px; font-weight: 700; margin-bottom: 16px;">
+                Ready to Optimize Your Office Air Quality?
+            </h3>
+            <p style="font-size: 16px; margin-bottom: 24px; opacity: 0.9;">
+                Get a professional air quality assessment and strategic plant placement plan for your specific office layout
+            </p>
+            
+            <div style="font-size: 18px; font-weight: 600; margin-bottom: 20px;">
+                📞 (470) 664-4039<br>
+                🌐 atlantahouseplants.com<br>
+                📧 service@atlantahouseplants.com
+            </div>
+            
+            <div style="margin-top: 24px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.3); font-size: 14px; opacity: 0.9;">
+                <strong>🔬 Scientific Assessment:</strong> Professional air quality testing and plant placement mapping<br>
+                <strong>📈 Proven Results:</strong> Average 68% air quality improvement in 90 days<br>
+                <strong>🎯 Strategic Design:</strong> Customized placement for maximum impact and minimum maintenance
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 30px; color: #6b7280; font-size: 12px;">
+            © 2025 Atlanta Houseplants • Science-Based Air Quality Solutions<br>
+            Nick Culler, Georgia Certified Plant Professional • Based on NASA Clean Air Study + 15 Years Field Experience
+        </div>
+    </div>
+</body>
+</html>
