@@ -175,17 +175,17 @@ const Corporate = () => {
               </div>
             </div>
 
-            {/* Executive Hero Image - Week 1 Enhancement */}
+            {/* Corporate Gift Hero Image */}
             <div className="relative">
               <img 
-                src="/images/corporate-offices/bird-of-paradise-atlanta-skyline.png" 
-                alt="Executive office space with premium plant installation overlooking Atlanta skyline"
+                src="/images/arrangements-decorative/wicker-basket-mixed-tropical-plants.png" 
+                alt="Premium corporate gift arrangement with tropical plants in elegant wicker basket"
                 className="rounded-2xl shadow-2xl"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent rounded-2xl"></div>
               <div className="absolute bottom-6 left-6 right-6 text-white">
-                <h4 className="text-xl font-bold mb-2">Premium Corporate Positioning</h4>
-                <p className="text-sm opacity-90">Executive-level installations that impress C-suite clients and partners</p>
+                <h4 className="text-xl font-bold mb-2">Premium Corporate Gifts</h4>
+                <p className="text-sm opacity-90">Thoughtfully curated plant arrangements that create lasting impressions with clients and employees</p>
               </div>
               <div className="absolute -bottom-6 -right-6 bg-white p-4 rounded-xl shadow-xl">
                 <div className="flex items-center space-x-3">
@@ -297,57 +297,57 @@ const Corporate = () => {
         </div>
       </section>
 
-      {/* Executive Positioning Section - Week 1 Enhancement */}
+      {/* Corporate Gifting Benefits Section */}
       <section className="py-20 bg-gradient-to-br from-gray-900 to-blue-900 text-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Trusted by Atlanta's C-Suite Leaders
+              Trusted by Atlanta's Leading Companies
             </h2>
             <p className="text-xl opacity-90 max-w-4xl mx-auto">
-              When executive presence matters, our premium plant programs enhance your professional image and create lasting impressions with clients, partners, and stakeholders.
+              When relationships matter, our premium gift programs create meaningful connections that strengthen business partnerships and show genuine appreciation to employees, clients, and partners.
             </p>
           </div>
           
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <img
-                src="/images/corporate-offices/croton-plant-city-view.png"
-                alt="Executive office with premium plant installation and city view"
+                src="/images/arrangements-decorative/wicker-basket-anthurium-arrangement.png"
+                alt="Premium corporate gift with elegant anthurium in wicker basket"
                 className="rounded-2xl shadow-2xl"
               />
             </div>
             
             <div className="space-y-8">
               <div className="bg-white/10 backdrop-blur rounded-2xl p-8">
-                <h3 className="text-2xl font-bold mb-6">Executive-Level Benefits</h3>
+                <h3 className="text-2xl font-bold mb-6">Corporate Gifting Benefits</h3>
                 <div className="space-y-4">
                   <div className="flex items-start space-x-4">
-                    <Building2 className="h-6 w-6 text-blue-400 flex-shrink-0 mt-1" />
+                    <Heart className="h-6 w-6 text-blue-400 flex-shrink-0 mt-1" />
                     <div>
-                      <h4 className="font-bold mb-1">Enhanced Brand Perception</h4>
-                      <p className="text-sm opacity-90">Premium environments reflect your commitment to excellence and attention to detail</p>
+                      <h4 className="font-bold mb-1">Strengthen Relationships</h4>
+                      <p className="text-sm opacity-90">Living gifts create lasting emotional connections that recipients remember for years</p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-4">
                     <Users className="h-6 w-6 text-blue-400 flex-shrink-0 mt-1" />
                     <div>
-                      <h4 className="font-bold mb-1">Client Impression Management</h4>
-                      <p className="text-sm opacity-90">Strategic biophilic design reinforces your market position in competitive presentations</p>
+                      <h4 className="font-bold mb-1">Employee Appreciation</h4>
+                      <p className="text-sm opacity-90">Show genuine care with gifts that improve their workspace and wellbeing daily</p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-4">
                     <TrendingUp className="h-6 w-6 text-blue-400 flex-shrink-0 mt-1" />
                     <div>
-                      <h4 className="font-bold mb-1">Measurable ROI</h4>
-                      <p className="text-sm opacity-90">Employee satisfaction and client feedback improvements translate to business value</p>
+                      <h4 className="font-bold mb-1">Better ROI Than Traditional Gifts</h4>
+                      <p className="text-sm opacity-90">3x higher satisfaction rates compared to standard corporate gifts like gift cards or baskets</p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-4">
-                    <Heart className="h-6 w-6 text-blue-400 flex-shrink-0 mt-1" />
+                    <Building2 className="h-6 w-6 text-blue-400 flex-shrink-0 mt-1" />
                     <div>
-                      <h4 className="font-bold mb-1">Executive Wellness</h4>
-                      <p className="text-sm opacity-90">Stress reduction and air quality improvements support peak executive performance</p>
+                      <h4 className="font-bold mb-1">Sustainable Brand Image</h4>
+                      <p className="text-sm opacity-90">Eco-friendly gifts reflect your company's commitment to sustainability and wellness</p>
                     </div>
                   </div>
                 </div>
@@ -358,7 +358,7 @@ const Corporate = () => {
                   onClick={() => document.getElementById('lead-magnet-form')?.scrollIntoView({ behavior: 'smooth' })}
                   className="bg-white text-gray-900 hover:bg-gray-100 text-lg px-8 py-4"
                 >
-                  Schedule Executive Consultation
+                  Start Your Gifting Program
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </div>
@@ -566,12 +566,12 @@ const Corporate = () => {
           </div>
           
           <div className="grid lg:grid-cols-2 gap-12">
-            {/* Tech Company Project */}
+            {/* Employee Appreciation Program */}
             <div className="group bg-gradient-to-br from-white to-gray-50/50 rounded-3xl shadow-2xl hover:shadow-blue-500/10 overflow-hidden border-0 transform hover:scale-[1.01] hover:-translate-y-2 transition-all duration-500">
               <div className="aspect-video overflow-hidden relative">
                 <img 
                   src="/images/arrangements-decorative/desktop-succulent-arrangement.png"
-                  alt="Atlanta Tech Company individual workstation enhancement program"
+                  alt="Employee appreciation gifts featuring desktop succulent arrangements"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -579,23 +579,23 @@ const Corporate = () => {
               <div className="p-10 relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-50/20 via-transparent to-green-50/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none rounded-b-3xl"></div>
                 <div className="relative z-10">
-                  <h3 className="text-2xl font-bold text-foreground mb-4">Atlanta Tech Company</h3>
+                  <h3 className="text-2xl font-bold text-foreground mb-4">Employee Appreciation Program</h3>
                   <p className="text-muted-foreground mb-6 leading-relaxed">
-                    Individual workstation enhancement program featuring carefully selected low-maintenance succulents. Personal plant installations improve individual focus and job satisfaction while maintaining consistent aesthetic standards.
+                    Quarterly employee recognition program featuring personalized desktop succulent arrangements. Each gift is carefully curated based on recipient preferences and delivered with custom thank-you messages.
                   </p>
                   <blockquote className="bg-gradient-to-r from-blue-50 to-indigo-50 p-6 rounded-2xl border-l-4 border-blue-500 shadow-inner group-hover:shadow-lg transition-shadow duration-300">
-                    <p className="text-foreground italic mb-2 text-lg leading-relaxed">"Quantifiable improvements in team productivity and employee satisfaction scores. The personal plant program has become a valued benefit that differentiates our workplace culture."</p>
+                    <p className="text-foreground italic mb-2 text-lg leading-relaxed">"Our employees actually keep and treasure these gifts - unlike traditional rewards that get forgotten. We've seen measurable improvements in retention and satisfaction scores."</p>
                   </blockquote>
                 </div>
               </div>
             </div>
 
-            {/* Law Firm Project */}
+            {/* Client Thank You Program */}
             <div className="group bg-gradient-to-br from-white to-gray-50/50 rounded-3xl shadow-2xl hover:shadow-blue-500/10 overflow-hidden border-0 transform hover:scale-[1.01] hover:-translate-y-2 transition-all duration-500">
               <div className="aspect-video overflow-hidden relative">
                 <img 
                   src="/images/arrangements-decorative/mixed-bowl-planter-colorful.png"
-                  alt="Executive Law Firm sophisticated plant arrangements"
+                  alt="Premium client gifts featuring sophisticated mixed plant arrangements"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -603,23 +603,23 @@ const Corporate = () => {
               <div className="p-10 relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-50/20 via-transparent to-green-50/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none rounded-b-3xl"></div>
                 <div className="relative z-10">
-                  <h3 className="text-2xl font-bold text-foreground mb-4">Executive Law Firm</h3>
+                  <h3 className="text-2xl font-bold text-foreground mb-4">Client Thank You Program</h3>
                   <p className="text-muted-foreground mb-6 leading-relaxed">
-                    Executive-level plant curation featuring diverse, sophisticated arrangements that reinforce professional credibility. Strategic species selection ensures year-round visual impact while supporting air quality goals in client-facing spaces.
+                    Executive-level client appreciation gifts featuring sophisticated mixed arrangements in premium containers. Each gift reinforces professional relationships while creating lasting brand impressions.
                   </p>
                   <blockquote className="bg-gradient-to-r from-blue-50 to-indigo-50 p-6 rounded-2xl border-l-4 border-blue-500 shadow-inner group-hover:shadow-lg transition-shadow duration-300">
-                    <p className="text-foreground italic mb-2 text-lg leading-relaxed">"Client feedback consistently highlights our office environment as a differentiating factor in competitive presentations. The investment has enhanced our brand perception significantly."</p>
+                    <p className="text-foreground italic mb-2 text-lg leading-relaxed">"Clients consistently mention receiving our plant gifts in follow-up meetings. It's become a signature part of our brand that differentiates us from competitors."</p>
                   </blockquote>
                 </div>
               </div>
             </div>
 
-            {/* Corporate Entrance Project */}
+            {/* Holiday Gifting Program */}
             <div className="group bg-gradient-to-br from-white to-gray-50/50 rounded-3xl shadow-2xl hover:shadow-blue-500/10 overflow-hidden border-0 transform hover:scale-[1.01] hover:-translate-y-2 transition-all duration-500">
               <div className="aspect-video overflow-hidden relative">
                 <img 
-                  src="/images/outdoor-commercial/luxury-artisan-entrance-planters.png"
-                  alt="Luxury Resort Corporate Entrance custom artisan planters"
+                  src="/images/arrangements-decorative/wicker-basket-mixed-plants-arrangement.png"
+                  alt="Holiday corporate gifts in elegant wicker baskets with seasonal touches"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -627,23 +627,23 @@ const Corporate = () => {
               <div className="p-10 relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-50/20 via-transparent to-green-50/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none rounded-b-3xl"></div>
                 <div className="relative z-10">
-                  <h3 className="text-2xl font-bold text-foreground mb-4">Luxury Resort Corporate Entrance</h3>
+                  <h3 className="text-2xl font-bold text-foreground mb-4">Holiday Gifting Program</h3>
                   <p className="text-muted-foreground mb-6 leading-relaxed">
-                    Luxury hospitality entrance design featuring custom artisan planters with rotating seasonal displays. Premium plant curation reinforces brand positioning while creating memorable first impressions.
+                    Annual holiday gift program featuring seasonal arrangements in elegant wicker baskets with personalized ribbon and messaging. Delivered directly to employee homes for maximum impact.
                   </p>
                   <blockquote className="bg-gradient-to-r from-blue-50 to-indigo-50 p-6 rounded-2xl border-l-4 border-blue-500 shadow-inner group-hover:shadow-lg transition-shadow duration-300">
-                    <p className="text-foreground italic mb-2 text-lg leading-relaxed">"Guest feedback consistently highlights our entrance design as reinforcing their perception of our luxury brand standards. The seasonal rotation ensures year-round visual impact."</p>
+                    <p className="text-foreground italic mb-2 text-lg leading-relaxed">"Switching from gift cards to living plants transformed our holiday program. Employee families love them, and the gifts keep giving joy throughout the year."</p>
                   </blockquote>
                 </div>
               </div>
             </div>
 
-            {/* Seasonal Entrance Project */}
+            {/* New Client Welcome Program */}
             <div className="group bg-gradient-to-br from-white to-gray-50/50 rounded-3xl shadow-2xl hover:shadow-blue-500/10 overflow-hidden border-0 transform hover:scale-[1.01] hover:-translate-y-2 transition-all duration-500">
               <div className="aspect-video overflow-hidden relative">
                 <img 
-                  src="/images/outdoor-commercial/seasonal-entrance-planters.png"
-                  alt="Construction Management Firm seasonal entrance enhancement"
+                  src="/images/arrangements-decorative/succulent-arrangement-decorative-bowl.png"
+                  alt="New client welcome gifts featuring elegant succulent arrangements"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -651,12 +651,12 @@ const Corporate = () => {
               <div className="p-10 relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-50/20 via-transparent to-green-50/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none rounded-b-3xl"></div>
                 <div className="relative z-10">
-                  <h3 className="text-2xl font-bold text-foreground mb-4">Construction Management Firm</h3>
+                  <h3 className="text-2xl font-bold text-foreground mb-4">New Client Welcome Program</h3>
                   <p className="text-muted-foreground mb-6 leading-relaxed">
-                    Commercial exterior enhancement with custom planter systems designed for year-round visual impact. Seasonal color rotation maintains consistent brand presentation while creating positive psychological effects.
+                    First-impression welcome gifts featuring elegant succulent arrangements in decorative containers. Delivered within 24 hours of contract signing to reinforce partnership excitement.
                   </p>
                   <blockquote className="bg-gradient-to-r from-blue-50 to-indigo-50 p-6 rounded-2xl border-l-4 border-blue-500 shadow-inner group-hover:shadow-lg transition-shadow duration-300">
-                    <p className="text-foreground italic mb-2 text-lg leading-relaxed">"Employee satisfaction scores increased measurably since installation. The welcoming exterior environment has become a significant recruitment advantage."</p>
+                    <p className="text-foreground italic mb-2 text-lg leading-relaxed">"New clients are genuinely surprised and delighted by the welcome gifts. It sets a premium tone that carries through our entire relationship."</p>
                   </blockquote>
                 </div>
               </div>
