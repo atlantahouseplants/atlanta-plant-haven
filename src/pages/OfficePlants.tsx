@@ -248,7 +248,7 @@ const OfficePlants = () => {
 
       {/* Strategic Lead Magnet Section */}
       <InlineLeadCapture 
-        variant="roi-calculator" 
+        variant="plant-investment-calculator" 
         className="mx-4 sm:mx-6 lg:mx-8 mb-20"
       />
 

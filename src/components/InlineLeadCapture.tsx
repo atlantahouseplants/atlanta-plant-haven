@@ -191,6 +191,10 @@ const InlineLeadCapture: React.FC<InlineLeadCaptureProps> = ({
 
   // Single magnet display
   const magnet = leadMagnets[variant];
+  if (!magnet) {
+    console.error(`InlineLeadCapture: variant "${variant}" not found in leadMagnets`);
+    return null;
+  }
   const colorClasses = getColorClasses(magnet.color);
   const IconComponent = magnet.icon;
 
