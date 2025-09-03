@@ -6,7 +6,7 @@ import { Download, ArrowRight, CheckCircle, Calculator, FileText, TrendingUp, Cl
 import LeadMagnetModal from "./LeadMagnetModal";
 
 interface InlineLeadCaptureProps {
-  variant?: 'roi-calculator' | 'audit-checklist' | 'case-studies' | 'full-grid';
+  variant?: 'roi-calculator' | 'audit-checklist' | 'case-studies' | 'full-grid' | 'plant-investment-calculator' | 'office-readiness-assessment';
   title?: string;
   subtitle?: string;
   className?: string;
@@ -27,31 +27,59 @@ const InlineLeadCapture: React.FC<InlineLeadCaptureProps> = ({
 
   const leadMagnets = {
     'roi-calculator': {
-      title: "Executive ROI Calculator",
-      subtitle: "Calculate Your Plant Investment Return",
-      description: "Interactive tool to calculate productivity gains, health benefits cost savings, and brand enhancement value from strategic office plant installation.",
+      title: "Office Plant Investment Calculator",
+      subtitle: "Quick ROI Estimate Tool",
+      description: "Simple calculator that shows investment costs, expected benefits, and ROI multiple based on your employee count. Get instant results with package recommendations.",
       icon: Calculator,
       color: "blue",
-      value: "15-minute assessment",
+      value: "3-minute calculator",
       benefits: [
-        "Productivity increase projections",
-        "Healthcare cost reduction estimates", 
-        "Employee retention value calculation",
-        "Brand perception impact metrics"
+        "Instant ROI calculation based on employee count",
+        "Package recommendations for your office size", 
+        "Conservative benefit estimates",
+        "Budget-friendly option comparisons"
+      ]
+    },
+    'plant-investment-calculator': {
+      title: "Office Plant Investment Calculator",
+      subtitle: "Quick ROI Estimate Tool",
+      description: "Simple calculator that shows investment costs, expected benefits, and ROI multiple based on your employee count. Get instant results with package recommendations.",
+      icon: Calculator,
+      color: "blue",
+      value: "3-minute calculator",
+      benefits: [
+        "Instant ROI calculation based on employee count",
+        "Package recommendations for your office size", 
+        "Conservative benefit estimates",
+        "Budget-friendly option comparisons"
       ]
     },
     'audit-checklist': {
-      title: "Workplace Wellness Audit Checklist",
-      subtitle: "40-Point Professional Assessment",
-      description: "The same checklist our certified horticulturalist uses to evaluate workplace environments and identify strategic plant placement opportunities.",
+      title: "Office Plant Readiness Assessment",
+      subtitle: "10-Question Evaluation",
+      description: "Quick assessment to determine the best plant strategy for your office. Get personalized recommendations based on your environment, budget, and goals.",
       icon: CheckCircle,
       color: "green",
-      value: "Professional checklist",
+      value: "10-question assessment",
       benefits: [
-        "Light condition analysis framework",
-        "Air quality improvement zones",
-        "Employee wellness impact areas",
-        "Strategic placement guidelines"
+        "Customized plant variety recommendations",
+        "Environment-specific solutions",
+        "Budget and maintenance matching",
+        "Implementation roadmap included"
+      ]
+    },
+    'office-readiness-assessment': {
+      title: "Office Plant Readiness Assessment",
+      subtitle: "10-Question Evaluation",
+      description: "Quick assessment to determine the best plant strategy for your office. Get personalized recommendations based on your environment, budget, and goals.",
+      icon: CheckCircle,
+      color: "green",
+      value: "10-question assessment",
+      benefits: [
+        "Customized plant variety recommendations",
+        "Environment-specific solutions",
+        "Budget and maintenance matching",
+        "Implementation roadmap included"
       ]
     },
     'case-studies': {
@@ -100,8 +128,16 @@ const InlineLeadCapture: React.FC<InlineLeadCaptureProps> = ({
   const handleMagnetClick = (magnetType: string) => {
     const magnet = leadMagnets[magnetType as keyof typeof leadMagnets];
     if (magnet) {
+      // Map legacy variants to new ones for the download
+      const magnetTypeMapping: Record<string, string> = {
+        'roi-calculator': 'plant-investment-calculator',
+        'audit-checklist': 'office-readiness-assessment'
+      };
+      
+      const actualType = magnetTypeMapping[magnetType] || magnetType;
+      
       setSelectedMagnet({
-        type: magnetType,
+        type: actualType,
         title: magnet.title,
         description: magnet.description
       });

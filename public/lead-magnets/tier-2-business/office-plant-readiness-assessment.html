@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Office Plant Readiness Assessment - Atlanta Houseplants</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+            background: #f9fafb;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-top: 40px;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 30px 0;
+            background: linear-gradient(135deg, #059669 0%, #047857 100%);
+            color: white;
+            border-radius: 12px;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        
+        .title {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        
+        .subtitle {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+        
+        .assessment-intro {
+            background: #f0fdf4;
+            border: 2px solid #10b981;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .intro-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #047857;
+            margin-bottom: 12px;
+        }
+        
+        .question-section {
+            background: #f8fafc;
+            border: 2px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 20px;
+        }
+        
+        .question-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 16px;
+        }
+        
+        .question-number {
+            background: #059669;
+            color: white;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            margin-right: 12px;
+            font-size: 14px;
+        }
+        
+        .options-grid {
+            display: grid;
+            gap: 12px;
+        }
+        
+        .option-item {
+            display: flex;
+            align-items: center;
+            background: white;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .option-item:hover {
+            border-color: #059669;
+            background: #f0fdf4;
+        }
+        
+        .option-item.selected {
+            border-color: #059669;
+            background: #f0fdf4;
+        }
+        
+        .option-checkbox {
+            width: 20px;
+            height: 20px;
+            margin-right: 12px;
+            accent-color: #059669;
+        }
+        
+        .option-text {
+            flex-grow: 1;
+        }
+        
+        .option-label {
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+        
+        .option-desc {
+            font-size: 14px;
+            color: #6b7280;
+        }
+        
+        .results-section {
+            display: none;
+            margin-top: 30px;
+        }
+        
+        .results-section.show {
+            display: block;
+        }
+        
+        .score-display {
+            background: #ecfdf5;
+            border: 3px solid #10b981;
+            border-radius: 16px;
+            padding: 30px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .score-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: #047857;
+            margin-bottom: 12px;
+        }
+        
+        .score-value {
+            font-size: 48px;
+            font-weight: 800;
+            color: #059669;
+            margin-bottom: 8px;
+        }
+        
+        .score-desc {
+            font-size: 16px;
+            color: #065f46;
+        }
+        
+        .readiness-level {
+            background: #f0f9ff;
+            border: 2px solid #3b82f6;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 24px;
+        }
+        
+        .level-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #1d4ed8;
+            margin-bottom: 12px;
+        }
+        
+        .recommendations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 24px 0;
+        }
+        
+        .rec-card {
+            background: white;
+            border: 2px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 20px;
+        }
+        
+        .rec-card.priority {
+            border-color: #ef4444;
+            background: #fef2f2;
+        }
+        
+        .rec-card.opportunity {
+            border-color: #10b981;
+            background: #f0fdf4;
+        }
+        
+        .rec-icon {
+            font-size: 32px;
+            margin-bottom: 12px;
+        }
+        
+        .rec-title {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        
+        .rec-desc {
+            font-size: 14px;
+            color: #6b7280;
+            margin-bottom: 12px;
+        }
+        
+        .rec-action {
+            font-size: 14px;
+            font-weight: 600;
+            color: #059669;
+        }
+        
+        .next-steps {
+            background: #fffbeb;
+            border: 2px solid #f59e0b;
+            border-radius: 12px;
+            padding: 24px;
+            margin: 24px 0;
+        }
+        
+        .steps-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #92400e;
+            margin-bottom: 16px;
+        }
+        
+        .steps-list {
+            counter-reset: step-counter;
+            list-style: none;
+        }
+        
+        .steps-list li {
+            counter-increment: step-counter;
+            padding: 12px 0;
+            padding-left: 40px;
+            position: relative;
+            border-bottom: 1px solid #fde68a;
+        }
+        
+        .steps-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .steps-list li::before {
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 12px;
+            background: #f59e0b;
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 12px;
+        }
+        
+        .calculate-btn {
+            background: #059669;
+            color: white;
+            border: none;
+            padding: 16px 32px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            margin-top: 20px;
+        }
+        
+        .calculate-btn:hover {
+            background: #047857;
+        }
+        
+        .calculate-btn:disabled {
+            background: #9ca3af;
+            cursor: not-allowed;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, #1e40af 0%, #1d4ed8 100%);
+            color: white;
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">🌿 Atlanta Houseplants</div>
+            <div class="title">Office Plant Readiness Assessment</div>
+            <div class="subtitle">Quick 10-question evaluation to determine your office plant strategy</div>
+        </div>
+        
+        <div class="assessment-intro">
+            <div class="intro-title">Is Your Office Ready for Plants?</div>
+            <div style="font-size: 16px; color: #065f46; margin-bottom: 16px;">
+                Answer these 10 practical questions to get customized recommendations for your office plant program.
+            </div>
+            <div style="font-size: 14px; color: #047857;">
+                ⏱️ Takes 3 minutes • ✅ Actionable results • 📋 Implementation roadmap included
+            </div>
+        </div>
+
+        <form id="assessment-form">
+            <!-- Question 1: Office Environment -->
+            <div class="question-section">
+                <div class="question-title">
+                    <span class="question-number">1</span>
+                    How would you describe your office environment?
+                </div>
+                <div class="options-grid">
+                    <label class="option-item" onclick="selectSingle(this, 'environment')">
+                        <input type="radio" name="environment" value="bright" class="option-checkbox">
+                        <div class="option-text">
+                            <div class="option-label">Bright & Airy</div>
+                            <div class="option-desc">Lots of natural light from windows</div>
+                        </div>
+                    </label>
+                    <label class="option-item" onclick="selectSingle(this, 'environment')">
+                        <input type="radio" name="environment" value="mixed" class="option-checkbox">
+                        <div class="option-text">
+                            <div class="option-label">Mixed Lighting</div>
+                            <div class="option-desc">Some natural light, mostly artificial</div>
+                        </div>
+                    </label>
+                    <label class="option-item" onclick="selectSingle(this, 'environment')">
+                        <input type="radio" name="environment" value="dim" class="option-checkbox">
+                        <div class="option-text">
+                            <div class="option-label">Dim/Windowless</div>
+                            <div class="option-desc">Primarily fluorescent or LED lighting</div>
+                        </div>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Question 2: Maintenance Preference -->
+            <div class="question-section">
+                <div class="question-title">
+                    <span class="question-number">2</span>
+                    Who would handle plant care?
+                </div>
+                <div class="options-grid">
+                    <label class="option-item" onclick="selectSingle(this, 'maintenance')">
+                        <input type="radio" name="maintenance" value="professional" class="option-checkbox">
+                        <div class="option-text">
+                            <div class="option-label">Professional Service</div>
+                            <div class="option-desc">We handle everything - preferred option</div>
+                        </div>
+                    </label>
+                    <label class="option-item" onclick="selectSingle(this, 'maintenance')">
+                        <input type="radio" name="maintenance" value="staff" class="option-checkbox">
+                        <div class="option-text">
+                            <div class="option-label">Office Staff</div>
+                            <div class="option-desc">Employees can water and care for plants</div>
+                        </div>
+                    </label>
+                    <label class="option-item" onclick="selectSingle(this, 'maintenance')">
+                        <input type="radio" name="maintenance" value="minimal" class="option-checkbox">
+                        <div class="option-text">
+                            <div class="option-label">Minimal Care Only</div>
+                            <div class="option-desc">Need very low-maintenance options</div>
+                        </div>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Question 3: Office Temperature -->
+            <div class="question-section">
+                <div class="question-title">
+                    <span class="question-number">3</span>
+                    How's your office temperature control?
+                </div>
+                <div class="options-grid">
+                    <label class="option-item" onclick="selectSingle(this, 'temperature')">
+                        <input type="radio" name="temperature" value="stable" class="option-checkbox">
+                        <div class="option-text">
+                            <div class="option-label">Consistently Comfortable</div>
+                            <div class="option-desc">70-75°F most of the time</div>
+                        </div>
+                    </label>
+                    <label class="option-item" onclick="selectSingle(this, 'temperature')">
+                        <input type="radio" name="temperature" value="variable" class="option-checkbox">
+                        <div class="option-text">
+                            <div class="option-label">Somewhat Variable</div>
+                            <div class="option-desc">Sometimes hot or cold, but manageable</div>
+                        </div>
+                    </label>
+                    <label class="option-item" onclick="selectSingle(this, 'temperature')">
+                        <input type="radio" name="temperature" value="extreme" class="option-checkbox">
+                        <div class="option-text">
+                            <div class="option-label">Temperature Issues</div>
+                            <div class="option-desc">Often too hot, cold, or drafty</div>
+                        </div>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Question 4: Employee Interest -->
+            <div class="question-section">
+                <div class="question-title">
+                    <span class="question-number">4</span>
+                    How interested are your employees in office plants?
+                </div>
+                <div class="options-grid">
+                    <label class="option-item" onclick="selectSingle(this, 'interest')">
+                        <input type="radio" name="interest" value="enthusiastic" class="option-checkbox">
+                        <div class="option-text">
+                            <div class="option-label">Very Enthusiastic</div>
+                            <div class="option-desc">Many have asked about adding plants</div>
+                        </div>
+                    </label>
+                    <label class="option-item" onclick="selectSingle(this, 'interest')">
+                        <input type="radio" name="interest" value="supportive" class="option-checkbox">
+                        <div class="option-text">
+                            <div class="option-label">Generally Supportive</div>
+                            <div class="option-desc">Positive response when mentioned</div>
+                        </div>
+                    </label>
+                    <label class="option-item" onclick="selectSingle(this, 'interest')">
+                        <input type="radio" name="interest" value="neutral" class="option-checkbox">
+                        <div class="option-text">
+                            <div class="option-label">Neutral/Unknown</div>
+                            <div class="option-desc">Haven't discussed it with them yet</div>
+                        </div>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Question 5: Space Availability -->
+            <div class="question-section">
+                <div class="question-title">
+                    <span class="question-number">5</span>
+                    What space do you have available for plants?
+                </div>
+                <div class="options-grid">
+                    <label class="option-item" onclick="selectMultiple(this, 'space')">
+                        <input type="checkbox" name="space" value="desks" class="option-checkbox">
+                        <div class="option-text">
+                            <div class="option-label">Individual Desks</div>
+                            <div class="option-desc">Small plants on workstations</div>
+                        </div>
+                    </label>
+                    <label class="option-item" onclick="selectMultiple(this, 'space')">
+                        <input type="checkbox" name="space" value="common" class="option-checkbox">
+                        <div class="option-text">
+                            <div class="option-label">Common Areas</div>
+                            <div class="option-desc">Reception, break rooms, hallways</div>
+                        </div>
+                    </label>
+                    <label class="option-item" onclick="selectMultiple(this, 'space')">
+                        <input type="checkbox" name="space" value="floor" class="option-checkbox">
+                        <div class="option-text">
+                            <div class="option-label">Floor Space</div>
+                            <div class="option-desc">Corners, areas for larger plants</div>
+                        </div>
+                    </label>
+                    <label class="option-item" onclick="selectMultiple(this, 'space')">
+                        <input type="checkbox" name="space" value="hanging" class="option-checkbox">
+                        <div class="option-text">
+                            <div class="option-label">Wall/Ceiling Space</div>
+                            <div class="option-desc">Can install hanging or wall-mounted plants</div>
+                        </div>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Question 6: Current Issues -->
+            <div class="question-section">
+                <div class="question-title">
+                    <span class="question-number">6</span>
+                    What workplace issues do you want plants to help with?
+                </div>
+                <div class="options-grid">
+                    <label class="option-item" onclick="selectMultiple(this, 'issues')">
+                        <input type="checkbox" name="issues" value="air" class="option-checkbox">
+                        <div class="option-text">
+                            <div class="option-label">Stuffy Air Quality</div>
+                            <div class="option-desc">Office feels stagnant or closed-in</div>
+                        </div>
+                    </label>
+                    <label class="option-item" onclick="selectMultiple(this, 'issues')">
+                        <input type="checkbox" name="issues" value="stress" class="option-checkbox">
+                        <div class="option-text">
+                            <div class="option-label">Employee Stress</div>
+                            <div class="option-desc">High-pressure environment, need calming elements</div>
+                        </div>
+                    </label>
+                    <label class="option-item" onclick="selectMultiple(this, 'issues')">
+                        <input type="checkbox" name="issues" value="bland" class="option-checkbox">
+                        <div class="option-text">
+                            <div class="option-label">Boring Environment</div>
+                            <div class="option-desc">Office looks sterile, needs personality</div>
+                        </div>
+                    </label>
+                    <label class="option-item" onclick="selectMultiple(this, 'issues')">
+                        <input type="checkbox" name="issues" value="wellness" class="option-checkbox">
+                        <div class="option-text">
+                            <div class="option-label">General Wellness</div>
+                            <div class="option-desc">Want to show employees we care about health</div>
+                        </div>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Question 7: Budget Range -->
+            <div class="question-section">
+                <div class="question-title">
+                    <span class="question-number">7</span>
+                    What's your estimated annual budget?
+                </div>
+                <div class="options-grid">
+                    <label class="option-item" onclick="selectSingle(this, 'budget')">
+                        <input type="radio" name="budget" value="low" class="option-checkbox">
+                        <div class="option-text">
+                            <div class="option-label">Under $1,500/year</div>
+                            <div class="option-desc">Budget-conscious approach</div>
+                        </div>
+                    </label>
+                    <label class="option-item" onclick="selectSingle(this, 'budget')">
+                        <input type="radio" name="budget" value="medium" class="option-checkbox">
+                        <div class="option-text">
+                            <div class="option-label">$1,500 - $4,000/year</div>
+                            <div class="option-desc">Moderate investment level</div>
+                        </div>
+                    </label>
+                    <label class="option-item" onclick="selectSingle(this, 'budget')">
+                        <input type="radio" name="budget" value="high" class="option-checkbox">
+                        <div class="option-text">
+                            <div class="option-label">$4,000+/year</div>
+                            <div class="option-desc">Comprehensive program desired</div>
+                        </div>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Question 8: Timeline -->
+            <div class="question-section">
+                <div class="question-title">
+                    <span class="question-number">8</span>
+                    When would you like to start?
+                </div>
+                <div class="options-grid">
+                    <label class="option-item" onclick="selectSingle(this, 'timeline')">
+                        <input type="radio" name="timeline" value="asap" class="option-checkbox">
+                        <div class="option-text">
+                            <div class="option-label">Within 2 Weeks</div>
+                            <div class="option-desc">Ready to move quickly</div>
+                        </div>
+                    </label>
+                    <label class="option-item" onclick="selectSingle(this, 'timeline')">
+                        <input type="radio" name="timeline" value="month" class="option-checkbox">
+                        <div class="option-text">
+                            <div class="option-label">Within 1-2 Months</div>
+                            <div class="option-desc">Standard planning timeline</div>
+                        </div>
+                    </label>
+                    <label class="option-item" onclick="selectSingle(this, 'timeline')">
+                        <input type="radio" name="timeline" value="quarter" class="option-checkbox">
+                        <div class="option-text">
+                            <div class="option-label">Next Quarter</div>
+                            <div class="option-desc">Planning for budget cycle</div>
+                        </div>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Question 9: Primary Goal -->
+            <div class="question-section">
+                <div class="question-title">
+                    <span class="question-number">9</span>
+                    What's your main goal with office plants?
+                </div>
+                <div class="options-grid">
+                    <label class="option-item" onclick="selectSingle(this, 'goal')">
+                        <input type="radio" name="goal" value="productivity" class="option-checkbox">
+                        <div class="option-text">
+                            <div class="option-label">Boost Productivity</div>
+                            <div class="option-desc">Improve focus and work performance</div>
+                        </div>
+                    </label>
+                    <label class="option-item" onclick="selectSingle(this, 'goal')">
+                        <input type="radio" name="goal" value="wellness" class="option-checkbox">
+                        <div class="option-text">
+                            <div class="option-label">Employee Wellness</div>
+                            <div class="option-desc">Reduce stress, improve satisfaction</div>
+                        </div>
+                    </label>
+                    <label class="option-item" onclick="selectSingle(this, 'goal')">
+                        <input type="radio" name="goal" value="image" class="option-checkbox">
+                        <div class="option-text">
+                            <div class="option-label">Professional Image</div>
+                            <div class="option-desc">Impress clients and visitors</div>
+                        </div>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Question 10: Concerns -->
+            <div class="question-section">
+                <div class="question-title">
+                    <span class="question-number">10</span>
+                    What concerns do you have about office plants?
+                </div>
+                <div class="options-grid">
+                    <label class="option-item" onclick="selectMultiple(this, 'concerns')">
+                        <input type="checkbox" name="concerns" value="maintenance" class="option-checkbox">
+                        <div class="option-text">
+                            <div class="option-label">Too Much Maintenance</div>
+                            <div class="option-desc">Worried about keeping them alive</div>
+                        </div>
+                    </label>
+                    <label class="option-item" onclick="selectMultiple(this, 'concerns')">
+                        <input type="checkbox" name="concerns" value="allergies" class="option-checkbox">
+                        <div class="option-text">
+                            <div class="option-label">Employee Allergies</div>
+                            <div class="option-desc">Some staff may have plant allergies</div>
+                        </div>
+                    </label>
+                    <label class="option-item" onclick="selectMultiple(this, 'concerns')">
+                        <input type="checkbox" name="concerns" value="cost" class="option-checkbox">
+                        <div class="option-text">
+                            <div class="option-label">Ongoing Costs</div>
+                            <div class="option-desc">Budget uncertainty for maintenance</div>
+                        </div>
+                    </label>
+                    <label class="option-item" onclick="selectMultiple(this, 'concerns')">
+                        <input type="checkbox" name="concerns" value="none" class="option-checkbox">
+                        <div class="option-text">
+                            <div class="option-label">No Major Concerns</div>
+                            <div class="option-desc">Ready to move forward</div>
+                        </div>
+                    </label>
+                </div>
+            </div>
+
+            <button type="button" class="calculate-btn" onclick="calculateReadiness()" id="calculate-btn" disabled>
+                Get My Plant Readiness Score
+            </button>
+        </form>
+
+        <div class="results-section" id="results">
+            <!-- Results will be populated by JavaScript -->
+        </div>
+
+        <div class="cta-section">
+            <div style="font-size: 24px; font-weight: 700; margin-bottom: 12px;">Ready to Transform Your Office?</div>
+            <div style="font-size: 16px; margin-bottom: 20px; opacity: 0.9;">Get your free consultation and customized plant plan based on your assessment results</div>
+            
+            <div style="font-size: 18px; font-weight: 600; margin-bottom: 20px;">
+                📞 (470) 664-4039<br>
+                🌐 atlantahouseplants.com<br>
+                📧 service@atlantahouseplants.com
+            </div>
+            
+            <div style="font-size: 14px; opacity: 0.9; margin-top: 16px;">
+                ✅ Free office assessment • ✅ Custom plant recommendations • ✅ 100% satisfaction guarantee
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let answers = {};
+        
+        function selectSingle(element, category) {
+            // Remove selected class from all options in this category
+            const categoryElements = document.querySelectorAll(`input[name="${category}"]`);
+            categoryElements.forEach(el => {
+                el.closest('.option-item').classList.remove('selected');
+            });
+            
+            // Add selected class to clicked option
+            element.classList.add('selected');
+            
+            // Store answer
+            answers[category] = element.querySelector('input').value;
+            checkFormComplete();
+        }
+        
+        function selectMultiple(element, category) {
+            // Toggle selected class
+            element.classList.toggle('selected');
+            
+            // Get all checked values for this category
+            const checkedBoxes = document.querySelectorAll(`input[name="${category}"]:checked`);
+            answers[category] = Array.from(checkedBoxes).map(box => box.value);
+            
+            checkFormComplete();
+        }
+        
+        function checkFormComplete() {
+            const requiredFields = ['environment', 'maintenance', 'temperature', 'interest', 'budget', 'timeline', 'goal'];
+            const isComplete = requiredFields.every(field => answers[field]);
+            
+            document.getElementById('calculate-btn').disabled = !isComplete;
+        }
+        
+        function calculateReadiness() {
+            let score = 0;
+            let recommendations = [];
+            
+            // Scoring logic
+            if (answers.environment === 'bright') score += 3;
+            else if (answers.environment === 'mixed') score += 2;
+            else score += 1;
+            
+            if (answers.maintenance === 'professional') score += 3;
+            else if (answers.maintenance === 'staff') score += 2;
+            else score += 1;
+            
+            if (answers.temperature === 'stable') score += 3;
+            else if (answers.temperature === 'variable') score += 2;
+            else score += 1;
+            
+            if (answers.interest === 'enthusiastic') score += 3;
+            else if (answers.interest === 'supportive') score += 2;
+            else score += 1;
+            
+            if (answers.budget === 'high') score += 3;
+            else if (answers.budget === 'medium') score += 2;
+            else score += 1;
+            
+            // Generate results
+            let readinessLevel, levelDesc, scorePercent;
+            
+            if (score >= 13) {
+                readinessLevel = "Excellent Plant Readiness";
+                levelDesc = "Your office is perfectly suited for a comprehensive plant program. You have ideal conditions and resources for maximum success.";
+                scorePercent = Math.round((score / 15) * 100);
+            } else if (score >= 10) {
+                readinessLevel = "Good Plant Readiness";
+                levelDesc = "Your office has solid fundamentals for a plant program. A few adjustments will ensure great results.";
+                scorePercent = Math.round((score / 15) * 100);
+            } else if (score >= 7) {
+                readinessLevel = "Moderate Plant Readiness";
+                levelDesc = "Your office has potential for plants with the right strategy. We'll focus on low-maintenance, adaptable varieties.";
+                scorePercent = Math.round((score / 15) * 100);
+            } else {
+                readinessLevel = "Challenging But Doable";
+                levelDesc = "Your office has some constraints, but don't worry! We specialize in solutions for difficult environments.";
+                scorePercent = Math.round((score / 15) * 100);
+            }
+            
+            displayResults(scorePercent, readinessLevel, levelDesc);
+        }
+        
+        function displayResults(score, level, description) {
+            const resultsHTML = `
+                <div class="score-display">
+                    <div class="score-title">Your Plant Readiness Score</div>
+                    <div class="score-value">${score}%</div>
+                    <div class="score-desc">Based on your office conditions and preferences</div>
+                </div>
+                
+                <div class="readiness-level">
+                    <div class="level-title">${level}</div>
+                    <p style="margin-bottom: 20px;">${description}</p>
+                    
+                    ${generateRecommendations()}
+                </div>
+                
+                <div class="next-steps">
+                    <div class="steps-title">Your Customized Action Plan</div>
+                    <ol class="steps-list">
+                        <li><strong>Schedule Free Consultation</strong> - We'll assess your specific space and needs</li>
+                        <li><strong>Receive Custom Proposal</strong> - Plant recommendations, pricing, and timeline</li>
+                        <li><strong>Present to Leadership</strong> - Use our ROI data for budget approval</li>
+                        <li><strong>Professional Installation</strong> - We handle everything from delivery to setup</li>
+                        <li><strong>Enjoy the Benefits</strong> - Watch your office transform and thrive</li>
+                    </ol>
+                </div>
+            `;
+            
+            document.getElementById('results').innerHTML = resultsHTML;
+            document.getElementById('results').classList.add('show');
+            
+            // Scroll to results
+            document.getElementById('results').scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        function generateRecommendations() {
+            let recs = [];
+            
+            if (answers.environment === 'dim') {
+                recs.push({
+                    type: 'priority',
+                    icon: '💡',
+                    title: 'Low-Light Specialists',
+                    desc: 'Perfect for your lighting conditions',
+                    action: 'Snake plants, ZZ plants, pothos'
+                });
+            }
+            
+            if (answers.maintenance === 'minimal') {
+                recs.push({
+                    type: 'priority',
+                    icon: '🌵',
+                    title: 'Ultra Low-Maintenance',
+                    desc: 'Plants that thrive on neglect',
+                    action: 'Succulents, air plants, hardy varieties'
+                });
+            }
+            
+            if (answers.issues && answers.issues.includes('air')) {
+                recs.push({
+                    type: 'opportunity',
+                    icon: '🌿',
+                    title: 'Air-Purifying Plants',
+                    desc: 'Naturally improve office air quality',
+                    action: 'Peace lilies, rubber plants, spider plants'
+                });
+            }
+            
+            if (answers.concerns && answers.concerns.includes('allergies')) {
+                recs.push({
+                    type: 'priority',
+                    icon: '🛡️',
+                    title: 'Hypoallergenic Options',
+                    desc: 'Safe for sensitive employees',
+                    action: 'Non-flowering, low-pollen varieties'
+                });
+            }
+            
+            // Default recommendations if we need more
+            if (recs.length < 3) {
+                recs.push({
+                    type: 'opportunity',
+                    icon: '✨',
+                    title: 'Professional Installation',
+                    desc: 'Complete setup and training',
+                    action: 'Full-service implementation'
+                });
+            }
+            
+            if (recs.length < 4) {
+                recs.push({
+                    type: 'opportunity',
+                    icon: '📊',
+                    title: 'Success Tracking',
+                    desc: 'Monitor your ROI and benefits',
+                    action: 'Quarterly wellness assessments'
+                });
+            }
+            
+            return `
+                <div class="recommendations-grid">
+                    ${recs.map(rec => `
+                        <div class="rec-card ${rec.type}">
+                            <div class="rec-icon">${rec.icon}</div>
+                            <div class="rec-title">${rec.title}</div>
+                            <div class="rec-desc">${rec.desc}</div>
+                            <div class="rec-action">${rec.action}</div>
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+        }
+    </script>
+</body>
+</html>

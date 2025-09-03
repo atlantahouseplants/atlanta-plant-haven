@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Program Leadership Presentation - Atlanta Houseplants</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+            background: #f9fafb;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .slide {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            padding: 40px;
+            page-break-inside: avoid;
+            min-height: 600px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .slide-number {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            background: #3b82f6;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        
+        .slide-header {
+            border-bottom: 3px solid #3b82f6;
+            padding-bottom: 16px;
+            margin-bottom: 30px;
+        }
+        
+        .slide-title {
+            font-size: 32px;
+            font-weight: 800;
+            color: #1e40af;
+            margin-bottom: 8px;
+        }
+        
+        .slide-subtitle {
+            font-size: 16px;
+            color: #6b7280;
+        }
+        
+        .slide-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .stat-card {
+            background: #f8fafc;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 24px;
+            text-align: center;
+        }
+        
+        .stat-value {
+            font-size: 36px;
+            font-weight: 800;
+            color: #059669;
+            margin-bottom: 8px;
+        }
+        
+        .stat-label {
+            font-size: 14px;
+            color: #6b7280;
+            font-weight: 600;
+        }
+        
+        .roi-comparison {
+            background: #ecfdf5;
+            border: 3px solid #10b981;
+            border-radius: 16px;
+            padding: 30px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .roi-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: #047857;
+            margin-bottom: 20px;
+        }
+        
+        .roi-values {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        
+        .roi-item {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            border: 2px solid #10b981;
+        }
+        
+        .roi-amount {
+            font-size: 28px;
+            font-weight: 800;
+            color: #047857;
+        }
+        
+        .roi-desc {
+            font-size: 14px;
+            color: #6b7280;
+            margin-top: 4px;
+        }
+        
+        .benefits-list {
+            list-style: none;
+            margin: 20px 0;
+        }
+        
+        .benefits-list li {
+            padding: 12px 0;
+            padding-left: 40px;
+            position: relative;
+            font-size: 18px;
+            border-bottom: 1px solid #f3f4f6;
+        }
+        
+        .benefits-list li::before {
+            content: "✅";
+            position: absolute;
+            left: 0;
+            font-size: 20px;
+        }
+        
+        .timeline-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .timeline-step {
+            background: #f0f9ff;
+            border: 2px solid #3b82f6;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .step-number {
+            background: #3b82f6;
+            color: white;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 12px;
+            font-weight: 700;
+            font-size: 16px;
+        }
+        
+        .step-title {
+            font-weight: 700;
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+        
+        .step-desc {
+            font-size: 14px;
+            color: #6b7280;
+        }
+        
+        .cost-breakdown {
+            background: #fffbeb;
+            border: 2px solid #f59e0b;
+            border-radius: 12px;
+            padding: 24px;
+            margin: 20px 0;
+        }
+        
+        .cost-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 16px;
+        }
+        
+        .cost-table th,
+        .cost-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .cost-table th {
+            background: #f59e0b;
+            color: white;
+            font-weight: 700;
+        }
+        
+        .cost-total {
+            background: #fef3c7;
+            font-weight: 700;
+            font-size: 18px;
+        }
+        
+        .next-steps {
+            background: #eff6ff;
+            border: 2px solid #3b82f6;
+            border-radius: 12px;
+            padding: 24px;
+            margin: 20px 0;
+        }
+        
+        .next-steps-list {
+            counter-reset: step-counter;
+            list-style: none;
+            margin-top: 16px;
+        }
+        
+        .next-steps-list li {
+            counter-increment: step-counter;
+            padding: 16px 0;
+            padding-left: 50px;
+            position: relative;
+            border-bottom: 1px solid #e5e7eb;
+            font-size: 16px;
+        }
+        
+        .next-steps-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .next-steps-list li::before {
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 16px;
+            background: #3b82f6;
+            color: white;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 14px;
+        }
+        
+        .quote-section {
+            background: #f8fafc;
+            border-left: 4px solid #3b82f6;
+            padding: 24px;
+            margin: 20px 0;
+            font-style: italic;
+            font-size: 18px;
+        }
+        
+        .quote-author {
+            font-weight: 600;
+            margin-top: 12px;
+            font-style: normal;
+            color: #3b82f6;
+        }
+        
+        .edit-instruction {
+            background: #fef3c7;
+            border: 1px solid #f59e0b;
+            border-radius: 6px;
+            padding: 8px 12px;
+            font-size: 12px;
+            color: #92400e;
+            margin-bottom: 16px;
+            font-style: italic;
+        }
+        
+        @media print {
+            body { background: white; }
+            .container { padding: 0; }
+            .slide { margin-bottom: 0; page-break-after: always; min-height: 100vh; }
+            .edit-instruction { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Slide 1: Title -->
+        <div class="slide" style="position: relative;">
+            <div class="slide-number">1/8</div>
+            <div class="slide-content" style="text-align: center; justify-content: center;">
+                <div style="font-size: 48px; font-weight: 800; color: #1e40af; margin-bottom: 20px;">
+                    Office Plant Program Proposal
+                </div>
+                <div style="font-size: 24px; color: #6b7280; margin-bottom: 40px;">
+                    Strategic Investment in Employee Wellness & Productivity
+                </div>
+                <div style="font-size: 18px; color: #059669; font-weight: 600;">
+                    Atlanta Houseplants • Professional Plant Solutions
+                </div>
+                <div style="margin-top: 40px; font-size: 14px; color: #9ca3af;">
+                    Presented by: [Your Name] • [Date]
+                </div>
+            </div>
+        </div>
+        
+        <!-- Slide 2: The Problem -->
+        <div class="slide" style="position: relative;">
+            <div class="slide-number">2/8</div>
+            <div class="edit-instruction">✏️ Edit: Customize these problems based on your office observations</div>
+            <div class="slide-header">
+                <div class="slide-title">Current Workplace Challenges</div>
+                <div class="slide-subtitle">Issues affecting our team performance and satisfaction</div>
+            </div>
+            <div class="slide-content">
+                <ul class="benefits-list" style="font-size: 20px;">
+                    <li style="color: #dc2626;">Employee stress levels affecting productivity</li>
+                    <li style="color: #dc2626;">Stale office environment impacting creativity</li>
+                    <li style="color: #dc2626;">Higher than average sick day usage</li>
+                    <li style="color: #dc2626;">Difficulty attracting/retaining top talent</li>
+                    <li style="color: #dc2626;">Client feedback on office atmosphere</li>
+                    <li style="color: #dc2626;">Air quality concerns in closed environments</li>
+                </ul>
+                
+                <div style="background: #fef2f2; border: 2px solid #fca5a5; border-radius: 12px; padding: 20px; margin-top: 30px;">
+                    <div style="font-size: 18px; font-weight: 600; color: #dc2626; margin-bottom: 8px;">
+                        The Cost of Inaction:
+                    </div>
+                    <div style="font-size: 16px; color: #7f1d1d;">
+                        Decreased productivity, higher turnover, and missed opportunities for employee satisfaction improvement.
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Slide 3: The Solution -->
+        <div class="slide" style="position: relative;">
+            <div class="slide-number">3/8</div>
+            <div class="slide-header">
+                <div class="slide-title">Strategic Plant Program Solution</div>
+                <div class="slide-subtitle">Scientifically-backed approach to workplace wellness</div>
+            </div>
+            <div class="slide-content">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-value">15%</div>
+                        <div class="stat-label">Productivity Increase</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value">25%</div>
+                        <div class="stat-label">Fewer Sick Days</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value">40%</div>
+                        <div class="stat-label">Better Air Quality</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value">92%</div>
+                        <div class="stat-label">Employee Satisfaction</div>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 30px;">
+                    <ul class="benefits-list">
+                        <li><strong>Immediate Impact:</strong> Improved office atmosphere and air quality</li>
+                        <li><strong>Long-term Benefits:</strong> Enhanced productivity and employee retention</li>
+                        <li><strong>Professional Image:</strong> Modern, health-conscious workplace brand</li>
+                        <li><strong>Minimal Maintenance:</strong> Full-service professional care included</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Slide 4: ROI Analysis -->
+        <div class="slide" style="position: relative;">
+            <div class="slide-number">4/8</div>
+            <div class="edit-instruction">✏️ Edit: Update these numbers based on your actual employee count and calculator results</div>
+            <div class="slide-header">
+                <div class="slide-title">Return on Investment Analysis</div>
+                <div class="slide-subtitle">Based on [X] employees in our office</div>
+            </div>
+            <div class="slide-content">
+                <div class="roi-comparison">
+                    <div class="roi-title">Annual Investment vs. Expected Returns</div>
+                    <div class="roi-values">
+                        <div class="roi-item">
+                            <div class="roi-amount">$3,750</div>
+                            <div class="roi-desc">Annual Investment</div>
+                        </div>
+                        <div class="roi-item">
+                            <div class="roi-amount">$8,750</div>
+                            <div class="roi-desc">Expected Benefits</div>
+                        </div>
+                        <div class="roi-item" style="border-color: #047857; background: #dcfce7;">
+                            <div class="roi-amount">2.3x</div>
+                            <div class="roi-desc">ROI Multiple</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cost-breakdown">
+                    <div style="font-size: 20px; font-weight: 700; color: #92400e; margin-bottom: 16px;">
+                        Benefit Breakdown:
+                    </div>
+                    <table class="cost-table">
+                        <thead>
+                            <tr>
+                                <th>Benefit Category</th>
+                                <th>Annual Value</th>
+                                <th>Source</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Productivity Enhancement</td>
+                                <td>$5,400</td>
+                                <td>15% improvement × avg. salary</td>
+                            </tr>
+                            <tr>
+                                <td>Reduced Sick Days</td>
+                                <td>$1,800</td>
+                                <td>25% reduction × replacement cost</td>
+                            </tr>
+                            <tr>
+                                <td>Employee Retention</td>
+                                <td>$1,200</td>
+                                <td>Reduced turnover costs</td>
+                            </tr>
+                            <tr>
+                                <td>Brand/Recruitment Value</td>
+                                <td>$350</td>
+                                <td>Enhanced employer brand</td>
+                            </tr>
+                            <tr class="cost-total">
+                                <td>Total Annual Benefits</td>
+                                <td>$8,750</td>
+                                <td>Conservative estimate</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Slide 5: Package Recommendation -->
+        <div class="slide" style="position: relative;">
+            <div class="slide-number">5/8</div>
+            <div class="edit-instruction">✏️ Edit: Select and customize the package that matches your decision guide results</div>
+            <div class="slide-header">
+                <div class="slide-title">Recommended Package: Professional</div>
+                <div class="slide-subtitle">Optimal balance of impact and maintenance</div>
+            </div>
+            <div class="slide-content">
+                <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 30px;">
+                    <div>
+                        <ul class="benefits-list">
+                            <li>15-25 mixed plants strategically placed</li>
+                            <li>Bi-weekly professional maintenance</li>
+                            <li>Plant replacement guarantee included</li>
+                            <li>Seasonal refresh program</li>
+                            <li>Employee care training session</li>
+                            <li>Phone support and emergency visits</li>
+                        </ul>
+                        
+                        <div class="quote-section">
+                            "The plant program was our best employee wellness investment. We've seen measurable improvements in both productivity metrics and employee retention."
+                            <div class="quote-author">— CEO, Atlanta Tech Company (180 employees)</div>
+                        </div>
+                    </div>
+                    
+                    <div style="text-align: center;">
+                        <div style="background: #f0fdf4; border: 3px solid #10b981; border-radius: 16px; padding: 30px;">
+                            <div style="font-size: 24px; font-weight: 800; color: #047857; margin-bottom: 12px;">
+                                $3,750
+                            </div>
+                            <div style="font-size: 16px; color: #6b7280; margin-bottom: 20px;">
+                                Annual Investment
+                            </div>
+                            <div style="font-size: 14px; color: #059669; font-weight: 600;">
+                                ✅ Everything included<br>
+                                ✅ No hidden fees<br>
+                                ✅ 12-month guarantee
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Slide 6: Implementation Timeline -->
+        <div class="slide" style="position: relative;">
+            <div class="slide-number">6/8</div>
+            <div class="slide-header">
+                <div class="slide-title">Implementation Timeline</div>
+                <div class="slide-subtitle">From approval to full installation in 3 weeks</div>
+            </div>
+            <div class="slide-content">
+                <div class="timeline-grid">
+                    <div class="timeline-step">
+                        <div class="step-number">1</div>
+                        <div class="step-title">Assessment</div>
+                        <div class="step-desc">Office evaluation and plant selection (Week 1)</div>
+                    </div>
+                    <div class="timeline-step">
+                        <div class="step-number">2</div>
+                        <div class="step-title">Procurement</div>
+                        <div class="step-desc">Plant sourcing and preparation (Week 2)</div>
+                    </div>
+                    <div class="timeline-step">
+                        <div class="step-number">3</div>
+                        <div class="step-title">Installation</div>
+                        <div class="step-desc">Professional setup and placement (Week 3)</div>
+                    </div>
+                    <div class="timeline-step">
+                        <div class="step-number">4</div>
+                        <div class="step-title">Training</div>
+                        <div class="step-desc">Team education and care guidelines (Week 3)</div>
+                    </div>
+                </div>
+                
+                <div class="next-steps">
+                    <div style="font-size: 20px; font-weight: 700; color: #1d4ed8; margin-bottom: 16px;">
+                        Immediate Action Items:
+                    </div>
+                    <ol class="next-steps-list">
+                        <li><strong>Leadership Approval</strong> - Decision and budget approval</li>
+                        <li><strong>Schedule Assessment</strong> - Book complimentary office evaluation</li>
+                        <li><strong>Team Communication</strong> - Announce wellness initiative to staff</li>
+                        <li><strong>Installation Coordination</strong> - Set installation date and logistics</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Slide 7: Risk Mitigation -->
+        <div class="slide" style="position: relative;">
+            <div class="slide-number">7/8</div>
+            <div class="slide-header">
+                <div class="slide-title">Risk Mitigation & Guarantees</div>
+                <div class="slide-subtitle">Minimizing concerns and maximizing success</div>
+            </div>
+            <div class="slide-content">
+                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px;">
+                    <div>
+                        <div style="font-size: 18px; font-weight: 700; color: #dc2626; margin-bottom: 16px;">
+                            Common Concerns:
+                        </div>
+                        <ul style="list-style: none; margin-left: 0;">
+                            <li style="padding: 8px 0; color: #dc2626;">❌ Plant maintenance burden</li>
+                            <li style="padding: 8px 0; color: #dc2626;">❌ Allergies and health issues</li>
+                            <li style="padding: 8px 0; color: #dc2626;">❌ Plants dying and looking bad</li>
+                            <li style="padding: 8px 0; color: #dc2626;">❌ Pest problems</li>
+                            <li style="padding: 8px 0; color: #dc2626;">❌ Ongoing costs</li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <div style="font-size: 18px; font-weight: 700; color: #059669; margin-bottom: 16px;">
+                            Our Solutions:
+                        </div>
+                        <ul style="list-style: none; margin-left: 0;">
+                            <li style="padding: 8px 0; color: #059669;">✅ Full-service professional maintenance</li>
+                            <li style="padding: 8px 0; color: #059669;">✅ Hypoallergenic plant selection</li>
+                            <li style="padding: 8px 0; color: #059669;">✅ 12-month plant health guarantee</li>
+                            <li style="padding: 8px 0; color: #059669;">✅ Integrated pest management</li>
+                            <li style="padding: 8px 0; color: #059669;">✅ Fixed annual pricing, no surprises</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div style="background: #ecfdf5; border: 3px solid #10b981; border-radius: 12px; padding: 30px; margin-top: 30px; text-align: center;">
+                    <div style="font-size: 24px; font-weight: 700; color: #047857; margin-bottom: 16px;">
+                        100% Success Guarantee
+                    </div>
+                    <div style="font-size: 16px; color: #065f46;">
+                        If you're not satisfied with the results within the first 90 days, we'll remove the plants and provide a full refund. No questions asked.
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Slide 8: Next Steps -->
+        <div class="slide" style="position: relative;">
+            <div class="slide-number">8/8</div>
+            <div class="edit-instruction">✏️ Edit: Add your contact information and preferred next steps</div>
+            <div class="slide-header">
+                <div class="slide-title">Recommendation & Next Steps</div>
+                <div class="slide-subtitle">Let's move forward with this strategic investment</div>
+            </div>
+            <div class="slide-content">
+                <div style="background: #f0fdf4; border: 3px solid #10b981; border-radius: 16px; padding: 30px; text-align: center; margin-bottom: 30px;">
+                    <div style="font-size: 28px; font-weight: 800; color: #047857; margin-bottom: 12px;">
+                        I recommend we proceed with the Professional Package
+                    </div>
+                    <div style="font-size: 18px; color: #065f46; margin-bottom: 20px;">
+                        $3,750 annual investment • 2.3x ROI • Immediate impact
+                    </div>
+                    <div style="font-size: 16px; color: #059669; font-weight: 600;">
+                        Payback period: Less than 6 months
+                    </div>
+                </div>
+                
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
+                    <div>
+                        <div style="font-size: 18px; font-weight: 700; color: #1d4ed8; margin-bottom: 16px;">
+                            Immediate Actions:
+                        </div>
+                        <ol style="margin-left: 20px; font-size: 16px; line-height: 1.8;">
+                            <li>Approve budget allocation</li>
+                            <li>Schedule free assessment</li>
+                            <li>Set implementation timeline</li>
+                            <li>Communicate to team</li>
+                        </ol>
+                    </div>
+                    
+                    <div>
+                        <div style="font-size: 18px; font-weight: 700; color: #1d4ed8; margin-bottom: 16px;">
+                            Contact Information:
+                        </div>
+                        <div style="font-size: 16px; line-height: 1.8;">
+                            <strong>Atlanta Houseplants</strong><br>
+                            📞 (470) 664-4039<br>
+                            🌐 atlantahouseplants.com<br>
+                            📧 service@atlantahouseplants.com<br><br>
+                            <strong>Project Lead:</strong> [Your Name]<br>
+                            📧 [your.email@company.com]
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin: 40px 0; color: #6b7280; font-size: 14px;">
+            <strong>Print Instructions:</strong> Use Ctrl+P (Cmd+P on Mac) to print these slides. Each slide will print on a separate page for presentation use.
+        </div>
+    </div>
+</body>
+</html>

@@ -12,7 +12,7 @@ import { calculateLeadScore, formatLeadForMakeCom, type LeadData } from "@/data/
 interface LeadMagnetModalProps {
   isOpen: boolean;
   onClose: () => void;
-  magnetType: 'roi-calculator' | 'audit-checklist' | 'plant-guide' | 'case-studies' | 'automation-guide' | 'proposal-template';
+  magnetType: 'roi-calculator' | 'audit-checklist' | 'plant-guide' | 'case-studies' | 'automation-guide' | 'proposal-template' | 'plant-investment-calculator' | 'office-readiness-assessment' | 'decision-guide' | 'leadership-presentation';
   title: string;
   description: string;
 }
@@ -130,12 +130,18 @@ const LeadMagnetModal: React.FC<LeadMagnetModalProps> = ({
         // Download the appropriate resource based on magnetType
         setTimeout(() => {
           const downloadMap: Record<string, string> = {
-            'roi-calculator': '/lead-magnets/tier-2-business/executive-roi-calculator.html',
-            'audit-checklist': '/lead-magnets/tier-2-business/workplace-wellness-audit-checklist.html',
-            'plant-guide': '/lead-magnets/tier-2-business/atlanta-office-plant-selection-guide.html', // Phase 2
-            'case-studies': '/lead-magnets/tier-2-business/business-transformation-case-studies.html', // Phase 2
-            'automation-guide': '/lead-magnets/tier-2-business/plant-care-automation-playbook.html', // Phase 2
-            'proposal-template': '/lead-magnets/tier-3-implementation/plant-program-proposal-template.html' // Phase 2
+            // New improved lead magnets
+            'plant-investment-calculator': '/lead-magnets/tier-2-business/simple-plant-investment-calculator.html',
+            'office-readiness-assessment': '/lead-magnets/tier-2-business/office-plant-readiness-assessment.html',
+            'decision-guide': '/lead-magnets/tier-2-business/plant-program-decision-guide.html',
+            'leadership-presentation': '/lead-magnets/tier-3-implementation/leadership-presentation-template.html',
+            // Legacy lead magnets (keeping for existing links)
+            'roi-calculator': '/lead-magnets/tier-2-business/simple-plant-investment-calculator.html',
+            'audit-checklist': '/lead-magnets/tier-2-business/office-plant-readiness-assessment.html',
+            'plant-guide': '/lead-magnets/tier-2-business/atlanta-office-plant-selection-guide.html',
+            'case-studies': '/lead-magnets/tier-2-business/business-transformation-case-studies.html',
+            'automation-guide': '/lead-magnets/tier-2-business/plant-care-automation-playbook.html',
+            'proposal-template': '/lead-magnets/tier-3-implementation/leadership-presentation-template.html'
           };
 
           const link = document.createElement('a');
@@ -158,17 +164,43 @@ const LeadMagnetModal: React.FC<LeadMagnetModalProps> = ({
 
   const getBenefits = () => {
     const benefits = {
+      // New improved lead magnets
+      'plant-investment-calculator': [
+        'Instant ROI calculation based on employee count',
+        'Package recommendations for your office size',
+        'Conservative benefit estimates',
+        'Budget-friendly option comparisons'
+      ],
+      'office-readiness-assessment': [
+        'Personalized plant variety recommendations',
+        'Environment-specific solutions',
+        'Budget and maintenance matching',
+        'Implementation roadmap included'
+      ],
+      'decision-guide': [
+        'Perfect package matching system',
+        'Budget-aligned recommendations',
+        'Implementation timeline',
+        'Clear next steps provided'
+      ],
+      'leadership-presentation': [
+        'Executive-ready business case slides',
+        'ROI justification included',
+        'Print-friendly presentation format',
+        'Customizable content areas'
+      ],
+      // Legacy lead magnets (keeping for existing functionality)
       'roi-calculator': [
-        'Instant productivity gain calculations',
-        'Healthcare cost reduction estimates',
-        'Employee retention value analysis',
-        'Brand enhancement metrics'
+        'Instant ROI calculation based on employee count',
+        'Package recommendations for your office size',
+        'Conservative benefit estimates',
+        'Budget-friendly option comparisons'
       ],
       'audit-checklist': [
-        'Professional 40-point assessment',
-        'Light analysis framework',
-        'Air quality improvement zones', 
-        'Strategic placement guidelines'
+        'Personalized plant variety recommendations',
+        'Environment-specific solutions',
+        'Budget and maintenance matching',
+        'Implementation roadmap included'
       ],
       'plant-guide': [
         '25+ Atlanta-optimized plants',
@@ -189,10 +221,10 @@ const LeadMagnetModal: React.FC<LeadMagnetModalProps> = ({
         'Cost optimization strategies'
       ],
       'proposal-template': [
-        'Executive presentation slides',
-        'ROI justification framework',
-        'Implementation timeline',
-        'Budget allocation guidance'
+        'Executive-ready business case slides',
+        'ROI justification included',
+        'Print-friendly presentation format',
+        'Customizable content areas'
       ]
     };
     return benefits[magnetType] || [];

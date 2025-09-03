@@ -10,38 +10,72 @@ const LeadMagnets = () => {
 
   const leadMagnets = [
     {
-      id: "executive-roi-calculator",
-      title: "Executive ROI Calculator",
-      subtitle: "Calculate Your Plant Investment Return",
-      description: "Interactive tool to calculate productivity gains, health benefits cost savings, and brand enhancement value from strategic office plant installation.",
-      value: "15-minute assessment",
+      id: "plant-investment-calculator",
+      title: "Office Plant Investment Calculator",
+      subtitle: "Quick ROI Estimate Tool",
+      description: "Simple calculator that shows investment costs, expected benefits, and ROI multiple based on your employee count. Get instant results with package recommendations.",
+      value: "3-minute calculator",
       category: "Business Tools",
       icon: Calculator,
       color: "blue",
       benefits: [
-        "Productivity increase projections",
-        "Healthcare cost reduction estimates", 
-        "Employee retention value calculation",
-        "Brand perception impact metrics"
+        "Instant investment vs. benefit calculation",
+        "Package recommendations for your size", 
+        "Conservative ROI estimates",
+        "Budget-friendly options included"
       ],
-      cta: "Get My Custom ROI Analysis"
+      cta: "Calculate My Plant ROI"
     },
     {
-      id: "biophilic-design-audit",
-      title: "Workplace Wellness Audit Checklist",
-      subtitle: "40-Point Assessment Tool",
-      description: "Professional checklist used by our certified horticulturalist to evaluate workplace environments and identify strategic plant placement opportunities.",
-      value: "Professional checklist",
+      id: "office-readiness-assessment",
+      title: "Office Plant Readiness Assessment",
+      subtitle: "10-Question Evaluation",
+      description: "Quick assessment to determine the best plant strategy for your office. Get personalized recommendations based on your environment, budget, and goals.",
+      value: "10-question assessment",
       category: "Assessment Tools",
       icon: CheckCircle,
       color: "green",
       benefits: [
-        "Light condition analysis framework",
-        "Air quality improvement zones",
-        "Employee wellness impact areas",
-        "Strategic placement guidelines"
+        "Customized plant variety recommendations",
+        "Environment-specific solutions",
+        "Budget and maintenance matching",
+        "Implementation roadmap included"
       ],
-      cta: "Download Professional Audit"
+      cta: "Get My Plant Readiness Score"
+    },
+    {
+      id: "decision-guide",
+      title: "Plant Program Decision Guide",
+      subtitle: "5-Question Interactive Tool",
+      description: "Interactive guide that matches you with the perfect plant package based on your office size, maintenance preference, goals, and budget.",
+      value: "5-question guide",
+      category: "Decision Support",
+      icon: Users,
+      color: "purple",
+      benefits: [
+        "Perfect package matching",
+        "Budget-aligned recommendations",
+        "Implementation timeline",
+        "Next steps clearly outlined"
+      ],
+      cta: "Find My Perfect Package"
+    },
+    {
+      id: "leadership-presentation",
+      title: "Leadership Presentation Template",
+      subtitle: "8-Slide Executive Deck",
+      description: "Ready-to-use presentation slides for proposing plant programs to leadership. Includes ROI justification, implementation timeline, and business case.",
+      value: "Executive presentation",
+      category: "Business Tools",
+      icon: Building2,
+      color: "blue",
+      benefits: [
+        "Executive-ready business case",
+        "ROI justification included",
+        "Print-friendly format",
+        "Customizable content areas"
+      ],
+      cta: "Get Presentation Template"
     },
     {
       id: "atlanta-plant-guide",
@@ -76,40 +110,6 @@ const LeadMagnets = () => {
         "Implementation timelines"
       ],
       cta: "Access Case Studies"
-    },
-    {
-      id: "maintenance-automation-guide",
-      title: "Plant Care Automation Playbook",
-      subtitle: "Zero-Burden Maintenance Systems",
-      description: "Step-by-step guide to implementing automated plant care programs that eliminate administrative burden while ensuring 100% plant health.",
-      value: "Complete automation framework",
-      category: "Operations",
-      icon: Users,
-      color: "blue",
-      benefits: [
-        "Staff training elimination",
-        "Automated scheduling systems",
-        "Quality assurance protocols",
-        "Cost optimization strategies"
-      ],
-      cta: "Download Automation Guide"
-    },
-    {
-      id: "proposal-template",
-      title: "Executive Plant Program Proposal Template",
-      subtitle: "C-Suite Presentation Ready",
-      description: "Professional presentation template for proposing workplace plant programs to executive teams, including ROI justification and implementation timelines.",
-      value: "Executive presentation",
-      category: "Business Tools",
-      icon: Building2,
-      color: "blue",
-      benefits: [
-        "Executive-level messaging",
-        "ROI justification framework",
-        "Implementation timeline",
-        "Budget allocation guidance"
-      ],
-      cta: "Get Proposal Template"
     }
   ];
 
@@ -145,11 +145,11 @@ const LeadMagnets = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-            Professional Resources for Strategic Decision Making
+            Quick Tools for Smart Decisions
           </h2>
           <p className="text-xl text-blue-700 max-w-4xl mx-auto leading-relaxed">
-            Access the same strategic tools and frameworks our certified professionals use to design, 
-            implement, and optimize workplace plant programs for 500+ Atlanta businesses.
+            Get practical, easy-to-use tools designed specifically for busy HR managers and office decision-makers. 
+            Calculate ROI, assess readiness, and build your business case in minutes.
           </p>
         </div>
 

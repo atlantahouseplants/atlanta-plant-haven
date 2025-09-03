@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Program Decision Guide - Atlanta Houseplants</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+            background: #f9fafb;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-top: 40px;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 30px 0;
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+            color: white;
+            border-radius: 12px;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        
+        .title {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        
+        .subtitle {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+        
+        .quiz-section {
+            background: #f0f9ff;
+            border: 2px solid #3b82f6;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .question {
+            margin-bottom: 30px;
+            display: none;
+        }
+        
+        .question.active {
+            display: block;
+        }
+        
+        .question-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1d4ed8;
+            margin-bottom: 20px;
+        }
+        
+        .question-number {
+            background: #3b82f6;
+            color: white;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            margin-right: 12px;
+        }
+        
+        .options {
+            display: grid;
+            gap: 12px;
+        }
+        
+        .option {
+            background: white;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .option:hover {
+            border-color: #3b82f6;
+            background: #f8fafc;
+        }
+        
+        .option.selected {
+            border-color: #3b82f6;
+            background: #eff6ff;
+        }
+        
+        .option-title {
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+        
+        .option-description {
+            font-size: 14px;
+            color: #6b7280;
+        }
+        
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #e5e7eb;
+        }
+        
+        .nav-button {
+            background: #3b82f6;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-button:hover {
+            background: #2563eb;
+        }
+        
+        .nav-button:disabled {
+            background: #9ca3af;
+            cursor: not-allowed;
+        }
+        
+        .progress-bar {
+            height: 6px;
+            background: #e5e7eb;
+            border-radius: 3px;
+            margin-bottom: 20px;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: #3b82f6;
+            border-radius: 3px;
+            transition: width 0.3s ease;
+        }
+        
+        .results {
+            display: none;
+            margin-top: 30px;
+        }
+        
+        .results.show {
+            display: block;
+        }
+        
+        .recommendation-card {
+            background: #f0fdf4;
+            border: 2px solid #10b981;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .rec-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: #047857;
+            margin-bottom: 16px;
+        }
+        
+        .rec-package {
+            font-size: 20px;
+            font-weight: 600;
+            color: #059669;
+            margin-bottom: 12px;
+        }
+        
+        .rec-price {
+            font-size: 32px;
+            font-weight: 800;
+            color: #047857;
+            margin-bottom: 16px;
+        }
+        
+        .rec-features {
+            list-style: none;
+            margin-bottom: 20px;
+        }
+        
+        .rec-features li {
+            padding: 8px 0;
+            padding-left: 24px;
+            position: relative;
+        }
+        
+        .rec-features li::before {
+            content: "✅";
+            position: absolute;
+            left: 0;
+        }
+        
+        .why-section {
+            background: #fffbeb;
+            border: 2px solid #f59e0b;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        
+        .why-title {
+            font-weight: 700;
+            color: #92400e;
+            margin-bottom: 12px;
+        }
+        
+        .next-steps {
+            background: #eff6ff;
+            border: 2px solid #3b82f6;
+            border-radius: 12px;
+            padding: 24px;
+            margin-top: 30px;
+        }
+        
+        .next-steps-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #1d4ed8;
+            margin-bottom: 16px;
+        }
+        
+        .steps-list {
+            counter-reset: step-counter;
+            list-style: none;
+        }
+        
+        .steps-list li {
+            counter-increment: step-counter;
+            padding: 12px 0;
+            padding-left: 40px;
+            position: relative;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .steps-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .steps-list li::before {
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 12px;
+            background: #3b82f6;
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 12px;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, #1e40af 0%, #1d4ed8 100%);
+            color: white;
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">🌿 Atlanta Houseplants</div>
+            <div class="title">Plant Program Decision Guide</div>
+            <div class="subtitle">Find the perfect plant solution for your office in 5 questions</div>
+        </div>
+
+        <div class="quiz-section">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progress-fill" style="width: 0%"></div>
+            </div>
+            
+            <!-- Question 1 -->
+            <div class="question active" id="q1">
+                <div class="question-title">
+                    <span class="question-number">1</span>
+                    What's your office size?
+                </div>
+                <div class="options">
+                    <div class="option" data-value="small" onclick="selectOption(this, 'size')">
+                        <div class="option-title">Small Office (5-20 people)</div>
+                        <div class="option-description">Conference rooms, small open spaces</div>
+                    </div>
+                    <div class="option" data-value="medium" onclick="selectOption(this, 'size')">
+                        <div class="option-title">Medium Office (20-50 people)</div>
+                        <div class="option-description">Multiple departments, reception area</div>
+                    </div>
+                    <div class="option" data-value="large" onclick="selectOption(this, 'size')">
+                        <div class="option-title">Large Office (50+ people)</div>
+                        <div class="option-description">Corporate headquarters, multiple floors</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Question 2 -->
+            <div class="question" id="q2">
+                <div class="question-title">
+                    <span class="question-number">2</span>
+                    What's your maintenance preference?
+                </div>
+                <div class="options">
+                    <div class="option" data-value="minimal" onclick="selectOption(this, 'maintenance')">
+                        <div class="option-title">Minimal Involvement</div>
+                        <div class="option-description">Full-service maintenance, we handle everything</div>
+                    </div>
+                    <div class="option" data-value="some" onclick="selectOption(this, 'maintenance')">
+                        <div class="option-title">Some Involvement</div>
+                        <div class="option-description">Basic daily care, professional check-ups</div>
+                    </div>
+                    <div class="option" data-value="diy" onclick="selectOption(this, 'maintenance')">
+                        <div class="option-title">DIY Approach</div>
+                        <div class="option-description">We'll teach your team, you maintain</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Question 3 -->
+            <div class="question" id="q3">
+                <div class="question-title">
+                    <span class="question-number">3</span>
+                    What's your primary goal?
+                </div>
+                <div class="options">
+                    <div class="option" data-value="wellness" onclick="selectOption(this, 'goal')">
+                        <div class="option-title">Employee Wellness</div>
+                        <div class="option-description">Reduce stress, improve air quality</div>
+                    </div>
+                    <div class="option" data-value="image" onclick="selectOption(this, 'goal')">
+                        <div class="option-title">Professional Image</div>
+                        <div class="option-description">Impress clients, enhance brand</div>
+                    </div>
+                    <div class="option" data-value="productivity" onclick="selectOption(this, 'goal')">
+                        <div class="option-title">Productivity Boost</div>
+                        <div class="option-description">Focus enhancement, creativity</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Question 4 -->
+            <div class="question" id="q4">
+                <div class="question-title">
+                    <span class="question-number">4</span>
+                    What's your budget range?
+                </div>
+                <div class="options">
+                    <div class="option" data-value="budget" onclick="selectOption(this, 'budget')">
+                        <div class="option-title">Budget-Friendly</div>
+                        <div class="option-description">Under $2,000/year</div>
+                    </div>
+                    <div class="option" data-value="moderate" onclick="selectOption(this, 'budget')">
+                        <div class="option-title">Moderate Investment</div>
+                        <div class="option-description">$2,000 - $5,000/year</div>
+                    </div>
+                    <div class="option" data-value="premium" onclick="selectOption(this, 'budget')">
+                        <div class="option-title">Premium Program</div>
+                        <div class="option-description">$5,000+/year</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Question 5 -->
+            <div class="question" id="q5">
+                <div class="question-title">
+                    <span class="question-number">5</span>
+                    How quickly do you need results?
+                </div>
+                <div class="options">
+                    <div class="option" data-value="asap" onclick="selectOption(this, 'timeline')">
+                        <div class="option-title">ASAP (Within 2 weeks)</div>
+                        <div class="option-description">Fast-track installation</div>
+                    </div>
+                    <div class="option" data-value="month" onclick="selectOption(this, 'timeline')">
+                        <div class="option-title">Within a Month</div>
+                        <div class="option-description">Standard timeline</div>
+                    </div>
+                    <div class="option" data-value="flexible" onclick="selectOption(this, 'timeline')">
+                        <div class="option-title">Flexible Timeline</div>
+                        <div class="option-description">Plan for next quarter</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="navigation">
+                <button class="nav-button" id="prev-btn" onclick="previousQuestion()" disabled>Previous</button>
+                <div id="question-counter">Question 1 of 5</div>
+                <button class="nav-button" id="next-btn" onclick="nextQuestion()" disabled>Next</button>
+            </div>
+        </div>
+        
+        <div class="results" id="results">
+            <div class="recommendation-card" id="recommendation">
+                <!-- Results will be populated by JavaScript -->
+            </div>
+            
+            <div class="next-steps">
+                <div class="next-steps-title">Your Next Steps</div>
+                <ol class="steps-list">
+                    <li><strong>Schedule Your Free Assessment</strong> - We'll visit your office and confirm the recommendation</li>
+                    <li><strong>Review Custom Proposal</strong> - Get specific plants, pricing, and timeline</li>
+                    <li><strong>Present to Leadership</strong> - Use our ROI data and proposal for approval</li>
+                    <li><strong>Installation Day</strong> - Professional setup and team training</li>
+                    <li><strong>Enjoy the Benefits</strong> - Watch productivity and satisfaction improve</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="cta-section">
+            <div style="font-size: 24px; font-weight: 700; margin-bottom: 12px;">Ready to Get Your Custom Assessment?</div>
+            <div style="font-size: 16px; margin-bottom: 20px; opacity: 0.9;">Free consultation • No obligation • Customized recommendations</div>
+            
+            <div style="font-size: 18px; font-weight: 600; margin-bottom: 20px;">
+                📞 (470) 664-4039<br>
+                🌐 atlantahouseplants.com<br>
+                📧 service@atlantahouseplants.com
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        let currentQuestion = 1;
+        let answers = {};
+        
+        function selectOption(element, category) {
+            // Remove selected class from all options in this question
+            const options = element.parentNode.querySelectorAll('.option');
+            options.forEach(opt => opt.classList.remove('selected'));
+            
+            // Add selected class to clicked option
+            element.classList.add('selected');
+            
+            // Store answer
+            answers[category] = element.getAttribute('data-value');
+            
+            // Enable next button
+            document.getElementById('next-btn').disabled = false;
+        }
+        
+        function nextQuestion() {
+            if (currentQuestion < 5) {
+                // Hide current question
+                document.getElementById('q' + currentQuestion).classList.remove('active');
+                
+                // Show next question
+                currentQuestion++;
+                document.getElementById('q' + currentQuestion).classList.add('active');
+                
+                // Update navigation
+                updateNavigation();
+                updateProgress();
+            } else {
+                // Show results
+                showResults();
+            }
+        }
+        
+        function previousQuestion() {
+            if (currentQuestion > 1) {
+                // Hide current question
+                document.getElementById('q' + currentQuestion).classList.remove('active');
+                
+                // Show previous question
+                currentQuestion--;
+                document.getElementById('q' + currentQuestion).classList.add('active');
+                
+                // Update navigation
+                updateNavigation();
+                updateProgress();
+            }
+        }
+        
+        function updateNavigation() {
+            const prevBtn = document.getElementById('prev-btn');
+            const nextBtn = document.getElementById('next-btn');
+            const counter = document.getElementById('question-counter');
+            
+            prevBtn.disabled = currentQuestion === 1;
+            
+            // Check if current question has an answer
+            const currentAnswerKey = getCurrentAnswerKey();
+            nextBtn.disabled = !answers[currentAnswerKey];
+            
+            if (currentQuestion === 5) {
+                nextBtn.textContent = 'Get Results';
+            } else {
+                nextBtn.textContent = 'Next';
+            }
+            
+            counter.textContent = `Question ${currentQuestion} of 5`;
+        }
+        
+        function getCurrentAnswerKey() {
+            const keys = ['size', 'maintenance', 'goal', 'budget', 'timeline'];
+            return keys[currentQuestion - 1];
+        }
+        
+        function updateProgress() {
+            const progress = (currentQuestion - 1) / 5 * 100;
+            document.getElementById('progress-fill').style.width = progress + '%';
+        }
+        
+        function showResults() {
+            // Hide quiz
+            document.querySelector('.quiz-section').style.display = 'none';
+            
+            // Show results
+            document.getElementById('results').classList.add('show');
+            
+            // Generate recommendation
+            const recommendation = generateRecommendation();
+            document.getElementById('recommendation').innerHTML = recommendation;
+            
+            // Update progress to 100%
+            document.getElementById('progress-fill').style.width = '100%';
+        }
+        
+        function generateRecommendation() {
+            // Simple recommendation logic
+            let packageName = "Professional Package";
+            let price = "$3,750/year";
+            let features = [
+                "15-25 mixed plants strategically placed",
+                "Bi-weekly professional maintenance",
+                "Plant replacement guarantee",
+                "Seasonal refresh program",
+                "Employee care training session"
+            ];
+            let reasoning = "";
+            
+            // Adjust based on answers
+            if (answers.size === 'small' && answers.budget === 'budget') {
+                packageName = "Starter Package";
+                price = "$1,500/year";
+                features = [
+                    "8-12 low-maintenance plants",
+                    "Monthly maintenance visits",
+                    "Basic care guide for staff",
+                    "6-month plant guarantee",
+                    "Phone support included"
+                ];
+                reasoning = "Perfect for smaller offices with budget constraints. Low-maintenance plants that deliver maximum impact.";
+            } else if (answers.size === 'large' || answers.budget === 'premium') {
+                packageName = "Executive Package";
+                price = "$7,500/year";
+                features = [
+                    "30+ premium plants with design consultation",
+                    "Weekly maintenance and monitoring",
+                    "Quarterly seasonal plant rotations",
+                    "24-month comprehensive guarantee",
+                    "Priority response and emergency service"
+                ];
+                reasoning = "Ideal for large offices that want maximum impact and professional image enhancement.";
+            } else {
+                reasoning = "The perfect balance of impact and maintenance for growing businesses.";
+            }
+            
+            const featuresList = features.map(f => `<li>${f}</li>`).join('');
+            
+            return `
+                <div class="rec-title">Perfect Match Found!</div>
+                <div class="rec-package">${packageName}</div>
+                <div class="rec-price">${price}</div>
+                
+                <ul class="rec-features">
+                    ${featuresList}
+                </ul>
+                
+                <div class="why-section">
+                    <div class="why-title">Why This Package?</div>
+                    <p>${reasoning}</p>
+                </div>
+            `;
+        }
+    </script>
+</body>
+</html>
