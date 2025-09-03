@@ -483,7 +483,7 @@ const OfficePlants = () => {
               </div>
               <div className="text-center">
                 <div className="text-4xl font-bold text-green-600 mb-2">100%</div>
-                <div class="text-gray-600">Client Retention</div>
+                <div className="text-gray-600">Client Retention</div>
               </div>
             </div>
           </div>
