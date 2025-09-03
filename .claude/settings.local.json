@@ -16,7 +16,8 @@
       "Bash(npm run dev:*)",
       "Bash(npx tsc:*)",
       "Bash(ls:*)",
-      "Bash(./process_images.bat)"
+      "Bash(./process_images.bat)",
+      "Bash(dir \"C:\\Users\\wallg\\AnaGITGW\\ana-wall-atlanta-homes\\atlanta-plant-haven\\public\\lead-magnets\" /b)"
     ],
     "deny": [],
     "ask": [],

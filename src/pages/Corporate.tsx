@@ -178,8 +178,8 @@ const Corporate = () => {
             {/* Corporate Gift Hero Image */}
             <div className="relative">
               <img 
-                src="/images/arrangements-decorative/wicker-basket-mixed-tropical-plants.png" 
-                alt="Premium corporate gift arrangement with tropical plants in elegant wicker basket"
+                src="/images/arrangements-decorative/premium-succulent-bowl-corporate-gift.png" 
+                alt="Premium corporate gift featuring diverse succulent arrangement in elegant wooden bowl"
                 className="rounded-2xl shadow-2xl"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent rounded-2xl"></div>
