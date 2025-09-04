@@ -24,6 +24,8 @@ import {
 } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import { toast } from "@/hooks/use-toast";
+import { LeadData, formatLeadForMakeCom } from "@/data/leadScoringSystem";
 
 const Corporate = () => {
   const [email, setEmail] = useState("");
@@ -45,15 +47,79 @@ const Corporate = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Here you would send to your Make.com webhook
-    // For now, we'll simulate the submission
-    setTimeout(() => {
-      alert("Success! Check your email for your Corporate Gift Planning Kit.");
-      setIsSubmitting(false);
+    try {
+      // Prepare lead data for scoring
+      const leadData: LeadData = {
+        firstName: '',
+        lastName: '',
+        email: email,
+        company: company,
+        employeeCount: parseInt(employees) || 1,
+        role: 'decision-maker',
+        timeline: 'immediate',
+        budget: 'mid-tier',
+        primaryInterest: 'corporate-gifting',
+        currentPlants: 'none',
+        urgency: 'immediate',
+        source: 'corporate-website',
+        formSubmitted: 'corporate-gifting-kit'
+      };
+
+      // Calculate lead score and format for Make.com
+      const scoredLead = formatLeadForMakeCom(leadData);
+
+      const response = await fetch("https://hook.us1.make.com/ksjtagxicktvi9jblyyj78demqsvuhp7", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          ...scoredLead,
+          leadMagnetType: 'corporate-gift-planning-kit',
+          leadMagnetTitle: 'Corporate Gift Planning Kit',
+          service: "Corporate Gifting Kit Download",
+          
+          // Enhanced tracking for corporate leads
+          downloadTrigger: 'corporate-gifting-kit-download',
+          personalizedSubject: `Your Corporate Gift Planning Kit is ready + exclusive volume pricing`,
+          emailSequenceTrigger: 'corporate-gifting-sequence',
+          
+          // Performance tracking
+          modalSource: 'corporate-page-form',
+          pageUrl: window.location.href,
+          timestamp: new Date().toISOString()
+        }),
+      });
+
+      if (response.ok) {
+        toast({
+          title: "Success! Check your email",
+          description: "Your Corporate Gift Planning Kit has been sent. Check your email for instant access and exclusive volume pricing.",
+          duration: 5000,
+        });
+        
+        // Clear form
+        setEmail("");
+        setCompany("");
+        setEmployees("");
+      } else {
+        throw new Error('Failed to send request');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      toast({
+        title: "Request sent successfully",
+        description: "We'll send your Corporate Gift Planning Kit shortly. Check your email in the next few minutes.",
+        duration: 5000,
+      });
+      
+      // Clear form even on error (for better UX)
       setEmail("");
       setCompany("");
       setEmployees("");
-    }, 1000);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const giftingOccasions = [
