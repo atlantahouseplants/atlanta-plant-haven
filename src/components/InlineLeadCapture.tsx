@@ -27,17 +27,17 @@ const InlineLeadCapture: React.FC<InlineLeadCaptureProps> = ({
 
   const leadMagnets = {
     'plant-investment-calculator': {
-      title: "Office Plant Investment Calculator",
-      subtitle: "Quick ROI Estimate Tool",
-      description: "Simple calculator that shows investment costs, expected benefits, and ROI multiple based on your employee count. Get instant results with package recommendations.",
+      title: "Office Plant Benefits Assessment",
+      subtitle: "5-Question Strategic Evaluation",
+      description: "Smart assessment that evaluates your office environment and challenges to provide personalized plant benefits and actionable recommendations.",
       icon: Calculator,
       color: "blue",
-      value: "3-minute calculator",
+      value: "5-question assessment",
       benefits: [
-        "Instant ROI calculation based on employee count",
-        "Package recommendations for your office size", 
-        "Conservative benefit estimates",
-        "Budget-friendly option comparisons"
+        "Personalized benefits based on your office profile",
+        "Strategic recommendations for your specific challenges", 
+        "Actionable next steps and consultation options",
+        "No arbitrary numbers - focus on real business value"
       ]
     },
     'office-readiness-assessment': {
