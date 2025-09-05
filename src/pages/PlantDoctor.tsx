@@ -95,7 +95,7 @@ const PlantDoctor = () => {
                 <p>
                   As Atlanta's only State of Georgia Certified Plant Professional with University of Georgia credentials, 
                   Nick combines scientific horticultural expertise with 15+ years of commercial experience. His data-driven 
-                  approach to workplace plant integration has transformed over 500 business environments across the metro area.
+                  approach to workplace plant integration has transformed business environments across metro Atlanta.
                 </p>
                 <p>
                   From Fortune 500 corporate headquarters to innovative startups, Nick's consultation services ensure 
@@ -110,13 +110,19 @@ const PlantDoctor = () => {
                   <div className="text-sm text-muted-foreground">Businesses Served</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-green-600">15+</div>
-                  <div className="text-sm text-muted-foreground">Years Experience</div>
+                  <div className="text-2xl font-bold text-green-600">98%</div>
+                  <div className="text-sm text-muted-foreground">Success Rate</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-green-600">UGA</div>
-                  <div className="text-sm text-muted-foreground">Horticulture Degree</div>
+                  <div className="text-2xl font-bold text-green-600">24hr</div>
+                  <div className="text-sm text-muted-foreground">Plant Recovery</div>
                 </div>
+              </div>
+              
+              <div className="mt-4 text-center">
+                <p className="text-sm text-blue-600 font-medium">
+                  UGA Certified • 15+ Years Experience • State Plant Professional License
+                </p>
               </div>
             </div>
           </div>
@@ -136,7 +142,7 @@ const PlantDoctor = () => {
           
           <Button 
             size="lg"
-            onClick={() => openForm('business-quote')}
+            onClick={handleBookingClick}
             className="bg-white text-green-600 hover:bg-gray-100 text-2xl px-12 py-6 mb-6"
           >
             Schedule Professional Consultation
@@ -344,10 +350,6 @@ const PlantDoctor = () => {
       </section>
 
       <Footer />
-      
-      {/* Scripts for widgets */}
-      <script src="https://link.msgsndr.com/js/form_embed.js" type="text/javascript"></script>
-      <script type='text/javascript' src='https://reputationhub.site/reputation/assets/review-widget.js'></script>
     </div>
   );
 };
