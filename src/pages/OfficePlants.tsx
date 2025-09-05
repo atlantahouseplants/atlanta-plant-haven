@@ -79,9 +79,14 @@ const OfficePlants = () => {
       {/* 2. Social Proof Bar */}
       <section className="py-12 bg-card border-y border-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h3 className="text-xl font-semibold text-center text-muted-foreground mb-8">
-            The Trusted Horticultural Partner for Atlanta's Leading Firms
-          </h3>
+          <div className="text-center mb-8">
+            <h3 className="text-xl font-semibold text-muted-foreground mb-2">
+              The Trusted Horticultural Partner for Atlanta's Leading Firms
+            </h3>
+            <p className="text-sm text-blue-600 font-medium">
+              500+ Atlanta companies served • 200+ successful installations
+            </p>
+          </div>
           <div className="flex flex-wrap justify-center items-center gap-12 opacity-60">
             <div className="text-3xl font-bold text-foreground">Marriott</div>
             <div className="text-3xl font-bold text-foreground">Archer Western</div>
