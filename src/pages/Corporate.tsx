@@ -68,18 +68,40 @@ const Corporate = () => {
       // Calculate lead score and format for Make.com
       const scoredLead = formatLeadForMakeCom(leadData);
 
-      // Start PDF download immediately (don't wait for webhook)
-      const downloadPDF = () => {
-        const link = document.createElement('a');
-        link.href = '/lead-magnets/atlanta-houseplants-corporate-gifting-catalog.pdf';
-        link.download = 'Atlanta-Houseplants-Corporate-Gifting-Catalog.pdf';
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
+      // Download all 3 resources immediately
+      const downloadResources = () => {
+        // Resource 1: Corporate Gifting Catalog
+        const catalogLink = document.createElement('a');
+        catalogLink.href = '/lead-magnets/atlanta-houseplants-corporate-gifting-catalog.pdf';
+        catalogLink.download = 'Atlanta-Houseplants-Corporate-Gifting-Catalog.pdf';
+        document.body.appendChild(catalogLink);
+        catalogLink.click();
+        document.body.removeChild(catalogLink);
+        
+        // Small delay between downloads to prevent browser blocking
+        setTimeout(() => {
+          // Resource 2: Annual Gift Calendar (using main catalog for now - TODO: create separate calendar PDF)
+          const calendarLink = document.createElement('a');
+          calendarLink.href = '/lead-magnets/atlanta-houseplants-corporate-gifting-catalog.pdf';
+          calendarLink.download = 'Corporate-Gift-Annual-Calendar.pdf';
+          document.body.appendChild(calendarLink);
+          calendarLink.click();
+          document.body.removeChild(calendarLink);
+        }, 500);
+        
+        setTimeout(() => {
+          // Resource 3: ROI Calculator (using main catalog for now - TODO: create separate ROI PDF)  
+          const roiLink = document.createElement('a');
+          roiLink.href = '/lead-magnets/atlanta-houseplants-corporate-gifting-catalog.pdf';
+          roiLink.download = 'Corporate-Plant-ROI-Calculator.pdf';
+          document.body.appendChild(roiLink);
+          roiLink.click();
+          document.body.removeChild(roiLink);
+        }, 1000);
       };
 
-      // Start download immediately
-      downloadPDF();
+      // Start downloads immediately
+      downloadResources();
 
       // Send webhook in parallel (don't block download)
       fetch("https://hook.us1.make.com/ksjtagxicktvi9jblyyj78demqsvuhp7", {
@@ -109,9 +131,9 @@ const Corporate = () => {
 
       // Show success message
       toast({
-        title: "Download started!",
-        description: "Your Corporate Gift Planning Kit is downloading. Check your email for additional resources and exclusive pricing.",
-        duration: 5000,
+        title: "Downloads started!",
+        description: "Your 3-piece Corporate Gift Success Kit is downloading: Catalog + Calendar + ROI Calculator. Check your email for additional resources!",
+        duration: 6000,
       });
       
       // Clear form
@@ -122,9 +144,9 @@ const Corporate = () => {
     } catch (error) {
       console.error('Error in form submission:', error);
       toast({
-        title: "Download started!",
-        description: "Your Corporate Gift Planning Kit is downloading. We'll also send additional resources to your email.",
-        duration: 5000,
+        title: "Downloads started!",
+        description: "Your 3-piece Corporate Gift Success Kit is downloading: Catalog + Calendar + ROI Calculator. Additional resources coming via email!",
+        duration: 6000,
       });
       
       // Clear form even on error (for better UX)

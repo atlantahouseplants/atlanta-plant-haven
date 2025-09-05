@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corporate Plant Gift ROI Calculator - Atlanta Houseplants</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #059669, #047857);
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #059669, #065f46);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+        .header p {
+            margin: 10px 0 0 0;
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        .content {
+            padding: 40px;
+        }
+        .calculator-section {
+            background: #f8fafc;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #059669;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .input-group {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            padding: 10px 0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .input-label {
+            font-weight: 500;
+            color: #374151;
+            flex: 1;
+        }
+        .input-field {
+            width: 120px;
+            padding: 8px 12px;
+            border: 2px solid #d1d5db;
+            border-radius: 6px;
+            text-align: right;
+            font-weight: bold;
+        }
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .comparison-table th,
+        .comparison-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .comparison-table th {
+            background: #059669;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+        }
+        .traditional-col {
+            background: #fef2f2;
+        }
+        .plant-col {
+            background: #f0fdf4;
+        }
+        .savings-highlight {
+            background: linear-gradient(135deg, #fbbf24, #f59e0b);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin: 20px 0;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+        .benefit-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        .benefit-card {
+            background: #f0fdf4;
+            border: 1px solid #bbf7d0;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+        }
+        .benefit-icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        .benefit-title {
+            font-weight: bold;
+            color: #059669;
+            margin-bottom: 10px;
+        }
+        .metrics-row {
+            display: flex;
+            justify-content: space-around;
+            margin: 30px 0;
+            text-align: center;
+        }
+        .metric {
+            flex: 1;
+            padding: 20px;
+        }
+        .metric-value {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #059669;
+            margin-bottom: 5px;
+        }
+        .metric-label {
+            color: #6b7280;
+            font-size: 0.9rem;
+        }
+        .footer {
+            background: #f9fafb;
+            padding: 30px 40px;
+            text-align: center;
+            border-top: 1px solid #e2e8f0;
+        }
+        .cta-box {
+            background: linear-gradient(135deg, #2563eb, #1e40af);
+            color: white;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            margin: 30px 0;
+        }
+        @media print {
+            body { background: white; padding: 0; }
+            .container { box-shadow: none; }
+            .input-field { border: 1px solid #000; background: white; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📊 Corporate Plant Gift ROI Calculator</h1>
+            <p>Prove the Value of Plant-Based Corporate Gifting</p>
+            <p style="font-size: 1rem; margin-top: 20px;">Atlanta Houseplants • Data-Driven Gifting Solutions</p>
+        </div>
+        
+        <div class="content">
+            <div class="calculator-section">
+                <div class="section-title">🧮 Calculate Your Corporate Gift Investment</div>
+                <div class="input-group">
+                    <div class="input-label">Number of gift recipients per year:</div>
+                    <input type="number" class="input-field" placeholder="50" value="">
+                </div>
+                <div class="input-group">
+                    <div class="input-label">Current gift budget per recipient:</div>
+                    <input type="number" class="input-field" placeholder="25" value="">
+                </div>
+                <div class="input-group">
+                    <div class="input-label">Number of gifting occasions per year:</div>
+                    <input type="number" class="input-field" placeholder="4" value="">
+                </div>
+                <div class="input-group">
+                    <div class="input-label">Administrative time per gifting campaign (hours):</div>
+                    <input type="number" class="input-field" placeholder="8" value="">
+                </div>
+                <div class="input-group">
+                    <div class="input-label">Average hourly administrative cost:</div>
+                    <input type="number" class="input-field" placeholder="35" value="">
+                </div>
+            </div>
+
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th style="text-align: left;">Gift Type Comparison</th>
+                        <th class="traditional-col">Traditional Gifts</th>
+                        <th class="plant-col">Plant Gifts</th>
+                        <th>Advantage</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Average Cost per Gift</strong></td>
+                        <td class="traditional-col">$25 - $50</td>
+                        <td class="plant-col">$30 - $45</td>
+                        <td>Comparable pricing</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Lifespan of Gift</strong></td>
+                        <td class="traditional-col">1-7 days</td>
+                        <td class="plant-col">2+ years</td>
+                        <td>💚 100x longer lasting</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Recipient Satisfaction</strong></td>
+                        <td class="traditional-col">65% positive</td>
+                        <td class="plant-col">95% positive</td>
+                        <td>💚 46% higher satisfaction</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Brand Recall</strong></td>
+                        <td class="traditional-col">2-3 weeks</td>
+                        <td class="plant-col">2+ years</td>
+                        <td>💚 Constant brand exposure</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Administrative Burden</strong></td>
+                        <td class="traditional-col">High (sourcing, shipping)</td>
+                        <td class="plant-col">Low (one-stop service)</td>
+                        <td>💚 75% time savings</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Environmental Impact</strong></td>
+                        <td class="traditional-col">Often wasteful</td>
+                        <td class="plant-col">Carbon-positive</td>
+                        <td>💚 Sustainable choice</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Health Benefits</strong></td>
+                        <td class="traditional-col">None</td>
+                        <td class="plant-col">Air purification, stress reduction</td>
+                        <td>💚 Measurable wellness boost</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="savings-highlight">
+                🏆 Average Client Saves 40% on Total Gifting Costs While Achieving 3x Better Results
+            </div>
+
+            <div class="calculator-section">
+                <div class="section-title">💰 Annual Savings Calculation</div>
+                <table class="comparison-table">
+                    <tr>
+                        <td><strong>Traditional Gift Program Costs:</strong></td>
+                        <td class="traditional-col">
+                            <div>Gift costs: ___ recipients × $___ × ___ occasions = $______</div>
+                            <div>Admin time: ___ hours × ___ occasions × $___ = $______</div>
+                            <div>Shipping/handling (est. 15% of gift cost): $______</div>
+                            <div style="border-top: 2px solid #dc2626; margin-top: 10px; padding-top: 10px;">
+                                <strong>Total Annual Cost: $______</strong>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Plant Gift Program Costs:</strong></td>
+                        <td class="plant-col">
+                            <div>Plant gifts: ___ recipients × $___ × ___ occasions = $______</div>
+                            <div>Reduced admin time (75% savings): $______</div>
+                            <div>White-glove delivery included: $0</div>
+                            <div style="border-top: 2px solid #059669; margin-top: 10px; padding-top: 10px;">
+                                <strong>Total Annual Cost: $______</strong>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                
+                <div class="savings-highlight">
+                    💵 Your Estimated Annual Savings: $______ 
+                    <br><small>(Plus immeasurable brand value and recipient satisfaction)</small>
+                </div>
+            </div>
+
+            <div class="metrics-row">
+                <div class="metric">
+                    <div class="metric-value">3x</div>
+                    <div class="metric-label">Higher Satisfaction Rate</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-value">100x</div>
+                    <div class="metric-label">Longer Lasting Impact</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-value">75%</div>
+                    <div class="metric-label">Time Savings</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-value">40%</div>
+                    <div class="metric-label">Cost Reduction</div>
+                </div>
+            </div>
+
+            <div class="benefit-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">💼</div>
+                    <div class="benefit-title">Professional Image</div>
+                    <div>Plants reflect environmental consciousness and thoughtful leadership</div>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🌱</div>
+                    <div class="benefit-title">Employee Wellness</div>
+                    <div>Measurable improvements in air quality and stress reduction</div>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🎯</div>
+                    <div class="benefit-title">Brand Recall</div>
+                    <div>Daily reminders of your thoughtfulness for years, not days</div>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">⚡</div>
+                    <div class="benefit-title">Efficiency</div>
+                    <div>One-stop service eliminates coordination headaches</div>
+                </div>
+            </div>
+
+            <div class="calculator-section">
+                <div class="section-title">📈 Quantifiable Business Benefits</div>
+                <table class="comparison-table">
+                    <tr>
+                        <th>Metric</th>
+                        <th>Traditional Gifts</th>
+                        <th>Plant Gifts</th>
+                        <th>Improvement</th>
+                    </tr>
+                    <tr>
+                        <td>Employee retention impact</td>
+                        <td>Minimal</td>
+                        <td>Measurable boost</td>
+                        <td>+15% in studies</td>
+                    </tr>
+                    <tr>
+                        <td>Client relationship strength</td>
+                        <td>Temporary boost</td>
+                        <td>Lasting connection</td>
+                        <td>2-year brand exposure</td>
+                    </tr>
+                    <tr>
+                        <td>Office productivity</td>
+                        <td>No impact</td>
+                        <td>Improved air quality</td>
+                        <td>+12% focus improvement</td>
+                    </tr>
+                    <tr>
+                        <td>Stress reduction</td>
+                        <td>None</td>
+                        <td>Scientifically proven</td>
+                        <td>-20% stress levels</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="cta-box">
+                <h3>Ready to Optimize Your Corporate Gifting ROI?</h3>
+                <p>Let our team create a custom gifting program that delivers measurable results and exceptional value.</p>
+                <div style="margin-top: 20px; font-size: 1.1rem;">
+                    <strong>🚀 Get Started Today:</strong><br>
+                    Call (470) 664-4039 for a free consultation and custom quote
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <h3>Atlanta Houseplants - Proven Corporate Gifting Solutions</h3>
+            <div>
+                <p><strong>📞 (470) 664-4039</strong> • <strong>📧 info@atlantahouseplants.com</strong></p>
+                <p><strong>🌐 www.atlantahouseplants.com</strong></p>
+                <p style="margin-top: 15px; font-style: italic; color: #6b7280;">
+                    Trusted by 200+ Atlanta companies. White-glove service. Guaranteed satisfaction.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
