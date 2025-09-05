@@ -12,11 +12,16 @@ const SocialProofBar = () => {
     <div className="py-16 bg-gradient-to-r from-gray-50 to-blue-50/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <div className="flex items-center justify-center space-x-2 mb-4">
-            <Shield className="h-6 w-6 text-green-500" />
-            <span className="text-lg font-semibold text-gray-700">
-              Trusted by 500+ Atlanta Businesses Since 2020
-            </span>
+          <div className="text-center mb-4">
+            <div className="flex items-center justify-center space-x-2 mb-2">
+              <Shield className="h-6 w-6 text-green-500" />
+              <span className="text-lg font-semibold text-gray-700">
+                Trusted by 500+ Atlanta Businesses Since 2020
+              </span>
+            </div>
+            <p className="text-sm text-blue-600 font-medium">
+              200+ successful installations • 15% avg. productivity boost • 37% stress reduction
+            </p>
           </div>
           
           {/* Star Rating */}

@@ -148,7 +148,7 @@ const SimplifiedHero = () => {
               
               <div className="text-center mt-8">
                 <p className="text-blue-700 font-semibold">
-                  Join 500+ Atlanta businesses creating healthier, more productive workspaces
+                  Proven results across metro Atlanta's most demanding business environments
                 </p>
               </div>
             </div>
@@ -201,7 +201,7 @@ const SimplifiedHero = () => {
         <InlineLeadCapture 
           variant="full-grid"
           title="Free Strategic Business Resources"
-          subtitle="Professional tools trusted by 500+ Atlanta businesses to evaluate, implement, and optimize workplace plant programs."
+          subtitle="Professional assessment tools used by Atlanta's leading companies to evaluate, implement, and optimize workplace plant programs."
           className="mb-20"
         />
 
@@ -212,7 +212,7 @@ const SimplifiedHero = () => {
               Ready to Enhance Your Workplace Environment?
             </h2>
             <p className="text-xl text-gray-700 mb-10 max-w-4xl mx-auto leading-relaxed">
-              Join 500+ Atlanta businesses who trust Atlanta Houseplants to create healthier, more productive workspaces. 
+              Experience the difference that professional plant design makes in workplace wellness and productivity. 
               <strong>Schedule your complimentary consultation</strong> to discover how strategic plant design can transform your office culture.
             </p>
             
