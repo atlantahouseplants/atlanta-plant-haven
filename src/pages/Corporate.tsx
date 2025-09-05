@@ -68,7 +68,21 @@ const Corporate = () => {
       // Calculate lead score and format for Make.com
       const scoredLead = formatLeadForMakeCom(leadData);
 
-      const response = await fetch("https://hook.us1.make.com/ksjtagxicktvi9jblyyj78demqsvuhp7", {
+      // Start PDF download immediately (don't wait for webhook)
+      const downloadPDF = () => {
+        const link = document.createElement('a');
+        link.href = '/lead-magnets/atlanta-houseplants-corporate-gifting-catalog.pdf';
+        link.download = 'Atlanta-Houseplants-Corporate-Gifting-Catalog.pdf';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      };
+
+      // Start download immediately
+      downloadPDF();
+
+      // Send webhook in parallel (don't block download)
+      fetch("https://hook.us1.make.com/ksjtagxicktvi9jblyyj78demqsvuhp7", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -89,27 +103,27 @@ const Corporate = () => {
           pageUrl: window.location.href,
           timestamp: new Date().toISOString()
         }),
+      }).catch(error => {
+        console.error('Webhook error (download still successful):', error);
       });
 
-      if (response.ok) {
-        toast({
-          title: "Success! Check your email",
-          description: "Your Corporate Gift Planning Kit has been sent. Check your email for instant access and exclusive volume pricing.",
-          duration: 5000,
-        });
-        
-        // Clear form
-        setEmail("");
-        setCompany("");
-        setEmployees("");
-      } else {
-        throw new Error('Failed to send request');
-      }
-    } catch (error) {
-      console.error('Error submitting form:', error);
+      // Show success message
       toast({
-        title: "Request sent successfully",
-        description: "We'll send your Corporate Gift Planning Kit shortly. Check your email in the next few minutes.",
+        title: "Download started!",
+        description: "Your Corporate Gift Planning Kit is downloading. Check your email for additional resources and exclusive pricing.",
+        duration: 5000,
+      });
+      
+      // Clear form
+      setEmail("");
+      setCompany("");
+      setEmployees("");
+
+    } catch (error) {
+      console.error('Error in form submission:', error);
+      toast({
+        title: "Download started!",
+        description: "Your Corporate Gift Planning Kit is downloading. We'll also send additional resources to your email.",
         duration: 5000,
       });
       
@@ -133,10 +147,10 @@ const Corporate = () => {
     "Get Well Soon"
   ];
 
-  const volumeTiers = [
-    { quantity: "25-49", discount: "20%", perPlant: "$32" },
-    { quantity: "50-99", discount: "30%", perPlant: "$28" },
-    { quantity: "100+", discount: "40%", perPlant: "$24" }
+  const corporateAdvantages = [
+    { icon: "💚", title: "Health & Wellness", description: "Boost employee wellbeing and reduce workplace stress" },
+    { icon: "🚚", title: "Office Delivery", description: "Direct delivery to your office location" },
+    { icon: "📅", title: "Flexible Scheduling", description: "Perfect timing for any occasion" }
   ];
 
   return (
@@ -217,17 +231,17 @@ const Corporate = () => {
                 </div>
               </div>
 
-              {/* Volume Pricing Preview */}
+              {/* Corporate Advantages */}
               <div className="bg-blue-50 border-2 border-blue-200 rounded-xl p-6">
-                <h3 className="font-bold text-lg mb-3">Volume Pricing Starting at 25 Plants</h3>
-                <div className="space-y-2 mb-4">
-                  {volumeTiers.map((tier) => (
-                    <div key={tier.quantity} className="flex justify-between items-center">
-                      <span className="text-gray-700">{tier.quantity} plants</span>
-                      <span className="font-semibold">
-                        <span className="text-blue-600">{tier.discount} off</span>
-                        <span className="text-gray-500 ml-2">(~{tier.perPlant}/plant)</span>
-                      </span>
+                <h3 className="font-bold text-lg mb-4">Why Atlanta Companies Choose Us</h3>
+                <div className="space-y-4 mb-6">
+                  {corporateAdvantages.map((advantage, index) => (
+                    <div key={index} className="flex items-start space-x-3">
+                      <span className="text-2xl">{advantage.icon}</span>
+                      <div>
+                        <h4 className="font-semibold text-gray-900">{advantage.title}</h4>
+                        <p className="text-gray-600 text-sm">{advantage.description}</p>
+                      </div>
                     </div>
                   ))}
                 </div>
@@ -235,7 +249,7 @@ const Corporate = () => {
                   onClick={() => document.getElementById('lead-magnet-form')?.scrollIntoView({ behavior: 'smooth' })}
                   className="w-full bg-blue-600 hover:bg-blue-700 text-lg py-6"
                 >
-                  Get Complete Pricing Guide
+                  Get Your Custom Quote
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </div>
@@ -277,7 +291,7 @@ const Corporate = () => {
                   Get Your Free Corporate Gift Success Kit
                 </h2>
                 <p className="text-lg text-gray-600">
-                  Everything you need to run a successful corporate gifting program
+                  Instant download: Everything you need to run a successful corporate gifting program
                 </p>
               </div>
               
@@ -356,10 +370,34 @@ const Corporate = () => {
               
               <p className="text-xs text-center text-gray-500 mt-4">
                 Join 200+ Atlanta companies who've optimized their gifting programs. 
-                Instant download, no spam.
+                Instant PDF download + bonus resources via email.
               </p>
             </CardContent>
           </Card>
+        </div>
+      </section>
+
+      {/* Client Success Story - Moved Higher for Impact */}
+      <section className="py-16 bg-white">
+        <div className="max-w-4xl mx-auto px-4">
+          <div className="bg-gray-50 rounded-2xl p-8">
+            <div className="flex justify-center mb-6">
+              {[...Array(5)].map((_, i) => (
+                <Star key={i} className="h-6 w-6 text-yellow-500 fill-current" />
+              ))}
+            </div>
+            <blockquote className="text-xl text-gray-700 mb-6 text-center">
+              "We switched from generic gift baskets to Atlanta Houseplants for our quarterly 
+              employee appreciation. The response has been incredible - employees actually 
+              keep and care for their plants. We've gifted over 500 plants and every single 
+              one was delivered perfectly. The ROI calculator in their planning kit showed us 
+              we're saving 40% while giving better gifts."
+            </blockquote>
+            <cite className="text-center block">
+              <span className="font-semibold">Jennifer Martinez</span>, 
+              <span className="text-gray-500"> HR Director, Financial Services Firm (200 employees)</span>
+            </cite>
+          </div>
         </div>
       </section>
 
@@ -430,68 +468,67 @@ const Corporate = () => {
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Use Cases Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-            Perfect for Every Occasion
-          </h2>
           
-          <div className="grid md:grid-cols-4 gap-4 mb-12">
-            {giftingOccasions.map((occasion) => (
-              <Card key={occasion} className="hover:shadow-lg transition-shadow">
-                <CardContent className="p-4">
-                  <div className="flex items-center justify-between">
-                    <span className="font-medium">{occasion}</span>
-                    <CheckCircle2 className="h-5 w-5 text-green-500" />
+          {/* Use Cases Integration */}
+          <div className="mt-20">
+            <h2 className="text-3xl md:text-4xl font-bold text-center text-white mb-12">
+              Perfect for Every Occasion
+            </h2>
+            
+            <div className="grid md:grid-cols-4 gap-4 mb-12">
+              {giftingOccasions.map((occasion) => (
+                <Card key={occasion} className="hover:shadow-lg transition-shadow bg-white/10 backdrop-blur border-white/20">
+                  <CardContent className="p-4">
+                    <div className="flex items-center justify-between">
+                      <span className="font-medium text-white">{occasion}</span>
+                      <CheckCircle2 className="h-5 w-5 text-green-400" />
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur rounded-2xl p-8">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                  <h3 className="text-2xl font-bold mb-4 text-white">
+                    Why Plants Make the Perfect Corporate Gift
+                  </h3>
+                  <ul className="space-y-3">
+                    <li className="flex items-start">
+                      <CheckCircle2 className="h-5 w-5 text-green-400 mt-0.5 mr-3 flex-shrink-0" />
+                      <span className="text-white"><strong>Lasting Impact:</strong> Unlike flowers or food, plants thrive for years with minimal care</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle2 className="h-5 w-5 text-green-400 mt-0.5 mr-3 flex-shrink-0" />
+                      <span className="text-white"><strong>Daily Reminder:</strong> Recipients think of you every time they see their plant</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle2 className="h-5 w-5 text-green-400 mt-0.5 mr-3 flex-shrink-0" />
+                      <span className="text-white"><strong>Health Benefits:</strong> Improves air quality and reduces stress</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle2 className="h-5 w-5 text-green-400 mt-0.5 mr-3 flex-shrink-0" />
+                      <span className="text-white"><strong>Eco-Friendly:</strong> Sustainable choice that reflects your values</span>
+                    </li>
+                  </ul>
+                </div>
+                <div className="text-center">
+                  <div className="bg-white p-6 rounded-xl shadow-lg">
+                    <BarChart3 className="h-16 w-16 text-blue-600 mx-auto mb-4" />
+                    <p className="text-3xl font-bold mb-2 text-gray-900">3x Higher ROI</p>
+                    <p className="text-gray-600">
+                      vs. traditional corporate gifts<br/>
+                      <span className="text-sm">(Based on recipient satisfaction surveys)</span>
+                    </p>
                   </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-          
-          <div className="bg-gray-50 rounded-2xl p-8">
-            <div className="grid md:grid-cols-2 gap-8 items-center">
-              <div>
-                <h3 className="text-2xl font-bold mb-4">
-                  Why Plants Make the Perfect Corporate Gift
-                </h3>
-                <ul className="space-y-3">
-                  <li className="flex items-start">
-                    <CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 mr-3 flex-shrink-0" />
-                    <span><strong>Lasting Impact:</strong> Unlike flowers or food, plants thrive for years with minimal care</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 mr-3 flex-shrink-0" />
-                    <span><strong>Daily Reminder:</strong> Recipients think of you every time they see their plant</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 mr-3 flex-shrink-0" />
-                    <span><strong>Health Benefits:</strong> Improves air quality and reduces stress</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 mr-3 flex-shrink-0" />
-                    <span><strong>Eco-Friendly:</strong> Sustainable choice that reflects your values</span>
-                  </li>
-                </ul>
-              </div>
-              <div className="text-center">
-                <div className="bg-white p-6 rounded-xl shadow-lg">
-                  <BarChart3 className="h-16 w-16 text-blue-600 mx-auto mb-4" />
-                  <p className="text-3xl font-bold mb-2">3x Higher ROI</p>
-                  <p className="text-gray-600">
-                    vs. traditional corporate gifts<br/>
-                    <span className="text-sm">(Based on recipient satisfaction surveys)</span>
-                  </p>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
+
 
       {/* How It Works */}
       <section className="py-20 bg-gray-50">
@@ -595,29 +632,6 @@ const Corporate = () => {
         </div>
       </section>
 
-      {/* Client Success Story */}
-      <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4">
-          <div className="bg-gray-50 rounded-2xl p-8">
-            <div className="flex justify-center mb-6">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} className="h-6 w-6 text-yellow-500 fill-current" />
-              ))}
-            </div>
-            <blockquote className="text-xl text-gray-700 mb-6 text-center">
-              "We switched from generic gift baskets to Atlanta Houseplants for our quarterly 
-              employee appreciation. The response has been incredible - employees actually 
-              keep and care for their plants. We've gifted over 500 plants and every single 
-              one was delivered perfectly. The ROI calculator in their planning kit showed us 
-              we're saving 40% while giving better gifts."
-            </blockquote>
-            <cite className="text-center block">
-              <span className="font-semibold">Jennifer Martinez</span>, 
-              <span className="text-gray-500"> HR Director, Financial Services Firm (200 employees)</span>
-            </cite>
-          </div>
-        </div>
-      </section>
 
       {/* Corporate Gifting Portfolio */}
       <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50/30">
@@ -680,53 +694,6 @@ const Corporate = () => {
               </div>
             </div>
 
-            {/* Holiday Gifting Program */}
-            <div className="group bg-gradient-to-br from-white to-gray-50/50 rounded-3xl shadow-2xl hover:shadow-blue-500/10 overflow-hidden border-0 transform hover:scale-[1.01] hover:-translate-y-2 transition-all duration-500">
-              <div className="aspect-video overflow-hidden relative">
-                <img 
-                  src="/images/arrangements-decorative/wicker-basket-mixed-plants-arrangement.png"
-                  alt="Holiday corporate gifts in elegant wicker baskets with seasonal touches"
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              </div>
-              <div className="p-10 relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-50/20 via-transparent to-green-50/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none rounded-b-3xl"></div>
-                <div className="relative z-10">
-                  <h3 className="text-2xl font-bold text-foreground mb-4">Holiday Gifting Program</h3>
-                  <p className="text-muted-foreground mb-6 leading-relaxed">
-                    Annual holiday gift program featuring seasonal arrangements in elegant wicker baskets with personalized ribbon and messaging. Delivered directly to employee homes for maximum impact.
-                  </p>
-                  <blockquote className="bg-gradient-to-r from-blue-50 to-indigo-50 p-6 rounded-2xl border-l-4 border-blue-500 shadow-inner group-hover:shadow-lg transition-shadow duration-300">
-                    <p className="text-foreground italic mb-2 text-lg leading-relaxed">"Switching from gift cards to living plants transformed our holiday program. Employee families love them, and the gifts keep giving joy throughout the year."</p>
-                  </blockquote>
-                </div>
-              </div>
-            </div>
-
-            {/* New Client Welcome Program */}
-            <div className="group bg-gradient-to-br from-white to-gray-50/50 rounded-3xl shadow-2xl hover:shadow-blue-500/10 overflow-hidden border-0 transform hover:scale-[1.01] hover:-translate-y-2 transition-all duration-500">
-              <div className="aspect-video overflow-hidden relative">
-                <img 
-                  src="/images/arrangements-decorative/succulent-arrangement-decorative-bowl.png"
-                  alt="New client welcome gifts featuring elegant succulent arrangements"
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              </div>
-              <div className="p-10 relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-50/20 via-transparent to-green-50/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none rounded-b-3xl"></div>
-                <div className="relative z-10">
-                  <h3 className="text-2xl font-bold text-foreground mb-4">New Client Welcome Program</h3>
-                  <p className="text-muted-foreground mb-6 leading-relaxed">
-                    First-impression welcome gifts featuring elegant succulent arrangements in decorative containers. Delivered within 24 hours of contract signing to reinforce partnership excitement.
-                  </p>
-                  <blockquote className="bg-gradient-to-r from-blue-50 to-indigo-50 p-6 rounded-2xl border-l-4 border-blue-500 shadow-inner group-hover:shadow-lg transition-shadow duration-300">
-                    <p className="text-foreground italic mb-2 text-lg leading-relaxed">"New clients are genuinely surprised and delighted by the welcome gifts. It sets a premium tone that carries through our entire relationship."</p>
-                  </blockquote>
-                </div>
-              </div>
-            </div>
           </div>
 
           {/* Corporate Gifting Results */}

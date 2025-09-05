@@ -17,7 +17,8 @@
       "Bash(npx tsc:*)",
       "Bash(ls:*)",
       "Bash(./process_images.bat)",
-      "Bash(dir \"C:\\Users\\wallg\\AnaGITGW\\ana-wall-atlanta-homes\\atlanta-plant-haven\\public\\lead-magnets\" /b)"
+      "Bash(dir \"C:\\Users\\wallg\\AnaGITGW\\ana-wall-atlanta-homes\\atlanta-plant-haven\\public\\lead-magnets\" /b)",
+      "Bash(cp:*)"
     ],
     "deny": [],
     "ask": [],
