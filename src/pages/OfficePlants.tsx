@@ -17,7 +17,7 @@ const OfficePlants = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
-              <h1 className="text-4xl md:text-6xl font-bold text-foreground leading-tight">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-foreground leading-tight">
                 <span className="bg-gradient-to-r from-green-600 via-emerald-500 to-green-600 bg-clip-text text-transparent">
                   Strategic Plant Design
                 </span>
@@ -30,29 +30,34 @@ const OfficePlants = () => {
               </h2>
 
               {/* Key Metrics Preview */}
-              <div className="grid md:grid-cols-3 gap-6 py-6">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 py-6">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-green-600">15%</div>
-                  <div className="text-gray-600 text-sm">Productivity Increase</div>
+                  <div className="text-2xl sm:text-3xl font-bold text-green-600">15%</div>
+                  <div className="text-gray-600 text-xs sm:text-sm">Productivity Increase</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-green-600">37%</div>
-                  <div className="text-gray-600 text-sm">Stress Reduction</div>
+                  <div className="text-2xl sm:text-3xl font-bold text-green-600">37%</div>
+                  <div className="text-gray-600 text-xs sm:text-sm">Stress Reduction</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-green-600">100%</div>
-                  <div className="text-gray-600 text-sm">Plant Health Guarantee</div>
+                  <div className="text-2xl sm:text-3xl font-bold text-green-600">100%</div>
+                  <div className="text-gray-600 text-xs sm:text-sm">Plant Health Guarantee</div>
                 </div>
               </div>
               
               <Button 
                 size="lg" 
                 onClick={() => window.open('https://api.leadconnectorhq.com/widget/booking/9fRFPShg1NmMIukGqwc4', '_blank')}
-                className="bg-gradient-to-r from-green-600 to-green-500 hover:from-green-700 hover:to-green-600 text-white text-xl px-12 py-6 shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 font-semibold tracking-wide rounded-2xl"
+                className="bg-gradient-to-r from-green-600 to-green-500 hover:from-green-700 hover:to-green-600 text-white text-base sm:text-lg md:text-xl px-6 sm:px-8 md:px-12 py-4 sm:py-5 md:py-6 shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 font-semibold tracking-wide rounded-2xl"
               >
-                <span className="flex items-center">
-                  Schedule Your Workspace Consultation
-                  <svg className="ml-3 h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <span className="flex items-center justify-center">
+                  <span className="block sm:hidden text-center leading-tight">
+                    Schedule Workspace<br />Consultation
+                  </span>
+                  <span className="hidden sm:block">
+                    Schedule Your Workspace Consultation
+                  </span>
+                  <svg className="ml-2 sm:ml-3 h-5 w-5 sm:h-6 sm:w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                   </svg>
                 </span>
@@ -87,12 +92,12 @@ const OfficePlants = () => {
               500+ Atlanta companies served • 200+ successful installations
             </p>
           </div>
-          <div className="flex flex-wrap justify-center items-center gap-12 opacity-60">
-            <div className="text-3xl font-bold text-foreground">Marriott</div>
-            <div className="text-3xl font-bold text-foreground">Archer Western</div>
-            <div className="text-3xl font-bold text-foreground">OneStreet Residential</div>
-            <div className="text-3xl font-bold text-foreground">Perkins and Will</div>
-            <div className="text-3xl font-bold text-foreground">Loria Ansley</div>
+          <div className="flex flex-wrap justify-center items-center gap-6 sm:gap-8 md:gap-12 opacity-60">
+            <div className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-foreground">Marriott</div>
+            <div className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-foreground">Archer Western</div>
+            <div className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-foreground">OneStreet Residential</div>
+            <div className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-foreground">Perkins and Will</div>
+            <div className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-foreground">Loria Ansley</div>
           </div>
         </div>
       </section>

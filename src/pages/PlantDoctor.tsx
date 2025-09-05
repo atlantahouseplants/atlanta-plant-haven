@@ -59,7 +59,7 @@ const PlantDoctor = () => {
       <section className="pt-24 pb-16 bg-gradient-to-br from-muted via-background to-muted/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-foreground mb-6">
               <span className="bg-gradient-to-r from-green-600 via-emerald-500 to-green-600 bg-clip-text text-transparent">
                 Atlanta's Plant Doctor:
               </span>
@@ -104,18 +104,18 @@ const PlantDoctor = () => {
                 </p>
               </div>
               
-              <div className="grid grid-cols-3 gap-6 pt-6">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 pt-6">
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-green-600">500+</div>
-                  <div className="text-sm text-muted-foreground">Businesses Served</div>
+                  <div className="text-xl sm:text-2xl font-bold text-green-600">500+</div>
+                  <div className="text-xs sm:text-sm text-muted-foreground">Businesses Served</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-green-600">98%</div>
-                  <div className="text-sm text-muted-foreground">Success Rate</div>
+                  <div className="text-xl sm:text-2xl font-bold text-green-600">98%</div>
+                  <div className="text-xs sm:text-sm text-muted-foreground">Success Rate</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-green-600">24hr</div>
-                  <div className="text-sm text-muted-foreground">Plant Recovery</div>
+                  <div className="text-xl sm:text-2xl font-bold text-green-600">24hr</div>
+                  <div className="text-xs sm:text-sm text-muted-foreground">Plant Recovery</div>
                 </div>
               </div>
               
@@ -143,10 +143,15 @@ const PlantDoctor = () => {
           <Button 
             size="lg"
             onClick={handleBookingClick}
-            className="bg-white text-green-600 hover:bg-gray-100 text-2xl px-12 py-6 mb-6"
+            className="bg-white text-green-600 hover:bg-gray-100 text-lg sm:text-xl md:text-2xl px-6 sm:px-8 md:px-12 py-4 sm:py-5 md:py-6 mb-6"
           >
-            Schedule Professional Consultation
-            <ArrowRight className="ml-2 h-6 w-6" />
+            <span className="block sm:hidden text-center leading-tight">
+              Schedule Professional<br />Consultation
+            </span>
+            <span className="hidden sm:block">
+              Schedule Professional Consultation
+            </span>
+            <ArrowRight className="ml-2 h-5 w-5 sm:h-6 sm:w-6" />
           </Button>
           
           <div className="flex flex-wrap justify-center items-center gap-8 text-sm opacity-75">
@@ -240,9 +245,14 @@ const PlantDoctor = () => {
           <div className="text-center">
             <Button 
               onClick={handleBookingClick}
-              className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 text-lg"
+              className="bg-orange-600 hover:bg-orange-700 text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg"
             >
-              Experience the Professional Difference - $149
+              <span className="block sm:hidden text-center leading-tight">
+                Professional Service<br />$149
+              </span>
+              <span className="hidden sm:block">
+                Experience the Professional Difference - $149
+              </span>
             </Button>
           </div>
         </div>
@@ -337,9 +347,14 @@ const PlantDoctor = () => {
             
             <Button 
               onClick={handleBookingClick}
-              className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-3"
+              className="bg-orange-600 hover:bg-orange-700 text-white px-6 sm:px-8 py-3 text-sm sm:text-base"
             >
-              Schedule Plant Health Consultation - $149
+              <span className="block sm:hidden text-center leading-tight">
+                Schedule Consultation<br />$149
+              </span>
+              <span className="hidden sm:block">
+                Schedule Plant Health Consultation - $149
+              </span>
             </Button>
             
             <p className="text-sm text-muted-foreground mt-4">

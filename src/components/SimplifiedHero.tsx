@@ -19,7 +19,7 @@ const SimplifiedHero = () => {
         {/* Hero Section */}
         <div className="text-center mb-16">
           <div className="mb-8">
-            <h1 className="text-5xl sm:text-6xl md:text-7xl font-black text-foreground leading-[0.9] mb-6 tracking-tight">
+            <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-foreground leading-[0.9] mb-6 tracking-tight">
               <span className="block bg-gradient-to-r from-green-600 via-emerald-500 to-green-600 bg-clip-text text-transparent mb-2">
                 Elevate Your Workplace
               </span>
@@ -30,20 +30,20 @@ const SimplifiedHero = () => {
           </div>
           
           <div className="max-w-4xl mx-auto mb-8">
-            <p className="text-2xl md:text-3xl text-blue-700 leading-relaxed font-semibold text-center mb-12">
+            <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-blue-700 leading-relaxed font-semibold text-center mb-12">
               Transform your Atlanta workspace into a healthier, more productive environment with expert biophilic design and guaranteed plant care.
             </p>
             
             {/* Professional Benefits Grid - Using Modern Cards */}
-            <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-6 md:gap-8 max-w-5xl mx-auto">
               {/* Employee Wellness Benefits */}
               <ModernCard variant="featured" className="animate-fade-in">
                 <CardContent>
-                  <h3 className="text-2xl font-bold text-blue-800 mb-6 flex items-center">
-                    <span className="mr-3">🏢</span>
+                  <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-blue-800 mb-4 md:mb-6 flex items-center">
+                    <span className="mr-2 sm:mr-3">🏢</span>
                     Employee Wellness Benefits
                   </h3>
-                  <ul className="text-lg text-blue-700 space-y-4">
+                  <ul className="text-base sm:text-lg text-blue-700 space-y-3 sm:space-y-4">
                     <li className="flex items-start">
                       <span className="text-blue-500 mr-3 mt-1">•</span>
                       <span><strong>15% productivity increase</strong> with biophilic design</span>
@@ -67,11 +67,11 @@ const SimplifiedHero = () => {
               {/* Business ROI Benefits */}
               <ModernCard variant="featured" className="animate-fade-in" style={{ animationDelay: '200ms' }}>
                 <CardContent>
-                  <h3 className="text-2xl font-bold text-green-800 mb-6 flex items-center">
-                    <span className="mr-3">📈</span>
+                  <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-green-800 mb-4 md:mb-6 flex items-center">
+                    <span className="mr-2 sm:mr-3">📈</span>
                     Business ROI Benefits
                   </h3>
-                  <ul className="text-lg text-green-700 space-y-4">
+                  <ul className="text-base sm:text-lg text-green-700 space-y-3 sm:space-y-4">
                     <li className="flex items-start">
                       <span className="text-green-500 mr-3 mt-1">•</span>
                       <span><strong>Professional brand image</strong> that impresses clients</span>
@@ -108,17 +108,17 @@ const SimplifiedHero = () => {
 
           {/* Atlanta Business Context - Week 1 Enhancement */}
           <div className="mb-16">
-            <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-3xl p-8 border border-blue-200 shadow-lg">
-              <div className="text-center mb-8">
-                <h3 className="text-2xl md:text-3xl font-bold text-blue-800 mb-4">
+            <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-3xl p-6 md:p-8 border border-blue-200 shadow-lg">
+              <div className="text-center mb-6 md:mb-8">
+                <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-blue-800 mb-3 md:mb-4">
                   Trusted by Atlanta's Leading Businesses
                 </h3>
-                <p className="text-lg text-blue-700">
+                <p className="text-base sm:text-lg text-blue-700">
                   From Buckhead high-rises to Midtown startups, we enhance workplaces across metro Atlanta
                 </p>
               </div>
               
-              <div className="grid md:grid-cols-2 gap-8">
+              <div className="grid md:grid-cols-2 gap-6 md:gap-8">
                 <div className="relative rounded-2xl overflow-hidden shadow-lg">
                   <img
                     src="/images/corporate-offices/bird-of-paradise-atlanta-skyline.png"
@@ -171,11 +171,11 @@ const SimplifiedHero = () => {
             <Link to="/office-plants" className="group animate-fade-in">
               <Button 
                 size="lg"
-                className={`${COMPONENT_STYLES.button.primary} w-full h-20 text-lg shadow-xl hover:shadow-green-500/25`}
+                className={`${COMPONENT_STYLES.button.primary} w-full h-16 sm:h-20 text-base sm:text-lg shadow-xl hover:shadow-green-500/25`}
               >
                 <span className="flex flex-col items-center">
-                  <span>Schedule Your Workspace Consultation</span>
-                  <span className="text-sm font-normal opacity-90">Complimentary Design Assessment</span>
+                  <span className="leading-tight">Schedule Your Workspace Consultation</span>
+                  <span className="text-xs sm:text-sm font-normal opacity-90 leading-tight">Complimentary Design Assessment</span>
                 </span>
                 <ArrowRight className="ml-3 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
@@ -184,11 +184,11 @@ const SimplifiedHero = () => {
             <Link to="/corporate" className="group animate-fade-in" style={{ animationDelay: '100ms' }}>
               <Button 
                 size="lg"
-                className={`${COMPONENT_STYLES.button.cta.replace('from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600', 'from-blue-600 via-blue-500 to-blue-600 hover:from-blue-700 hover:via-blue-600 hover:to-blue-700')} w-full h-20 shadow-xl hover:shadow-blue-500/25`}
+                className={`${COMPONENT_STYLES.button.cta.replace('from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600', 'from-blue-600 via-blue-500 to-blue-600 hover:from-blue-700 hover:via-blue-600 hover:to-blue-700')} w-full h-16 sm:h-20 text-base sm:text-lg shadow-xl hover:shadow-blue-500/25`}
               >
                 <span className="flex flex-col items-center">
-                  <span>Explore Corporate Gifting Solutions</span>
-                  <span className="text-sm font-normal opacity-90">Automated Programs Available</span>
+                  <span className="leading-tight">Explore Corporate Gifting Solutions</span>
+                  <span className="text-xs sm:text-sm font-normal opacity-90 leading-tight">Automated Programs Available</span>
                 </span>
                 <ArrowRight className="ml-3 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
@@ -220,11 +220,11 @@ const SimplifiedHero = () => {
               <Link to="/office-plants" className="group">
                 <Button 
                   size="lg"
-                  className="w-full h-20 text-lg bg-gradient-to-r from-green-600 via-green-500 to-green-600 hover:from-green-700 hover:via-green-600 hover:to-green-700 text-white shadow-xl hover:shadow-green-500/25 transform hover:scale-[1.02] transition-all duration-300 border-0 font-semibold rounded-2xl"
+                  className="w-full h-16 sm:h-20 text-base sm:text-lg bg-gradient-to-r from-green-600 via-green-500 to-green-600 hover:from-green-700 hover:via-green-600 hover:to-green-700 text-white shadow-xl hover:shadow-green-500/25 transform hover:scale-[1.02] transition-all duration-300 border-0 font-semibold rounded-2xl"
                 >
                   <span className="flex flex-col items-center">
-                    <span>Begin Your Workplace Transformation</span>
-                    <span className="text-sm font-normal opacity-90">Complimentary consultation included</span>
+                    <span className="leading-tight">Begin Your Workplace Transformation</span>
+                    <span className="text-xs sm:text-sm font-normal opacity-90 leading-tight">Complimentary consultation included</span>
                   </span>
                   <ArrowRight className="ml-3 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
@@ -233,11 +233,11 @@ const SimplifiedHero = () => {
               <Link to="/corporate" className="group">
                 <Button 
                   size="lg"
-                  className="w-full h-20 text-lg bg-gradient-to-r from-blue-600 via-blue-500 to-blue-600 hover:from-blue-700 hover:via-blue-600 hover:to-blue-700 text-white shadow-xl hover:shadow-blue-500/25 transform hover:scale-[1.02] transition-all duration-300 border-0 font-semibold rounded-2xl"
+                  className="w-full h-16 sm:h-20 text-base sm:text-lg bg-gradient-to-r from-blue-600 via-blue-500 to-blue-600 hover:from-blue-700 hover:via-blue-600 hover:to-blue-700 text-white shadow-xl hover:shadow-blue-500/25 transform hover:scale-[1.02] transition-all duration-300 border-0 font-semibold rounded-2xl"
                 >
                   <span className="flex flex-col items-center">
-                    <span>Streamline Your Corporate Gifting</span>
-                    <span className="text-sm font-normal opacity-90">Automated solutions available</span>
+                    <span className="leading-tight">Streamline Your Corporate Gifting</span>
+                    <span className="text-xs sm:text-sm font-normal opacity-90 leading-tight">Automated solutions available</span>
                   </span>
                   <ArrowRight className="ml-3 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Button>

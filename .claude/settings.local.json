@@ -19,7 +19,8 @@
       "Bash(./process_images.bat)",
       "Bash(dir \"C:\\Users\\wallg\\AnaGITGW\\ana-wall-atlanta-homes\\atlanta-plant-haven\\public\\lead-magnets\" /b)",
       "Bash(cp:*)",
-      "Bash(where:*)"
+      "Bash(where:*)",
+      "Bash(npm run typecheck:*)"
     ],
     "deny": [],
     "ask": [],
