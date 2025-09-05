@@ -68,40 +68,18 @@ const Corporate = () => {
       // Calculate lead score and format for Make.com
       const scoredLead = formatLeadForMakeCom(leadData);
 
-      // Download all 3 resources immediately
-      const downloadResources = () => {
-        // Resource 1: Corporate Gifting Catalog
+      // Download corporate gifting catalog immediately
+      const downloadCatalog = () => {
         const catalogLink = document.createElement('a');
         catalogLink.href = '/lead-magnets/atlanta-houseplants-corporate-gifting-catalog.pdf';
         catalogLink.download = 'Atlanta-Houseplants-Corporate-Gifting-Catalog.pdf';
         document.body.appendChild(catalogLink);
         catalogLink.click();
         document.body.removeChild(catalogLink);
-        
-        // Small delay between downloads to prevent browser blocking
-        setTimeout(() => {
-          // Resource 2: Annual Gift Calendar (using main catalog for now - TODO: create separate calendar PDF)
-          const calendarLink = document.createElement('a');
-          calendarLink.href = '/lead-magnets/atlanta-houseplants-corporate-gifting-catalog.pdf';
-          calendarLink.download = 'Corporate-Gift-Annual-Calendar.pdf';
-          document.body.appendChild(calendarLink);
-          calendarLink.click();
-          document.body.removeChild(calendarLink);
-        }, 500);
-        
-        setTimeout(() => {
-          // Resource 3: ROI Calculator (using main catalog for now - TODO: create separate ROI PDF)  
-          const roiLink = document.createElement('a');
-          roiLink.href = '/lead-magnets/atlanta-houseplants-corporate-gifting-catalog.pdf';
-          roiLink.download = 'Corporate-Plant-ROI-Calculator.pdf';
-          document.body.appendChild(roiLink);
-          roiLink.click();
-          document.body.removeChild(roiLink);
-        }, 1000);
       };
 
-      // Start downloads immediately
-      downloadResources();
+      // Start download immediately
+      downloadCatalog();
 
       // Send webhook in parallel (don't block download)
       fetch("https://hook.us1.make.com/ksjtagxicktvi9jblyyj78demqsvuhp7", {
@@ -131,9 +109,9 @@ const Corporate = () => {
 
       // Show success message
       toast({
-        title: "Downloads started!",
-        description: "Your 3-piece Corporate Gift Success Kit is downloading: Catalog + Calendar + ROI Calculator. Check your email for additional resources!",
-        duration: 6000,
+        title: "Download started!",
+        description: "Your Corporate Gifting Catalog is downloading. Check your email for additional resources and exclusive pricing!",
+        duration: 5000,
       });
       
       // Clear form
@@ -144,9 +122,9 @@ const Corporate = () => {
     } catch (error) {
       console.error('Error in form submission:', error);
       toast({
-        title: "Downloads started!",
-        description: "Your 3-piece Corporate Gift Success Kit is downloading: Catalog + Calendar + ROI Calculator. Additional resources coming via email!",
-        duration: 6000,
+        title: "Download started!",
+        description: "Your Corporate Gifting Catalog is downloading. Additional resources coming via email!",
+        duration: 5000,
       });
       
       // Clear form even on error (for better UX)
@@ -188,14 +166,14 @@ const Corporate = () => {
             <div className="flex items-center space-x-4">
               <Gift className="h-5 w-5" />
               <p className="text-lg font-semibold">
-                Free Gift Planning Kit: Annual Calendar + ROI Calculator + Catalog
+                Free Corporate Gifting Catalog: 40+ Options + Volume Pricing
               </p>
             </div>
             <Button 
               onClick={() => document.getElementById('lead-magnet-form')?.scrollIntoView({ behavior: 'smooth' })}
               className="bg-white text-blue-600 hover:bg-blue-50"
             >
-              Get Your Free Kit
+              Download Free Catalog
             </Button>
           </div>
         </div>
@@ -310,41 +288,41 @@ const Corporate = () => {
             <CardContent className="p-8">
               <div className="text-center mb-8">
                 <h2 className="text-3xl font-bold mb-4">
-                  Get Your Free Corporate Gift Success Kit
+                  Download Your Free Corporate Gifting Catalog
                 </h2>
                 <p className="text-lg text-gray-600">
-                  Instant download: Everything you need to run a successful corporate gifting program
+                  Instant download: Complete catalog with volume pricing and gifting ideas
                 </p>
               </div>
               
               <div className="grid md:grid-cols-3 gap-6 mb-8">
                 <div className="text-center">
                   <div className="bg-blue-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-3">
-                    <Calendar className="h-10 w-10 text-blue-600" />
+                    <Package className="h-10 w-10 text-blue-600" />
                   </div>
-                  <h3 className="font-semibold mb-2">Annual Gift Calendar</h3>
+                  <h3 className="font-semibold mb-2">Wellness & Air Cleaning Plant Options</h3>
                   <p className="text-sm text-gray-600">
-                    Never miss an important occasion with our 12-month planning guide
+                    Curated selection of premium corporate gifts with detailed descriptions
                   </p>
                 </div>
                 
                 <div className="text-center">
                   <div className="bg-green-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-3">
-                    <Calculator className="h-10 w-10 text-green-600" />
+                    <TrendingUp className="h-10 w-10 text-green-600" />
                   </div>
-                  <h3 className="font-semibold mb-2">ROI Calculator</h3>
+                  <h3 className="font-semibold mb-2">Volume Pricing</h3>
                   <p className="text-sm text-gray-600">
-                    Compare plant gifts vs. traditional options with real data
+                    Transparent pricing tiers with significant bulk discounts
                   </p>
                 </div>
                 
                 <div className="text-center">
                   <div className="bg-purple-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-3">
-                    <Download className="h-10 w-10 text-purple-600" />
+                    <Calendar className="h-10 w-10 text-purple-600" />
                   </div>
-                  <h3 className="font-semibold mb-2">2025 Gift Catalog</h3>
+                  <h3 className="font-semibold mb-2">Gifting Ideas</h3>
                   <p className="text-sm text-gray-600">
-                    40+ curated options with volume pricing instantly
+                    Seasonal suggestions and occasion-specific recommendations
                   </p>
                 </div>
               </div>
@@ -383,7 +361,7 @@ const Corporate = () => {
                     "Sending..."
                   ) : (
                     <>
-                      Get My Free Gift Planning Kit
+                      Download Free Corporate Catalog
                       <Download className="ml-2 h-5 w-5" />
                     </>
                   )}
@@ -392,7 +370,7 @@ const Corporate = () => {
               
               <p className="text-xs text-center text-gray-500 mt-4">
                 Join 200+ Atlanta companies who've optimized their gifting programs. 
-                Instant PDF download + bonus resources via email.
+                Instant catalog download + bonus resources via email.
               </p>
             </CardContent>
           </Card>
