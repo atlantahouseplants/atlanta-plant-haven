@@ -794,7 +794,7 @@ const Corporate = () => {
             </p>
           </div>
           
-          <div className="grid lg:grid-cols-2 gap-12">
+          <div className="grid lg:grid-cols-2 gap-8 mb-12">
             {/* Employee Appreciation Program */}
             <div className="group bg-gradient-to-br from-white to-gray-50/50 rounded-3xl shadow-2xl hover:shadow-blue-500/10 overflow-hidden border-0 transform hover:scale-[1.01] hover:-translate-y-2 transition-all duration-500">
               <div className="aspect-video overflow-hidden relative">
@@ -805,39 +805,135 @@ const Corporate = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </div>
-              <div className="p-10 relative">
+              <div className="p-8 relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-50/20 via-transparent to-green-50/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none rounded-b-3xl"></div>
                 <div className="relative z-10">
-                  <h3 className="text-2xl font-bold text-foreground mb-4">Employee Appreciation Program</h3>
-                  <p className="text-muted-foreground mb-6 leading-relaxed">
-                    Quarterly employee recognition program featuring personalized desktop succulent arrangements. Each gift is carefully curated based on recipient preferences and delivered with custom thank-you messages.
+                  <h3 className="text-xl font-bold text-foreground mb-3">Employee Appreciation Program</h3>
+                  <p className="text-muted-foreground mb-4 leading-relaxed text-sm">
+                    Quarterly employee recognition program featuring personalized desktop succulent arrangements. Each gift is carefully curated based on recipient preferences.
                   </p>
-                  <blockquote className="bg-gradient-to-r from-blue-50 to-indigo-50 p-6 rounded-2xl border-l-4 border-blue-500 shadow-inner group-hover:shadow-lg transition-shadow duration-300">
-                    <p className="text-foreground italic mb-2 text-lg leading-relaxed">"Our employees actually keep and treasure these gifts - unlike traditional rewards that get forgotten. We've seen measurable improvements in retention and satisfaction scores."</p>
+                  <blockquote className="bg-gradient-to-r from-blue-50 to-indigo-50 p-4 rounded-xl border-l-4 border-blue-500 shadow-inner">
+                    <p className="text-foreground italic text-sm leading-relaxed">"Our employees actually keep and treasure these gifts. We've seen measurable improvements in retention scores."</p>
                   </blockquote>
                 </div>
               </div>
             </div>
 
-            {/* Client Thank You Program */}
+            {/* Financial Services Custom Arrangement */}
             <div className="group bg-gradient-to-br from-white to-gray-50/50 rounded-3xl shadow-2xl hover:shadow-blue-500/10 overflow-hidden border-0 transform hover:scale-[1.01] hover:-translate-y-2 transition-all duration-500">
               <div className="aspect-video overflow-hidden relative">
                 <img 
-                  src="/images/arrangements-decorative/mixed-bowl-planter-colorful.png"
-                  alt="Premium client gifts featuring sophisticated mixed plant arrangements"
+                  src="/images/arrangements-decorative/financial-services-mixed-plants.png"
+                  alt="Custom mixed plant arrangement for financial services company"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </div>
-              <div className="p-10 relative">
+              <div className="p-8 relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-50/20 via-transparent to-green-50/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none rounded-b-3xl"></div>
                 <div className="relative z-10">
-                  <h3 className="text-2xl font-bold text-foreground mb-4">Client Thank You Program</h3>
-                  <p className="text-muted-foreground mb-6 leading-relaxed">
-                    Executive-level client appreciation gifts featuring sophisticated mixed arrangements in premium containers. Each gift reinforces professional relationships while creating lasting brand impressions.
+                  <h3 className="text-xl font-bold text-foreground mb-3">Financial Services Partnership</h3>
+                  <p className="text-muted-foreground mb-4 leading-relaxed text-sm">
+                    Custom mixed arrangements designed for a major financial services firm's client appreciation program. Features premium plants in sophisticated containers.
                   </p>
-                  <blockquote className="bg-gradient-to-r from-blue-50 to-indigo-50 p-6 rounded-2xl border-l-4 border-blue-500 shadow-inner group-hover:shadow-lg transition-shadow duration-300">
-                    <p className="text-foreground italic mb-2 text-lg leading-relaxed">"Clients consistently mention receiving our plant gifts in follow-up meetings. It's become a signature part of our brand that differentiates us from competitors."</p>
+                  <blockquote className="bg-gradient-to-r from-blue-50 to-indigo-50 p-4 rounded-xl border-l-4 border-blue-500 shadow-inner">
+                    <p className="text-foreground italic text-sm leading-relaxed">"These arrangements perfectly reflect our brand values and create memorable client experiences."</p>
+                  </blockquote>
+                </div>
+              </div>
+            </div>
+
+            {/* Premium Wicker Basket Collection */}
+            <div className="group bg-gradient-to-br from-white to-gray-50/50 rounded-3xl shadow-2xl hover:shadow-blue-500/10 overflow-hidden border-0 transform hover:scale-[1.01] hover:-translate-y-2 transition-all duration-500">
+              <div className="aspect-video overflow-hidden relative">
+                <img 
+                  src="/images/arrangements-decorative/wicker-basket-anthurium-arrangement.png"
+                  alt="Premium wicker basket with elegant anthurium arrangement for executive gifts"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              </div>
+              <div className="p-8 relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-50/20 via-transparent to-green-50/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none rounded-b-3xl"></div>
+                <div className="relative z-10">
+                  <h3 className="text-xl font-bold text-foreground mb-3">Executive Gift Collection</h3>
+                  <p className="text-muted-foreground mb-4 leading-relaxed text-sm">
+                    Premium wicker basket arrangements featuring elegant anthuriums, perfect for C-suite gifting and high-value client appreciation.
+                  </p>
+                  <blockquote className="bg-gradient-to-r from-blue-50 to-indigo-50 p-4 rounded-xl border-l-4 border-blue-500 shadow-inner">
+                    <p className="text-foreground italic text-sm leading-relaxed">"The quality and presentation exceeded our expectations. Perfect for our board member gifts."</p>
+                  </blockquote>
+                </div>
+              </div>
+            </div>
+
+            {/* Custom Office Installation */}
+            <div className="group bg-gradient-to-br from-white to-gray-50/50 rounded-3xl shadow-2xl hover:shadow-blue-500/10 overflow-hidden border-0 transform hover:scale-[1.01] hover:-translate-y-2 transition-all duration-500">
+              <div className="aspect-video overflow-hidden relative">
+                <img 
+                  src="/images/corporate-offices/blue-planters-office-anthurium-arrangement.png"
+                  alt="Custom blue planters with anthurium arrangements in modern office setting"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              </div>
+              <div className="p-8 relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-50/20 via-transparent to-green-50/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none rounded-b-3xl"></div>
+                <div className="relative z-10">
+                  <h3 className="text-xl font-bold text-foreground mb-3">Brand-Matched Installation</h3>
+                  <p className="text-muted-foreground mb-4 leading-relaxed text-sm">
+                    Custom planters designed to match company branding, featuring coordinated anthuriums. Perfect for reception areas and client-facing spaces.
+                  </p>
+                  <blockquote className="bg-gradient-to-r from-blue-50 to-indigo-50 p-4 rounded-xl border-l-4 border-blue-500 shadow-inner">
+                    <p className="text-foreground italic text-sm leading-relaxed">"They perfectly matched our brand colors and created a cohesive, professional atmosphere."</p>
+                  </blockquote>
+                </div>
+              </div>
+            </div>
+
+            {/* Sophisticated Mixed Arrangement */}
+            <div className="group bg-gradient-to-br from-white to-gray-50/50 rounded-3xl shadow-2xl hover:shadow-blue-500/10 overflow-hidden border-0 transform hover:scale-[1.01] hover:-translate-y-2 transition-all duration-500">
+              <div className="aspect-video overflow-hidden relative">
+                <img 
+                  src="/images/corporate-offices/office-planter-anthurium-dracaena.png"
+                  alt="Sophisticated office planter with anthurium and dracaena arrangement"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              </div>
+              <div className="p-8 relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-50/20 via-transparent to-green-50/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none rounded-b-3xl"></div>
+                <div className="relative z-10">
+                  <h3 className="text-xl font-bold text-foreground mb-3">Professional Office Arrangements</h3>
+                  <p className="text-muted-foreground mb-4 leading-relaxed text-sm">
+                    Sophisticated mixed arrangements combining anthuriums and dracaenas, designed for professional environments and corporate gifting programs.
+                  </p>
+                  <blockquote className="bg-gradient-to-r from-blue-50 to-indigo-50 p-4 rounded-xl border-l-4 border-blue-500 shadow-inner">
+                    <p className="text-foreground italic text-sm leading-relaxed">"The perfect balance of elegance and low maintenance for our busy office environment."</p>
+                  </blockquote>
+                </div>
+              </div>
+            </div>
+
+            {/* Natural Elegance Collection */}
+            <div className="group bg-gradient-to-br from-white to-gray-50/50 rounded-3xl shadow-2xl hover:shadow-blue-500/10 overflow-hidden border-0 transform hover:scale-[1.01] hover:-translate-y-2 transition-all duration-500">
+              <div className="aspect-video overflow-hidden relative">
+                <img 
+                  src="/images/arrangements-decorative/wicker-basket-mixed-tropical-plants.png"
+                  alt="Natural wicker basket with mixed tropical plants for corporate gifts"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              </div>
+              <div className="p-8 relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-50/20 via-transparent to-green-50/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none rounded-b-3xl"></div>
+                <div className="relative z-10">
+                  <h3 className="text-xl font-bold text-foreground mb-3">Natural Elegance Collection</h3>
+                  <p className="text-muted-foreground mb-4 leading-relaxed text-sm">
+                    Handcrafted wicker baskets filled with lush tropical plants, combining natural materials with vibrant greenery for timeless corporate gifts.
+                  </p>
+                  <blockquote className="bg-gradient-to-r from-blue-50 to-indigo-50 p-4 rounded-xl border-l-4 border-blue-500 shadow-inner">
+                    <p className="text-foreground italic text-sm leading-relaxed">"The natural aesthetic perfectly complements our sustainability-focused company culture."</p>
                   </blockquote>
                 </div>
               </div>
