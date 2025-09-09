@@ -76,7 +76,7 @@ const SimplifiedHero = () => {
                 {/* Risk Reversal */}
                 <div className="bg-blue-50 border border-blue-200 rounded-lg px-4 py-2">
                   <p className="text-sm text-blue-800 font-medium">
-                    If any plant underperforms under our care, we'll guarantee we'll replace it for free.
+                    If any plant underperforms while under our care, we will replace it for free. Guaranteed!
                   </p>
                 </div>
               </div>
