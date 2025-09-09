@@ -20,19 +20,67 @@ const SimplifiedHero = () => {
         <div className="text-center mb-12 sm:mb-16">
           <div className="mb-6 sm:mb-8">
             <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-foreground leading-[0.95] mb-4 sm:mb-6 tracking-tight px-2 sm:px-0">
-              <span className="block bg-gradient-to-r from-green-600 via-emerald-500 to-green-600 bg-clip-text text-transparent mb-1 sm:mb-2">
-                Elevate Your Workplace
+              <span className="block text-foreground mb-1 sm:mb-2">
+                We design, install & maintain
               </span>
-              <span className="block text-foreground">
-                With Strategic Plant Design
+              <span className="block bg-gradient-to-r from-green-600 via-emerald-500 to-green-600 bg-clip-text text-transparent">
+                office plants for Atlanta buildings.
               </span>
             </h1>
           </div>
           
           <div className="max-w-4xl mx-auto mb-6 sm:mb-8 px-2 sm:px-0">
             <p className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-blue-700 leading-relaxed font-semibold text-center mb-8 sm:mb-12">
-              Transform your Atlanta workspace into a healthier, more productive environment with expert biophilic design and guaranteed plant care.
+              Get a free office biophilic design + quote in 48 hours. On-site walkthrough included.
             </p>
+
+            {/* Primary CTA and Trust Elements */}
+            <div className="mb-8 sm:mb-12">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6">
+                <Link to="/office-plants" className="group">
+                  <Button 
+                    size="lg"
+                    className="bg-gradient-to-r from-green-600 via-green-500 to-green-600 hover:from-green-700 hover:via-green-600 hover:to-green-700 text-white shadow-xl hover:shadow-green-500/25 transform hover:scale-[1.02] transition-all duration-300 border-0 font-semibold rounded-2xl h-16 px-8 text-lg"
+                  >
+                    Get My Free Office Biophilic Design →
+                  </Button>
+                </Link>
+                <Link to="/our-work" className="group">
+                  <Button 
+                    variant="outline"
+                    size="lg"
+                    className="border-2 border-blue-300 text-blue-700 hover:bg-blue-50 h-16 px-8 text-lg rounded-2xl"
+                  >
+                    See Atlanta Projects
+                  </Button>
+                </Link>
+              </div>
+
+              {/* Trust Row */}
+              <div className="flex flex-col items-center space-y-4">
+                <div className="flex flex-wrap justify-center items-center gap-4 text-sm text-gray-600">
+                  <span className="flex items-center">
+                    <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
+                    Fully insured
+                  </span>
+                  <span className="flex items-center">
+                    <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
+                    COI same-day
+                  </span>
+                  <span className="flex items-center">
+                    <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
+                    Commercial-friendly
+                  </span>
+                </div>
+                
+                {/* Risk Reversal */}
+                <div className="bg-blue-50 border border-blue-200 rounded-lg px-4 py-2">
+                  <p className="text-sm text-blue-800 font-medium">
+                    If any plant underperforms in 90 days, we replace it free.
+                  </p>
+                </div>
+              </div>
+            </div>
             
             {/* Professional Benefits Grid - Using Modern Cards */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8 max-w-5xl mx-auto px-2 sm:px-0">
@@ -154,16 +202,26 @@ const SimplifiedHero = () => {
             </div>
           </div>
 
-          {/* Professional Service Notice */}
-          <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-2xl p-8 max-w-4xl mx-auto mb-12">
+          {/* Free Office Biophilic Design Offer */}
+          <div className="bg-gradient-to-r from-green-50 to-emerald-50 border border-green-200 rounded-2xl p-8 max-w-4xl mx-auto mb-12">
             <div className="flex items-center justify-center mb-4">
-              <span className="text-2xl mr-3">🌟</span>
-              <h3 className="text-2xl font-bold text-blue-800">Premium Service Commitment</h3>
+              <span className="text-2xl mr-3">🌿</span>
+              <h3 className="text-2xl font-bold text-green-800">Free Office Biophilic Design</h3>
             </div>
-            <p className="text-lg text-blue-700 text-center leading-relaxed">
-              To maintain our exceptional service standards, we carefully manage our client capacity.<br/>
-              <strong>Schedule your complimentary consultation</strong> to secure your preferred installation timeline.
+            <p className="text-lg text-green-700 text-center leading-relaxed mb-6">
+              Get your customized office plant design and quote in 48 hours.<br/>
+              <strong>Includes complimentary on-site walkthrough</strong> with our biophilic design specialist.
             </p>
+            <div className="text-center">
+              <Link to="/office-plants">
+                <Button 
+                  size="lg"
+                  className="bg-gradient-to-r from-green-600 via-green-500 to-green-600 hover:from-green-700 hover:via-green-600 hover:to-green-700 text-white shadow-xl hover:shadow-green-500/25 transform hover:scale-[1.02] transition-all duration-300 border-0 font-semibold rounded-2xl h-14 px-8 text-base"
+                >
+                  Get My Free Office Biophilic Design
+                </Button>
+              </Link>
+            </div>
           </div>
 
           {/* Enhanced Professional CTAs */}
@@ -174,8 +232,8 @@ const SimplifiedHero = () => {
                 className={`${COMPONENT_STYLES.button.primary} w-full h-16 sm:h-20 text-base sm:text-lg shadow-xl hover:shadow-green-500/25`}
               >
                 <span className="flex flex-col items-center">
-                  <span className="leading-tight">Schedule Your Workspace Consultation</span>
-                  <span className="text-xs sm:text-sm font-normal opacity-90 leading-tight">Complimentary Design Assessment</span>
+                  <span className="leading-tight">Get Your Free Office Biophilic Design</span>
+                  <span className="text-xs sm:text-sm font-normal opacity-90 leading-tight">48-hour turnaround + on-site walkthrough</span>
                 </span>
                 <ArrowRight className="ml-3 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
@@ -209,11 +267,11 @@ const SimplifiedHero = () => {
         <div className="text-center">
           <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-12 rounded-3xl shadow-xl border border-green-200">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-              Ready to Enhance Your Workplace Environment?
+              Ready for Your Free Office Biophilic Design?
             </h2>
             <p className="text-xl text-gray-700 mb-10 max-w-4xl mx-auto leading-relaxed">
-              Experience the difference that professional plant design makes in workplace wellness and productivity. 
-              <strong>Schedule your complimentary consultation</strong> to discover how strategic plant design can transform your office culture.
+              Get your customized office plant design and quote in 48 hours with complimentary on-site walkthrough. 
+              <strong>Experience the difference</strong> professional biophilic design makes in workplace wellness and productivity.
             </p>
             
             <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
@@ -223,8 +281,8 @@ const SimplifiedHero = () => {
                   className="w-full h-16 sm:h-20 text-base sm:text-lg bg-gradient-to-r from-green-600 via-green-500 to-green-600 hover:from-green-700 hover:via-green-600 hover:to-green-700 text-white shadow-xl hover:shadow-green-500/25 transform hover:scale-[1.02] transition-all duration-300 border-0 font-semibold rounded-2xl"
                 >
                   <span className="flex flex-col items-center">
-                    <span className="leading-tight">Begin Your Workplace Transformation</span>
-                    <span className="text-xs sm:text-sm font-normal opacity-90 leading-tight">Complimentary consultation included</span>
+                    <span className="leading-tight">Get My Free Office Biophilic Design</span>
+                    <span className="text-xs sm:text-sm font-normal opacity-90 leading-tight">48-hour quote + on-site walkthrough</span>
                   </span>
                   <ArrowRight className="ml-3 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Button>

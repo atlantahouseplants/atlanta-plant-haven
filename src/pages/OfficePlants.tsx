@@ -18,15 +18,17 @@ const OfficePlants = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
               <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-foreground leading-tight">
-                <span className="bg-gradient-to-r from-green-600 via-emerald-500 to-green-600 bg-clip-text text-transparent">
-                  Strategic Plant Design
+                <span className="text-foreground">
+                  We design, install & maintain
                 </span>
                 <br />
-                For Atlanta Workspaces
+                <span className="bg-gradient-to-r from-green-600 via-emerald-500 to-green-600 bg-clip-text text-transparent">
+                  office plants for Atlanta buildings.
+                </span>
               </h1>
               
               <h2 className="text-xl md:text-2xl text-blue-700 leading-relaxed font-semibold">
-                Create healthier, more productive work environments through expert biophilic design and guaranteed plant care—with zero maintenance burden on your team.
+                Get a free office biophilic design + quote in 48 hours. On-site walkthrough included.
               </h2>
 
               {/* Key Metrics Preview */}
@@ -52,14 +54,11 @@ const OfficePlants = () => {
               >
                 <span className="flex items-center justify-center">
                   <span className="block sm:hidden text-center leading-tight">
-                    Schedule Workspace<br />Consultation
+                    Get My Free Office<br />Biophilic Design →
                   </span>
                   <span className="hidden sm:block">
-                    Schedule Your Workspace Consultation
+                    Get My Free Office Biophilic Design →
                   </span>
-                  <svg className="ml-2 sm:ml-3 h-5 w-5 sm:h-6 sm:w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                  </svg>
                 </span>
               </Button>
             </div>
@@ -298,13 +297,13 @@ const OfficePlants = () => {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="mb-12">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Schedule Your Complimentary Workspace Assessment
+              Get Your Free Office Biophilic Design
             </h2>
-            <div className="bg-gradient-to-r from-blue-50 to-green-50 border border-blue-200 rounded-2xl p-8 max-w-4xl mx-auto mb-8">
+            <div className="bg-gradient-to-r from-green-50 to-emerald-50 border border-green-200 rounded-2xl p-8 max-w-4xl mx-auto mb-8">
               <div className="text-xl text-gray-700 leading-relaxed space-y-4">
                 <p className="text-center">
-                  <strong>Get a comprehensive workspace analysis</strong> with our certified horticulturalist. 
-                  We'll assess your environment and provide a detailed strategic plan at no cost.
+                  <strong>Get your customized office biophilic design + quote in 48 hours</strong> with complimentary on-site walkthrough. 
+                  Our certified horticulturalist will assess your environment and provide a detailed strategic plan at no cost.
                 </p>
                 <div className="grid md:grid-cols-3 gap-6 mt-8">
                   <div className="text-center">
@@ -312,8 +311,8 @@ const OfficePlants = () => {
                     <div className="text-sm text-gray-600">Light, air flow, layout analysis</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-green-600 font-bold text-lg">✓ Custom Proposal</div>
-                    <div className="text-sm text-gray-600">Visual design & plant selection</div>
+                    <div className="text-green-600 font-bold text-lg">✓ Biophilic Design Plan</div>
+                    <div className="text-sm text-gray-600">Visual design & strategic plant selection</div>
                   </div>
                   <div className="text-center">
                     <div className="text-purple-600 font-bold text-lg">✓ Care Strategy</div>
@@ -335,7 +334,7 @@ const OfficePlants = () => {
             className="bg-gradient-to-r from-green-600 to-green-500 hover:from-green-700 hover:to-green-600 text-white text-2xl px-16 py-8 shadow-2xl hover:shadow-green-500/25 transform hover:scale-105 transition-all duration-300 font-bold tracking-wide rounded-xl"
           >
             <span className="flex items-center">
-              Schedule My Professional Assessment
+              Get My Free Office Biophilic Design
               <svg className="ml-4 h-7 w-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 7l5 5m0 0l-5 5m5-5H6" />
               </svg>
@@ -505,10 +504,10 @@ const OfficePlants = () => {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="mb-8">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Ready to Transform Your Workspace?
+              Ready for Your Free Office Biophilic Design?
             </h2>
             <p className="text-xl opacity-90 leading-relaxed">
-              Join 500+ Atlanta businesses who trust us to create healthier, more productive work environments.
+              Get your customized design + quote in 48 hours. Join 500+ Atlanta businesses who trust our biophilic expertise.
             </p>
           </div>
           <Button 
@@ -517,7 +516,7 @@ const OfficePlants = () => {
             className="bg-white text-green-700 hover:bg-green-50 border-2 border-white hover:border-green-100 text-2xl px-16 py-8 shadow-2xl hover:shadow-white/25 transform hover:scale-105 transition-all duration-300 font-bold tracking-wide rounded-xl"
           >
             <span className="flex items-center">
-              Begin Your Workspace Transformation
+              Get My Free Office Biophilic Design
               <svg className="ml-4 h-7 w-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 7l5 5m0 0l-5 5m5-5H6" />
               </svg>
