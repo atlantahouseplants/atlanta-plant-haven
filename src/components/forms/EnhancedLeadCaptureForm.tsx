@@ -247,13 +247,14 @@ const EnhancedLeadCaptureForm: React.FC<EnhancedLeadCaptureFormProps> = ({
 
         <div>
           <Label htmlFor="phone" className="text-sm font-medium text-gray-700">
-            Phone Number
+            Phone Number *
           </Label>
           <Input
             id="phone"
             type="tel"
             value={formData.phone}
             onChange={(e) => handleInputChange('phone', e.target.value)}
+            required
             className="mt-1"
             placeholder="(470) 555-0123"
           />

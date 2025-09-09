@@ -2,6 +2,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Award, Users, Leaf, Building2, Calendar, CheckCircle } from "lucide-react";
+import EnhancedLeadCaptureForm from "@/components/forms/EnhancedLeadCaptureForm";
 
 const About = () => {
   return (
@@ -213,6 +214,26 @@ const About = () => {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Contact Us Section */}
+      <section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+              Get in Touch
+            </h2>
+            <p className="text-xl text-blue-700 leading-relaxed">
+              Have a specific question or need a custom quote? We're here to help with any inquiry, 
+              from general information to specialized plant requirements for your business.
+            </p>
+          </div>
+          
+          <EnhancedLeadCaptureForm 
+            formType="business-consultation"
+            className="max-w-3xl mx-auto"
+          />
         </div>
       </section>
 
