@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
 import { 
   Gift, 
   ArrowRight, 
@@ -28,11 +29,21 @@ import { toast } from "@/hooks/use-toast";
 import { LeadData, formatLeadForMakeCom } from "@/data/leadScoringSystem";
 
 const Corporate = () => {
-  const [email, setEmail] = useState("");
-  const [company, setCompany] = useState("");
-  const [employees, setEmployees] = useState("");
+  const [catalogEmail, setCatalogEmail] = useState("");
+  const [consultationData, setConsultationData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    company: "",
+    phone: "",
+    employees: "",
+    occasion: "",
+    timeline: "",
+    message: ""
+  });
   const [showStickyBar, setShowStickyBar] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmittingCatalog, setIsSubmittingCatalog] = useState(false);
+  const [isSubmittingConsultation, setIsSubmittingConsultation] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -43,96 +54,119 @@ const Corporate = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const handleLeadMagnetSubmit = async (e: React.FormEvent) => {
+  const handleCatalogDownload = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
+    setIsSubmittingCatalog(true);
     
     try {
-      // Prepare lead data for scoring
-      const leadData: LeadData = {
-        firstName: '',
-        lastName: '',
-        email: email,
-        company: company,
-        employeeCount: parseInt(employees) || 1,
-        role: 'decision-maker',
-        timeline: 'immediate',
-        budget: 'mid-tier',
-        primaryInterest: 'corporate-gifting',
-        currentPlants: 'none',
-        urgency: 'immediate',
-        source: 'corporate-website',
-        formSubmitted: 'corporate-gifting-kit'
-      };
+      // Immediate download - no friction
+      const catalogLink = document.createElement('a');
+      catalogLink.href = '/lead-magnets/atlanta-houseplants-corporate-gifting-catalog.pdf';
+      catalogLink.download = 'Atlanta-Houseplants-Corporate-Gifting-Catalog.pdf';
+      document.body.appendChild(catalogLink);
+      catalogLink.click();
+      document.body.removeChild(catalogLink);
 
-      // Calculate lead score and format for Make.com
-      const scoredLead = formatLeadForMakeCom(leadData);
-
-      // Download corporate gifting catalog immediately
-      const downloadCatalog = () => {
-        const catalogLink = document.createElement('a');
-        catalogLink.href = '/lead-magnets/atlanta-houseplants-corporate-gifting-catalog.pdf';
-        catalogLink.download = 'Atlanta-Houseplants-Corporate-Gifting-Catalog.pdf';
-        document.body.appendChild(catalogLink);
-        catalogLink.click();
-        document.body.removeChild(catalogLink);
-      };
-
-      // Start download immediately
-      downloadCatalog();
-
-      // Send webhook in parallel (don't block download)
+      // Send minimal webhook data (don't block download)
       fetch("https://hook.us1.make.com/ksjtagxicktvi9jblyyj78demqsvuhp7", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          ...scoredLead,
-          leadMagnetType: 'corporate-gift-planning-kit',
-          leadMagnetTitle: 'Corporate Gift Planning Kit',
-          service: "Corporate Gifting Kit Download",
-          
-          // Enhanced tracking for corporate leads
-          downloadTrigger: 'corporate-gifting-kit-download',
-          personalizedSubject: `Your Corporate Gift Planning Kit is ready + exclusive volume pricing`,
-          emailSequenceTrigger: 'corporate-gifting-sequence',
-          
-          // Performance tracking
-          modalSource: 'corporate-page-form',
-          pageUrl: window.location.href,
+          email: catalogEmail,
+          service: "Corporate Catalog Download",
+          leadType: "catalog-download",
+          downloadTrigger: "corporate-catalog-instant",
           timestamp: new Date().toISOString()
         }),
       }).catch(error => {
         console.error('Webhook error (download still successful):', error);
       });
 
-      // Show success message
       toast({
-        title: "Download started!",
-        description: "Your Corporate Gifting Catalog is downloading. Check your email for additional resources and exclusive pricing!",
-        duration: 5000,
+        title: "Catalog downloaded!",
+        description: "Your Corporate Gifting Catalog is ready. Browse 40+ gift options with volume pricing!",
+        duration: 4000,
       });
       
-      // Clear form
-      setEmail("");
-      setCompany("");
-      setEmployees("");
+      setCatalogEmail("");
 
     } catch (error) {
-      console.error('Error in form submission:', error);
+      console.error('Error in catalog download:', error);
       toast({
-        title: "Download started!",
-        description: "Your Corporate Gifting Catalog is downloading. Additional resources coming via email!",
-        duration: 5000,
+        title: "Catalog downloaded!",
+        description: "Your Corporate Gifting Catalog is ready to view!",
+        duration: 4000,
+      });
+      setCatalogEmail("");
+    } finally {
+      setIsSubmittingCatalog(false);
+    }
+  };
+
+  const handleConsultationSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmittingConsultation(true);
+    
+    try {
+      const leadData: LeadData = {
+        firstName: consultationData.firstName,
+        lastName: consultationData.lastName,
+        email: consultationData.email,
+        company: consultationData.company,
+        phone: consultationData.phone,
+        employeeCount: consultationData.employees,
+        timeline: consultationData.timeline,
+        primaryInterest: 'corporate-gifting-consultation',
+        urgency: consultationData.timeline,
+        source: 'corporate-website',
+        formSubmitted: 'corporate-consultation-request'
+      };
+
+      const scoredLead = formatLeadForMakeCom(leadData);
+
+      await fetch("https://hook.us1.make.com/ksjtagxicktvi9jblyyj78demqsvuhp7", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          ...scoredLead,
+          service: "Corporate Consultation Request",
+          occasion: consultationData.occasion,
+          message: consultationData.message,
+          consultationRequest: true,
+          personalizedSubject: `${consultationData.firstName}, your custom corporate gifting consultation is scheduled`,
+          timestamp: new Date().toISOString()
+        }),
+      });
+
+      toast({
+        title: "Consultation requested!",
+        description: "We'll contact you within 24 hours to discuss your custom gifting needs and provide a personalized quote.",
+        duration: 6000,
       });
       
-      // Clear form even on error (for better UX)
-      setEmail("");
-      setCompany("");
-      setEmployees("");
+      setConsultationData({
+        firstName: "", lastName: "", email: "", company: "", phone: "",
+        employees: "", occasion: "", timeline: "", message: ""
+      });
+
+    } catch (error) {
+      console.error('Error in consultation submission:', error);
+      toast({
+        title: "Request received!",
+        description: "We'll contact you within 24 hours with your custom consultation details.",
+        duration: 6000,
+      });
+      
+      setConsultationData({
+        firstName: "", lastName: "", email: "", company: "", phone: "",
+        employees: "", occasion: "", timeline: "", message: ""
+      });
     } finally {
-      setIsSubmitting(false);
+      setIsSubmittingConsultation(false);
     }
   };
 
@@ -166,15 +200,23 @@ const Corporate = () => {
             <div className="flex items-center space-x-4">
               <Gift className="h-5 w-5" />
               <p className="text-lg font-semibold">
-                Free Corporate Gifting Catalog: 40+ Options + Volume Pricing
+                Free Corporate Gifting Catalog + Custom Consultation
               </p>
             </div>
-            <Button 
-              onClick={() => document.getElementById('lead-magnet-form')?.scrollIntoView({ behavior: 'smooth' })}
-              className="bg-white text-blue-600 hover:bg-blue-50"
-            >
-              Download Free Catalog
-            </Button>
+            <div className="flex items-center space-x-3">
+              <Button 
+                onClick={() => document.getElementById('catalog-download')?.scrollIntoView({ behavior: 'smooth' })}
+                className="bg-white text-blue-600 hover:bg-blue-50"
+              >
+                Get Catalog
+              </Button>
+              <Button 
+                onClick={() => document.getElementById('consultation-request')?.scrollIntoView({ behavior: 'smooth' })}
+                className="bg-blue-700 text-white border border-white hover:bg-blue-800"
+              >
+                Get Quote
+              </Button>
+            </div>
           </div>
         </div>
       </div>
@@ -245,13 +287,22 @@ const Corporate = () => {
                     </div>
                   ))}
                 </div>
-                <Button 
-                  onClick={() => document.getElementById('lead-magnet-form')?.scrollIntoView({ behavior: 'smooth' })}
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-lg py-6"
-                >
-                  Get Your Custom Quote
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
+                <div className="grid md:grid-cols-2 gap-3">
+                  <Button 
+                    onClick={() => document.getElementById('catalog-download')?.scrollIntoView({ behavior: 'smooth' })}
+                    className="bg-blue-600 hover:bg-blue-700 text-lg py-6"
+                  >
+                    Get Catalog
+                    <Download className="ml-2 h-5 w-5" />
+                  </Button>
+                  <Button 
+                    onClick={() => document.getElementById('consultation-request')?.scrollIntoView({ behavior: 'smooth' })}
+                    className="bg-green-600 hover:bg-green-700 text-lg py-6"
+                  >
+                    Get Quote
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Button>
+                </div>
               </div>
             </div>
 
@@ -281,96 +332,194 @@ const Corporate = () => {
         </div>
       </section>
 
-      {/* Lead Magnet Section */}
-      <section id="lead-magnet-form" className="py-20 bg-gradient-to-br from-blue-50 to-indigo-50">
+      {/* Catalog Download Section */}
+      <section id="catalog-download" className="py-20 bg-gradient-to-br from-blue-50 to-indigo-50">
         <div className="max-w-4xl mx-auto px-4">
           <Card className="border-blue-200 shadow-xl">
             <CardContent className="p-8">
               <div className="text-center mb-8">
+                <div className="inline-flex items-center bg-blue-100 text-blue-800 px-4 py-2 rounded-full mb-4">
+                  <Download className="h-4 w-4 mr-2" />
+                  <span className="text-sm font-semibold">Instant Download • No Signup Required</span>
+                </div>
                 <h2 className="text-3xl font-bold mb-4">
-                  Download Your Free Corporate Gifting Catalog
+                  Get Your Free Corporate Gifting Catalog
                 </h2>
                 <p className="text-lg text-gray-600">
-                  Instant download: Complete catalog with volume pricing and gifting ideas
+                  Complete catalog with 40+ plant gift options and transparent volume pricing
                 </p>
               </div>
               
               <div className="grid md:grid-cols-3 gap-6 mb-8">
                 <div className="text-center">
-                  <div className="bg-blue-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-3">
-                    <Package className="h-10 w-10 text-blue-600" />
+                  <div className="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3">
+                    <Package className="h-8 w-8 text-blue-600" />
                   </div>
-                  <h3 className="font-semibold mb-2">Wellness & Air Cleaning Plant Options</h3>
+                  <h3 className="font-semibold mb-2">40+ Gift Options</h3>
                   <p className="text-sm text-gray-600">
-                    Curated selection of premium corporate gifts with detailed descriptions
+                    Desktop plants, arrangements, and premium gifts
                   </p>
                 </div>
                 
                 <div className="text-center">
-                  <div className="bg-green-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-3">
-                    <TrendingUp className="h-10 w-10 text-green-600" />
+                  <div className="bg-green-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3">
+                    <TrendingUp className="h-8 w-8 text-green-600" />
                   </div>
                   <h3 className="font-semibold mb-2">Volume Pricing</h3>
                   <p className="text-sm text-gray-600">
-                    Transparent pricing tiers with significant bulk discounts
+                    Transparent bulk discounts and pricing tiers
                   </p>
                 </div>
                 
                 <div className="text-center">
-                  <div className="bg-purple-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-3">
-                    <Calendar className="h-10 w-10 text-purple-600" />
+                  <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3">
+                    <Calendar className="h-8 w-8 text-purple-600" />
                   </div>
-                  <h3 className="font-semibold mb-2">Gifting Ideas</h3>
+                  <h3 className="font-semibold mb-2">Occasion Ideas</h3>
                   <p className="text-sm text-gray-600">
-                    Seasonal suggestions and occasion-specific recommendations
+                    Perfect gifts for every business occasion
                   </p>
                 </div>
               </div>
               
-              <form onSubmit={handleLeadMagnetSubmit} className="space-y-4">
-                <div className="grid md:grid-cols-2 gap-4">
+              <form onSubmit={handleCatalogDownload} className="max-w-md mx-auto">
+                <div className="flex gap-3">
                   <Input
                     type="email"
-                    placeholder="Work Email*"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
+                    placeholder="Your email (optional)"
+                    value={catalogEmail}
+                    onChange={(e) => setCatalogEmail(e.target.value)}
+                    className="h-12"
+                  />
+                  <Button 
+                    type="submit" 
+                    disabled={isSubmittingCatalog}
+                    className="bg-blue-600 hover:bg-blue-700 text-lg px-8 h-12"
+                  >
+                    {isSubmittingCatalog ? "..." : "Download"}
+                  </Button>
+                </div>
+              </form>
+              
+              <p className="text-xs text-center text-gray-500 mt-4">
+                Instant PDF download • Browse all options and pricing immediately
+              </p>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      {/* Consultation Request Section */}
+      <section id="consultation-request" className="py-20 bg-gradient-to-br from-green-50 to-emerald-50">
+        <div className="max-w-4xl mx-auto px-4">
+          <Card className="border-green-200 shadow-xl">
+            <CardContent className="p-8">
+              <div className="text-center mb-8">
+                <div className="inline-flex items-center bg-green-100 text-green-800 px-4 py-2 rounded-full mb-4">
+                  <Users className="h-4 w-4 mr-2" />
+                  <span className="text-sm font-semibold">Free Consultation • No Obligation</span>
+                </div>
+                <h2 className="text-3xl font-bold mb-4">
+                  Request Your Custom Corporate Gifting Quote
+                </h2>
+                <p className="text-lg text-gray-600">
+                  Get personalized recommendations and custom pricing for your specific needs
+                </p>
+              </div>
+              
+              <form onSubmit={handleConsultationSubmit} className="space-y-4">
+                <div className="grid md:grid-cols-2 gap-4">
+                  <Input
+                    placeholder="First Name*"
+                    value={consultationData.firstName}
+                    onChange={(e) => setConsultationData({...consultationData, firstName: e.target.value})}
                     required
                     className="h-12"
                   />
                   <Input
-                    placeholder="Company Name*"
-                    value={company}
-                    onChange={(e) => setCompany(e.target.value)}
+                    placeholder="Last Name*"
+                    value={consultationData.lastName}
+                    onChange={(e) => setConsultationData({...consultationData, lastName: e.target.value})}
                     required
                     className="h-12"
                   />
                 </div>
-                <Input
-                  placeholder="Number of Employees (helps us customize recommendations)"
-                  value={employees}
-                  onChange={(e) => setEmployees(e.target.value)}
-                  className="h-12"
+                
+                <div className="grid md:grid-cols-2 gap-4">
+                  <Input
+                    type="email"
+                    placeholder="Work Email*"
+                    value={consultationData.email}
+                    onChange={(e) => setConsultationData({...consultationData, email: e.target.value})}
+                    required
+                    className="h-12"
+                  />
+                  <Input
+                    type="tel"
+                    placeholder="Phone Number*"
+                    value={consultationData.phone}
+                    onChange={(e) => setConsultationData({...consultationData, phone: e.target.value})}
+                    required
+                    className="h-12"
+                  />
+                </div>
+
+                <div className="grid md:grid-cols-2 gap-4">
+                  <Input
+                    placeholder="Company Name*"
+                    value={consultationData.company}
+                    onChange={(e) => setConsultationData({...consultationData, company: e.target.value})}
+                    required
+                    className="h-12"
+                  />
+                  <Input
+                    placeholder="Number of Recipients"
+                    value={consultationData.employees}
+                    onChange={(e) => setConsultationData({...consultationData, employees: e.target.value})}
+                    className="h-12"
+                  />
+                </div>
+
+                <div className="grid md:grid-cols-2 gap-4">
+                  <Input
+                    placeholder="Occasion (e.g., Holiday Gifts)"
+                    value={consultationData.occasion}
+                    onChange={(e) => setConsultationData({...consultationData, occasion: e.target.value})}
+                    className="h-12"
+                  />
+                  <Input
+                    placeholder="Timeline (e.g., Next Month)"
+                    value={consultationData.timeline}
+                    onChange={(e) => setConsultationData({...consultationData, timeline: e.target.value})}
+                    className="h-12"
+                  />
+                </div>
+
+                <Textarea
+                  placeholder="Tell us about your gifting needs, budget, or any special requests..."
+                  value={consultationData.message}
+                  onChange={(e) => setConsultationData({...consultationData, message: e.target.value})}
+                  className="h-24 resize-none"
                 />
                 
                 <Button 
                   type="submit" 
-                  disabled={isSubmitting}
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-lg py-6"
+                  disabled={isSubmittingConsultation}
+                  className="w-full bg-green-600 hover:bg-green-700 text-lg py-6"
                 >
-                  {isSubmitting ? (
-                    "Sending..."
+                  {isSubmittingConsultation ? (
+                    "Sending Request..."
                   ) : (
                     <>
-                      Download Free Corporate Catalog
-                      <Download className="ml-2 h-5 w-5" />
+                      Request Free Consultation & Quote
+                      <ArrowRight className="ml-2 h-5 w-5" />
                     </>
                   )}
                 </Button>
               </form>
               
               <p className="text-xs text-center text-gray-500 mt-4">
-                Join 200+ Atlanta companies who've optimized their gifting programs. 
-                Instant catalog download + bonus resources via email.
+                We'll contact you within 24 hours to discuss your needs and provide a custom quote.
               </p>
             </CardContent>
           </Card>
@@ -459,7 +608,7 @@ const Corporate = () => {
               
               <div className="text-center">
                 <Button 
-                  onClick={() => document.getElementById('lead-magnet-form')?.scrollIntoView({ behavior: 'smooth' })}
+                  onClick={() => document.getElementById('consultation-request')?.scrollIntoView({ behavior: 'smooth' })}
                   className="bg-white text-gray-900 hover:bg-gray-100 text-lg px-8 py-4"
                 >
                   Start Your Gifting Program
@@ -624,7 +773,7 @@ const Corporate = () => {
           </div>
           
           <Button 
-            onClick={() => document.getElementById('lead-magnet-form')?.scrollIntoView({ behavior: 'smooth' })}
+            onClick={() => document.getElementById('consultation-request')?.scrollIntoView({ behavior: 'smooth' })}
             className="bg-purple-600 hover:bg-purple-700 text-lg px-8 py-6"
           >
             Learn About Subscription Savings
@@ -740,10 +889,10 @@ const Corporate = () => {
               🎁 Limited Time: 25% off your first order of 50+ plants
             </p>
             <Button 
-              onClick={() => document.getElementById('lead-magnet-form')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={() => document.getElementById('catalog-download')?.scrollIntoView({ behavior: 'smooth' })}
               className="bg-white text-blue-600 hover:bg-blue-50 text-lg px-8 py-6"
             >
-              Get Your Free Planning Kit
+              Get Your Free Catalog
             </Button>
           </div>
           
