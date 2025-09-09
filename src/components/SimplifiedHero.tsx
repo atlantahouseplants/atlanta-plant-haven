@@ -61,22 +61,22 @@ const SimplifiedHero = () => {
                 <div className="flex flex-wrap justify-center items-center gap-4 text-sm text-gray-600">
                   <span className="flex items-center">
                     <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
-                    Fully insured
+                    Professional consultation included
                   </span>
                   <span className="flex items-center">
                     <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
-                    COI same-day
+                    Custom design proposal
                   </span>
                   <span className="flex items-center">
                     <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
-                    Commercial-friendly
+                    Zero obligation walkthrough
                   </span>
                 </div>
                 
                 {/* Risk Reversal */}
                 <div className="bg-blue-50 border border-blue-200 rounded-lg px-4 py-2">
                   <p className="text-sm text-blue-800 font-medium">
-                    If any plant underperforms in 90 days, we replace it free.
+                    If any plant underperforms under our care, we'll guarantee we'll replace it for free.
                   </p>
                 </div>
               </div>
