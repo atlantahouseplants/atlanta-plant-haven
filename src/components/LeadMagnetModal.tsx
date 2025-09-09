@@ -31,10 +31,12 @@ const LeadMagnetModal: React.FC<LeadMagnetModalProps> = ({
     email: '',
     company: '',
     title: '',
+    phone: '',
     employeeCount: '',
     currentPlants: '',
     primaryInterest: '',
-    timeline: ''
+    timeline: '',
+    message: ''
   });
 
   const handleInputChange = (name: string, value: string) => {
@@ -55,6 +57,7 @@ const LeadMagnetModal: React.FC<LeadMagnetModalProps> = ({
         email: formData.email,
         company: formData.company,
         title: formData.title,
+        phone: formData.phone,
         employeeCount: formData.employeeCount,
         leadMagnetDownloaded: magnetType,
         formSubmitted: 'lead-magnet',
@@ -78,6 +81,7 @@ const LeadMagnetModal: React.FC<LeadMagnetModalProps> = ({
           leadMagnetType: magnetType,
           leadMagnetTitle: title,
           service: "Lead Magnet Download",
+          message: formData.message,
           
           // Enhanced tracking for email optimization
           downloadTrigger: `${magnetType}-download`,
@@ -119,10 +123,12 @@ const LeadMagnetModal: React.FC<LeadMagnetModalProps> = ({
           email: '',
           company: '',
           title: '',
+          phone: '',
           employeeCount: '',
           currentPlants: '',
           primaryInterest: '',
-          timeline: ''
+          timeline: '',
+          message: ''
         });
         
         onClose();
@@ -346,6 +352,21 @@ const LeadMagnetModal: React.FC<LeadMagnetModalProps> = ({
               </div>
 
               <div>
+                <Label htmlFor="phone" className="text-sm font-medium">
+                  Phone Number *
+                </Label>
+                <Input
+                  id="phone"
+                  type="tel"
+                  value={formData.phone}
+                  onChange={(e) => handleInputChange('phone', e.target.value)}
+                  required
+                  className="mt-1"
+                  placeholder="(470) 555-0123"
+                />
+              </div>
+
+              <div>
                 <Label htmlFor="employeeCount" className="text-sm font-medium">
                   Number of Employees
                 </Label>
@@ -380,6 +401,19 @@ const LeadMagnetModal: React.FC<LeadMagnetModalProps> = ({
                     <SelectItem value="researching">Just researching</SelectItem>
                   </SelectContent>
                 </Select>
+              </div>
+
+              <div>
+                <Label htmlFor="message" className="text-sm font-medium">
+                  Additional Comments (Optional)
+                </Label>
+                <Textarea
+                  id="message"
+                  value={formData.message}
+                  onChange={(e) => handleInputChange('message', e.target.value)}
+                  className="mt-1 h-20"
+                  placeholder="Any specific questions or requirements..."
+                />
               </div>
 
               <Button 

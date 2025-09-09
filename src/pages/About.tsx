@@ -2,6 +2,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Award, Users, Leaf, Building2, Calendar, CheckCircle } from "lucide-react";
+import InlineLeadCapture from "@/components/InlineLeadCapture";
 
 const About = () => {
   return (
@@ -215,6 +216,14 @@ const About = () => {
           </div>
         </div>
       </section>
+
+      {/* Lead Magnet Resources Section */}
+      <InlineLeadCapture 
+        variant="full-grid"
+        title="Professional Business Resources"
+        subtitle="Access the same strategic tools and assessments used by 500+ Atlanta businesses to plan and implement successful office plant programs."
+        className="py-20"
+      />
 
       {/* Call to Action */}
       <section className="py-20 bg-green-600 text-white">
