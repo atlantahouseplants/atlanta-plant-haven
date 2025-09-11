@@ -1,8 +1,12 @@
 
 import { Phone, Mail, Facebook, Instagram, Linkedin, Youtube } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useState } from "react";
+import LeadMagnetModal from "./LeadMagnetModal";
 
 const Footer = () => {
+  const [contactModalOpen, setContactModalOpen] = useState(false);
+  
   const socialLinks = [
     { name: "Facebook", icon: Facebook, url: "https://www.facebook.com/atlantahouseplants/" },
     { name: "Instagram", icon: Instagram, url: "https://www.instagram.com/atlanta_houseplants/" },
@@ -14,8 +18,7 @@ const Footer = () => {
     { name: "Office Plant Service", href: "/office-plants" },
     { name: "Corporate Gifting", href: "/corporate" },
     { name: "Our Work", href: "/our-work" },
-    { name: "The Plant Doctor", href: "/plant-doctor" },
-    { name: "Contact", href: "/contact" }
+    { name: "The Plant Doctor", href: "/plant-doctor" }
   ];
 
   return (
@@ -63,6 +66,14 @@ const Footer = () => {
                   </Link>
                 </li>
               ))}
+              <li>
+                <button
+                  onClick={() => setContactModalOpen(true)}
+                  className="text-gray-300 hover:text-green-400 transition-colors text-left"
+                >
+                  Contact
+                </button>
+              </li>
             </ul>
           </div>
 
@@ -93,6 +104,15 @@ const Footer = () => {
           </p>
         </div>
       </div>
+      
+      {/* Contact Modal */}
+      <LeadMagnetModal
+        isOpen={contactModalOpen}
+        onClose={() => setContactModalOpen(false)}
+        magnetType="office-readiness-assessment"
+        title="Contact Atlanta Houseplants"
+        description="Get in touch with our team for questions, custom quotes, or to schedule your complimentary consultation."
+      />
     </footer>
   );
 };

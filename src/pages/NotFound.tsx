@@ -49,7 +49,7 @@ const NotFound = () => {
                 <a href="/office-plants" className="text-green-600 hover:text-green-700 underline">Office Plants</a>
                 <a href="/corporate" className="text-green-600 hover:text-green-700 underline">Corporate Gifting</a>
                 <a href="/plant-doctor" className="text-green-600 hover:text-green-700 underline">Plant Doctor</a>
-                <a href="/contact" className="text-green-600 hover:text-green-700 underline">Contact</a>
+                <a href="/about" className="text-green-600 hover:text-green-700 underline">About</a>
               </div>
             </div>
           </div>

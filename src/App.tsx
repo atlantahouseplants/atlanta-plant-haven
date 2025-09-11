@@ -15,7 +15,6 @@ import PlantDoctor from "./pages/PlantDoctor";
 import ColorPlanters from "./pages/ColorPlanters";
 import Corporate from "./pages/Corporate";
 import HomeDesign from "./pages/HomeDesign";
-import Contact from "./pages/Contact";
 import SucculentsForSmiles from "./pages/SucculentsForSmiles";
 import Resources from "./pages/Resources";
 import About from "./pages/About";
@@ -39,7 +38,6 @@ const App = () => (
             <Route path="/plant-doctor" element={<PlantDoctor />} />
             <Route path="/color-planters" element={<ColorPlanters />} />
             <Route path="/home-design" element={<HomeDesign />} />
-            <Route path="/contact" element={<Contact />} />
             <Route path="/about" element={<About />} />
             <Route path="/our-work" element={<OurWork />} />
             <Route path="/succulents-for-smiles" element={<SucculentsForSmiles />} />

@@ -376,7 +376,7 @@ const OfficePlants = () => {
               <div className="aspect-video overflow-hidden relative">
                 <img 
                   src="/images/corporate-offices/large-lobby-floor-plants.png"
-                  alt="Heritage Distribution Buckhead office transformation with large floor plants"
+                  alt="Financial Services Corporation Buckhead office transformation with large floor plants"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -384,7 +384,7 @@ const OfficePlants = () => {
               <div className="p-10 relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-green-50/20 via-transparent to-blue-50/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none rounded-b-3xl"></div>
                 <div className="relative z-10">
-                  <h3 className="text-2xl font-bold text-green-600 mb-4">Heritage Distribution - Buckhead</h3>
+                  <h3 className="text-2xl font-bold text-green-600 mb-4">Financial Services Corporation - Buckhead</h3>
                   <p className="text-muted-foreground mb-6 leading-relaxed">
                     Multi-floor biophilic integration featuring strategic plant placement for maximum air purification and productivity enhancement. Premium installations serve as natural focal points.
                   </p>
