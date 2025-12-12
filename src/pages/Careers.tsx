@@ -122,6 +122,28 @@ const Careers = () => {
             </div>
           </section>
 
+          {/* Infographic Section */}
+          <section className="py-12 bg-gradient-to-br from-blue-50 to-indigo-50/30">
+            <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="text-center mb-8">
+                <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+                  What Makes This Role Unique
+                </h2>
+                <p className="text-xl text-gray-600">
+                  See what a typical day looks like for our Plant Care Specialists
+                </p>
+              </div>
+
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-blue-200 bg-white">
+                <img
+                  src="/images/careers/job-infographic.png"
+                  alt="Plant Care & Operations Specialist job infographic showing daily responsibilities and work environment"
+                  className="w-full h-auto"
+                />
+              </div>
+            </div>
+          </section>
+
           {/* Job Overview Card */}
           <section className="py-12 bg-gradient-to-br from-gray-50 to-blue-50/30">
             <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
