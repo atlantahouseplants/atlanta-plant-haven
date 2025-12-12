@@ -19,6 +19,7 @@ const Footer = () => {
     { name: "Lease Programs", href: "/lease-programs" },
     { name: "Corporate Gifting", href: "/corporate" },
     { name: "Our Work", href: "/our-work" },
+    { name: "Careers", href: "/careers" },
     { name: "About", href: "/about" }
   ];
 
