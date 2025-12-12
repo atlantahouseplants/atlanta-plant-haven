@@ -102,9 +102,12 @@ const Careers = () => {
               <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-green-200 bg-black">
                 <video
                   controls
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
                   className="w-full h-auto"
-                  poster="/images/video-poster.jpg"
-                  preload="metadata"
+                  preload="auto"
                 >
                   <source src="/videos/plant-care-ops-specialist.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
