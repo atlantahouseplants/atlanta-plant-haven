@@ -15,10 +15,11 @@ const Footer = () => {
   ];
 
   const navigationLinks = [
-    { name: "Office Plant Service", href: "/office-plants" },
+    { name: "Office Plant Programs", href: "/office-plants" },
+    { name: "Lease Programs", href: "/lease-programs" },
     { name: "Corporate Gifting", href: "/corporate" },
     { name: "Our Work", href: "/our-work" },
-    { name: "The Plant Doctor", href: "/plant-doctor" }
+    { name: "About", href: "/about" }
   ];
 
   return (
@@ -100,7 +101,7 @@ const Footer = () => {
         {/* Footer Bottom */}
         <div className="border-t border-gray-800 pt-8 text-center">
           <p className="text-gray-400">
-            © 2024 Atlanta Houseplants. Professional plant care for Atlanta's leading businesses.
+            © 2024 Atlanta Houseplants. Commercial plant services for Atlanta's leading businesses.
           </p>
         </div>
       </div>

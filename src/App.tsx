@@ -19,6 +19,7 @@ import SucculentsForSmiles from "./pages/SucculentsForSmiles";
 import Resources from "./pages/Resources";
 import About from "./pages/About";
 import OurWork from "./pages/OurWork";
+import LeasePrograms from "./pages/LeasePrograms";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -35,6 +36,7 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/office-plants" element={<OfficePlants />} />
             <Route path="/corporate" element={<Corporate />} />
+            <Route path="/lease-programs" element={<LeasePrograms />} />
             <Route path="/plant-doctor" element={<PlantDoctor />} />
             <Route path="/color-planters" element={<ColorPlanters />} />
             <Route path="/home-design" element={<HomeDesign />} />

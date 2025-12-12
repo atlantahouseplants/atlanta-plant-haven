@@ -30,7 +30,7 @@ const MobileStickyCTA = () => {
             <Link to="/office-plants">
               <Button className={`${COMPONENT_STYLES.button.primary} w-full py-3 text-base font-semibold`}>
                 <Calendar className="h-4 w-4 mr-2" />
-                Free Assessment
+                Get Free Office Design
               </Button>
             </Link>
           </div>
@@ -57,7 +57,7 @@ const MobileStickyCTA = () => {
         {/* Subtitle */}
         <div className="text-center mt-2">
           <p className="text-xs text-gray-500">
-            💯 100% Plant Health Guarantee • ⚡ 24hr Response
+            💯 100% Plant Guarantee • 📍 Serving Atlanta Businesses
           </p>
         </div>
       </div>

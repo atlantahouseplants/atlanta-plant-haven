@@ -9,11 +9,12 @@ const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
-  // Simplified navigation - only core pages
+  // B2B-focused navigation
   const navItems = [
     { name: "Office Plants", href: "/office-plants" },
+    { name: "Lease Programs", href: "/lease-programs" },
     { name: "Corporate Gifts", href: "/corporate" },
-    { name: "Plant Doctor", href: "/plant-doctor" },
+    { name: "Our Work", href: "/our-work" },
     { name: "About", href: "/about" },
   ];
 
@@ -46,7 +47,7 @@ const Navigation = () => {
                 <div className="text-lg font-bold text-gray-900 group-hover:text-green-600 transition-colors">
                   Atlanta Houseplants
                 </div>
-                <div className="text-xs text-gray-500 -mt-1">Professional Plant Services</div>
+                <div className="text-xs text-gray-500 -mt-1">Commercial Plant Services</div>
               </div>
             </Link>
           </div>

@@ -21,16 +21,19 @@ const SimplifiedHero = () => {
           <div className="mb-6 sm:mb-8">
             <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-foreground leading-[0.95] mb-4 sm:mb-6 tracking-tight px-2 sm:px-0">
               <span className="block text-foreground mb-1 sm:mb-2">
-                We design, install & maintain
+                Transform Atlanta Workplaces with
               </span>
               <span className="block bg-gradient-to-r from-green-600 via-emerald-500 to-green-600 bg-clip-text text-transparent">
-                office plants for Atlanta buildings.
+                Professional Plant Programs
               </span>
             </h1>
           </div>
           
           <div className="max-w-4xl mx-auto mb-6 sm:mb-8 px-2 sm:px-0">
-            <p className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-blue-700 leading-relaxed font-semibold text-center mb-8 sm:mb-12">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-blue-700 leading-relaxed font-semibold text-center mb-4">
+              Office Plant Programs • Corporate Gifting • 100% Plant Guarantee
+            </p>
+            <p className="text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed text-center mb-8 sm:mb-12">
               Get a free office biophilic design + quote in 48 hours. On-site walkthrough included.
             </p>
 
@@ -45,13 +48,12 @@ const SimplifiedHero = () => {
                     Get My Free Office Biophilic Design →
                   </Button>
                 </Link>
-                <Link to="/our-work" className="group">
-                  <Button 
-                    variant="outline"
+                <Link to="/corporate" className="group">
+                  <Button
                     size="lg"
-                    className="border-2 border-blue-300 text-blue-700 hover:bg-blue-50 h-16 px-8 text-lg rounded-2xl"
+                    className="bg-gradient-to-r from-blue-600 via-blue-500 to-blue-600 hover:from-blue-700 hover:via-blue-600 hover:to-blue-700 text-white shadow-xl hover:shadow-blue-500/25 transform hover:scale-[1.02] transition-all duration-300 border-0 font-semibold rounded-2xl h-16 px-8 text-lg"
                   >
-                    See Atlanta Projects
+                    Download Corporate Gift Catalog
                   </Button>
                 </Link>
               </div>
@@ -202,57 +204,6 @@ const SimplifiedHero = () => {
             </div>
           </div>
 
-          {/* Free Office Biophilic Design Offer */}
-          <div className="bg-gradient-to-r from-green-50 to-emerald-50 border border-green-200 rounded-2xl p-8 max-w-4xl mx-auto mb-12">
-            <div className="flex items-center justify-center mb-4">
-              <span className="text-2xl mr-3">🌿</span>
-              <h3 className="text-2xl font-bold text-green-800">Free Office Biophilic Design</h3>
-            </div>
-            <p className="text-lg text-green-700 text-center leading-relaxed mb-6">
-              Get your customized office plant design and quote in 48 hours.<br/>
-              <strong>Includes complimentary on-site walkthrough</strong> with our biophilic design specialist.
-            </p>
-            <div className="text-center">
-              <Link to="/office-plants">
-                <Button 
-                  size="lg"
-                  className="bg-gradient-to-r from-green-600 via-green-500 to-green-600 hover:from-green-700 hover:via-green-600 hover:to-green-700 text-white shadow-xl hover:shadow-green-500/25 transform hover:scale-[1.02] transition-all duration-300 border-0 font-semibold rounded-2xl h-14 px-8 text-base"
-                >
-                  Get My Free Office Biophilic Design
-                </Button>
-              </Link>
-            </div>
-          </div>
-
-          {/* Enhanced Professional CTAs */}
-          <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto mb-16">
-            <Link to="/office-plants" className="group animate-fade-in">
-              <Button 
-                size="lg"
-                className={`${COMPONENT_STYLES.button.primary} w-full h-16 sm:h-20 text-base sm:text-lg shadow-xl hover:shadow-green-500/25`}
-              >
-                <span className="flex flex-col items-center">
-                  <span className="leading-tight">Get Your Free Office Biophilic Design</span>
-                  <span className="text-xs sm:text-sm font-normal opacity-90 leading-tight">48-hour turnaround + on-site walkthrough</span>
-                </span>
-                <ArrowRight className="ml-3 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
-            </Link>
-            
-            <Link to="/corporate" className="group animate-fade-in" style={{ animationDelay: '100ms' }}>
-              <Button 
-                size="lg"
-                className={`${COMPONENT_STYLES.button.cta.replace('from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600', 'from-blue-600 via-blue-500 to-blue-600 hover:from-blue-700 hover:via-blue-600 hover:to-blue-700')} w-full h-16 sm:h-20 text-base sm:text-lg shadow-xl hover:shadow-blue-500/25`}
-              >
-                <span className="flex flex-col items-center">
-                  <span className="leading-tight">Explore Corporate Gifting Solutions</span>
-                  <span className="text-xs sm:text-sm font-normal opacity-90 leading-tight">Automated Programs Available</span>
-                </span>
-                <ArrowRight className="ml-3 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
-            </Link>
-          </div>
-          
         </div>
 
         {/* Strategic Lead Magnets Section */}
@@ -267,11 +218,13 @@ const SimplifiedHero = () => {
         <div className="text-center">
           <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-12 rounded-3xl shadow-xl border border-green-200">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-              Ready for Your Free Office Biophilic Design?
+              Ready to Transform Your Atlanta Workplace?
             </h2>
-            <p className="text-xl text-gray-700 mb-10 max-w-4xl mx-auto leading-relaxed">
-              Get your customized office plant design and quote in 48 hours with complimentary on-site walkthrough. 
-              <strong>Experience the difference</strong> professional biophilic design makes in workplace wellness and productivity.
+            <p className="text-xl text-gray-700 mb-4 max-w-4xl mx-auto leading-relaxed">
+              Join 500+ Atlanta businesses that trust us with their workplace plant programs and corporate gifting needs.
+            </p>
+            <p className="text-lg text-gray-600 mb-10 max-w-3xl mx-auto">
+              Get your free office design or download our corporate gift catalog today.
             </p>
             
             <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
@@ -289,13 +242,13 @@ const SimplifiedHero = () => {
               </Link>
               
               <Link to="/corporate" className="group">
-                <Button 
+                <Button
                   size="lg"
                   className="w-full h-16 sm:h-20 text-base sm:text-lg bg-gradient-to-r from-blue-600 via-blue-500 to-blue-600 hover:from-blue-700 hover:via-blue-600 hover:to-blue-700 text-white shadow-xl hover:shadow-blue-500/25 transform hover:scale-[1.02] transition-all duration-300 border-0 font-semibold rounded-2xl"
                 >
                   <span className="flex flex-col items-center">
-                    <span className="leading-tight">Streamline Your Corporate Gifting</span>
-                    <span className="text-xs sm:text-sm font-normal opacity-90 leading-tight">Automated solutions available</span>
+                    <span className="leading-tight">Download Corporate Gift Catalog</span>
+                    <span className="text-xs sm:text-sm font-normal opacity-90 leading-tight">Bulk orders from 50-5,000+ plants</span>
                   </span>
                   <ArrowRight className="ml-3 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Button>

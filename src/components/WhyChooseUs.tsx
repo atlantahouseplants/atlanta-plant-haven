@@ -6,7 +6,7 @@ const WhyChooseUs = () => {
     {
       icon: Award,
       title: "UGA Certified Expert",
-      description: "Nick holds a Horticulture degree from University of Georgia with 15+ years of professional experience."
+      description: "Our founder holds a Horticulture degree from University of Georgia with 15+ years of commercial plant experience."
     },
     {
       icon: Shield,
@@ -71,7 +71,7 @@ const WhyChooseUs = () => {
                 className="w-28 h-28 rounded-full object-cover border-4 border-green-600 shadow-lg"
               />
               <div className="ml-6">
-                <h3 className="text-3xl font-bold text-foreground mb-2">Meet Nick, Your Plant Doctor</h3>
+                <h3 className="text-3xl font-bold text-foreground mb-2">Meet Our Founder</h3>
                 <div className="space-y-2">
                   <p className="text-green-700 font-bold text-lg flex items-center">
                     🎓 UGA Horticulture Graduate
@@ -111,11 +111,11 @@ const WhyChooseUs = () => {
           
           <div className="mt-8 text-center">
             <blockquote className="text-lg text-muted-foreground max-w-4xl mx-auto italic">
-              "I've dedicated my career to helping Atlanta businesses create beautiful, healthy plant environments. 
-              Every installation comes with my personal guarantee and ongoing support. My goal is to transform 
+              "We've dedicated our careers to helping Atlanta businesses create beautiful, healthy plant environments.
+              Every installation comes with our guarantee and ongoing professional support. Our goal is to transform
               your workspace into a thriving, productive environment that your employees and clients will love."
             </blockquote>
-            <cite className="text-green-700 font-semibold mt-4 block">– Nick, Founder & Head Horticulturalist</cite>
+            <cite className="text-green-700 font-semibold mt-4 block">– Atlanta Houseplants Team</cite>
           </div>
         </div>
       </div>
