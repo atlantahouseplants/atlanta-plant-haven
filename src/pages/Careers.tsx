@@ -87,8 +87,43 @@ const Careers = () => {
             </div>
           </section>
 
-          {/* Job Overview Card */}
+          {/* Video Section */}
           <section className="py-12 bg-white">
+            <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="text-center mb-8">
+                <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+                  See What The Job Is Really Like
+                </h2>
+                <p className="text-xl text-gray-600">
+                  Watch this 2-minute overview of the position and our company
+                </p>
+              </div>
+
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-green-200 bg-black">
+                <video
+                  controls
+                  className="w-full h-auto"
+                  poster="/images/video-poster.jpg"
+                  preload="metadata"
+                >
+                  <source src="/videos/plant-care-ops-specialist.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+
+              <div className="mt-8 text-center">
+                <a href="https://app.gohighlevel.com/v2/preview/gWf0eHW3LMHhZpcUqmth?notrack=true" target="_blank" rel="noopener noreferrer">
+                  <Button size="lg" className="bg-gradient-to-r from-green-600 via-green-500 to-green-600 hover:from-green-700 hover:via-green-600 hover:to-green-700 text-white shadow-xl hover:shadow-green-500/25 transform hover:scale-[1.02] transition-all duration-300 border-0 font-semibold rounded-xl h-14 px-10 text-lg">
+                    Apply Now After Watching
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Button>
+                </a>
+              </div>
+            </div>
+          </section>
+
+          {/* Job Overview Card */}
+          <section className="py-12 bg-gradient-to-br from-gray-50 to-blue-50/30">
             <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
               <Card className="border-2 border-green-200 shadow-xl">
                 <CardHeader className="bg-gradient-to-br from-green-50 to-emerald-50 border-b border-green-200">
